@@ -1,7 +1,7 @@
 # USER.md - About Your Human
 
-- **Name:**
-- **What to call them:**
+- **Name:** Николай
+- **What to call them:** Николай
 - **Pronouns:**
 - **Timezone:** UTC
 - **Notes:** Торгует или активно интересуется рынками предсказаний, в частности Kalshi и Polymarket.
