@@ -13243,20 +13243,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-CEAS",
             "label": "CEAS",
             "display_label": "Ceasefire",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 18.0,
-            "price_bucket": "mid_tail",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-DEFE",
@@ -13268,20 +13269,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-DEFE",
             "label": "DEFE",
             "display_label": "Defense / Defence",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 76.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-DRON",
@@ -13293,20 +13295,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-DRON",
             "label": "DRON",
             "display_label": "Drone",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 32.0,
-            "price_bucket": "mid_tail",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-ENER",
@@ -13318,20 +13321,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-ENER",
             "label": "ENER",
             "display_label": "Energy",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
@@ -13343,21 +13347,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
             "label": "IMMI",
             "display_label": "Immigrant / Immigration",
-            "score": 6,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 16.0,
-            "price_bucket": "mid_tail",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "current-events lane",
-              "question-driven"
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "core watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-IRAN",
@@ -13369,20 +13373,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
@@ -13394,21 +13399,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
             "label": "ISRA",
             "display_label": "Israel / Israeli",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "current-events lane",
-              "question-driven"
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "core watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-NATO",
@@ -13420,20 +13425,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-NATO",
             "label": "NATO",
             "display_label": "NATO",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 37.0,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-NUCL",
@@ -13445,20 +13451,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 56.99999999999999,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-OIL",
@@ -13470,20 +13477,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 57.99999999999999,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-REFO",
@@ -13495,20 +13503,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-REFO",
             "label": "REFO",
             "display_label": "Reform",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 85.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-TRUM",
@@ -13520,20 +13529,21 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 40.0,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "phase watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
@@ -13545,41 +13555,36 @@
             "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
             "label": "UKRA",
             "display_label": "Ukraine",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 49.0,
-            "price_bucket": "mid",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "current-events lane",
-              "question-driven"
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
-          "phase_fit": "q&a-heavy",
-          "attention_allocation": "core watch"
+          "phase_fit": "mixed",
+          "attention_allocation": "secondary watch"
         }
       ],
       "context_checks": [
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
-        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
-        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening."
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
-        "question-driven narrative shift",
-        "opening frame",
-        "headline-topic pressure"
+        "question-driven narrative shift"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Parliament-style format часто ближе к adversarial Q&A, чем к чистой prepared speech логике.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
+        "Parliament-style format часто ближе к adversarial Q&A, чем к чистой prepared speech логике."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -13596,355 +13601,401 @@
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
-            "label": "IMMI",
-            "display_label": "Immigrant / Immigration",
-            "score": 6,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 16.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
-          {
             "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
             "label": "ISRA",
             "display_label": "Israel / Israeli",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "current-events lane",
-              "question-driven"
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
             "label": "UKRA",
             "display_label": "Ukraine",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 49.0,
-            "price_bucket": "mid",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "current-events lane",
-              "question-driven"
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-CEAS",
             "label": "CEAS",
             "display_label": "Ceasefire",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 18.0,
-            "price_bucket": "mid_tail",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-DEFE",
             "label": "DEFE",
             "display_label": "Defense / Defence",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 76.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           }
         ],
-        "cheap_watchlist": [
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
-            "label": "IMMI",
-            "display_label": "Immigrant / Immigration",
-            "score": 6,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 16.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
-            "label": "ISRA",
-            "display_label": "Israel / Israeli",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
-            "label": "UKRA",
-            "display_label": "Ukraine",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 49.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          }
-        ],
+        "cheap_watchlist": [],
         "likely_overreactions": [],
-        "low_priority_strikes": [],
-        "full_ranking": [
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
-            "label": "IMMI",
-            "display_label": "Immigrant / Immigration",
-            "score": 6,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 16.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
-            "label": "ISRA",
-            "display_label": "Israel / Israeli",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
-          {
-            "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
-            "label": "UKRA",
-            "display_label": "Ukraine",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 49.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "current-events lane",
-              "question-driven"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-yellow"
-          },
+        "low_priority_strikes": [
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-CEAS",
             "label": "CEAS",
             "display_label": "Ceasefire",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 18.0,
-            "price_bucket": "mid_tail",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-DEFE",
             "label": "DEFE",
             "display_label": "Defense / Defence",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 76.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-DRON",
             "label": "DRON",
             "display_label": "Drone",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 32.0,
-            "price_bucket": "mid_tail",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-ENER",
             "label": "ENER",
             "display_label": "Energy",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-ISRA",
+            "label": "ISRA",
+            "display_label": "Israel / Israeli",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-UKRA",
+            "label": "UKRA",
+            "display_label": "Ukraine",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "тема может быть тесно связана с текущей новостной повесткой",
+              "question-driven strike может неправильно оцениваться после opening"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-CEAS",
+            "label": "CEAS",
+            "display_label": "Ceasefire",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-DEFE",
+            "label": "DEFE",
+            "display_label": "Defense / Defence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-DRON",
+            "label": "DRON",
+            "display_label": "Drone",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-ENER",
+            "label": "ENER",
+            "display_label": "Energy",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSTARMERMENTIONB-26MAR25-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-NATO",
             "label": "NATO",
             "display_label": "NATO",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 37.0,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 56.99999999999999,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 57.99999999999999,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-REFO",
             "label": "REFO",
             "display_label": "Reform",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 85.0,
-            "price_bucket": "rich",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXSTARMERMENTIONB-26MAR25-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "qa-sensitive",
-            "yes_reference_price": 40.0,
-            "price_bucket": "mid",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "question-driven"
+              "question-driven strike может неправильно оцениваться после opening",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-yellow"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           }
         ]
       },
@@ -13989,6 +14040,19 @@
             "Iran",
             "Israel / Israeli",
             "Ukraine"
+          ]
+        },
+        {
+          "family": "odd-tail",
+          "labels": [
+            "Ceasefire",
+            "Defense / Defence",
+            "Drone",
+            "Energy",
+            "Immigrant / Immigration",
+            "NATO",
+            "Nuclear",
+            "Oil"
           ]
         }
       ],
