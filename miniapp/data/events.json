@@ -11703,6 +11703,822 @@
       "slug": "electronic-arts-inc-their-next-earnings-call"
     },
     {
+      "group_key": "KXLASTWORDMENTION-26MAR24",
+      "event_title": "Gary Peters — The Last Word With Lawrence O'Donnell",
+      "event_ticker": "KXLASTWORDMENTION-26MAR24",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-24T23:05:00Z",
+      "close_time": "2026-03-25T14:00:00Z",
+      "market_count": 11,
+      "dominant_group": "culture_entertainment_mentions",
+      "dominant_subtype": "podcast_or_stream",
+      "dominant_rules_risk": "medium",
+      "speaker": "gary peters",
+      "format_confidence": 0.85,
+      "prep_focus": "Пойми формат подкаста, co-host dynamic и какие темы реально могут organically зайти в разговор.",
+      "live_focus": "Следи за topic drift, banter flow и guest/host pivots, а не за scripted-opening логикой.",
+      "priority": "normal",
+      "strike_codes": [
+        "Afford / Affordable / Affordability",
+        "Corrupt / Corruption",
+        "Election",
+        "Iran",
+        "Kristi / Noem",
+        "Event does not qualify",
+        "Oil / Gas / Gasoline",
+        "Republican",
+        "Shutdown / Shut Down",
+        "Trump",
+        "TSA"
+      ],
+      "strike_buckets": {
+        "count": 11,
+        "context_sensitive_hint": 11
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
+            "label": "Election",
+            "short_label": "ELEC",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
+            "label": "Iran",
+            "short_label": "IRAN",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
+            "label": "Kristi / Noem",
+            "short_label": "KRIS",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
+            "label": "Republican",
+            "short_label": "REPU",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
+            "label": "Trump",
+            "short_label": "TRUM",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
+            "label": "TSA",
+            "short_label": "TSA",
+            "note": "manual review · mixed"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
+            "label": "Afford / Affordable / Affordability",
+            "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
+            "label": "Corrupt / Corruption",
+            "short_label": "CORR",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
+            "label": "Oil / Gas / Gasoline",
+            "short_label": "OIL",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
+            "label": "Shutdown / Shut Down",
+            "short_label": "SHUT",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
+          "label": "Afford / Affordable / Affordability",
+          "short_label": "AFFO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
+          "label": "Corrupt / Corruption",
+          "short_label": "CORR",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
+            "label": "CORR",
+            "display_label": "Corrupt / Corruption",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
+          "label": "Election",
+          "short_label": "ELEC",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
+            "label": "ELEC",
+            "display_label": "Election",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "needs hard topic pivot"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
+          "label": "Iran",
+          "short_label": "IRAN",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
+          "label": "Kristi / Noem",
+          "short_label": "KRIS",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
+          "label": "Oil / Gas / Gasoline",
+          "short_label": "OIL",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
+          "label": "Republican",
+          "short_label": "REPU",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
+          "label": "Shutdown / Shut Down",
+          "short_label": "SHUT",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
+          "label": "Trump",
+          "short_label": "TRUM",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
+          "label": "TSA",
+          "short_label": "TSA",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
+      ],
+      "likely_hooks": [
+        "segment transition",
+        "surprise cameo",
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
+      ],
+      "context_notes": [
+        "В culture/entertainment markets часто важнее flow и structure of show, чем история."
+      ],
+      "opening_plan": [
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters."
+      ],
+      "post_opening_plan": [
+        "Если разговор закрепился в одном lane, режь страйки, которым нужен жёсткий topic pivot.",
+        "На podcasts важнее flow and chemistry, чем scripted-opening analogies."
+      ],
+      "qa_transition_plan": [
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
+            "label": "CORR",
+            "display_label": "Corrupt / Corruption",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
+            "label": "CORR",
+            "display_label": "Corrupt / Corruption",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
+            "label": "ELEC",
+            "display_label": "Election",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "needs hard topic pivot"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь structure of show: segments, host duties, performer slots, likely cameos.",
+        "Ожидай dumb flow на front-page массовых событиях и заранее выдели narrative-driven traps."
+      ],
+      "live_trading_summary": [
+        "Реагируй на segment transitions, а не только на сами слова.",
+        "Если это one-off show, уменьшай уверенность в сырых historical comparisons."
+      ],
+      "risk_summary": [
+        "Высокий front-page / retail flow risk.",
+        "One-off format risk: мало повторяемой истории."
+      ],
+      "manual_trader_prompts": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters.",
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Используй только максимально близкий comparison set по формату события; generic history здесь слабее помогает.",
+        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances."
+      ],
+      "consensus_misread": [
+        "В podcasts crowd часто путает broad topic affinity гостей с реальным probability, что тема вообще зайдёт в live conversation.",
+        "Long-form banter markets легко перепрайсить по clip-worthy narrative, хотя разговор может уйти совсем в другой lane.",
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "live only",
+        "summary": "Достаточно короткой проверки контекста и наблюдения за opening."
+      },
+      "transcript_matches": [],
+      "slug": "gary-peters-the-last-word-with-lawrence-o-donnell"
+    },
+    {
       "group_key": "KXSNLMENTION-26APR04",
       "event_title": "Jack Black — Saturday Night Live opening monologue",
       "event_ticker": "KXSNLMENTION-26APR04",
