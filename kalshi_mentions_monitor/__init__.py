@@ -1,0 +1,1 @@
+# Kalshi mentions monitor package
