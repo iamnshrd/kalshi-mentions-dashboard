@@ -828,19 +828,20 @@
             "market_id": "KXPERSONMENTION-26MAR24-AGI",
             "label": "AGI",
             "display_label": "AGI / Artificial General Intelligence",
-            "score": -1,
+            "score": -3,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 19.0,
-            "price_bucket": "mid_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-red"
+            "type_class": "type-gray"
           },
-          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "phase_fit": "question-chain-sensitive",
           "attention_allocation": "pass"
         },
         {
@@ -853,13 +854,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-AMIC",
             "label": "AMIC",
             "display_label": "Amicus",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -876,21 +879,21 @@
             "market_id": "KXPERSONMENTION-26MAR24-APA",
             "label": "APA",
             "display_label": "APA / Administrative Procedure Act",
-            "score": -5,
+            "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "weak setup"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-AUTO",
@@ -904,18 +907,18 @@
             "display_label": "Autonomous",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 80.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-CLAS",
@@ -929,18 +932,18 @@
             "display_label": "Classified",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 85.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-CLAU",
@@ -954,18 +957,18 @@
             "display_label": "Claude",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-CONS",
@@ -979,19 +982,19 @@
             "display_label": "Constitution / Constitutional / Unconstitutional",
             "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "special rule",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "rich for weak setup"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
-            "type_class": "type-red"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
-          "phase_fit": "speaker-identity-and-rules-sensitive",
-          "attention_allocation": "manual only"
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-HEGS",
@@ -1005,18 +1008,18 @@
             "display_label": "Hegseth",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-IDEO",
@@ -1028,19 +1031,20 @@
             "market_id": "KXPERSONMENTION-26MAR24-IDEO",
             "label": "IDEO",
             "display_label": "Ideology / Ideological",
-            "score": -1,
+            "score": -3,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 44.0,
-            "price_bucket": "mid",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-red"
+            "type_class": "type-gray"
           },
-          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "phase_fit": "question-chain-sensitive",
           "attention_allocation": "pass"
         },
         {
@@ -1055,18 +1059,18 @@
             "display_label": "Lethal / Fatal",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-NQE",
@@ -1078,20 +1082,20 @@
             "market_id": "KXPERSONMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": 0,
+            "score": -3,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 2.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-red"
+            "type_class": "type-gray"
           },
-          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "phase_fit": "question-chain-sensitive",
           "attention_allocation": "pass"
         },
         {
@@ -1106,18 +1110,18 @@
             "display_label": "Pentagon",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 78.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-SECU",
@@ -1129,13 +1133,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-SECU",
             "label": "SECU",
             "display_label": "Security Clearance",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -1154,18 +1160,18 @@
             "display_label": "Surveillance",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "question-chain-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPERSONMENTION-26MAR24-TRUM",
@@ -1177,13 +1183,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -1200,13 +1208,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-TRUT",
             "label": "TRUT",
             "display_label": "Truth Social",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -1223,13 +1233,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-WARF",
             "label": "WARF",
             "display_label": "Warfare",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -1246,13 +1258,15 @@
             "market_id": "KXPERSONMENTION-26MAR24-WOKE",
             "label": "WOKE",
             "display_label": "Woke / DEI",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 23.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
@@ -1291,92 +1305,32 @@
             "market_id": "KXPERSONMENTION-26MAR24-AMIC",
             "label": "AMIC",
             "display_label": "Amicus",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-NQE",
-            "label": "NQE",
-            "display_label": "Event does not qualify",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 2.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-SECU",
-            "label": "SECU",
-            "display_label": "Security Clearance",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUM",
-            "label": "TRUM",
-            "display_label": "Trump",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUT",
-            "label": "TRUT",
-            "display_label": "Truth Social",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          }
-        ],
-        "cheap_watchlist": [],
-        "likely_overreactions": [
           {
             "market_id": "KXPERSONMENTION-26MAR24-AUTO",
             "label": "AUTO",
             "display_label": "Autonomous",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 80.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1385,14 +1339,14 @@
             "display_label": "Classified",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 85.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1401,14 +1355,14 @@
             "display_label": "Claude",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1417,104 +1371,97 @@
             "display_label": "Hegseth",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-LETH",
-            "label": "LETH",
-            "display_label": "Lethal / Fatal",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "rich for weak setup"
-            ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
         "low_priority_strikes": [
           {
             "market_id": "KXPERSONMENTION-26MAR24-AMIC",
             "label": "AMIC",
             "display_label": "Amicus",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-NQE",
-            "label": "NQE",
-            "display_label": "Event does not qualify",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 2.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-SECU",
-            "label": "SECU",
-            "display_label": "Security Clearance",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUM",
-            "label": "TRUM",
-            "display_label": "Trump",
-            "score": 0,
+            "market_id": "KXPERSONMENTION-26MAR24-AUTO",
+            "label": "AUTO",
+            "display_label": "Autonomous",
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUT",
-            "label": "TRUT",
-            "display_label": "Truth Social",
-            "score": 0,
+            "market_id": "KXPERSONMENTION-26MAR24-CLAS",
+            "label": "CLAS",
+            "display_label": "Classified",
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-CLAU",
+            "label": "CLAU",
+            "display_label": "Claude",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-HEGS",
+            "label": "HEGS",
+            "display_label": "Hegseth",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           }
@@ -1524,134 +1471,17 @@
             "market_id": "KXPERSONMENTION-26MAR24-AMIC",
             "label": "AMIC",
             "display_label": "Amicus",
-            "score": 0,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-NQE",
-            "label": "NQE",
-            "display_label": "Event does not qualify",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 2.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-SECU",
-            "label": "SECU",
-            "display_label": "Security Clearance",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
             "status_class": "status-gray",
             "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUM",
-            "label": "TRUM",
-            "display_label": "Trump",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-TRUT",
-            "label": "TRUT",
-            "display_label": "Truth Social",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 36.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-WARF",
-            "label": "WARF",
-            "display_label": "Warfare",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-WOKE",
-            "label": "WOKE",
-            "display_label": "Woke / DEI",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 23.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-AGI",
-            "label": "AGI",
-            "display_label": "AGI / Artificial General Intelligence",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 19.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXPERSONMENTION-26MAR24-IDEO",
-            "label": "IDEO",
-            "display_label": "Ideology / Ideological",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 44.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
           },
           {
             "market_id": "KXPERSONMENTION-26MAR24-AUTO",
@@ -1659,14 +1489,14 @@
             "display_label": "Autonomous",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 80.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1675,14 +1505,14 @@
             "display_label": "Classified",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 85.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1691,14 +1521,14 @@
             "display_label": "Claude",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1707,14 +1537,14 @@
             "display_label": "Hegseth",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1723,14 +1553,14 @@
             "display_label": "Lethal / Fatal",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1739,14 +1569,30 @@
             "display_label": "Pentagon",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 78.0,
-            "price_bucket": "rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-SECU",
+            "label": "SECU",
+            "display_label": "Security Clearance",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
@@ -1755,14 +1601,112 @@
             "display_label": "Surveillance",
             "score": -2,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-TRUT",
+            "label": "TRUT",
+            "display_label": "Truth Social",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-WARF",
+            "label": "WARF",
+            "display_label": "Warfare",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-WOKE",
+            "label": "WOKE",
+            "display_label": "Woke / DEI",
+            "score": -2,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-AGI",
+            "label": "AGI",
+            "display_label": "AGI / Artificial General Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-APA",
+            "label": "APA",
+            "display_label": "APA / Administrative Procedure Act",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-yellow",
             "type_class": "type-gray"
           },
           {
@@ -1771,32 +1715,49 @@
             "display_label": "Constitution / Constitutional / Unconstitutional",
             "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "special rule",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "rich for weak setup"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
-            "type_class": "type-red"
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
           },
           {
-            "market_id": "KXPERSONMENTION-26MAR24-APA",
-            "label": "APA",
-            "display_label": "APA / Administrative Procedure Act",
-            "score": -5,
+            "market_id": "KXPERSONMENTION-26MAR24-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "weak setup"
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXPERSONMENTION-26MAR24-IDEO",
+            "label": "IDEO",
+            "display_label": "Ideology / Ideological",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "есть дополнительный риск из-за формулировки или конструкции страйка",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-yellow",
             "type_class": "type-gray"
           }
         ]
@@ -1828,8 +1789,7 @@
         "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера."
       ],
       "consensus_misread": [
-        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase.",
-        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
       ],
       "semantic_families": [],
       "attention_allocation": {
