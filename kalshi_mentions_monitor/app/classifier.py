@@ -16,7 +16,7 @@ def classify_market(market: NormalizedMarket) -> Classification:
     rules_risk = "low"
     confidence = 0.55
 
-    if any(x in text for x in ["trump", "vance", "white house", "senate", "congress", "governor", "president", "vice president", "secretary"]):
+    if any(x in text for x in ["trump", "vance", "white house", "senate", "congress", "governor", "president", "vice president", "secretary", "justice", "supreme court", "oral arguments", "tim walz", "jd vance", "scotus"]):
         group = "political_mentions"
         confidence = 0.88
         context = "high"

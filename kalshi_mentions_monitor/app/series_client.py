@@ -16,10 +16,7 @@ class KalshiSeriesClient:
         payload = response.json()
         out: set[str] = set()
         for s in payload.get("series", []):
-            category = str(s.get("category", "")).lower()
             ticker = str(s.get("ticker", ""))
-            title = str(s.get("title", "")).lower()
-            if category == "mentions" or "mention" in title or "say" in title or "remarks" in title:
-                if ticker:
-                    out.add(ticker)
+            if ticker and "MENTION" in ticker.upper():
+                out.add(ticker)
         return out

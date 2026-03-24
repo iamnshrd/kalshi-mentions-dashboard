@@ -36,4 +36,6 @@ Environment variables:
 - `KALSHI_OUTPUT_DIR`
 
 ## Notes
+Discovery is intentionally simple and robust: a market is considered a mention market if its `series_ticker` contains `MENTION`.
+
 This project is intentionally rule-based and conservative. It is a prep/recommendation engine, not an execution bot.
