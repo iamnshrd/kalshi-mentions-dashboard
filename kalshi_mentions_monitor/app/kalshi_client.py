@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
 
 import requests
@@ -37,6 +38,28 @@ class KalshiClient:
             if not cursor:
                 break
         return all_markets
+
+    def fetch_markets_for_series(self, series_ticker: str) -> list[NormalizedMarket]:
+        response = requests.get(
+            f"{self.base_url}/markets",
+            params={"limit": 200, "series_ticker": series_ticker},
+            headers=self._headers(),
+            timeout=30,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        return [self._normalize_market(raw) for raw in payload.get("markets", [])]
+
+    def fetch_markets_for_series_bulk(self, series_tickers: set[str], max_workers: int = 24) -> list[NormalizedMarket]:
+        out: list[NormalizedMarket] = []
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(self.fetch_markets_for_series, ticker): ticker for ticker in sorted(series_tickers)}
+            for future in as_completed(futures):
+                try:
+                    out.extend(future.result())
+                except Exception:
+                    continue
+        return out
 
     @staticmethod
     def _normalize_market(raw: dict[str, Any]) -> NormalizedMarket:

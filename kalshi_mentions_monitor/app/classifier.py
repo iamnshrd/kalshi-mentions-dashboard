@@ -44,7 +44,7 @@ def classify_market(market: NormalizedMarket) -> Classification:
             phase = "opening_heavy"
             reasoning.append("Defaulted to speech-style political event")
 
-    elif any(x in text for x in ["earnings call", "investor day", "guidance", "ceo", "cfo", "quarterly", "conference"]):
+    elif any(x in text for x in ["earnings call", "investor day", "guidance", "ceo", "cfo", "quarterly"]) or ("conference" in text and not any(x in text for x in ["press conference", "press briefing", "oral arguments", "supreme court", "justice", "president", "governor", "secretary", "tim walz"])):
         group = "earnings_or_corporate_mentions"
         subtype = "earnings_call" if "earnings" in text else "corporate_event"
         recurring = "semi_recurring"

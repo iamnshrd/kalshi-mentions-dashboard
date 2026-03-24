@@ -16,9 +16,13 @@ CREATE TABLE IF NOT EXISTS markets (
     ticker TEXT,
     title TEXT,
     subtitle TEXT,
+    yes_sub_title TEXT,
+    no_sub_title TEXT,
     rules_primary TEXT,
     rules_secondary TEXT,
     status TEXT,
+    market_type TEXT,
+    series_ticker TEXT,
     open_time TEXT,
     close_time TEXT,
     created_time TEXT,
@@ -94,18 +98,22 @@ class Database:
             conn.execute(
                 """
                 INSERT INTO markets (
-                    market_id, event_ticker, ticker, title, subtitle, rules_primary,
-                    rules_secondary, status, open_time, close_time, created_time,
+                    market_id, event_ticker, ticker, title, subtitle, yes_sub_title, no_sub_title, rules_primary,
+                    rules_secondary, status, market_type, series_ticker, open_time, close_time, created_time,
                     updated_time, raw_json, first_seen_at, last_seen_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
                 ON CONFLICT(market_id) DO UPDATE SET
                     event_ticker=excluded.event_ticker,
                     ticker=excluded.ticker,
                     title=excluded.title,
                     subtitle=excluded.subtitle,
+                    yes_sub_title=excluded.yes_sub_title,
+                    no_sub_title=excluded.no_sub_title,
                     rules_primary=excluded.rules_primary,
                     rules_secondary=excluded.rules_secondary,
                     status=excluded.status,
+                    market_type=excluded.market_type,
+                    series_ticker=excluded.series_ticker,
                     open_time=excluded.open_time,
                     close_time=excluded.close_time,
                     created_time=excluded.created_time,
@@ -199,8 +207,5 @@ class Database:
             conn.execute(
                 "INSERT INTO poll_runs (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors) VALUES (?, ?, ?, ?, ?, ?)",
                 (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors),
-            )
-            conn.commit()
-kets_found, errors),
             )
             conn.commit()

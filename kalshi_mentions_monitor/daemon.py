@@ -8,6 +8,7 @@ from app.config import Settings
 from app.db import Database
 from app.kalshi_client import KalshiClient
 from app.service import KalshiMentionMonitorService
+from app.series_client import KalshiSeriesClient
 
 
 def main() -> None:
@@ -15,7 +16,8 @@ def main() -> None:
     settings.ensure_dirs()
     db = Database(settings.db_path)
     client = KalshiClient(settings.base_url, settings.api_key, settings.page_limit, settings.max_pages)
-    service = KalshiMentionMonitorService(client, db, settings.output_dir)
+    series_client = KalshiSeriesClient(settings.base_url, settings.page_limit)
+    service = KalshiMentionMonitorService(client, series_client, db, settings.output_dir)
 
     while True:
         try:

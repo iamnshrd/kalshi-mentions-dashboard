@@ -1,30 +1,49 @@
 from __future__ import annotations
 
 from dataclasses import asdict
-from datetime import datetime, UTC
+from datetime import UTC, datetime
 
 from .classifier import classify_market
 from .db import Database
-from .filtering import looks_like_mention_market
+from .filtering import score_market_for_mentions
 from .kalshi_client import KalshiClient
 from .recommender import build_recommendation
 from .reporter import write_reports
+from .series_client import KalshiSeriesClient
 
 
 class KalshiMentionMonitorService:
-    def __init__(self, client: KalshiClient, db: Database, output_dir):
+    def __init__(self, client: KalshiClient, series_client: KalshiSeriesClient, db: Database, output_dir):
         self.client = client
+        self.series_client = series_client
         self.db = db
         self.output_dir = output_dir
 
     def run_once(self) -> dict:
         started = datetime.now(UTC).isoformat()
-        markets = self.client.fetch_markets()
-        mention_candidates = [m for m in markets if looks_like_mention_market(m)]
+        mention_series = self.series_client.fetch_mention_series_tickers()
+        markets = []
+        seen_ids: set[str] = set()
+        for market in self.client.fetch_markets_for_series_bulk(mention_series):
+            if market.market_id in seen_ids:
+                continue
+            seen_ids.add(market.market_id)
+            markets.append(market)
+
+        scored = [(m, score_market_for_mentions(m)) for m in markets]
+        mention_candidates: list[tuple] = []
+        for market, heuristic in scored:
+            if market.series_ticker in mention_series:
+                heuristic.score += 10
+                heuristic.reasons.append("series_category_mentions+10")
+                heuristic.is_candidate = True
+            if heuristic.is_candidate:
+                mention_candidates.append((market, heuristic))
+
         new_market_ids: list[str] = []
         summaries: list[dict] = []
 
-        for market in mention_candidates:
+        for market, heuristic in mention_candidates:
             existed = self.db.market_exists(market.market_id)
             self.db.upsert_market(market)
             if existed:
@@ -35,16 +54,18 @@ class KalshiMentionMonitorService:
             self.db.upsert_recommendation(recommendation)
             md_path, json_path = write_reports(self.output_dir, market, classification, recommendation)
             new_market_ids.append(market.market_id)
-            summaries.append({
-                "market_id": market.market_id,
-                "title": market.title,
-                "heuristic_score": heuristic.score,
-                "heuristic_reasons": heuristic.reasons,
-                "classification": asdict(classification),
-                "recommendation": asdict(recommendation),
-                "markdown_path": str(md_path),
-                "json_path": str(json_path),
-            })
+            summaries.append(
+                {
+                    "market_id": market.market_id,
+                    "title": market.title,
+                    "heuristic_score": heuristic.score,
+                    "heuristic_reasons": heuristic.reasons,
+                    "classification": asdict(classification),
+                    "recommendation": asdict(recommendation),
+                    "markdown_path": str(md_path),
+                    "json_path": str(json_path),
+                }
+            )
 
         finished = datetime.now(UTC).isoformat()
         self.db.log_poll_run(started, finished, len(markets), len(mention_candidates), len(new_market_ids), "")
