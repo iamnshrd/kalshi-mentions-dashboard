@@ -119,9 +119,13 @@ class Database:
                     market.ticker,
                     market.title,
                     market.subtitle,
+                    market.yes_sub_title,
+                    market.no_sub_title,
                     market.rules_primary,
                     market.rules_secondary,
                     market.status,
+                    market.market_type,
+                    market.series_ticker,
                     market.open_time,
                     market.close_time,
                     market.created_time,
@@ -195,5 +199,8 @@ class Database:
             conn.execute(
                 "INSERT INTO poll_runs (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors) VALUES (?, ?, ?, ?, ?, ?)",
                 (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors),
+            )
+            conn.commit()
+kets_found, errors),
             )
             conn.commit()

@@ -11,9 +11,13 @@ class NormalizedMarket:
     ticker: str
     title: str
     subtitle: str
+    yes_sub_title: str
+    no_sub_title: str
     rules_primary: str
     rules_secondary: str
     status: str
+    market_type: str
+    series_ticker: str
     open_time: str
     close_time: str
     created_time: str

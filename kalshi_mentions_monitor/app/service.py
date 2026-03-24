@@ -38,6 +38,8 @@ class KalshiMentionMonitorService:
             summaries.append({
                 "market_id": market.market_id,
                 "title": market.title,
+                "heuristic_score": heuristic.score,
+                "heuristic_reasons": heuristic.reasons,
                 "classification": asdict(classification),
                 "recommendation": asdict(recommendation),
                 "markdown_path": str(md_path),
