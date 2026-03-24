@@ -140,9 +140,21 @@ def write_event_summary(output_dir: Path, summary: dict) -> tuple[Path, Path]:
         '## Trader live focus',
         f"- {summary['live_focus']}",
         '',
-        '## Pre-event prep',
+        '## Context checks',
     ]
+    lines.extend([f'- {x}' for x in summary['context_checks']])
+    lines.extend(['', '## Likely hooks'])
+    lines.extend([f'- {x}' for x in summary['likely_hooks']])
+    lines.extend(['', '## Context notes'])
+    lines.extend([f'- {x}' for x in summary['context_notes']])
+    lines.extend(['', '## Pre-event prep'])
     lines.extend([f'- {x}' for x in summary['pre_event_summary']])
+    lines.extend(['', '## Opening plan'])
+    lines.extend([f'- {x}' for x in summary['opening_plan']])
+    lines.extend(['', '## Post-opening plan'])
+    lines.extend([f'- {x}' for x in summary['post_opening_plan']])
+    lines.extend(['', '## Q&A transition plan'])
+    lines.extend([f'- {x}' for x in summary['qa_transition_plan']])
     lines.extend(['', '## Live trading guidance'])
     lines.extend([f'- {x}' for x in summary['live_trading_summary']])
     lines.extend(['', '## Risk notes'])
