@@ -9,14 +9,14 @@
       "open_time": "2026-03-23T03:00:00Z",
       "close_time": "2026-06-30T14:00:00Z",
       "market_count": 9,
-      "dominant_group": "earnings_or_corporate_mentions",
-      "dominant_subtype": "earnings_call",
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nfl_announcer_market",
       "dominant_rules_risk": "medium",
       "speaker": "aar corp.",
-      "format_confidence": 0.9,
-      "prep_focus": "Раздели prepared remarks и analyst Q&A ещё до события.",
-      "live_focus": "После prepared remarks быстро пересмотри Q&A-heavy страйки.",
-      "priority": "normal",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
       "strike_codes": [
         "Aircraft Reconfig",
         "Delta",
@@ -35,57 +35,57 @@
       "strike_intel": {
         "structural": [],
         "qa_sensitive": [],
-        "contextual": [
+        "contextual": [],
+        "game_state_sensitive": [
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
             "label": "Aircraft Reconfig",
             "short_label": "AIRC",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
             "label": "Delta",
             "short_label": "DELT",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-HEAD",
             "label": "Headwind",
             "short_label": "HEAD",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
             "label": "Iran",
             "short_label": "IRAN",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
             "label": "Oil",
             "short_label": "OIL",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
             "label": "Oklahoma City",
             "short_label": "OKLA",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
             "label": "Otto",
             "short_label": "OTTO",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-TARI",
             "label": "Tariff",
             "short_label": "TARI",
-            "note": "needs quarter-specific context · context"
+            "note": "broadcast-flow dependent · live"
           }
         ],
-        "game_state_sensitive": [],
         "likely_trap": [
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-SHUT",
@@ -100,166 +100,177 @@
           "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
           "label": "Aircraft Reconfig",
           "short_label": "AIRC",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
             "label": "AIRC",
             "display_label": "Aircraft Reconfig",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
           "label": "Delta",
           "short_label": "DELT",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
             "label": "DELT",
             "display_label": "Delta",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 54.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-HEAD",
           "label": "Headwind",
           "short_label": "HEAD",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-HEAD",
             "label": "HEAD",
             "display_label": "Headwind",
-            "score": -2,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 37.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
+              "страйк чувствителен к ходу трансляции",
               "скорее мусорный страйк без явного edge"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           },
-          "phase_fit": "q&a-watch",
+          "phase_fit": "mixed",
           "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
           "label": "Iran",
           "short_label": "IRAN",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
           "label": "Oil",
           "short_label": "OIL",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 31.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
           "label": "Oklahoma City",
           "short_label": "OKLA",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
             "label": "OKLA",
             "display_label": "Oklahoma City",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "страйк чувствителен к ходу трансляции"
             ],
-            "status_class": "status-red",
-            "type_class": "type-gray"
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "manual only"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
           "label": "Otto",
           "short_label": "OTTO",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
             "label": "OTTO",
             "display_label": "Otto",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 55.00000000000001,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-SHUT",
@@ -274,25 +285,25 @@
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 8.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "есть дополнительный риск из-за формулировки или конструкции страйка",
-              "cheap tail"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-red"
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
-          "attention_allocation": "pass"
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMENTIONEARNAIR-26MAR24-TARI",
           "label": "Tariff",
           "short_label": "TARI",
-          "note": "needs quarter-specific context · context",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMENTIONEARNAIR-26MAR24-TARI",
             "label": "TARI",
@@ -300,297 +311,277 @@
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-gray"
+            "type_class": "type-green"
           },
-          "phase_fit": "q&a-watch",
+          "phase_fit": "game-state-sensitive",
           "attention_allocation": "phase watch"
         }
       ],
       "context_checks": [
-        "Проверь последний earnings transcript и investor materials.",
-        "Отметь темы, которые likely script-driven, и темы, которые скорее всплывут только в analyst Q&A.",
-        "Смотри свежие company-specific catalysts: downgrade, product issue, layoffs, guidance pressure."
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven."
       ],
       "likely_hooks": [
-        "scripted guidance",
-        "analyst follow-up",
-        "current quarter issue"
+        "replay sequence",
+        "close game script",
+        "blowout yap risk"
       ],
       "context_notes": [
-        "Для earnings history полезна, но без quarter-specific context легко даёт ложную уверенность.",
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Assume mixed format by default: prepared remarks first, analyst Q&A second."
       ],
       "opening_plan": [
-        "В prepared remarks ищи management-script phrases и baseline guidance language.",
-        "Не делай вывод, что unsaid strike dead, пока не понял, живёт ли он в analyst Q&A."
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
       ],
       "post_opening_plan": [
-        "Сразу после prepared remarks пересчитай Q&A-only fair values для analyst-driven strikes.",
-        "Если call unusually short, режь Q&A-sensitive tails сильнее."
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
       ],
       "qa_transition_plan": [
-        "Во время analyst Q&A повышай вес current-quarter issue strikes и follow-up dependent language.",
-        "Если вопросы мягкие, не overpay за Q&A-sensitive yeses."
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
       ],
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-TARI",
-            "label": "TARI",
-            "display_label": "Tariff",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
             "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
             "label": "AIRC",
             "display_label": "Aircraft Reconfig",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
             "label": "DELT",
             "display_label": "Delta",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 54.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 31.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          }
-        ],
-        "cheap_watchlist": [],
-        "likely_overreactions": [
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
             "label": "OKLA",
             "display_label": "Oklahoma City",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rich for weak setup"
+              "страйк чувствителен к ходу трансляции"
             ],
-            "status_class": "status-red",
-            "type_class": "type-gray"
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           }
         ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
-            "label": "AIRC",
-            "display_label": "Aircraft Reconfig",
+            "market_id": "KXMENTIONEARNAIR-26MAR24-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
             "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
           },
           {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
-            "label": "DELT",
-            "display_label": "Delta",
-            "score": 0,
+            "market_id": "KXMENTIONEARNAIR-26MAR24-HEAD",
+            "label": "HEAD",
+            "display_label": "Headwind",
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 54.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
-            "label": "IRAN",
-            "display_label": "Iran",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
-            "label": "OIL",
-            "display_label": "Oil",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 31.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
-            "label": "OTTO",
-            "display_label": "Otto",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 55.00000000000001,
-            "price_bucket": "mid",
-            "reasons": [],
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
+            ],
             "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ],
         "full_ranking": [
           {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
+            "label": "AIRC",
+            "display_label": "Aircraft Reconfig",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
+            "label": "DELT",
+            "display_label": "Delta",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
+            "label": "OKLA",
+            "display_label": "Oklahoma City",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
+            "label": "OTTO",
+            "display_label": "Otto",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXMENTIONEARNAIR-26MAR24-TARI",
             "label": "TARI",
             "display_label": "Tariff",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-AIRC",
-            "label": "AIRC",
-            "display_label": "Aircraft Reconfig",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 61.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-DELT",
-            "label": "DELT",
-            "display_label": "Delta",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 54.0,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-IRAN",
-            "label": "IRAN",
-            "display_label": "Iran",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 24.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-OIL",
-            "label": "OIL",
-            "display_label": "Oil",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 31.0,
-            "price_bucket": "mid_tail",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-OTTO",
-            "label": "OTTO",
-            "display_label": "Otto",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "generic",
-            "yes_reference_price": 55.00000000000001,
-            "price_bucket": "mid",
-            "reasons": [],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
+            "type_class": "type-green"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-SHUT",
@@ -599,87 +590,70 @@
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 8.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "есть дополнительный риск из-за формулировки или конструкции страйка",
-              "cheap tail"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-red"
+            "type_class": "type-green"
           },
           {
             "market_id": "KXMENTIONEARNAIR-26MAR24-HEAD",
             "label": "HEAD",
             "display_label": "Headwind",
-            "score": -2,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 37.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
+              "страйк чувствителен к ходу трансляции",
               "скорее мусорный страйк без явного edge"
             ],
             "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMENTIONEARNAIR-26MAR24-OKLA",
-            "label": "OKLA",
-            "display_label": "Oklahoma City",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "generic",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "rich for weak setup"
-            ],
-            "status_class": "status-red",
             "type_class": "type-gray"
           }
         ]
       },
       "pre_event_summary": [
-        "Посмотри 4–8 релевантных прошлых calls и раздели recurring phrases между prepared remarks и analyst Q&A.",
-        "Не используй сырые transcript frequencies без сегментации по quarter и типу события."
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
       ],
       "live_trading_summary": [
-        "После prepared remarks полностью перепрайсь Q&A-heavy strikes.",
-        "Отсутствие слова в script не убивает Q&A-dependent strike автоматически."
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
       ],
       "risk_summary": [
-        "Средняя зависимость от контекста, но высокая чувствительность к сегментации prepared vs Q&A.",
-        "Ошибки часто идут от грубого использования истории без event-specific поправок."
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
       ],
       "manual_trader_prompts": [
-        "Проверь последний earnings transcript и investor materials.",
-        "Отметь темы, которые likely script-driven, и темы, которые скорее всплывут только в analyst Q&A.",
-        "Смотри свежие company-specific catalysts: downgrade, product issue, layoffs, guidance pressure.",
-        "В prepared remarks ищи management-script phrases и baseline guidance language.",
-        "Не делай вывод, что unsaid strike dead, пока не понял, живёт ли он в analyst Q&A.",
-        "Во время analyst Q&A повышай вес current-quarter issue strikes и follow-up dependent language.",
-        "Если вопросы мягкие, не overpay за Q&A-sensitive yeses.",
-        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
       ],
       "relevant_history_notes": [
-        "Смотри не все earnings calls подряд, а same-company и по возможности same-quarter / same-setup samples.",
-        "Отдельно разделяй prepared remarks history и analyst Q&A history.",
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
         "Для earnings call baseline строится отдельно по prepared remarks и отдельно по Q&A."
       ],
       "consensus_misread": [
-        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase.",
-        "Рынок может смешивать prepared-remarks words и analyst-Q&A words в один bucket.",
-        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
       ],
       "semantic_families": [],
       "attention_allocation": {
-        "prep_allocation": "full prep",
-        "live_allocation": "phase monitor",
-        "summary": "Подготовка особенно важна; в лайве критичен переход prepared remarks → Q&A."
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве."
       },
       "transcript_matches": [],
       "slug": "aar-corp-their-next-earnings-call"
@@ -13396,9 +13370,9 @@
       "event_title": "Melania Trump — Opening Remarks at the Fostering the Future Together Global Coalition Summit",
       "event_ticker": "KXMELANIAMENTION-26MAR24",
       "series_ticker": "",
-      "status": "active",
+      "status": "finalized",
       "open_time": "2026-03-24T04:00:00Z",
-      "close_time": "2026-03-25T14:00:00Z",
+      "close_time": "2026-03-24T15:05:01Z",
       "market_count": 15,
       "dominant_group": "political_mentions",
       "dominant_subtype": "speech",
@@ -13541,21 +13515,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": -5,
+            "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "odd tail",
-              "rich tail"
+              "odd tail"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "only-alive-if-topic-breaks",
-          "attention_allocation": "manual only"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMELANIAMENTION-26MAR24-BARR",
@@ -13571,8 +13544,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 12.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -13596,8 +13569,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -13617,21 +13590,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-CHIL",
             "label": "CHIL",
             "display_label": "Children",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "rich exact-token"
+              "baseline basket"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "opening-heavy",
-          "attention_allocation": "manual only"
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXMELANIAMENTION-26MAR24-DONA",
@@ -13647,8 +13619,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -13668,21 +13640,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-ECON",
             "label": "ECON",
             "display_label": "Economy / Economic",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "opening-heavy",
-          "attention_allocation": "core watch"
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXMELANIAMENTION-26MAR24-HIST",
@@ -13694,15 +13665,14 @@
             "market_id": "KXMELANIAMENTION-26MAR24-HIST",
             "label": "HIST",
             "display_label": "History / Historic",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 47.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -13724,8 +13694,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -13745,15 +13715,14 @@
             "market_id": "KXMELANIAMENTION-26MAR24-LEAD",
             "label": "LEAD",
             "display_label": "Lead / Leader / Leadership",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 69.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -13775,8 +13744,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "служебный",
             "strike_type": "nqe",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "service-only"
             ],
@@ -13796,21 +13765,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-PEAC",
             "label": "PEAC",
             "display_label": "Peace",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 26.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "opening-heavy",
-          "attention_allocation": "core watch"
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXMELANIAMENTION-26MAR24-PRIV",
@@ -13822,15 +13790,14 @@
             "market_id": "KXMELANIAMENTION-26MAR24-PRIV",
             "label": "PRIV",
             "display_label": "Privacy / Security",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 46.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -13848,21 +13815,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-SAFE",
             "label": "SAFE",
             "display_label": "Safe / Safer / Safety",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "rich exact-token"
+              "baseline basket"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "opening-heavy",
-          "attention_allocation": "manual only"
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXMELANIAMENTION-26MAR24-SCHO",
@@ -13874,15 +13840,14 @@
             "market_id": "KXMELANIAMENTION-26MAR24-SCHO",
             "label": "SCHO",
             "display_label": "School",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 39.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -13900,21 +13865,20 @@
             "market_id": "KXMELANIAMENTION-26MAR24-TAKE",
             "label": "TAKE",
             "display_label": "Take It Down",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 21.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "opening-heavy",
-          "attention_allocation": "core watch"
+          "attention_allocation": "secondary watch"
         }
       ],
       "context_checks": [
@@ -13945,69 +13909,49 @@
       "strike_priority": {
         "top_watchlist": [
           {
+            "market_id": "KXMELANIAMENTION-26MAR24-CHIL",
+            "label": "CHIL",
+            "display_label": "Children",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
             "market_id": "KXMELANIAMENTION-26MAR24-ECON",
             "label": "ECON",
             "display_label": "Economy / Economic",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-PEAC",
-            "label": "PEAC",
-            "display_label": "Peace",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 26.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-TAKE",
-            "label": "TAKE",
-            "display_label": "Take It Down",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 21.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXMELANIAMENTION-26MAR24-HIST",
             "label": "HIST",
             "display_label": "History / Historic",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 47.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -14016,127 +13960,54 @@
             "market_id": "KXMELANIAMENTION-26MAR24-LEAD",
             "label": "LEAD",
             "display_label": "Lead / Leader / Leadership",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 69.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-blue"
-          }
-        ],
-        "cheap_watchlist": [
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-ECON",
-            "label": "ECON",
-            "display_label": "Economy / Economic",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXMELANIAMENTION-26MAR24-PEAC",
             "label": "PEAC",
             "display_label": "Peace",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 26.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-TAKE",
-            "label": "TAKE",
-            "display_label": "Take It Down",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 21.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           }
         ],
-        "likely_overreactions": [
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-CHIL",
-            "label": "CHIL",
-            "display_label": "Children",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "baseline basket",
-              "rich exact-token"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-SAFE",
-            "label": "SAFE",
-            "display_label": "Safe / Safer / Safety",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "baseline basket",
-              "rich exact-token"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
           {
             "market_id": "KXMELANIAMENTION-26MAR24-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": -5,
+            "score": -3,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "odd tail",
-              "rich tail"
+              "odd tail"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
-          }
-        ],
-        "low_priority_strikes": [
+          },
           {
             "market_id": "KXMELANIAMENTION-26MAR24-BARR",
             "label": "BARR",
@@ -14145,8 +14016,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 12.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14161,8 +14032,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14177,8 +14048,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14193,97 +14064,60 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-AI",
-            "label": "AI",
-            "display_label": "AI / Artificial Intelligence",
-            "score": -5,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "odd tail",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "odd tail",
-              "rich tail"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-gray"
           }
         ],
         "full_ranking": [
           {
+            "market_id": "KXMELANIAMENTION-26MAR24-CHIL",
+            "label": "CHIL",
+            "display_label": "Children",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
             "market_id": "KXMELANIAMENTION-26MAR24-ECON",
             "label": "ECON",
             "display_label": "Economy / Economic",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "cheap"
+              "baseline basket"
             ],
-            "status_class": "status-green",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-PEAC",
-            "label": "PEAC",
-            "display_label": "Peace",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 26.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-TAKE",
-            "label": "TAKE",
-            "display_label": "Take It Down",
-            "score": 5,
-            "priority_band": "проверить сначала",
-            "edge_tag": "стоит проверить",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 21.0,
-            "price_bucket": "mid_tail",
-            "reasons": [
-              "baseline basket",
-              "cheap"
-            ],
-            "status_class": "status-green",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXMELANIAMENTION-26MAR24-HIST",
             "label": "HIST",
             "display_label": "History / Historic",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 47.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -14292,15 +14126,30 @@
             "market_id": "KXMELANIAMENTION-26MAR24-LEAD",
             "label": "LEAD",
             "display_label": "Lead / Leader / Leadership",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 69.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR24-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -14309,15 +14158,30 @@
             "market_id": "KXMELANIAMENTION-26MAR24-PRIV",
             "label": "PRIV",
             "display_label": "Privacy / Security",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 46.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR24-SAFE",
+            "label": "SAFE",
+            "display_label": "Safe / Safer / Safety",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -14326,52 +14190,49 @@
             "market_id": "KXMELANIAMENTION-26MAR24-SCHO",
             "label": "SCHO",
             "display_label": "School",
-            "score": 4,
+            "score": 3,
             "priority_band": "проверить после",
             "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 39.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "workable price"
+              "baseline basket"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMELANIAMENTION-26MAR24-CHIL",
-            "label": "CHIL",
-            "display_label": "Children",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "market_id": "KXMELANIAMENTION-26MAR24-TAKE",
+            "label": "TAKE",
+            "display_label": "Take It Down",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "baseline speech",
-            "yes_reference_price": 96.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "rich exact-token"
+              "baseline basket"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMELANIAMENTION-26MAR24-SAFE",
-            "label": "SAFE",
-            "display_label": "Safe / Safer / Safety",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
-            "strike_type": "baseline speech",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
+            "market_id": "KXMELANIAMENTION-26MAR24-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "baseline basket",
-              "rich exact-token"
+              "odd tail"
             ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMELANIAMENTION-26MAR24-BARR",
@@ -14381,8 +14242,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 12.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14397,8 +14258,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14413,8 +14274,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
@@ -14429,29 +14290,12 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 6.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "odd tail"
             ],
             "status_class": "status-gray",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXMELANIAMENTION-26MAR24-AI",
-            "label": "AI",
-            "display_label": "AI / Artificial Intelligence",
-            "score": -5,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "odd tail",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "odd tail",
-              "rich tail"
-            ],
-            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
@@ -14462,8 +14306,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "служебный",
             "strike_type": "nqe",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "service-only"
             ],
