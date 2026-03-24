@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
-from app.config import Settings
-from app.db import Database
-from app.kalshi_client import KalshiClient
-from app.service import KalshiMentionMonitorService
-from app.series_client import KalshiSeriesClient
+from kalshi_mentions_monitor.app.config import Settings
+from kalshi_mentions_monitor.app.db import Database
+from kalshi_mentions_monitor.app.kalshi_client import KalshiClient
+from kalshi_mentions_monitor.app.series_client import KalshiSeriesClient
+from kalshi_mentions_monitor.app.service import KalshiMentionMonitorService
 
 
 def main() -> None:

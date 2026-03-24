@@ -7,6 +7,7 @@ import re
 
 from .grouping import EventGroup
 from .models import Classification, Recommendation
+from .strike_intel import build_strike_intel
 
 
 def _strike_label(market_id: str) -> str:
