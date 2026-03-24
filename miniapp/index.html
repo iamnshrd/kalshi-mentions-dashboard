@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mentions Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --card: #141a2e;
+      --border: #23304f;
+      --text: #e7ecf5;
+      --muted: #9fb0cf;
+      --green: #183824;
+      --green-text: #9af0b6;
+      --yellow: #433515;
+      --yellow-text: #ffd86b;
+      --red: #4a1f1f;
+      --red-text: #ff9b9b;
+      --gray: #2a3142;
+      --gray-text: #b8c3db;
+      --blue: #172f56;
+      --blue-text: #9fcbff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    .app { max-width: 720px; margin: 0 auto; padding: 14px 14px 32px; }
+    .top { position: sticky; top: 0; z-index: 5; background: linear-gradient(180deg, rgba(11,16,32,.98), rgba(11,16,32,.92)); backdrop-filter: blur(8px); padding: 8px 0 12px; }
+    h1,h2,h3,p { margin: 0; }
+    .muted { color: var(--muted); }
+    .search { margin-top: 10px; width: 100%; background: #10182d; color: var(--text); border: 1px solid var(--border); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+    .list, .detail { display: grid; gap: 12px; margin-top: 14px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+    .event-card { cursor: pointer; }
+    .title { font-size: 18px; font-weight: 700; line-height: 1.2; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; background: var(--gray); color: var(--gray-text); font-size: 12px; }
+    .pill.green { background: var(--green); color: var(--green-text); }
+    .pill.yellow { background: var(--yellow); color: var(--yellow-text); }
+    .pill.red { background: var(--red); color: var(--red-text); }
+    .pill.blue { background: var(--blue); color: var(--blue-text); }
+    .section-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat { background: #10182d; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+    .market { padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .market:last-child { border-bottom: 0; }
+    .market-title { font-weight: 700; }
+    .market-note { color: var(--muted); margin-top: 4px; font-size: 14px; }
+    .back { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); background: #10182d; color: var(--text); border-radius: 12px; padding: 10px 12px; cursor: pointer; }
+    .hidden { display: none !important; }
+    .kv { display: grid; gap: 6px; margin-top: 8px; }
+    .kv div { color: var(--muted); }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div id="listView">
+      <div class="top">
+        <h1>Mentions Mini App</h1>
+        <p class="muted">События и быстрый разбор внутри Telegram.</p>
+        <input id="search" class="search" placeholder="Поиск по событию, спикеру, группе..." />
+      </div>
+      <div id="eventsCount" class="muted" style="margin-top:12px"></div>
+      <div id="eventsList" class="list"></div>
+    </div>
+    <div id="detailView" class="hidden">
+      <div class="top">
+        <button id="backBtn" class="back">← Назад</button>
+      </div>
+      <div id="detail" class="detail"></div>
+    </div>
+  </div>
+<script>
+const tg = window.Telegram?.WebApp;
+if (tg) {
+  tg.ready();
+  tg.expand();
+  tg.setHeaderColor('#0b1020');
+  tg.setBackgroundColor('#0b1020');
+}
+
+const state = { events: [], filtered: [], current: null };
+
+function esc(s) {
+  return String(s ?? '-').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+function pillClass(priority) {
+  const p = String(priority || '').toLowerCase();
+  if (p.includes('high') || p.includes('сначала')) return 'green';
+  if (p.includes('после') || p.includes('норм')) return 'yellow';
+  if (p.includes('осторож') || p.includes('red')) return 'red';
+  return 'blue';
+}
+function renderEventCard(item) {
+  const top = (item.strike_priority?.top_watchlist || []).slice(0,3).map(x => x.display_label || x.label).join(', ') || '—';
+  const prep = item.attention_allocation?.prep_allocation || '-';
+  const live = item.attention_allocation?.live_allocation || '-';
+  return `<div class="card event-card" data-slug="${esc(item.slug)}">
+    <div class="title">${esc(item.event_title)}</div>
+    <div class="row">
+      <span class="pill blue">${esc(item.dominant_group)}</span>
+      <span class="pill blue">${esc(item.dominant_subtype)}</span>
+      <span class="pill ${pillClass(item.priority)}">${esc(item.priority)}</span>
+    </div>
+    <div class="kv">
+      <div>Спикер: <strong>${esc(item.speaker)}</strong></div>
+      <div>Страйков: <strong>${esc(item.market_count)}</strong></div>
+      <div>Prep: <strong>${esc(prep)}</strong> · Live: <strong>${esc(live)}</strong></div>
+      <div>Смотреть первым: <strong>${esc(top)}</strong></div>
+    </div>
+  </div>`;
+}
+function renderMarket(item) {
+  const rank = item.rank || {};
+  return `<div class="market">
+    <div class="market-title">${esc(item.label)}</div>
+    <div class="market-note">${esc(item.note || '-')}</div>
+    <div class="row">
+      <span class="pill blue">${esc(rank.strike_type || '-')}</span>
+      <span class="pill ${pillClass(rank.priority_band)}">${esc(rank.priority_band || '-')}</span>
+      <span class="pill ${pillClass(rank.edge_tag)}">${esc(rank.edge_tag || '-')}</span>
+    </div>
+  </div>`;
+}
+function renderRank(items) {
+  if (!items || !items.length) return '<div class="muted">—</div>';
+  return items.slice(0,5).map(item => `<div class="market"><div class="market-title">${esc(item.display_label || item.label)}</div><div class="market-note">${esc((item.reasons || []).join(' · ') || '—')}</div></div>`).join('');
+}
+function showList() {
+  document.getElementById('detailView').classList.add('hidden');
+  document.getElementById('listView').classList.remove('hidden');
+  if (tg?.BackButton) tg.BackButton.hide();
+  history.replaceState({}, '', './index.html');
+}
+function showDetail(slug) {
+  const item = state.events.find(x => x.slug === slug);
+  if (!item) return;
+  state.current = item;
+  document.getElementById('listView').classList.add('hidden');
+  document.getElementById('detailView').classList.remove('hidden');
+  if (tg?.BackButton) { tg.BackButton.show(); tg.BackButton.onClick(showList); }
+  history.replaceState({}, '', `./index.html#${encodeURIComponent(slug)}`);
+  const markets = (item.strike_analyses || []).map(renderMarket).join('');
+  document.getElementById('detail').innerHTML = `
+    <div class="card">
+      <div class="title">${esc(item.event_title)}</div>
+      <div class="row">
+        <span class="pill blue">${esc(item.dominant_group)}</span>
+        <span class="pill blue">${esc(item.dominant_subtype)}</span>
+        <span class="pill ${pillClass(item.priority)}">${esc(item.priority)}</span>
+      </div>
+      <div class="kv">
+        <div>Спикер: <strong>${esc(item.speaker)}</strong></div>
+        <div>Страйков: <strong>${esc(item.market_count)}</strong></div>
+        <div>Prep: <strong>${esc(item.attention_allocation?.prep_allocation || '-')}</strong></div>
+        <div>Live: <strong>${esc(item.attention_allocation?.live_allocation || '-')}</strong></div>
+      </div>
+    </div>
+    <div class="card"><div class="section-title">С чего начать</div><div class="muted">${esc(item.prep_focus || '-')}</div></div>
+    <div class="card"><div class="section-title">Страйки события</div>${markets || '<div class="muted">—</div>'}</div>
+    <div class="card"><div class="section-title">Что проверить первым</div>${renderRank(item.strike_priority?.top_watchlist)}</div>
+    <div class="card"><div class="section-title">Где рынок может ошибаться</div><ul>${(item.consensus_misread || []).map(x => `<li>${esc(x)}</li>`).join('') || '<li>—</li>'}</ul></div>
+    <div class="card"><div class="section-title">Opening / Q&A план</div><ul>${(item.opening_plan || []).slice(0,2).map(x => `<li>${esc(x)}</li>`).join('')}</ul><ul>${(item.qa_transition_plan || []).slice(0,2).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+  `;
+}
+function applyFilter(q) {
+  const query = String(q || '').toLowerCase().trim();
+  state.filtered = !query ? [...state.events] : state.events.filter(item => {
+    const hay = [item.event_title, item.speaker, item.dominant_group, item.dominant_subtype, ...(item.strike_codes || [])].join(' ').toLowerCase();
+    return hay.includes(query);
+  });
+  document.getElementById('eventsCount').textContent = `Событий: ${state.filtered.length}`;
+  document.getElementById('eventsList').innerHTML = state.filtered.map(renderEventCard).join('') || '<div class="card muted">Ничего не найдено.</div>';
+  document.querySelectorAll('.event-card').forEach(el => el.addEventListener('click', () => showDetail(el.dataset.slug)));
+}
+async function boot() {
+  const res = await fetch('./data/events.json');
+  const data = await res.json();
+  state.events = data.events || [];
+  applyFilter('');
+  const hash = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  if (hash) showDetail(hash);
+}
+document.getElementById('search').addEventListener('input', (e) => applyFilter(e.target.value));
+document.getElementById('backBtn').addEventListener('click', showList);
+boot();
+</script>
+</body>
+</html>
