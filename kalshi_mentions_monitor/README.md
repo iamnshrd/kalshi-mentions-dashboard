@@ -28,6 +28,8 @@ MVP service that polls Kalshi every 5 minutes, detects new mention-like markets,
 ```bash
 python3 kalshi_mentions_monitor/run_once.py
 python3 kalshi_mentions_monitor/daemon.py
+python3 kalshi_mentions_monitor/health_check.py
+python3 kalshi_mentions_monitor/tests/run_tests.py
 ```
 
 Environment variables:
