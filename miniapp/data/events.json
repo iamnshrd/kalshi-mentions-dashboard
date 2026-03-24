@@ -19159,14 +19159,15 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 59.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -19236,14 +19237,15 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 50.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -19286,7 +19288,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19312,20 +19314,21 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR25ATLDET-OVER",
@@ -19362,7 +19365,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19388,20 +19391,21 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 17.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
@@ -19413,7 +19417,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19464,7 +19468,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -19617,57 +19621,6 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 70.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 87.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-CROW",
             "label": "CROW",
             "display_label": "Crowd / Crowded",
@@ -19685,18 +19638,69 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-TRAD",
-            "label": "TRAD",
-            "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 70.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 87.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 83.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
+            "yes_reference_price": 1.0,
+            "price_bucket": "cheap_tail",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
@@ -19720,10 +19724,27 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 87.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19740,7 +19761,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19757,7 +19778,7 @@
             "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -19766,23 +19787,6 @@
             "reasons": [
               "narrative tag",
               "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 87.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "broadcast filler",
-              "easy overprice"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -19902,22 +19906,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 59.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-ELBO",
             "label": "ELBO",
             "display_label": "Elbow",
@@ -19952,17 +19940,35 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 59.0,
+            "price_bucket": "mid",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 50.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -19984,57 +19990,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 70.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 87.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-CROW",
             "label": "CROW",
             "display_label": "Crowd / Crowded",
@@ -20052,42 +20007,95 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 70.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 87.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25ATLDET-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 83.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 17.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR25ATLDET-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -20443,14 +20451,15 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 63.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -20520,7 +20529,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20572,7 +20581,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20598,20 +20607,21 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR25DENPHX-OVER",
@@ -20648,7 +20658,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20674,20 +20684,21 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 18.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
@@ -20699,7 +20710,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20750,7 +20761,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -20904,10 +20915,27 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 82.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20924,7 +20952,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20941,7 +20969,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20958,7 +20986,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -20967,23 +20995,6 @@
             "reasons": [
               "narrative tag",
               "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "broadcast filler",
-              "easy overprice"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -20991,10 +21002,27 @@
         ],
         "low_priority_strikes": [
           {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 82.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21011,7 +21039,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21020,6 +21048,23 @@
             "reasons": [
               "narrative tag",
               "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-MORT",
+            "label": "MORT",
+            "display_label": "Mortgage Matchup",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 89.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast sensitive",
+              "rich price"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -21028,7 +21073,7 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21037,40 +21082,6 @@
             "reasons": [
               "narrative tag",
               "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "broadcast filler",
-              "easy overprice"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -21174,22 +21185,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 63.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-ELBO",
             "label": "ELBO",
             "display_label": "Elbow",
@@ -21241,10 +21236,44 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 63.0,
+            "price_bucket": "mid",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 82.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21261,66 +21290,15 @@
             "market_id": "KXNBAMENTION-26MAR25DENPHX-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 82.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 88.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR25DENPHX-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
             "score": -1,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 82.0,
             "price_bucket": "rich",
             "reasons": [
-              "broadcast filler",
-              "easy overprice"
+              "narrative tag",
+              "headline overread"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -21343,42 +21321,78 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 91.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR25DENPHX-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 88.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 18.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR25DENPHX-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -21764,7 +21778,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21842,7 +21856,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21868,7 +21882,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21894,7 +21908,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -21946,7 +21960,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -21972,7 +21986,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -21998,7 +22012,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22050,7 +22064,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -22209,10 +22223,44 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-AMAA",
+            "label": "AMAA",
+            "display_label": "American Airlines",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22229,7 +22277,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22246,41 +22294,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22296,10 +22310,44 @@
         ],
         "low_priority_strikes": [
           {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-AMAA",
+            "label": "AMAA",
+            "display_label": "American Airlines",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22316,7 +22364,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22333,41 +22381,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -22536,91 +22550,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-JORD",
-            "label": "JORD",
-            "display_label": "Jordan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24GSWDAL-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-AMAA",
             "label": "AMAA",
             "display_label": "American Airlines",
@@ -22655,10 +22584,95 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24GSWDAL-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -22675,7 +22689,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -22692,7 +22706,7 @@
             "market_id": "KXNBAMENTION-26MAR24GSWDAL-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -23048,14 +23062,15 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 62.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -23125,7 +23140,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23151,14 +23166,15 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 64.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -23176,20 +23192,21 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR26HOUMIN-OVER",
@@ -23226,7 +23243,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23252,20 +23269,21 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 22.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
@@ -23277,7 +23295,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23354,7 +23372,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -23507,57 +23525,6 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-JORD",
-            "label": "JORD",
-            "display_label": "Jordan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 70.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 80.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-CROW",
             "label": "CROW",
             "display_label": "Crowd / Crowded",
@@ -23575,18 +23542,69 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-TRAD",
-            "label": "TRAD",
-            "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 70.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 89.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 80.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
+            "yes_reference_price": 1.0,
+            "price_bucket": "cheap_tail",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
@@ -23594,10 +23612,27 @@
         ],
         "low_priority_strikes": [
           {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 86.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23614,7 +23649,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23631,7 +23666,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23640,23 +23675,6 @@
             "reasons": [
               "narrative tag",
               "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 86.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "broadcast filler",
-              "easy overprice"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -23793,22 +23811,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 62.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-ELBO",
             "label": "ELBO",
             "display_label": "Elbow",
@@ -23843,26 +23845,61 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 62.0,
+            "price_bucket": "mid",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 64.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26HOUMIN-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 86.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
             "type_class": "type-green"
           },
           {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23879,7 +23916,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23896,7 +23933,7 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -23905,23 +23942,6 @@
             "reasons": [
               "narrative tag",
               "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26HOUMIN-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 86.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "broadcast filler",
-              "easy overprice"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -23947,39 +23967,41 @@
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 22.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR26HOUMIN-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -29542,7 +29564,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -29620,7 +29642,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -29646,7 +29668,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -29672,20 +29694,21 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR26NYKCHA-OVER",
@@ -29723,7 +29746,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -29749,7 +29772,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -29775,7 +29798,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -29852,7 +29875,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -30006,10 +30029,27 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 82.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -30026,7 +30066,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -30043,7 +30083,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -30060,29 +30100,12 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 83.0,
             "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 95.0,
-            "price_bucket": "very_rich",
             "reasons": [
               "narrative tag",
               "headline overread"
@@ -30093,10 +30116,43 @@
         ],
         "low_priority_strikes": [
           {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-SPEC",
+            "label": "SPEC",
+            "display_label": "Spectrum",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 71.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 82.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -30113,7 +30169,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -30130,46 +30186,12 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 83.0,
             "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 95.0,
-            "price_bucket": "very_rich",
             "reasons": [
               "narrative tag",
               "headline overread"
@@ -30329,91 +30351,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-JORD",
-            "label": "JORD",
-            "display_label": "Jordan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 83.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR26NYKCHA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 95.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-SPEC",
             "label": "SPEC",
             "display_label": "Spectrum",
@@ -30447,26 +30384,112 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 66.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 83.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 83.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 83.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR26NYKCHA-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 95.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -30483,7 +30506,7 @@
             "market_id": "KXNBAMENTION-26MAR26NYKCHA-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -30803,7 +30826,7 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "требует осторожности",
             "strike_type": "game-state",
@@ -31006,20 +31029,21 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-OHTA",
@@ -31132,7 +31156,7 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -31282,7 +31306,7 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "требует осторожности",
             "strike_type": "game-state",
@@ -31380,10 +31404,27 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": 1.0,
+            "price_bucket": "cheap_tail",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -31484,7 +31525,7 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "требует осторожности",
             "strike_type": "game-state",
@@ -31795,23 +31836,24 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -32168,14 +32210,15 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 63.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -32245,14 +32288,15 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 35.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -32270,14 +32314,15 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 61.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -32295,20 +32340,21 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR24ORLCLE-OVER",
@@ -32345,7 +32391,7 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -32371,20 +32417,21 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 17.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "pass"
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROCK",
@@ -32422,7 +32469,7 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -32473,7 +32520,7 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -32626,40 +32673,6 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 92.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-CROW",
             "label": "CROW",
             "display_label": "Crowd / Crowded",
@@ -32677,18 +32690,69 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-TRAD",
-            "label": "TRAD",
-            "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 92.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 77.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 79.0,
-            "price_bucket": "rich",
+            "yes_reference_price": 1.0,
+            "price_bucket": "cheap_tail",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": 17.0,
+            "price_bucket": "mid_tail",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
@@ -32696,40 +32760,6 @@
         ],
         "low_priority_strikes": [
           {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 92.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-CROW",
             "label": "CROW",
             "display_label": "Crowd / Crowded",
@@ -32742,6 +32772,23 @@
             "reasons": [
               "broadcast filler",
               "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 92.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -32764,19 +32811,37 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 77.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           }
         ],
@@ -32895,22 +32960,6 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 63.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-ELBO",
             "label": "ELBO",
             "display_label": "Elbow",
@@ -32945,17 +32994,35 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 63.0,
+            "price_bucket": "mid",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 35.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -32964,50 +33031,17 @@
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 1,
+            "score": 0,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 61.0,
             "price_bucket": "mid",
             "reasons": [
-              "narrative tag"
+              "narrative tag",
+              "crowded narrative cluster"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 92.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
             "type_class": "type-green"
           },
           {
@@ -33023,6 +33057,23 @@
             "reasons": [
               "broadcast filler",
               "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 92.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -33045,42 +33096,61 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR24ORLCLE-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 77.0,
+            "price_bucket": "rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 1.0,
             "price_bucket": "cheap_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -3,
+            "score": -4,
             "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
+            "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
             "yes_reference_price": 17.0,
             "price_bucket": "mid_tail",
             "reasons": [
-              "weird tail"
+              "weird tail",
+              "weak tail cluster"
             ],
-            "status_class": "status-gray",
+            "status_class": "status-red",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXNBAMENTION-26MAR24ORLCLE-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -34478,7 +34548,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34556,7 +34626,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34608,7 +34678,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34634,7 +34704,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -34686,7 +34756,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34712,7 +34782,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -34738,7 +34808,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-ROOK",
             "label": "ROOK",
             "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34790,7 +34860,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -34949,10 +35019,27 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR23SASMIA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34969,7 +35056,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -34986,7 +35073,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35003,24 +35090,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35036,10 +35106,27 @@
         ],
         "low_priority_strikes": [
           {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR23SASMIA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35056,7 +35143,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35065,6 +35152,23 @@
             "reasons": [
               "narrative tag",
               "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-KASE",
+            "label": "KASE",
+            "display_label": "Kaseya Center",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast sensitive",
+              "rich price"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -35073,41 +35177,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35276,10 +35346,27 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "broadcast filler",
+              "easy overprice"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR23SASMIA-DRAF",
             "label": "DRAF",
             "display_label": "Draft / Drafted",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
@@ -35296,83 +35383,15 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-JORD",
             "label": "JORD",
             "display_label": "Jordan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-PLAY",
-            "label": "PLAY",
-            "display_label": "Playoff",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-ROOK",
-            "label": "ROOK",
-            "display_label": "Rookie",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 100.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR23SASMIA-CROW",
-            "label": "CROW",
-            "display_label": "Crowd / Crowded",
             "score": -1,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "требует осторожности",
             "strike_type": "broadcast-flow",
             "yes_reference_price": 100.0,
             "price_bucket": "very_rich",
             "reasons": [
-              "broadcast filler",
-              "easy overprice"
+              "narrative tag",
+              "headline overread"
             ],
             "status_class": "status-red",
             "type_class": "type-green"
@@ -35395,10 +35414,61 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR23SASMIA-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "требует осторожности",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": 100.0,
+            "price_bucket": "very_rich",
+            "reasons": [
+              "narrative tag",
+              "headline overread"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR23SASMIA-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -35415,7 +35485,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-RETI",
             "label": "RETI",
             "display_label": "Retire / Retired / Retirement",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
@@ -35432,7 +35502,7 @@
             "market_id": "KXNBAMENTION-26MAR23SASMIA-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -5,
+            "score": -6,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
