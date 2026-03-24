@@ -13546,11 +13546,13 @@
       ],
       "relevant_history_notes": [
         "Используй только максимально близкий comparison set по формату события; generic history здесь слабее помогает.",
-        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances."
+        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances.",
+        "Если basket держится на host-chemistry cluster, смотри похожие episodes/guests, а не generic topic frequency."
       ],
       "consensus_misread": [
         "В podcasts crowd часто путает broad topic affinity гостей с реальным probability, что тема вообще зайдёт в live conversation.",
         "Long-form banter markets легко перепрайсить по clip-worthy narrative, хотя разговор может уйти совсем в другой lane.",
+        "Host-chemistry cluster обычно живёт лучше forced topical tails: знакомые shared obsessions crowd часто недооценивает.",
         "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
       ],
       "semantic_families": [],
@@ -45418,11 +45420,14 @@
       "relevant_history_notes": [
         "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
         "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера.",
-        "Для local/civic events полезнее same-office и same-city samples, чем generic national political history."
+        "Для local/civic events полезнее same-office и same-city samples, чем generic national political history.",
+        "Если local governance cluster широкий, история по same-city issues полезнее, чем national cable-news priors."
       ],
       "consensus_misread": [
         "В local/civic events crowd часто overprojects national political narratives на более узкий office-framed event.",
-        "Title relevance здесь легко перепутать с real speech path: headline city issue не значит, что exact token organically появится в office statement."
+        "Title relevance здесь легко перепутать с real speech path: headline city issue не значит, что exact token organically появится в office statement.",
+        "Local governance cluster должен читаться отдельно: city-policy words не стоит мешать с generic national talking points в один bucket.",
+        "Если в civic basket много national tails, crowd может перепутать headline politics с реальным office-framing path."
       ],
       "semantic_families": [],
       "attention_allocation": {
