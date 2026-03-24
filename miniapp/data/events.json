@@ -2418,12 +2418,17 @@
       "context_checks": [
         "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
         "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes."
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
       ],
       "likely_hooks": [
         "segment transition",
         "surprise cameo",
-        "retail narrative blowoff"
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
       ],
       "context_notes": [
         "В culture/entertainment markets часто важнее flow и structure of show, чем история."
@@ -8012,15 +8017,20 @@
       "context_checks": [
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
-        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum."
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
-        "question-driven narrative shift"
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure"
       ],
       "context_notes": [
-        "Для political mentions current events часто важнее последних transcript counts."
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -9880,12 +9890,17 @@
       "context_checks": [
         "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
         "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes."
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
       ],
       "likely_hooks": [
         "segment transition",
         "surprise cameo",
-        "retail narrative blowoff"
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
       ],
       "context_notes": [
         "В culture/entertainment markets часто важнее flow и structure of show, чем история."
@@ -10824,12 +10839,17 @@
       "context_checks": [
         "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
         "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes."
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
       ],
       "likely_hooks": [
         "segment transition",
         "surprise cameo",
-        "retail narrative blowoff"
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
       ],
       "context_notes": [
         "В culture/entertainment markets часто важнее flow и structure of show, чем история."
@@ -11802,12 +11822,16 @@
       "context_checks": [
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
-        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum."
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
-        "question-driven narrative shift"
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts."
@@ -12758,16 +12782,21 @@
       "context_checks": [
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
-        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum."
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
-        "question-driven narrative shift"
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Parliament-style format часто ближе к adversarial Q&A, чем к чистой prepared speech логике."
+        "Parliament-style format часто ближе к adversarial Q&A, чем к чистой prepared speech логике.",
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -13356,15 +13385,22 @@
       "context_checks": [
         "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
         "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes."
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
       ],
       "likely_hooks": [
         "segment transition",
         "surprise cameo",
-        "retail narrative blowoff"
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
       ],
       "context_notes": [
-        "В culture/entertainment markets часто важнее flow и structure of show, чем история."
+        "В culture/entertainment markets часто важнее flow и structure of show, чем история.",
+        "Host-chemistry cluster уже выглядит центральным; current context здесь скорее в social/media loop, чем в formal news cycle.",
+        "Podcast current context часто приходит не из headline news, а из social/media loop последних 24–48 часов."
       ],
       "opening_plan": [
         "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
@@ -14097,15 +14133,21 @@
       "context_checks": [
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
-        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum."
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
-        "question-driven narrative shift"
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure"
       ],
       "context_notes": [
-        "Для political mentions current events часто важнее последних transcript counts."
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Family/social cluster сейчас выглядит как headline-sensitive; важно проверить, это реальная текущая повестка или просто framing названия события.",
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -17328,16 +17370,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -18368,16 +18416,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -19515,16 +19569,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -20811,16 +20871,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -22116,16 +22182,23 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Broadcast filler cluster стоит оживлять только если есть конкретный arena/broadcast story today, иначе это просто generic overowning.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -23426,16 +23499,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -24617,16 +24696,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -25657,16 +25742,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -26696,16 +26787,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -27737,16 +27834,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -28781,16 +28884,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -29931,16 +30040,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -31291,16 +31406,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -32580,16 +32701,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -33771,16 +33898,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -34923,16 +35056,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -36128,16 +36267,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -37171,16 +37316,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -38210,16 +38361,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -39252,16 +39409,22 @@
       "context_checks": [
         "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
-        "Заранее раздели strikes на baseline-driven и game-state-driven."
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
         "close game script",
-        "blowout yap risk"
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
-        "Live repricing после ключевых игровых моментов обычно важнее prematch static view."
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -44940,17 +45103,24 @@
         "Проверь новости за 48–72 часа по стране / штату / площадке события.",
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
-        "Для civic/local events отдельно смотри локальный news cycle, agency framing и кто формально говорит от офиса."
+        "Для civic/local events отдельно смотри локальный news cycle, agency framing и кто формально говорит от офиса.",
+        "Проверь, какой именно официальный повод у события сегодня: policy rollout, staffing signal, local incident response или ceremonial appearance.",
+        "Сопоставь basket со свежим local news cycle, а не с national cable framing."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
-        "local governance headline"
+        "local governance headline",
+        "office framing",
+        "local governance hook",
+        "press scrum risk"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Local/civic announcement чаще уже и конкретнее, чем generic national political speech."
+        "Local/civic announcement чаще уже и конкретнее, чем generic national political speech.",
+        "Текущий basket уже намекает на city-policy framing; local issue pressure здесь важнее generic national politics.",
+        "Mayor/office events часто живут вокруг very current city issue of the day, а не around broad ideological basket."
       ],
       "opening_plan": [
         "Сначала проверь, держится ли спикер в узком office/agency framing или уходит в broader politics.",
