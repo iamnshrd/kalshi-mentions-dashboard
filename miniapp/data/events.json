@@ -14153,8 +14153,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 44.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14178,8 +14178,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14203,8 +14203,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 28.999999999999996,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14228,8 +14228,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 27.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14253,8 +14253,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции",
               "есть дополнительный риск из-за формулировки или конструкции страйка"
@@ -14279,8 +14279,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.99999999999999,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14304,8 +14304,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 63.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14329,8 +14329,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14354,8 +14354,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14379,8 +14379,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 38.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14404,8 +14404,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 76.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14429,8 +14429,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14454,8 +14454,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14479,8 +14479,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14504,8 +14504,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14529,8 +14529,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 93.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14576,8 +14576,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14592,8 +14592,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 44.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14608,8 +14608,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 28.999999999999996,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14624,8 +14624,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 27.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14640,8 +14640,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.99999999999999,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14660,8 +14660,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции",
               "есть дополнительный риск из-за формулировки или конструкции страйка"
@@ -14679,8 +14679,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 98.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14695,8 +14695,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 44.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14711,8 +14711,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 28.999999999999996,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14727,8 +14727,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 27.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14743,8 +14743,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.99999999999999,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14759,8 +14759,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 63.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14775,8 +14775,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 89.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14791,8 +14791,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14807,8 +14807,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 38.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14823,8 +14823,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 76.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14839,8 +14839,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 81.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14855,8 +14855,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 14.000000000000002,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14871,8 +14871,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14887,8 +14887,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14903,8 +14903,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 93.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции"
             ],
@@ -14919,8 +14919,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 25.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "страйк чувствителен к ходу трансляции",
               "есть дополнительный риск из-за формулировки или конструкции страйка"
