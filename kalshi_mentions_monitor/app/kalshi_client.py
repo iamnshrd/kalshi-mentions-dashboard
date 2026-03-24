@@ -1,0 +1,57 @@
+from __future__ import annotations
+
+from typing import Any
+
+import requests
+
+from .models import NormalizedMarket
+
+
+class KalshiClient:
+    def __init__(self, base_url: str, api_key: str = "", page_limit: int = 1000, max_pages: int = 10) -> None:
+        self.base_url = base_url.rstrip("/")
+        self.api_key = api_key
+        self.page_limit = page_limit
+        self.max_pages = max_pages
+
+    def _headers(self) -> dict[str, str]:
+        headers = {"Accept": "application/json"}
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+            headers["X-API-Key"] = self.api_key
+        return headers
+
+    def fetch_markets(self) -> list[NormalizedMarket]:
+        cursor = None
+        all_markets: list[NormalizedMarket] = []
+        for _ in range(self.max_pages):
+            params: dict[str, Any] = {"limit": self.page_limit}
+            if cursor:
+                params["cursor"] = cursor
+            response = requests.get(f"{self.base_url}/markets", params=params, headers=self._headers(), timeout=30)
+            response.raise_for_status()
+            payload = response.json()
+            for raw in payload.get("markets", []):
+                all_markets.append(self._normalize_market(raw))
+            cursor = payload.get("cursor")
+            if not cursor:
+                break
+        return all_markets
+
+    @staticmethod
+    def _normalize_market(raw: dict[str, Any]) -> NormalizedMarket:
+        return NormalizedMarket(
+            market_id=raw.get("ticker", ""),
+            event_ticker=raw.get("event_ticker", ""),
+            ticker=raw.get("ticker", ""),
+            title=raw.get("title", "") or "",
+            subtitle=raw.get("subtitle", "") or "",
+            rules_primary=raw.get("rules_primary", "") or "",
+            rules_secondary=raw.get("rules_secondary", "") or "",
+            status=raw.get("status", "") or "",
+            open_time=raw.get("open_time", "") or "",
+            close_time=raw.get("close_time", "") or "",
+            created_time=raw.get("created_time", "") or "",
+            updated_time=raw.get("updated_time", "") or "",
+            raw_json=raw,
+        )
