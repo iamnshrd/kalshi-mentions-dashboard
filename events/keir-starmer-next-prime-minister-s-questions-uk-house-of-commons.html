@@ -9,7 +9,7 @@
     body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; margin: 0; background: #0b1020; color: #e7ecf5; }
     a { color: #8cc8ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 24px; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 24px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
     .card { background: #141a2e; border: 1px solid #23304f; border-radius: 14px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
     .hero { margin-bottom: 18px; }
@@ -24,6 +24,15 @@
     .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 8px 10px; }
     .section { margin-top: 18px; }
     .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .three { display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 16px; }
+    .market-list { margin-top: 8px; border-top: 1px solid #23304f; }
+    .market-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #23304f; }
+    .market-main { min-width: 0; }
+    .market-title { font-weight: 700; }
+    .market-note { color: #9fb0cf; margin-top: 4px; font-size: 14px; line-height: 1.35; }
+    .market-meta { white-space: nowrap; align-self: center; }
+    .summary-line { color: #9fb0cf; margin-top: 8px; }
+    @media (max-width: 1000px) { .three { grid-template-columns: 1fr; } }
     @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -39,37 +48,27 @@
         <div class="stat">Приоритет: <strong>-</strong></div>
         <div class="stat">Страйков: <strong>13</strong></div>
       </div>
+      <div class="summary-line">Сейчас смотреть в первую очередь: <strong>—</strong></div>
     </div>
 
-    <div class="grid">
+    <div class="section card">
+      <h2>Все страйки события</h2>
+      <div class="market-list"><div class="market-row"><div class="market-main"><div class='market-title'>CEAS</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>DEFE</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>DRON</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>ENER</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>IMMI</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>IRAN</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>ISRA</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>NATO</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>NUCL</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>OIL</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>REFO</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>TRUM</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>UKRA</div></div></div></div>
+    </div>
+
+    <div class="three section">
       <div class="card">
         <h2>Фокус подготовки</h2>
         <p>-</p>
+        <h3 class="section">Что проверить до события</h3>
+        <ul><li class="muted">—</li></ul>
       </div>
-      <div class="card">
-        <h2>Фокус лайва</h2>
-        <p>-</p>
-      </div>
-    </div>
-
-    <div class="two section">
       <div class="card">
         <h2>Смотреть первым</h2>
         <ul><li class="muted">—</li></ul>
       </div>
       <div class="card">
         <h2>Вероятные переоценки</h2>
-        <ul><li class="muted">—</li></ul>
-      </div>
-    </div>
-
-    <div class="two section">
-      <div class="card">
-        <h2>Что проверить до события</h2>
-        <ul><li class="muted">—</li></ul>
-      </div>
-      <div class="card">
-        <h2>Вероятные хуки</h2>
         <ul><li class="muted">—</li></ul>
       </div>
     </div>

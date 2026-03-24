@@ -9,7 +9,7 @@
     body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; margin: 0; background: #0b1020; color: #e7ecf5; }
     a { color: #8cc8ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 24px; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 24px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
     .card { background: #141a2e; border: 1px solid #23304f; border-radius: 14px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
     .hero { margin-bottom: 18px; }
@@ -24,6 +24,15 @@
     .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 8px 10px; }
     .section { margin-top: 18px; }
     .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .three { display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 16px; }
+    .market-list { margin-top: 8px; border-top: 1px solid #23304f; }
+    .market-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #23304f; }
+    .market-main { min-width: 0; }
+    .market-title { font-weight: 700; }
+    .market-note { color: #9fb0cf; margin-top: 4px; font-size: 14px; line-height: 1.35; }
+    .market-meta { white-space: nowrap; align-self: center; }
+    .summary-line { color: #9fb0cf; margin-top: 8px; }
+    @media (max-width: 1000px) { .three { grid-template-columns: 1fr; } }
     @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -39,38 +48,28 @@
         <div class="stat">Приоритет: <strong>high</strong></div>
         <div class="stat">Страйков: <strong>4</strong></div>
       </div>
+      <div class="summary-line">Сейчас смотреть в первую очередь: <strong>Huberman, Silicon Valley, Sleep, Wolverine</strong></div>
     </div>
 
-    <div class="grid">
+    <div class="section card">
+      <h2>Все страйки события</h2>
+      <div class="market-list"><div class="market-row"><div class="market-main"><div class='market-title'>Huberman</div><div class='market-note'>Huberman: повышенная чувствительность к формулировке и rules</div></div><div class="market-meta"><span class='pill'>не приоритет</span><span class='pill edge'>likely_overreaction</span></div></div><div class="market-row"><div class="market-main"><div class='market-title'>Silicon Valley</div><div class='market-note'>Silicon Valley: повышенная чувствительность к формулировке и rules</div></div><div class="market-meta"><span class='pill'>не приоритет</span><span class='pill edge'>likely_overreaction</span></div></div><div class="market-row"><div class="market-main"><div class='market-title'>Sleep</div><div class='market-note'>Sleep: повышенная чувствительность к формулировке и rules</div></div><div class="market-meta"><span class='pill'>не приоритет</span><span class='pill edge'>likely_overreaction</span></div></div><div class="market-row"><div class="market-main"><div class='market-title'>Wolverine</div><div class='market-note'>Wolverine: повышенная чувствительность к формулировке и rules</div></div><div class="market-meta"><span class='pill'>не приоритет</span><span class='pill edge'>likely_overreaction</span></div></div></div>
+    </div>
+
+    <div class="three section">
       <div class="card">
         <h2>Фокус подготовки</h2>
         <p>Собери priors по комментаторам, сети и game state ещё до открытия рынка.</p>
-      </div>
-      <div class="card">
-        <h2>Фокус лайва</h2>
-        <p>Перепрайс по game state, replay-контексту и ходу комментария.</p>
-      </div>
-    </div>
-
-    <div class="two section">
-      <div class="card">
-        <h2>Смотреть первым</h2>
-        <ul><li><strong>Huberman</strong> <span class='muted'>(HUBE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='muted'>(SILI)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='muted'>(SLEE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='muted'>(WOLV)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
-      </div>
-      <div class="card">
-        <h2>Вероятные переоценки</h2>
-        <ul><li><strong>Huberman</strong> <span class='muted'>(HUBE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='muted'>(SILI)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='muted'>(SLEE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='muted'>(WOLV)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
-      </div>
-    </div>
-
-    <div class="two section">
-      <div class="card">
-        <h2>Что проверить до события</h2>
+        <h3 class="section">Что проверить до события</h3>
         <ul><li>Проверь sport, matchup, announcer crew и network/broadcast quirks.</li><li>Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.</li><li>Заранее раздели strikes на baseline-driven и game-state-driven.</li></ul>
       </div>
       <div class="card">
-        <h2>Вероятные хуки</h2>
-        <ul><li>replay sequence</li><li>close game script</li><li>blowout yap risk</li></ul>
+        <h2>Смотреть первым</h2>
+        <ul><li><strong>Huberman</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
+      </div>
+      <div class="card">
+        <h2>Вероятные переоценки</h2>
+        <ul><li><strong>Huberman</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
       </div>
     </div>
 
@@ -105,7 +104,7 @@
       </div>
       <div class="card">
         <h2>Низкий приоритет</h2>
-        <ul><li><strong>Huberman</strong> <span class='muted'>(HUBE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='muted'>(SILI)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='muted'>(SLEE)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='muted'>(WOLV)</span> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
+        <ul><li><strong>Huberman</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Silicon Valley</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Sleep</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li><li><strong>Wolverine</strong> <span class='pill'>не приоритет</span> <span class='pill edge'>likely_overreaction</span> <span class='muted'>score -3</span><br><span class='muted'>страйк чувствителен к ходу трансляции; формулировка и rules повышают риск ложной уверенности; скорее мусорный страйк без явного edge; скорее мёртвый tail, если структура события не оживит его</span></li></ul>
       </div>
     </div>
     </div>
