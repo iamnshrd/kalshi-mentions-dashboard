@@ -8052,9 +8052,9 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: President Trump Hosts Swearing-In for Homeland Security Secretary Mullin - C-SPAN",
-        "Свежий headline: Mullin sworn in as secretary of Homeland Security - KTEN",
-        "Свежий headline: (LEAD) Trump says Iran has given U.S. 'very significant prize' related to oil, gas - Yonhap News Agency"
+        "Свежий headline: President Trump Gaggles with Press on Air Force One En Route Joint Base Andrews, Mar. 15, 2026 - The White House (.gov)",
+        "Свежий headline: Live updates: Donald Trump's 2025 Inauguration Day - PBS",
+        "Свежий headline: President Trump Hosts Swearing-In for Homeland Security Secretary Mullin - C-SPAN"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -11861,9 +11861,9 @@
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Свежий headline: New York Governor Hochul endorses Zohran Mamdani for mayor amid poll surge - Al Jazeera",
         "Свежий headline: NY Gov. Kathy Hochul doubles down on affordability in State of the State message - WXXI News",
-        "Свежий headline: Mayor Mamdani and Governor Hochul Announce First Four Communities to Receive Free 2-K Seats - NYC.gov"
+        "Свежий headline: Protecting Our Kids: Governor Hochul Announces Nation-Leading Proposals to Protect Kids Online, Restrict AI Chatbots and Combat the Youth Mental Health Crisis - Governor Kathy Hochul (.gov)",
+        "Свежий headline: Echoing Mamdani, Hochul Offers Plan for a More Affordable New York - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -12828,9 +12828,9 @@
         "Для political mentions current events часто важнее последних transcript counts.",
         "Parliament-style format часто ближе к adversarial Q&A, чем к чистой prepared speech логике.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: Sir Keir Starmer defends Rachel Reeves at PMQs - BBC",
         "Свежий headline: MPs would get vote on troop deployment to Ukraine, says Keir Starmer - The Guardian",
-        "Свежий headline: Starmer defends Iran response as Badenoch calls for more action - BBC",
-        "Свежий headline: Sir Keir Starmer defends Rachel Reeves at PMQs - BBC"
+        "Свежий headline: Watch: Key moments from Starmer's Labour conference speech - BBC"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -14185,8 +14185,8 @@
         "Family/social cluster сейчас выглядит как headline-sensitive; важно проверить, это реальная текущая повестка или просто framing названия события.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
         "Свежий headline: Melania Trump attends her own global summit for just 7 minutes on day one; Israeli PM's wife among attendees - Mint",
-        "Свежий headline: LIVE: Melania Trump at center of global talks | 45 nations join ‘fostering future together’ summit - The Economic Times",
-        "Свежий headline: Melania Trump Attends Day 1 of Her 'Unprecedented' Global Summit in Washington for 7 Minutes - People.com"
+        "Свежий headline: Melania Trump Attends Day 1 of Her 'Unprecedented' Global Summit in Washington for 7 Minutes - People.com",
+        "Свежий headline: Melania Trump hosts world counterparts and tech reps to discuss children, education and technology - The Hill"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -17429,8 +17429,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Alabama vs Michigan schedule, TV channel for March Madness game - The Arizona Republic",
-        "Свежий headline: Karaban's career night lifts UConn basketball over UCLA, into Sweet 16 - Norwich Bulletin",
-        "Свежий headline: ESPN predicts the winner of Alabama vs Kentucky basketball in SEC opener - Roll Tide Wire"
+        "Свежий headline: Start time, TV channel announced for Alabama vs. Michigan in Sweet 16 - Roll Tide Wire",
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -18480,9 +18480,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Duke vs TCU schedule, TV channel, how to watch March Madness game - The Arizona Republic",
-        "Свежий headline: Michigan vs Saint Louis schedule, TV channel for March Madness game - The Arizona Republic",
-        "Свежий headline: Nebraska vs Vanderbilt TV channel, time, schedule for March Madness - The Arizona Republic"
+        "Свежий headline: Arkansas vs Arizona schedule, TV channel, how to watch March Madness - The Arizona Republic",
+        "Свежий headline: March Madness TV announcers schedule for Sweet 16 games this week - The Arizona Republic",
+        "Свежий headline: March Madness announcers by game: Full list of broadcast teams for 2026 NCAA Tournament - sportingnews.com"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -19639,9 +19639,8 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Orlando Magic vs. Denver Nuggets: Game Preview - NBA",
-        "Свежий headline: ESPN NBA Full Court Press: ESPN’s “Cavaliers Pistons All Access” coverage culminates with a matchup on Friday night - ESPN Press Room",
-        "Свежий headline: Pistons vs Celtics prediction, channel, injury report on MLK Day - Detroit Free Press"
+        "Свежий headline: Boston Celtics injury report: Payton Pritchard remains on the list vs. Detroit - Sports Illustrated",
+        "Свежий headline: Quin Snyder Previews Tomorrow's Matchup With The Pistons + Talks About Detroit's Growth This Season - Sports Illustrated"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -20947,9 +20946,7 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Orlando Magic vs. Denver Nuggets: Game Preview - NBA",
-        "Свежий headline: 2025 - 2026 NBA on ESPN Schedule - Blogger.com",
-        "Свежий headline: Game Preview: Pacers at Cavaliers (Game 1) - NBA"
+        "Свежий headline: Indiana Pacers vs Phoenix Suns (11-13-2025) game preview: When and where to watch, expected lineup, injur - The Times of India"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -22265,9 +22262,7 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Broadcast filler cluster стоит оживлять только если есть конкретный arena/broadcast story today, иначе это просто generic overowning.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Orlando Magic vs. Denver Nuggets: Game Preview - NBA",
-        "Свежий headline: How to watch Stephen Curry's Warriors vs. Raptors, injury report, preview - Sports Illustrated",
-        "Свежий headline: How to Watch NBA Christmas Day Games with Sling - Sling TV"
+        "Свежий headline: Golden State Warriors vs Dallas Mavericks (12/15): Starting Five, Injury Report, Start Time, Game Predict - The Times of India"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -23587,9 +23582,8 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Timberwolves, FanDuel Sports Network and iHeartMedia Minneapolis Announce 2025-26 Broadcast Schedule and Talent Additions - NBA",
-        "Свежий headline: 2025 NBA Playoffs: Timberwolves at Lakers Game 1 – TV & Streaming Info, Start Time & Injury Updates - NBA",
-        "Свежий headline: Game Preview: Pacers at Cavaliers (Game 1) - NBA"
+        "Свежий headline: Minnesota Timberwolves vs Oklahoma City Thunder (01-29-2026) game preview: When and where to watch, expec - The Times of India",
+        "Свежий headline: When do the Suns play next? How to watch, prediction for Phoenix Suns vs Minnesota Timberwolves game - Valley of the Suns"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -24790,8 +24784,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Ohio State vs Nebraska men's basketball how to watch, odds, injuries, series history and prediction - Busting Brackets",
-        "Свежий headline: Complete 2024 March Madness First Round schedule: Dates, times, TV channels, announcers, live stream - DraftKings Network"
+        "Свежий headline: March Madness broadcast crews: Who's announcing NCAA Tournament games? - USA Today",
+        "Свежий headline: College basketball viewing picks for March 13, 2026: How to watch A-10, ACC, B1G, Big XII and SEC Tourneys - Awful Announcing",
+        "Свежий headline: What channel is North Carolina vs VCU on today? Time, TV schedule for March Madness game - The Fayetteville Observer"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -25841,9 +25836,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: How to Watch Houston vs. Illinois in Sweet 16 - Yahoo Sports Canada",
         "Свежий headline: Illinois vs Houston schedule, TV channel, how to watch March Madness - The Arizona Republic",
-        "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic"
+        "Свежий headline: March Madness TV schedule today: Game times, how to watch NCAA first round - USA Today",
+        "Свежий headline: March Madness TV announcers schedule for Sweet 16 games this week - The Arizona Republic"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -26892,9 +26887,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic",
-        "Свежий headline: Alabama vs Michigan schedule, TV channel for March Madness game - The Arizona Republic",
-        "Свежий headline: NCAA Tournament: Kalshi markets, prediction and picks for Nebraska vs. Troy - MassLive"
+        "Свежий headline: Nebraska vs Iowa schedule, TV channel, how to watch March Madness - The Arizona Republic",
+        "Свежий headline: 2026 March Madness TV schedule for second round: Tip times, announcers, where to watch NCAA Tournament games - CBS Sports",
+        "Свежий headline: Iowa coach Ben McCollum upset after refs missed possible flagrant foul on Florida - Hawk Central"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -27945,9 +27940,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Alabama vs Michigan schedule, TV channel for March Madness game - The Arizona Republic",
-        "Свежий headline: Karaban's career night lifts UConn basketball over UCLA, into Sweet 16 - Norwich Bulletin",
-        "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic"
+        "Свежий headline: Michigan State vs UConn schedule, TV channel for March Madness game - The Arizona Republic",
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing",
+        "Свежий headline: St. John's vs Duke schedule, TV channel, how to watch March Madness - The Arizona Republic"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -29001,9 +28996,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: NFL Playoffs Announcers: Full Broadcast Crew List For Every Wild Card Round Game - College Sports Network",
-        "Свежий headline: Complete 2024 March Madness First Round schedule: Dates, times, TV channels, announcers, live stream - DraftKings Network",
-        "Свежий headline: March Madness Men’s Announcers: Full List of Broadcasters for Final Four - College Sports Network"
+        "Свежий headline: ESPN returns as the exclusive home of the National Invitation Tournament - ESPN Press Room",
+        "Свежий headline: How to watch Tennessee versus Houston basketball: Time, TV channel - Vols Wire",
+        "Свежий headline: 2025 - 2026 College Basketball on TNT Schedule - Blogger.com"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -30163,9 +30158,7 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: How to watch Timberwolves at Nets tonight: game preview, injury updates and TV and streaming info - NBA",
-        "Свежий headline: How to watch Raptors vs. Knicks, injury report, preview - Sports Illustrated",
-        "Свежий headline: Orlando Magic at San Antonio Spurs: Game Preview - NBA"
+        "Свежий headline: Game preview: Charlotte Hornets return home to face KAT, Brunson, and the red-hot New York Knicks - Sports Illustrated"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -31535,8 +31528,7 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: 2023 NFL on FOX Schedule - Blogger.com",
-        "Свежий headline: MLB Opening Day 2026: Full Schedule, Key Games, Dodgers Title Defense and What Fans Should Expect - Sports Preferred"
+        "Свежий headline: San Francisco 49ers vs New York Giants picks, predictions, odds for NFL Week 9 game Sunday - The Arizona Republic"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -32818,8 +32810,7 @@
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
         "Заранее раздели strikes на baseline-driven и game-state-driven.",
         "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
-        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
-        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
@@ -32827,17 +32818,12 @@
         "blowout yap risk",
         "injury report",
         "seeding narrative",
-        "broadcast storyline",
-        "fresh headline pressure",
-        "prematch storyline today"
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
-        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: How to watch Timberwolves at Cavaliers today: game preview, injury updates and TV and streaming info - NBA",
-        "Свежий headline: Orlando Magic at San Antonio Spurs: Game Preview - NBA",
-        "Свежий headline: 2025 - 2026 NBA on ESPN Schedule - Blogger.com"
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -34038,9 +34024,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: No. 10 Tech, No. 4 Houston set for ESPN Big Monday - Texas Tech Red Raiders",
-        "Свежий headline: 2025 NCAA Tournament bracket: Ranking every team playing in March Madness from No. 1 to 68 - CBS Sports",
-        "Свежий headline: No. 22 Tech, No. 6 Houston set for Big 12 clash - Texas Tech Red Raiders"
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing",
+        "Свежий headline: ESPN returns as the exclusive home of the National Invitation Tournament - ESPN Press Room",
+        "Свежий headline: Eian Elmer's deep 3-pointer for Miami (OH) has the announcers hyped - ESPN"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -35185,8 +35171,7 @@
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
         "Заранее раздели strikes на baseline-driven и game-state-driven.",
         "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
-        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
-        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
       ],
       "likely_hooks": [
         "replay sequence",
@@ -35194,17 +35179,12 @@
         "blowout yap risk",
         "injury report",
         "seeding narrative",
-        "broadcast storyline",
-        "fresh headline pressure",
-        "prematch storyline today"
+        "broadcast storyline"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
-        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: How to watch Timberwolves at Spurs tonight: game preview, injury updates and TV and streaming info - NBA",
-        "Свежий headline: Orlando Magic at San Antonio Spurs: Game Preview - NBA",
-        "Свежий headline: 2025 - 2026 NBA on ESPN Schedule - Blogger.com"
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -36419,9 +36399,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic",
-        "Свежий headline: NCAA Tournament: Kalshi markets, prediction and picks for Duke vs. TCU - MassLive",
-        "Свежий headline: Alabama vs Michigan schedule, TV channel for March Madness game - The Arizona Republic"
+        "Свежий headline: St. John's vs Duke schedule, TV channel, how to watch March Madness - The Arizona Republic",
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing",
+        "Свежий headline: 2026 March Madness TV schedule for second round: Tip times, announcers, where to watch NCAA Tournament games - CBS Sports"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -37474,9 +37454,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic",
-        "Свежий headline: Alabama vs Michigan schedule, TV channel for March Madness game - The Arizona Republic",
-        "Свежий headline: Karaban's career night lifts UConn basketball over UCLA, into Sweet 16 - Norwich Bulletin"
+        "Свежий headline: St. John's vs Duke schedule, TV channel, how to watch March Madness - The Arizona Republic",
+        "Свежий headline: What channel is Iowa State vs Tennessee State on today? Time, TV for March Madness game - The Des Moines Register",
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -38526,8 +38506,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Texas vs Purdue schedule, TV channel, how to watch March Madness game - The Arizona Republic",
-        "Свежий headline: Karaban's career night lifts UConn basketball over UCLA, into Sweet 16 - Norwich Bulletin",
-        "Свежий headline: Kansas vs St. John's schedule, TV channel, how to watch March Madness - The Arizona Republic"
+        "Свежий headline: March Madness schedule: How to watch Texas vs Purdue in Sweet 16 of NCAA Tournament - Austin American-Statesman",
+        "Свежий headline: Date, Time and TV Info Released for Purdue's Sweet 16 Game vs. Texas - Sports Illustrated"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -39562,7 +39542,8 @@
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
         "Заранее раздели strikes на baseline-driven и game-state-driven.",
         "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
-        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
       ],
       "likely_hooks": [
         "replay sequence",
@@ -39570,12 +39551,17 @@
         "blowout yap risk",
         "injury report",
         "seeding narrative",
-        "broadcast storyline"
+        "broadcast storyline",
+        "fresh headline pressure",
+        "prematch storyline today"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
-        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: College basketball viewing picks for March 22, 2026: how to watch NCAA Tournament games - Awful Announcing",
+        "Свежий headline: ESPN returns as the exclusive home of the National Invitation Tournament - ESPN Press Room",
+        "Свежий headline: ESPN men’s college basketball schedule delivers six days of conference showdowns and ranked matchups, Jan. 27–Feb. 1 - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -41693,8 +41679,8 @@
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Свежий headline: Powell’s parting gift from the Fed may be more rate cuts than expected, courtesy of deteriorating data - Fortune",
         "Свежий headline: Transcript: Fed Chair Jerome Powell’s Postmeeting Press Conference - WSJ",
+        "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times",
         "Свежий headline: Divided Fed lowers rates, signals pause and one cut next year as growth rebounds - Reuters"
       ],
       "opening_plan": [
@@ -43507,8 +43493,8 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: Live Updates: Trump's 2026 State of the Union address - PBS",
-        "Свежий headline: Press Briefing by Press Secretary Karoline Leavitt - The American Presidency Project",
-        "Свежий headline: Trump's speech on combating inflation turns to grievances about immigrants - NPR"
+        "Свежий headline: Trump's speech on combating inflation turns to grievances about immigrants - NPR",
+        "Свежий headline: State of the Union 2026: What It Means for Your Money - Investopedia"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -45284,9 +45270,9 @@
         "Local/civic announcement чаще уже и конкретнее, чем generic national political speech.",
         "Текущий basket уже намекает на city-policy framing; local issue pressure здесь важнее generic national politics.",
         "Mayor/office events часто живут вокруг very current city issue of the day, а не around broad ideological basket.",
-        "Свежий headline: Mayor Mamdani Announces Key Appointments to Three City Agencies and Offices, Including Chief Technology Officer - NYC.gov",
         "Свежий headline: Mayor Zohran Mamdani, at Inauguration, Vows to Represent All New Yorkers - The New York Times",
-        "Свежий headline: Watch Mayor Zohran Mamdani's inauguration ceremony at NYC City Hall - NBC New York"
+        "Свежий headline: Watch Mayor Zohran Mamdani's inauguration ceremony at NYC City Hall - NBC New York",
+        "Свежий headline: Nearly a million New Yorkers say they will leave city if Zohran Mamdani wins - The Times of India"
       ],
       "opening_plan": [
         "Сначала проверь, держится ли спикер в узком office/agency framing или уходит в broader politics.",
