@@ -51,6 +51,13 @@ def build_event_summary(group: EventGroup, classifications: dict[str, Classifica
                 out.append(x)
         return out
 
+    strike_codes = [_strike_label(m.market_id) for m in group.markets]
+    strike_buckets = {
+        'all': strike_codes,
+        'count': len(strike_codes),
+        'context_sensitive_hint': len([s for s in strike_codes if len(s) > 0 and not s.isdigit()]),
+    }
+
     return {
         "group_key": group.group_key,
         "event_title": group.event_title,
@@ -63,7 +70,8 @@ def build_event_summary(group: EventGroup, classifications: dict[str, Classifica
         "dominant_group": dominant_group,
         "dominant_subtype": dominant_subtype,
         "dominant_rules_risk": dominant_rules_risk,
-        "strike_codes": [_strike_label(m.market_id) for m in group.markets],
+        "strike_codes": strike_codes,
+        "strike_buckets": strike_buckets,
         "pre_event_summary": dedupe(pre)[:8],
         "live_trading_summary": dedupe(live)[:8],
         "risk_summary": dedupe(risk)[:8],
@@ -104,6 +112,12 @@ def write_event_summary(output_dir: Path, summary: dict) -> tuple[Path, Path]:
     lines.extend([f"- {x}" for x in summary['risk_summary']])
     lines.extend(["", "## Strikes"])
     lines.extend([f"- {x}" for x in summary['strike_codes']])
+    lines.extend([
+        "",
+        "## Strike bucket notes",
+        f"- Total strikes: {summary['strike_buckets']['count']}",
+        f"- Context-sensitive hint count: {summary['strike_buckets']['context_sensitive_hint']}",
+    ])
     md_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     json_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
     return md_path, json_path
