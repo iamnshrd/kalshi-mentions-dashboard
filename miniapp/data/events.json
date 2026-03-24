@@ -12115,44 +12115,43 @@
       },
       "strike_intel": {
         "structural": [],
-        "qa_sensitive": [
+        "qa_sensitive": [],
+        "contextual": [
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
             "label": "Election",
             "short_label": "ELEC",
-            "note": "forced topical pivot · q&a"
-          }
-        ],
-        "contextual": [
+            "note": "manual review · mixed"
+          },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
             "label": "Iran",
             "short_label": "IRAN",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
             "label": "Kristi / Noem",
             "short_label": "KRIS",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
             "label": "Republican",
             "short_label": "REPU",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
             "label": "Trump",
             "short_label": "TRUM",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
             "label": "TSA",
             "short_label": "TSA",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           }
         ],
         "game_state_sensitive": [],
@@ -12200,21 +12199,21 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
@@ -12226,53 +12225,52 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
             "label": "CORR",
             "display_label": "Corrupt / Corruption",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
           "label": "Election",
           "short_label": "ELEC",
-          "note": "forced topical pivot · q&a",
-          "bucket": "qa_sensitive",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
             "label": "ELEC",
             "display_label": "Election",
-            "score": -4,
+            "score": -1,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "forced topical pivot",
-              "rich for weak setup"
+              "needs hard topic pivot"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
           "label": "Iran",
           "short_label": "IRAN",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-IRAN",
@@ -12282,8 +12280,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12297,7 +12295,7 @@
           "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
           "label": "Kristi / Noem",
           "short_label": "KRIS",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-KRIS",
@@ -12307,8 +12305,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12328,21 +12326,21 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
@@ -12354,27 +12352,27 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
           "label": "Republican",
           "short_label": "REPU",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-REPU",
@@ -12384,8 +12382,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12405,27 +12403,27 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "manual only"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
           "label": "Trump",
           "short_label": "TRUM",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-TRUM",
@@ -12435,8 +12433,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12450,7 +12448,7 @@
           "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
           "label": "TSA",
           "short_label": "TSA",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXLASTWORDMENTION-26MAR24-TSA",
@@ -12460,8 +12458,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12511,8 +12509,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12527,8 +12525,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12543,8 +12541,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12559,8 +12557,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12575,8 +12573,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12585,177 +12583,91 @@
           }
         ],
         "cheap_watchlist": [],
-        "likely_overreactions": [
-          {
-            "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
-            "label": "AFFO",
-            "display_label": "Afford / Affordable / Affordability",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
-            "label": "CORR",
-            "display_label": "Corrupt / Corruption",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
-            "label": "NQE",
-            "display_label": "Event does not qualify",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
-            "label": "OIL",
-            "display_label": "Oil / Gas / Gasoline",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
-            "label": "SHUT",
-            "display_label": "Shutdown / Shut Down",
-            "score": -2,
-            "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-blue"
-          }
-        ],
+        "likely_overreactions": [],
         "low_priority_strikes": [
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
             "label": "CORR",
             "display_label": "Corrupt / Corruption",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           }
         ],
@@ -12768,8 +12680,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12784,8 +12696,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12800,8 +12712,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12816,8 +12728,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12832,8 +12744,8 @@
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent"
             ],
@@ -12844,102 +12756,101 @@
             "market_id": "KXLASTWORDMENTION-26MAR24-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-CORR",
             "label": "CORR",
             "display_label": "Corrupt / Corruption",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": -2,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           {
             "market_id": "KXLASTWORDMENTION-26MAR24-ELEC",
             "label": "ELEC",
             "display_label": "Election",
-            "score": -4,
+            "score": -1,
             "priority_band": "можно отложить",
-            "edge_tag": "рынок может переоценивать",
+            "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "forced topical pivot",
-              "rich for weak setup"
+              "needs hard topic pivot"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ]
@@ -26333,7 +26244,6 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: Boston Celtics injury report: Payton Pritchard remains on the list vs. Detroit - Sports Illustrated",
         "Свежий headline: Quin Snyder Previews Tomorrow's Matchup With The Pistons + Talks About Detroit's Growth This Season - Sports Illustrated"
       ],
       "opening_plan": [
