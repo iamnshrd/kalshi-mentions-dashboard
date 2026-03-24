@@ -31198,9 +31198,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: ESPN men’s college basketball schedule features 17 Top 25 teams and four ranked matchups, Jan. 13–18 - ESPN Press Room",
         "Свежий headline: ESPN Announces Schedule and Commentators for TBT 2020 - ESPN Press Room",
-        "Свежий headline: ESPN College Hoops Analysts Fran Fraschilla, Dan Dakich and Seth Greenberg Return for The Basketball Tournament 2019 - ESPN Press Room",
-        "Свежий headline: ESPN Reveals 2025-26 College Football Commentator Roster; Top Teams Return for Another Season - ESPN Press Room"
+        "Свежий headline: ESPN College Hoops Analysts Fran Fraschilla, Dan Dakich and Seth Greenberg Return for The Basketball Tournament 2019 - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -51349,7 +51349,7 @@
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
             "priority_band": "держать в поле зрения",
-            "edge_tag": "осторожно",
+            "edge_tag": "живой, но rules-fragile",
             "strike_type": "theme-linked",
             "yes_reference_price": 100.0,
             "price_bucket": "very_rich",
@@ -51695,7 +51695,7 @@
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
             "priority_band": "держать в поле зрения",
-            "edge_tag": "осторожно",
+            "edge_tag": "живой, но rules-fragile",
             "strike_type": "theme-linked",
             "yes_reference_price": 100.0,
             "price_bucket": "very_rich",
@@ -51956,7 +51956,7 @@
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
             "priority_band": "держать в поле зрения",
-            "edge_tag": "осторожно",
+            "edge_tag": "живой, но rules-fragile",
             "strike_type": "theme-linked",
             "yes_reference_price": 100.0,
             "price_bucket": "very_rich",
