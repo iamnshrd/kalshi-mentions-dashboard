@@ -102,6 +102,43 @@ def write_event_summary(output_dir: Path, summary: dict) -> tuple[Path, Path]:
         f"- Dominant group: {summary['dominant_group']}",
         f"- Dominant subtype: {summary['dominant_subtype']}",
         f"- Dominant rules risk: {summary['dominant_rules_risk']}",
+        f"- Speaker: {summary['speaker']}",
+        f"- Format confidence: {summary['format_confidence']}",
+        f"- Priority: {summary['priority']}",
+        "",
+        "## Trader prep focus",
+        f"- {summary['prep_focus']}",
+        "",
+        "## Trader live focus",
+        f"- {summary['live_focus']}",
+        "",
+        "## Pre-event prep",
+    ]
+    lines.extend([f"- {x}" for x in summary['pre_event_summary']])
+    lines.extend(["", "## Live trading guidance"])
+    lines.extend([f"- {x}" for x in summary['live_trading_summary']])
+    lines.extend(["", "## Risk notes"])
+    lines.extend([f"- {x}" for x in summary['risk_summary']])
+    lines.extend(["", "## Strikes"])
+    lines.extend([f"- {x}" for x in summary['strike_codes']])
+    lines.extend([
+        "",
+        "## Strike bucket notes",
+        f"- Total strikes: {summary['strike_buckets']['count']}",
+        f"- Context-sensitive hint count: {summary['strike_buckets']['context_sensitive_hint']}",
+    ])
+    md_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    json_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+    return md_path, json_path
+ Status: {summary['status'] or '-'}",
+        f"- Open time: {summary['open_time'] or '-'}",
+        f"- Close time: {summary['close_time'] or '-'}",
+        f"- Strike count: {summary['market_count']}",
+        "",
+        "## Classification",
+        f"- Dominant group: {summary['dominant_group']}",
+        f"- Dominant subtype: {summary['dominant_subtype']}",
+        f"- Dominant rules risk: {summary['dominant_rules_risk']}",
         "",
         "## Pre-event prep",
     ]

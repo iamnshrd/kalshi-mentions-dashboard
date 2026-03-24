@@ -112,5 +112,7 @@ def classify_market(market: NormalizedMarket) -> Classification:
         context_sensitivity=context,
         rules_risk=rules_risk,
         classification_confidence=round(max(0.05, min(confidence, 0.99)), 2),
+        speaker=speaker,
+        format_confidence=round(max(0.05, min(format_confidence, 0.99)), 2),
         reasoning=reasoning,
     )

@@ -160,6 +160,8 @@ class Database:
                     context_sensitivity=excluded.context_sensitivity,
                     rules_risk=excluded.rules_risk,
                     classification_confidence=excluded.classification_confidence,
+                    speaker=excluded.speaker,
+                    format_confidence=excluded.format_confidence,
                     reasoning=excluded.reasoning,
                     updated_at=CURRENT_TIMESTAMP
                 """,

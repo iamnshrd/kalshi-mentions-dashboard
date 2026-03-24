@@ -35,6 +35,8 @@ class Classification:
     context_sensitivity: str
     rules_risk: str
     classification_confidence: float
+    speaker: str
+    format_confidence: float
     reasoning: list[str]
 
 
