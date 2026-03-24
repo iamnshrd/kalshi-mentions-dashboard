@@ -14,11 +14,20 @@
     .card { background: #141a2e; border: 1px solid #23304f; border-radius: 14px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
     .hero { margin-bottom: 18px; }
     .muted { color: #9fb0cf; }
-    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #23304f; font-size: 12px; margin-right: 6px; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #23304f; font-size: 12px; margin-right: 6px; border: 1px solid transparent; }
     .edge { background: #2f3d67; }
+    .status-green { border-color: #245b3b !important; }
+    .status-yellow { border-color: #7c6422 !important; }
+    .status-gray { border-color: #3a4254 !important; }
+    .status-red { border-color: #7a2d2d !important; }
+    .pill.status-green { background: #183824; color: #9af0b6; }
+    .pill.status-yellow { background: #433515; color: #ffd86b; }
+    .pill.status-gray { background: #2a3142; color: #b8c3db; }
+    .pill.status-red { background: #4a1f1f; color: #ff9b9b; }
     h1, h2, h3 { margin: 0 0 10px; }
     ul { margin: 8px 0 0 18px; padding: 0; }
     li { margin: 6px 0; }
+    .rank-item { padding: 8px 10px; border: 1px solid #23304f; border-radius: 10px; margin-bottom: 10px; list-style: none; }
     .event-link { display: block; color: inherit; text-decoration: none; }
     .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 0; }
     .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 8px 10px; }
@@ -26,12 +35,17 @@
     .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .three { display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 16px; }
     .market-list { margin-top: 8px; border-top: 1px solid #23304f; }
-    .market-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #23304f; }
+    .market-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #23304f; border-left: 4px solid transparent; padding-left: 12px; }
+    .market-row.status-green { border-left-color: #2fb36d; background: rgba(47,179,109,.05); }
+    .market-row.status-yellow { border-left-color: #e0b84e; background: rgba(224,184,78,.05); }
+    .market-row.status-gray { border-left-color: #74819b; background: rgba(116,129,155,.04); }
+    .market-row.status-red { border-left-color: #d95c5c; background: rgba(217,92,92,.06); }
     .market-main { min-width: 0; }
     .market-title { font-weight: 700; }
     .market-note { color: #9fb0cf; margin-top: 4px; font-size: 14px; line-height: 1.35; }
     .market-meta { white-space: nowrap; align-self: center; }
     .summary-line { color: #9fb0cf; margin-top: 8px; }
+    .legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
     @media (max-width: 1000px) { .three { grid-template-columns: 1fr; } }
     @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
   </style>
@@ -49,11 +63,17 @@
         <div class="stat">Страйков: <strong>12</strong></div>
       </div>
       <div class="summary-line">Сейчас смотреть в первую очередь: <strong>—</strong></div>
+      <div class="legend">
+        <span class='pill status-green'>зелёный = смотреть первым</span>
+        <span class='pill status-yellow'>жёлтый = держать в уме / смотреть вторым</span>
+        <span class='pill status-gray'>серый = не приоритет</span>
+        <span class='pill status-red'>красный = вероятная переоценка / дорогой yes</span>
+      </div>
     </div>
 
     <div class="section card">
       <h2>Все страйки события</h2>
-      <div class="market-list"><div class="market-row"><div class="market-main"><div class='market-title'>ACQU</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>GUID</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>HOLI</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>IRAN</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>NONS</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>OIL</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>PART</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>SHUT</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>TARI</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>TECH</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>WEAT</div></div></div><div class="market-row"><div class="market-main"><div class='market-title'>YOUT</div></div></div></div>
+      <div class="market-list"><div class="market-row status-gray"><div class="market-main"><div class='market-title'>ACQU</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>GUID</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>HOLI</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>IRAN</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>NONS</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>OIL</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>PART</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>SHUT</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>TARI</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>TECH</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>WEAT</div></div></div><div class="market-row status-gray"><div class="market-main"><div class='market-title'>YOUT</div></div></div></div>
     </div>
 
     <div class="three section">
