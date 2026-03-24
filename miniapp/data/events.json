@@ -6875,6 +6875,811 @@
       "slug": "carnival-corporation-plc-their-next-earnings-call"
     },
     {
+      "group_key": "KXMENTIONEARNCHWY-26MAR25",
+      "event_title": "Chewy, Inc. — their next earnings call",
+      "event_ticker": "KXMENTIONEARNCHWY-26MAR25",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-23T03:00:00Z",
+      "close_time": "2026-06-30T14:00:00Z",
+      "market_count": 12,
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nfl_announcer_market",
+      "dominant_rules_risk": "medium",
+      "speaker": "chewy, inc.",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
+      "strike_codes": [
+        "AI / Artificial Intelligence",
+        "App",
+        "Automation",
+        "Holiday",
+        "Humanization",
+        "Inflation / Inflationary",
+        "Insurance",
+        "International / Internationally",
+        "Pharmacy",
+        "SmartEquine",
+        "Supplement",
+        "Tariff"
+      ],
+      "strike_buckets": {
+        "count": 12,
+        "context_sensitive_hint": 12
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [],
+        "game_state_sensitive": [
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-APP",
+            "label": "App",
+            "short_label": "APP",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AUTO",
+            "label": "Automation",
+            "short_label": "AUTO",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HOLI",
+            "label": "Holiday",
+            "short_label": "HOLI",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HUMA",
+            "label": "Humanization",
+            "short_label": "HUMA",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INSU",
+            "label": "Insurance",
+            "short_label": "INSU",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-PHAR",
+            "label": "Pharmacy",
+            "short_label": "PHAR",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SMAR",
+            "label": "SmartEquine",
+            "short_label": "SMAR",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SUPP",
+            "label": "Supplement",
+            "short_label": "SUPP",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-TARI",
+            "label": "Tariff",
+            "short_label": "TARI",
+            "note": "broadcast-flow dependent · live"
+          }
+        ],
+        "likely_trap": [
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AI",
+            "label": "AI / Artificial Intelligence",
+            "short_label": "AI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INFL",
+            "label": "Inflation / Inflationary",
+            "short_label": "INFL",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INTE",
+            "label": "International / Internationally",
+            "short_label": "INTE",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-AI",
+          "label": "AI / Artificial Intelligence",
+          "short_label": "AI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-APP",
+          "label": "App",
+          "short_label": "APP",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-APP",
+            "label": "APP",
+            "display_label": "App",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-AUTO",
+          "label": "Automation",
+          "short_label": "AUTO",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AUTO",
+            "label": "AUTO",
+            "display_label": "Automation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-HOLI",
+          "label": "Holiday",
+          "short_label": "HOLI",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HOLI",
+            "label": "HOLI",
+            "display_label": "Holiday",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-HUMA",
+          "label": "Humanization",
+          "short_label": "HUMA",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HUMA",
+            "label": "HUMA",
+            "display_label": "Humanization",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-INFL",
+          "label": "Inflation / Inflationary",
+          "short_label": "INFL",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation / Inflationary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-INSU",
+          "label": "Insurance",
+          "short_label": "INSU",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INSU",
+            "label": "INSU",
+            "display_label": "Insurance",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-INTE",
+          "label": "International / Internationally",
+          "short_label": "INTE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INTE",
+            "label": "INTE",
+            "display_label": "International / Internationally",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-PHAR",
+          "label": "Pharmacy",
+          "short_label": "PHAR",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-PHAR",
+            "label": "PHAR",
+            "display_label": "Pharmacy",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-SMAR",
+          "label": "SmartEquine",
+          "short_label": "SMAR",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SMAR",
+            "label": "SMAR",
+            "display_label": "SmartEquine",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-SUPP",
+          "label": "Supplement",
+          "short_label": "SUPP",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SUPP",
+            "label": "SUPP",
+            "display_label": "Supplement",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMENTIONEARNCHWY-26MAR25-TARI",
+          "label": "Tariff",
+          "short_label": "TARI",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven."
+      ],
+      "likely_hooks": [
+        "replay sequence",
+        "close game script",
+        "blowout yap risk"
+      ],
+      "context_notes": [
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
+        "Assume mixed format by default: prepared remarks first, analyst Q&A second."
+      ],
+      "opening_plan": [
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
+      ],
+      "post_opening_plan": [
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
+      ],
+      "qa_transition_plan": [
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-APP",
+            "label": "APP",
+            "display_label": "App",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AUTO",
+            "label": "AUTO",
+            "display_label": "Automation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HOLI",
+            "label": "HOLI",
+            "display_label": "Holiday",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HUMA",
+            "label": "HUMA",
+            "display_label": "Humanization",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation / Inflationary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INTE",
+            "label": "INTE",
+            "display_label": "International / Internationally",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-APP",
+            "label": "APP",
+            "display_label": "App",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AUTO",
+            "label": "AUTO",
+            "display_label": "Automation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HOLI",
+            "label": "HOLI",
+            "display_label": "Holiday",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-HUMA",
+            "label": "HUMA",
+            "display_label": "Humanization",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation / Inflationary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INSU",
+            "label": "INSU",
+            "display_label": "Insurance",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-PHAR",
+            "label": "PHAR",
+            "display_label": "Pharmacy",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SMAR",
+            "label": "SMAR",
+            "display_label": "SmartEquine",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-SUPP",
+            "label": "SUPP",
+            "display_label": "Supplement",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMENTIONEARNCHWY-26MAR25-INTE",
+            "label": "INTE",
+            "display_label": "International / Internationally",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
+      ],
+      "live_trading_summary": [
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
+      ],
+      "risk_summary": [
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
+      ],
+      "manual_trader_prompts": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
+        "Для earnings call baseline строится отдельно по prepared remarks и отдельно по Q&A."
+      ],
+      "consensus_misread": [
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "chewy-inc-their-next-earnings-call"
+    },
+    {
       "group_key": "KXPOLITICSMENTION-26MAR24",
       "event_title": "Cory Booker — MS NOW: All in with Chris Hayes",
       "event_ticker": "KXPOLITICSMENTION-26MAR24",
@@ -16157,14 +16962,14 @@
       "open_time": "2026-03-25T00:00:00Z",
       "close_time": "2026-05-01T14:00:00Z",
       "market_count": 17,
-      "dominant_group": "culture_entertainment_mentions",
-      "dominant_subtype": "podcast_or_stream",
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nfl_announcer_market",
       "dominant_rules_risk": "medium",
       "speaker": "mrbeast",
-      "format_confidence": 0.82,
-      "prep_focus": "Пойми формат подкаста, co-host dynamic и какие темы реально могут organically зайти в разговор.",
-      "live_focus": "Следи за topic drift, banter flow и guest/host pivots, а не за scripted-opening логикой.",
-      "priority": "normal",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
       "strike_codes": [
         "AI / Artificial Intelligence",
         "Beast",
@@ -16191,99 +16996,99 @@
       "strike_intel": {
         "structural": [],
         "qa_sensitive": [],
-        "contextual": [
+        "contextual": [],
+        "game_state_sensitive": [
           {
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "Beast",
             "short_label": "BEAS",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "Billion",
             "short_label": "BILL",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "Challenge",
             "short_label": "CHAL",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "Chandler",
             "short_label": "CHAN",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "Charity",
             "short_label": "CHAR",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "Contestant",
             "short_label": "CONT",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "Feastable",
             "short_label": "FEAS",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "Mario / Galaxy",
             "short_label": "MARI",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "Million",
             "short_label": "MILL",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "Money",
             "short_label": "MONE",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "Prize",
             "short_label": "PRIZ",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "Speed",
             "short_label": "SPEE",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "Subscribe",
             "short_label": "SUBS",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "Twitch",
             "short_label": "TWIT",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "Win",
             "short_label": "WIN",
-            "note": "manual review · mixed"
+            "note": "broadcast-flow dependent · live"
           }
         ],
-        "game_state_sensitive": [],
         "likely_trap": [
           {
             "market_id": "KXMRBEASTMENTION-26APR04-AI",
@@ -16310,333 +17115,333 @@
             "market_id": "KXMRBEASTMENTION-26APR04-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": -2,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
           "label": "Beast",
           "short_label": "BEAS",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-BILL",
           "label": "Billion",
           "short_label": "BILL",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
           "label": "Challenge",
           "short_label": "CHAL",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
           "label": "Chandler",
           "short_label": "CHAN",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
           "label": "Charity",
           "short_label": "CHAR",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-CONT",
           "label": "Contestant",
           "short_label": "CONT",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "CONT",
             "display_label": "Contestant",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
           "label": "Feastable",
           "short_label": "FEAS",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "FEAS",
             "display_label": "Feastable",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-MARI",
           "label": "Mario / Galaxy",
           "short_label": "MARI",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "MARI",
             "display_label": "Mario / Galaxy",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-MILL",
           "label": "Million",
           "short_label": "MILL",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "MILL",
             "display_label": "Million",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-MONE",
           "label": "Money",
           "short_label": "MONE",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "MONE",
             "display_label": "Money",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
           "label": "Prize",
           "short_label": "PRIZ",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "PRIZ",
             "display_label": "Prize",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
           "label": "Speed",
           "short_label": "SPEE",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "SPEE",
             "display_label": "Speed",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-SPON",
@@ -16648,15 +17453,15 @@
             "market_id": "KXMRBEASTMENTION-26APR04-SPON",
             "label": "SPON",
             "display_label": "Sponsor / Sponsored",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -16668,109 +17473,104 @@
           "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
           "label": "Subscribe",
           "short_label": "SUBS",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "SUBS",
             "display_label": "Subscribe",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
           "label": "Twitch",
           "short_label": "TWIT",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "TWIT",
             "display_label": "Twitch",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-WIN",
           "label": "Win",
           "short_label": "WIN",
-          "note": "manual review · mixed",
-          "bucket": "contextual",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "WIN",
             "display_label": "Win",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
-        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
-        "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
-        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
-        "Не путай topic affinity с actual live entry point в разговор."
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven."
       ],
       "likely_hooks": [
-        "segment transition",
-        "surprise cameo",
-        "retail narrative blowoff",
-        "host chemistry",
-        "fresh clip cycle",
-        "guest pivot"
+        "replay sequence",
+        "close game script",
+        "blowout yap risk"
       ],
       "context_notes": [
-        "В culture/entertainment markets часто важнее flow и structure of show, чем история."
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты."
       ],
       "opening_plan": [
-        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
-        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters."
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
       ],
       "post_opening_plan": [
-        "Если разговор закрепился в одном lane, режь страйки, которым нужен жёсткий topic pivot.",
-        "На podcasts важнее flow and chemistry, чем scripted-opening analogies."
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
       ],
       "qa_transition_plan": [
-        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops."
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
       ],
       "strike_priority": {
         "top_watchlist": [
@@ -16778,106 +17578,174 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           }
         ],
         "cheap_watchlist": [],
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXMRBEASTMENTION-26APR04-SPON",
-            "label": "SPON",
-            "display_label": "Sponsor / Sponsored",
+            "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
+            "label": "BEAS",
+            "display_label": "Beast",
             "score": -1,
             "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
+            "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMRBEASTMENTION-26APR04-BILL",
+            "label": "BILL",
+            "display_label": "Billion",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
+            "label": "CHAL",
+            "display_label": "Challenge",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
+            "label": "CHAN",
+            "display_label": "Chandler",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
+            "label": "CHAR",
+            "display_label": "Charity",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
+            ],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ],
@@ -16886,287 +17754,287 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "CONT",
             "display_label": "Contestant",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "FEAS",
             "display_label": "Feastable",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "MARI",
             "display_label": "Mario / Galaxy",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "MILL",
             "display_label": "Million",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "MONE",
             "display_label": "Money",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "PRIZ",
             "display_label": "Prize",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "SPEE",
             "display_label": "Speed",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "SUBS",
             "display_label": "Subscribe",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "TWIT",
             "display_label": "Twitch",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "WIN",
             "display_label": "Win",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "страйк чувствителен к ходу трансляции",
+              "скорее мусорный страйк без явного edge"
             ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": -2,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-blue"
+            "type_class": "type-gray"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SPON",
             "label": "SPON",
             "display_label": "Sponsor / Sponsored",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "rules / wording risk"
+              "страйк чувствителен к ходу трансляции",
+              "есть дополнительный риск из-за формулировки или конструкции страйка"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -17174,41 +18042,39 @@
         ]
       },
       "pre_event_summary": [
-        "Проверь structure of show: segments, host duties, performer slots, likely cameos.",
-        "Ожидай dumb flow на front-page массовых событиях и заранее выдели narrative-driven traps."
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
       ],
       "live_trading_summary": [
-        "Реагируй на segment transitions, а не только на сами слова.",
-        "Если это one-off show, уменьшай уверенность в сырых historical comparisons."
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
       ],
       "risk_summary": [
-        "Высокий front-page / retail flow risk.",
-        "One-off format risk: мало повторяемой истории."
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
       ],
       "manual_trader_prompts": [
-        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
-        "Отдельно смотри social narrative и front-page retail flow risk.",
-        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
-        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
-        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters.",
-        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops.",
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
         "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
         "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
       ],
       "relevant_history_notes": [
-        "Используй только максимально близкий comparison set по формату события; generic history здесь слабее помогает.",
-        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances."
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки."
       ],
       "consensus_misread": [
-        "В podcasts crowd часто путает broad topic affinity гостей с реальным probability, что тема вообще зайдёт в live conversation.",
-        "Long-form banter markets легко перепрайсить по clip-worthy narrative, хотя разговор может уйти совсем в другой lane.",
-        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
       ],
       "semantic_families": [],
       "attention_allocation": {
         "prep_allocation": "light prep",
-        "live_allocation": "live only",
-        "summary": "Достаточно короткой проверки контекста и наблюдения за opening. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
       },
       "transcript_matches": [],
       "slug": "mrbeast-next-mrbeast-youtube-video"
