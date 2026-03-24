@@ -10,6 +10,7 @@ MVP service that polls Kalshi every 5 minutes, detects new mention-like markets,
 - Applies market classification and recommendation rules
 - Generates pre-event, live-trading, and risk-note recommendations
 - Writes markdown and JSON summaries for newly discovered markets
+- Generates a local HTML dashboard from event summaries
 - Can run once or as a long-running daemon loop
 
 ## Layout
@@ -30,7 +31,33 @@ python3 kalshi_mentions_monitor/run_once.py
 python3 kalshi_mentions_monitor/daemon.py
 python3 kalshi_mentions_monitor/health_check.py
 python3 kalshi_mentions_monitor/tests/run_tests.py
+python3 kalshi_mentions_monitor/ingest_transcripts.py /path/to/transcripts_dir
+# then open:
+# /root/.openclaw/workspace/kalshi_mentions_monitor/output/dashboard/index.html
 ```
+
+## Telegram Mini App
+The dashboard build now also produces a Telegram-friendly mobile view:
+- Mini App URL: `https://iamnshrd.github.io/kalshi-mentions-dashboard/miniapp/index.html`
+- Local file: `/root/.openclaw/workspace/kalshi_mentions_monitor/output/dashboard/miniapp/index.html`
+
+To wire it into a Telegram bot:
+
+```bash
+export TELEGRAM_BOT_TOKEN='...'
+export TELEGRAM_MINIAPP_URL='https://iamnshrd.github.io/kalshi-mentions-dashboard/miniapp/index.html'
+
+# set bot menu button
+python3 kalshi_mentions_monitor/telegram_set_menu_button.py
+
+# send a one-off launch button into a chat
+python3 kalshi_mentions_monitor/telegram_send_miniapp_button.py <chat_id> 'Открыть Mentions Mini App'
+```
+
+You can also configure the same menu button manually in BotFather via `/setmenubutton`.
+
+## V1 scope
+See `V1_SCOPE.md` for the current V1 boundary / freeze criteria.
 
 Environment variables:
 - `KALSHI_BASE_URL` (default `https://api.elections.kalshi.com/trade-api/v2`)

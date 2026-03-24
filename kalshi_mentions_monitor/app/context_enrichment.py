@@ -17,6 +17,10 @@ def build_context_enrichment(event_title: str, classification: Classification) -
         ])
         likely_hooks.extend(['local incident', 'policy headline', 'question-driven narrative shift'])
         notes.append('Для political mentions current events часто важнее последних transcript counts.')
+        if classification.market_subtype == 'civic_announcement':
+            checks.append('Для civic/local events отдельно смотри локальный news cycle, agency framing и кто формально говорит от офиса.')
+            likely_hooks.append('local governance headline')
+            notes.append('Local/civic announcement чаще уже и конкретнее, чем generic national political speech.')
 
     elif classification.market_group == 'legal_court_mentions':
         checks.extend([

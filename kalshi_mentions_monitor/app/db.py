@@ -6,6 +6,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Iterator
 
+from .migrations import apply_migrations
 from .models import Classification, NormalizedMarket, Recommendation
 
 
@@ -41,6 +42,8 @@ CREATE TABLE IF NOT EXISTS classifications (
     context_sensitivity TEXT,
     rules_risk TEXT,
     classification_confidence REAL,
+    speaker TEXT,
+    format_confidence REAL,
     reasoning TEXT,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP,
     updated_at TEXT DEFAULT CURRENT_TIMESTAMP
@@ -85,6 +88,7 @@ class Database:
     def _init_db(self) -> None:
         with self.connect() as conn:
             conn.executescript(SCHEMA)
+            apply_migrations(conn)
             conn.commit()
 
     @contextmanager
@@ -98,7 +102,7 @@ class Database:
 
     def market_exists(self, market_id: str) -> bool:
         with self.connect() as conn:
-            row = conn.execute("SELECT 1 FROM markets WHERE market_id = ?", (market_id,)).fetchone()
+            row = conn.execute('SELECT 1 FROM markets WHERE market_id = ?', (market_id,)).fetchone()
             return row is not None
 
     def upsert_market(self, market: NormalizedMarket) -> None:
@@ -130,23 +134,10 @@ class Database:
                     last_seen_at=CURRENT_TIMESTAMP
                 """,
                 (
-                    market.market_id,
-                    market.event_ticker,
-                    market.ticker,
-                    market.title,
-                    market.subtitle,
-                    market.yes_sub_title,
-                    market.no_sub_title,
-                    market.rules_primary,
-                    market.rules_secondary,
-                    market.status,
-                    market.market_type,
-                    market.series_ticker,
-                    market.open_time,
-                    market.close_time,
-                    market.created_time,
-                    market.updated_time,
-                    json.dumps(market.raw_json),
+                    market.market_id, market.event_ticker, market.ticker, market.title, market.subtitle,
+                    market.yes_sub_title, market.no_sub_title, market.rules_primary, market.rules_secondary,
+                    market.status, market.market_type, market.series_ticker, market.open_time, market.close_time,
+                    market.created_time, market.updated_time, json.dumps(market.raw_json, ensure_ascii=False),
                 ),
             )
             conn.commit()
@@ -158,8 +149,9 @@ class Database:
                 INSERT INTO classifications (
                     market_id, market_group, market_subtype, recurring_type,
                     phase_profile, context_sensitivity, rules_risk,
-                    classification_confidence, reasoning, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+                    classification_confidence, speaker, format_confidence,
+                    reasoning, created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
                 ON CONFLICT(market_id) DO UPDATE SET
                     market_group=excluded.market_group,
                     market_subtype=excluded.market_subtype,
@@ -174,15 +166,9 @@ class Database:
                     updated_at=CURRENT_TIMESTAMP
                 """,
                 (
-                    c.market_id,
-                    c.market_group,
-                    c.market_subtype,
-                    c.recurring_type,
-                    c.phase_profile,
-                    c.context_sensitivity,
-                    c.rules_risk,
-                    c.classification_confidence,
-                    json.dumps(c.reasoning),
+                    c.market_id, c.market_group, c.market_subtype, c.recurring_type, c.phase_profile,
+                    c.context_sensitivity, c.rules_risk, c.classification_confidence, c.speaker,
+                    c.format_confidence, json.dumps(c.reasoning, ensure_ascii=False),
                 ),
             )
             conn.commit()
@@ -204,22 +190,23 @@ class Database:
                 """,
                 (
                     r.market_id,
-                    json.dumps(r.pre_event_recommendations),
-                    json.dumps(r.live_trading_recommendations),
-                    json.dumps(r.risk_notes),
+                    json.dumps(r.pre_event_recommendations, ensure_ascii=False),
+                    json.dumps(r.live_trading_recommendations, ensure_ascii=False),
+                    json.dumps(r.risk_notes, ensure_ascii=False),
                     r.priority_level,
                 ),
             )
             conn.commit()
 
-    def log_poll_run(self, started_at: str, finished_at: str, markets_fetched: int, mention_candidates: int, new_markets_found: int, errors: str = "") -> None:
+    def log_poll_run(self, started_at: str, finished_at: str, markets_fetched: int, mention_candidates: int, new_markets_found: int, errors: str = '') -> None:
         with self.connect() as conn:
             conn.execute(
-                "INSERT INTO poll_runs (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors) VALUES (?, ?, ?, ?, ?, ?)",
+                'INSERT INTO poll_runs (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors) VALUES (?, ?, ?, ?, ?, ?)',
                 (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors),
             )
             conn.commit()
-(market_id, stage, error) VALUES (?, ?, ?)",
-                (market_id, stage, error[:2000]),
-            )
+
+    def log_market_error(self, market_id: str, stage: str, error: str) -> None:
+        with self.connect() as conn:
+            conn.execute('INSERT INTO market_errors (market_id, stage, error) VALUES (?, ?, ?)', (market_id, stage, error[:2000]))
             conn.commit()

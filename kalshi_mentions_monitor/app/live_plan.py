@@ -21,6 +21,19 @@ def build_live_plan(classification: Classification) -> dict:
             'При переходе в Q&A поднимай вес question-driven strikes.',
             'Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.',
         ]
+        if classification.market_subtype == 'civic_announcement':
+            opening = [
+                'Сначала проверь, держится ли спикер в узком office/agency framing или уходит в broader politics.',
+                'Не тащи national narrative в локальное event framing без явного сигнала в opening.',
+            ]
+            post_opening = [
+                'Если opening остался формальным и office-heavy, режь tails, которым нужен wider political rant path.',
+                'Если local governance topic неожиданно раскрывается широко, перепрайсь тематические кластеры, а не одно слово.',
+            ]
+            qa_transition = [
+                'Если событие уходит в press scrum, вес question-driven strikes резко растёт.',
+                'Local press questions могут быстро сменить office framing на conflict/policy lane.',
+            ]
 
     elif classification.market_group == 'legal_court_mentions':
         opening = [
@@ -63,6 +76,18 @@ def build_live_plan(classification: Classification) -> dict:
             'Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.',
         ]
 
+    elif classification.market_subtype == 'podcast_or_stream':
+        opening = [
+            'Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.',
+            'Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters.',
+        ]
+        post_opening = [
+            'Если разговор закрепился в одном lane, режь страйки, которым нужен жёсткий topic pivot.',
+            'На podcasts важнее flow and chemistry, чем scripted-opening analogies.',
+        ]
+        qa_transition = [
+            'Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops.',
+        ]
     else:
         opening = ['Сначала пойми реальный формат события, потом уже aggressively repricing strikes.']
         post_opening = ['После первой фазы события пересчитай, какие strikes ещё реально живы.']

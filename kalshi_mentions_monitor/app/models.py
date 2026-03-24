@@ -22,6 +22,14 @@ class NormalizedMarket:
     close_time: str
     created_time: str
     updated_time: str
+    yes_bid: float | None = None
+    yes_ask: float | None = None
+    no_bid: float | None = None
+    no_ask: float | None = None
+    yes_price: float | None = None
+    no_price: float | None = None
+    last_price: float | None = None
+    volume: float | None = None
     raw_json: dict[str, Any] = field(default_factory=dict)
 
 

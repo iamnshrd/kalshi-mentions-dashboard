@@ -15,6 +15,9 @@ def build_recommendation(market: NormalizedMarket, c: Classification) -> Recomme
             'Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent.',
             'Сгруппируй тематически связанные strikes в narrative buckets, чтобы не задублировать один и тот же риск.',
         ])
+        if c.market_subtype == 'civic_announcement':
+            pre.append('Для civic/local announcement сначала пойми официальный повод и expected office framing; local governance language часто важнее national narrative.')
+            live.append('Если спикер держится в узком office framing, не переоценивай national/podcast-style tail words.')
         live.extend([
             'В первые минуты определи dominant theme cluster, а не отдельное слово.',
             'Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу.',
