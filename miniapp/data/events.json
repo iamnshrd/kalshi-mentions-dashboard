@@ -7819,7 +7819,7 @@
       "event_title": "Cory Booker — MS NOW: All in with Chris Hayes",
       "event_ticker": "KXPOLITICSMENTION-26MAR24",
       "series_ticker": "",
-      "status": "initialized",
+      "status": "active",
       "open_time": "2026-03-24T21:20:00Z",
       "close_time": "2026-03-25T14:00:00Z",
       "market_count": 12,
@@ -7838,7 +7838,7 @@
         "Election",
         "ICE / TSA",
         "Iran",
-        "Laguardia",
+        "LaGuardia",
         "Event does not qualify",
         "Oil / Gas / Gasoline",
         "Republican",
@@ -7851,44 +7851,43 @@
       },
       "strike_intel": {
         "structural": [],
-        "qa_sensitive": [
+        "qa_sensitive": [],
+        "contextual": [
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-ELEC",
             "label": "Election",
             "short_label": "ELEC",
-            "note": "forced topical pivot · q&a"
-          }
-        ],
-        "contextual": [
+            "note": "manual review · mixed"
+          },
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
             "label": "ICE / TSA",
             "short_label": "ICE",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
             "label": "Iran",
             "short_label": "IRAN",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
-            "label": "Laguardia",
+            "label": "LaGuardia",
             "short_label": "LAGU",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
             "label": "Republican",
             "short_label": "REPU",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
             "label": "Trump",
             "short_label": "TRUM",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           }
         ],
         "game_state_sensitive": [],
@@ -7942,12 +7941,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -7956,7 +7955,7 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-CONS",
@@ -7968,12 +7967,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-CONS",
             "label": "CONS",
             "display_label": "Constitution / Constitutional / Unconstitutional",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -7982,7 +7981,7 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-CORR",
@@ -7994,12 +7993,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-CORR",
             "label": "CORR",
             "display_label": "Corrupt / Corruption",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8008,14 +8007,14 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-ELEC",
           "label": "Election",
           "short_label": "ELEC",
-          "note": "forced topical pivot · q&a",
-          "bucket": "qa_sensitive",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-ELEC",
             "label": "ELEC",
@@ -8024,11 +8023,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "forced topical pivot",
-              "cheap tail"
+              "needs hard topic pivot"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
@@ -8040,21 +8038,20 @@
           "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
           "label": "ICE / TSA",
           "short_label": "ICE",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
             "label": "ICE",
             "display_label": "ICE / TSA",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8066,21 +8063,20 @@
           "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
           "label": "Iran",
           "short_label": "IRAN",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8090,23 +8086,22 @@
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
-          "label": "Laguardia",
+          "label": "LaGuardia",
           "short_label": "LAGU",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
             "label": "LAGU",
-            "display_label": "Laguardia",
-            "score": 2,
+            "display_label": "LaGuardia",
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8124,12 +8119,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8138,7 +8133,7 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-OIL",
@@ -8150,12 +8145,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8164,27 +8159,26 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
           "label": "Republican",
           "short_label": "REPU",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
             "label": "REPU",
             "display_label": "Republican",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8202,12 +8196,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8216,27 +8210,26 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
           "label": "Trump",
           "short_label": "TRUM",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8280,15 +8273,14 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
             "label": "ICE",
             "display_label": "ICE / TSA",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8297,15 +8289,14 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8313,16 +8304,15 @@
           {
             "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
             "label": "LAGU",
-            "display_label": "Laguardia",
-            "score": 2,
+            "display_label": "LaGuardia",
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8331,15 +8321,14 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
             "label": "REPU",
             "display_label": "Republican",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8348,15 +8337,14 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -8366,119 +8354,15 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXPOLITICSMENTION-26MAR24-ELEC",
-            "label": "ELEC",
-            "display_label": "Election",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "forced topical pivot",
-              "cheap tail"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          }
-        ],
-        "full_ranking": [
-          {
-            "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
-            "label": "ICE",
-            "display_label": "ICE / TSA",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
-            "label": "IRAN",
-            "display_label": "Iran",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
-            "label": "LAGU",
-            "display_label": "Laguardia",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
-            "label": "REPU",
-            "display_label": "Republican",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
-            "label": "TRUM",
-            "display_label": "Trump",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
             "market_id": "KXPOLITICSMENTION-26MAR24-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8490,12 +8374,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-CONS",
             "label": "CONS",
             "display_label": "Constitution / Constitutional / Unconstitutional",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8507,12 +8391,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-CORR",
             "label": "CORR",
             "display_label": "Corrupt / Corruption",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8524,12 +8408,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8541,12 +8425,179 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-ICE",
+            "label": "ICE",
+            "display_label": "ICE / TSA",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-LAGU",
+            "label": "LAGU",
+            "display_label": "LaGuardia",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-CONS",
+            "label": "CONS",
+            "display_label": "Constitution / Constitutional / Unconstitutional",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-CORR",
+            "label": "CORR",
+            "display_label": "Corrupt / Corruption",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXPOLITICSMENTION-26MAR24-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8558,12 +8609,12 @@
             "market_id": "KXPOLITICSMENTION-26MAR24-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -8579,11 +8630,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "forced topical pivot",
-              "cheap tail"
+              "needs hard topic pivot"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
@@ -18225,91 +18275,91 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "Beast",
             "short_label": "BEAS",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "Billion",
             "short_label": "BILL",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "Challenge",
             "short_label": "CHAL",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "Chandler",
             "short_label": "CHAN",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "Charity",
             "short_label": "CHAR",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "Contestant",
             "short_label": "CONT",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "Feastable",
             "short_label": "FEAS",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "Mario / Galaxy",
             "short_label": "MARI",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "Million",
             "short_label": "MILL",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "Money",
             "short_label": "MONE",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "Prize",
             "short_label": "PRIZ",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "Speed",
             "short_label": "SPEE",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "Subscribe",
             "short_label": "SUBS",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "Twitch",
             "short_label": "TWIT",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           },
           {
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "Win",
             "short_label": "WIN",
-            "note": "conversation-dependent token · mixed"
+            "note": "manual review · mixed"
           }
         ],
         "game_state_sensitive": [],
@@ -18339,12 +18389,12 @@
             "market_id": "KXMRBEASTMENTION-26APR04-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -18353,27 +18403,26 @@
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
           "label": "Beast",
           "short_label": "BEAS",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18385,21 +18434,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-BILL",
           "label": "Billion",
           "short_label": "BILL",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18411,21 +18459,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
           "label": "Challenge",
           "short_label": "CHAL",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18437,21 +18484,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
           "label": "Chandler",
           "short_label": "CHAN",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18463,21 +18509,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
           "label": "Charity",
           "short_label": "CHAR",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18489,21 +18534,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-CONT",
           "label": "Contestant",
           "short_label": "CONT",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "CONT",
             "display_label": "Contestant",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18515,21 +18559,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
           "label": "Feastable",
           "short_label": "FEAS",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "FEAS",
             "display_label": "Feastable",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18541,21 +18584,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-MARI",
           "label": "Mario / Galaxy",
           "short_label": "MARI",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "MARI",
             "display_label": "Mario / Galaxy",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18567,21 +18609,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-MILL",
           "label": "Million",
           "short_label": "MILL",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "MILL",
             "display_label": "Million",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18593,21 +18634,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-MONE",
           "label": "Money",
           "short_label": "MONE",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "MONE",
             "display_label": "Money",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18619,21 +18659,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
           "label": "Prize",
           "short_label": "PRIZ",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "PRIZ",
             "display_label": "Prize",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18645,21 +18684,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
           "label": "Speed",
           "short_label": "SPEE",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "SPEE",
             "display_label": "Speed",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18677,12 +18715,12 @@
             "market_id": "KXMRBEASTMENTION-26APR04-SPON",
             "label": "SPON",
             "display_label": "Sponsor / Sponsored",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -18697,21 +18735,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
           "label": "Subscribe",
           "short_label": "SUBS",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "SUBS",
             "display_label": "Subscribe",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18723,21 +18760,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
           "label": "Twitch",
           "short_label": "TWIT",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "TWIT",
             "display_label": "Twitch",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18749,21 +18785,20 @@
           "market_id": "KXMRBEASTMENTION-26APR04-WIN",
           "label": "Win",
           "short_label": "WIN",
-          "note": "conversation-dependent token · mixed",
+          "note": "manual review · mixed",
           "bucket": "contextual",
           "rank": {
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "WIN",
             "display_label": "Win",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18807,15 +18842,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18824,15 +18858,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18841,15 +18874,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18858,15 +18890,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18875,15 +18906,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18893,15 +18923,32 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
+            "market_id": "KXMRBEASTMENTION-26APR04-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
             "market_id": "KXMRBEASTMENTION-26APR04-SPON",
             "label": "SPON",
             "display_label": "Sponsor / Sponsored",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -18915,15 +18962,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BEAS",
             "label": "BEAS",
             "display_label": "Beast",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18932,15 +18978,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-BILL",
             "label": "BILL",
             "display_label": "Billion",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18949,15 +18994,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18966,15 +19010,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAN",
             "label": "CHAN",
             "display_label": "Chandler",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -18983,15 +19026,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CHAR",
             "label": "CHAR",
             "display_label": "Charity",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19000,15 +19042,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-CONT",
             "label": "CONT",
             "display_label": "Contestant",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19017,15 +19058,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-FEAS",
             "label": "FEAS",
             "display_label": "Feastable",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19034,15 +19074,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-MARI",
             "label": "MARI",
             "display_label": "Mario / Galaxy",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19051,15 +19090,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-MILL",
             "label": "MILL",
             "display_label": "Million",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19068,15 +19106,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-MONE",
             "label": "MONE",
             "display_label": "Money",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19085,15 +19122,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-PRIZ",
             "label": "PRIZ",
             "display_label": "Prize",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19102,15 +19138,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-SPEE",
             "label": "SPEE",
             "display_label": "Speed",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19119,15 +19154,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-SUBS",
             "label": "SUBS",
             "display_label": "Subscribe",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19136,15 +19170,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-TWIT",
             "label": "TWIT",
             "display_label": "Twitch",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19153,15 +19186,14 @@
             "market_id": "KXMRBEASTMENTION-26APR04-WIN",
             "label": "WIN",
             "display_label": "Win",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "conversation-flow dependent",
-              "late-phase optionality"
+              "conversation-flow dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -19170,12 +19202,12 @@
             "market_id": "KXMRBEASTMENTION-26APR04-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
@@ -19187,12 +19219,12 @@
             "market_id": "KXMRBEASTMENTION-26APR04-SPON",
             "label": "SPON",
             "display_label": "Sponsor / Sponsored",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "conversation-flow dependent",
               "rules / wording risk"
