@@ -10,6 +10,7 @@ from .kalshi_client import KalshiClient
 from .recommender import build_recommendation
 from .reporter import write_reports
 from .series_client import KalshiSeriesClient
+from .time_filter import is_relevant_from_date, today_utc
 
 
 class KalshiMentionMonitorService:
@@ -24,11 +25,13 @@ class KalshiMentionMonitorService:
         mention_series = self.series_client.fetch_mention_series_tickers()
         markets = []
         seen_ids: set[str] = set()
+        from_date = today_utc()
         for market in self.client.fetch_markets_for_series_bulk(mention_series):
             if market.market_id in seen_ids:
                 continue
             seen_ids.add(market.market_id)
-            markets.append(market)
+            if is_relevant_from_date(market, from_date):
+                markets.append(market)
 
         scored = [(m, score_market_for_mentions(m)) for m in markets]
         mention_candidates: list[tuple] = []

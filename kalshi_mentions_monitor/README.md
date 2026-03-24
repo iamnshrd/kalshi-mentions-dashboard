@@ -3,9 +3,11 @@
 MVP service that polls Kalshi every 5 minutes, detects new mention-like markets, classifies them, and generates pre-event + live trading recommendations.
 
 ## Features
-- Polls Kalshi markets endpoint on a fixed cadence
+- Polls Kalshi mentions on a fixed cadence
 - Detects new markets via SQLite persistence
-- Applies rule-based mention filtering and market classification
+- Discovers mention markets by `series_ticker` containing `MENTION`
+- Filters to markets relevant from today UTC forward
+- Applies market classification and recommendation rules
 - Generates pre-event, live-trading, and risk-note recommendations
 - Writes markdown and JSON summaries for newly discovered markets
 - Can run once or as a long-running daemon loop
@@ -37,5 +39,6 @@ Environment variables:
 
 ## Notes
 Discovery is intentionally simple and robust: a market is considered a mention market if its `series_ticker` contains `MENTION`.
+The monitor then filters to markets dated from today UTC forward using market timestamps and ticker/event date hints.
 
 This project is intentionally rule-based and conservative. It is a prep/recommendation engine, not an execution bot.
