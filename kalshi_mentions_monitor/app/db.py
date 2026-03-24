@@ -65,6 +65,14 @@ CREATE TABLE IF NOT EXISTS poll_runs (
     new_markets_found INTEGER,
     errors TEXT
 );
+
+CREATE TABLE IF NOT EXISTS market_errors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    market_id TEXT,
+    stage TEXT,
+    error TEXT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 
@@ -209,5 +217,9 @@ class Database:
             conn.execute(
                 "INSERT INTO poll_runs (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors) VALUES (?, ?, ?, ?, ?, ?)",
                 (started_at, finished_at, markets_fetched, mention_candidates, new_markets_found, errors),
+            )
+            conn.commit()
+(market_id, stage, error) VALUES (?, ?, ?)",
+                (market_id, stage, error[:2000]),
             )
             conn.commit()

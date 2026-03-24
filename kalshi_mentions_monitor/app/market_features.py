@@ -64,17 +64,16 @@ def infer_event_format(text: str) -> str:
 def extract_speaker(title: str) -> str | None:
     if not title:
         return None
+    t = title.lower()
+    if 'what will the announcers say during' in t:
+        return 'announcers'
+
     patterns = [
         r'what will (.+?) say during',
         r'what will (.+?) mention during',
-        r'what will the announcers say during',
     ]
-    t = title.lower()
     for p in patterns:
         m = re.search(p, t)
         if m:
-            val = m.group(1).strip()
-            if val == 'the announcers':
-                return 'announcers'
-            return val
+            return m.group(1).strip()
     return None

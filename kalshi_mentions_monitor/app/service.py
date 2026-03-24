@@ -81,20 +81,29 @@ class KalshiMentionMonitorService:
 
         event_summaries: list[dict] = []
         for group in group_markets(markets):
-            summary = build_event_summary(group, classifications_by_market, recommendations_by_market)
-            md_path, json_path = write_event_summary(self.output_dir, summary)
-            summary["markdown_path"] = str(md_path)
-            summary["json_path"] = str(json_path)
-            event_summaries.append(summary)
+            try:
+                summary = build_event_summary(group, classifications_by_market, recommendations_by_market)
+                md_path, json_path = write_event_summary(self.output_dir, summary)
+                summary["markdown_path"] = str(md_path)
+                summary["json_path"] = str(json_path)
+                event_summaries.append(summary)
+            except Exception as exc:  # noqa: BLE001
+                self.db.log_market_error(group.group_key, 'event_summary', str(exc))
+                market_level_errors.append(f"event {group.group_key}: {exc}")
+                continue
 
         finished = datetime.now(UTC).isoformat()
-        self.db.log_poll_run(started, finished, len(markets), len(mention_candidates), len(new_market_ids), "")
+        self.db.log_poll_run(started, finished, len(markets), len(mention_candidates), len(new_market_ids), '\n'.join(market_level_errors[:20]))
         return {
             "started_at": started,
             "finished_at": finished,
             "markets_fetched": len(markets),
             "mention_candidates": len(mention_candidates),
             "new_markets_found": len(new_market_ids),
+            "new_markets": market_summaries,
+            "event_summaries": event_summaries,
+        }
+),
             "new_markets": market_summaries,
             "event_summaries": event_summaries,
         }
