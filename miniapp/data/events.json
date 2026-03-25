@@ -8208,9 +8208,9 @@
       "event_title": "Bernie Sanders — Press Conference on AI Data Centers",
       "event_ticker": "KXBERNIEMENTION-26MAR25",
       "series_ticker": "",
-      "status": "active",
+      "status": "determined",
       "open_time": "2026-03-25T15:45:00Z",
-      "close_time": "2026-03-26T14:00:00Z",
+      "close_time": "2026-03-25T21:26:57Z",
       "market_count": 20,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
@@ -8903,7 +8903,7 @@
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: A.I. Is Coming for the 2026 Midterms - The New York Times",
         "Свежий headline: Kennedy Rejects Criticism, Data and Decorum in Contentious Hearing - The New York Times",
-        "Свежий headline: Live Updates: Federal Judge Finds Third-Country Deportations Unlawful - The New York Times"
+        "Свежий headline: Sanders, Ocasio-Cortez push bill to impose AI data center moratorium - AP News"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -13932,21 +13932,18 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening.",
-        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure",
-        "fresh headline pressure"
+        "headline-topic pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Fact Check: No, There’s No Link Between Wind Farms and Cancer Like Trump Claimed - Bloomberg.com"
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -61435,8 +61432,8 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: Divided Fed lowers rates, signals pause and one cut next year as growth rebounds - Reuters",
-        "Свежий headline: Fed's Powell dodges questions on his future, but has advice for his successor - Reuters",
-        "Свежий headline: Fed's Powell says larger-than-expected tariffs likely to boost inflation, slow growth - Reuters"
+        "Свежий headline: Fed Cuts Rates Again, Is Divided Over Future Moves - The New York Times",
+        "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
