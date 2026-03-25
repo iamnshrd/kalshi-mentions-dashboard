@@ -9868,9 +9868,9 @@
       "event_title": "Chewy, Inc. — their next earnings call",
       "event_ticker": "KXMENTIONEARNCHWY-26MAR25",
       "series_ticker": "",
-      "status": "active",
+      "status": "determined",
       "open_time": "2026-03-23T03:00:00Z",
-      "close_time": "2026-06-30T14:00:00Z",
+      "close_time": "2026-03-25T16:30:00Z",
       "market_count": 12,
       "dominant_group": "earnings_or_corporate_mentions",
       "dominant_subtype": "earnings_call",
@@ -17932,6 +17932,932 @@
       "slug": "gary-peters-the-last-word-with-lawrence-o-donnell"
     },
     {
+      "group_key": "KXNEWSOMMENTION-26MAR25",
+      "event_title": "Gavin Newsom — Governor Gavin Newsom launches effort to recruit young people to serve communities, gain job skills",
+      "event_ticker": "KXNEWSOMMENTION-26MAR25",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-25T16:15:00Z",
+      "close_time": "2026-03-26T14:00:00Z",
+      "market_count": 13,
+      "dominant_group": "political_mentions",
+      "dominant_subtype": "speech",
+      "dominant_rules_risk": "medium",
+      "speaker": "gavin newsom",
+      "format_confidence": 0.85,
+      "prep_focus": "Собери контекст, формат события и кластеры страйков перед торговлей.",
+      "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
+      "priority": "high",
+      "strike_codes": [
+        "2028 / Campaign",
+        "Afford / Affordable / Affordability",
+        "AI / Artificial Intelligence",
+        "Economy / Economic",
+        "Enroll / Enrollment",
+        "Iran",
+        "Mentor / Mentorship",
+        "Mental Health",
+        "Event does not qualify",
+        "Oil / Gas / Gasoline",
+        "Republican",
+        "Suicide",
+        "Trump"
+      ],
+      "strike_buckets": {
+        "count": 13,
+        "context_sensitive_hint": 13
+      },
+      "strike_intel": {
+        "structural": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ECON",
+            "label": "Economy / Economic",
+            "short_label": "ECON",
+            "note": "macro-policy lane · opening"
+          }
+        ],
+        "qa_sensitive": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-IRAN",
+            "label": "Iran",
+            "short_label": "IRAN",
+            "note": "geo/conflict dependent · q&a"
+          }
+        ],
+        "contextual": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+            "label": "2028 / Campaign",
+            "short_label": "2028",
+            "note": "theme bridge required · pivot"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+            "label": "Mental Health",
+            "short_label": "MENTH",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-REPU",
+            "label": "Republican",
+            "short_label": "REPU",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-SUIC",
+            "label": "Suicide",
+            "short_label": "SUIC",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-TRUM",
+            "label": "Trump",
+            "short_label": "TRUM",
+            "note": "name-only exposure · tail"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+            "label": "Afford / Affordable / Affordability",
+            "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AI",
+            "label": "AI / Artificial Intelligence",
+            "short_label": "AI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+            "label": "Enroll / Enrollment",
+            "short_label": "ENRO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENT",
+            "label": "Mentor / Mentorship",
+            "short_label": "MENT",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-OIL",
+            "label": "Oil / Gas / Gasoline",
+            "short_label": "OIL",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+          "label": "2028 / Campaign",
+          "short_label": "2028",
+          "note": "theme bridge required · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+            "label": "2028",
+            "display_label": "2028 / Campaign",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+          "label": "Afford / Affordable / Affordability",
+          "short_label": "AFFO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-AI",
+          "label": "AI / Artificial Intelligence",
+          "short_label": "AI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-ECON",
+          "label": "Economy / Economic",
+          "short_label": "ECON",
+          "note": "macro-policy lane · opening",
+          "bucket": "structural",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+          "label": "Enroll / Enrollment",
+          "short_label": "ENRO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+            "label": "ENRO",
+            "display_label": "Enroll / Enrollment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-IRAN",
+          "label": "Iran",
+          "short_label": "IRAN",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-MENT",
+          "label": "Mentor / Mentorship",
+          "short_label": "MENT",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENT",
+            "label": "MENT",
+            "display_label": "Mentor / Mentorship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+          "label": "Mental Health",
+          "short_label": "MENTH",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+            "label": "MENTH",
+            "display_label": "Mental Health",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          },
+          "phase_fit": "service-only",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-OIL",
+          "label": "Oil / Gas / Gasoline",
+          "short_label": "OIL",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-REPU",
+          "label": "Republican",
+          "short_label": "REPU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-SUIC",
+          "label": "Suicide",
+          "short_label": "SUIC",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-SUIC",
+            "label": "SUIC",
+            "display_label": "Suicide",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNEWSOMMENTION-26MAR25-TRUM",
+          "label": "Trump",
+          "short_label": "TRUM",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXNEWSOMMENTION-26MAR25-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        }
+      ],
+      "context_checks": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "local incident",
+        "policy headline",
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure",
+        "fresh headline pressure"
+      ],
+      "context_notes": [
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Свежий headline: Trump Suggests Ground Strikes on Venezuela Could Be Next - The New York Times",
+        "Свежий headline: White House Orders C.I.A. to Send Names as Worker Purge Expands (Published 2025) - The New York Times"
+      ],
+      "opening_plan": [
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot."
+      ],
+      "post_opening_plan": [
+        "Если opening прошёл без hit, не держи NO автоматически: сначала реши, был ли strike opening-heavy или Q&A-heavy.",
+        "Переоцени narrative buckets целиком, а не отдельные слова."
+      ],
+      "qa_transition_plan": [
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+            "label": "2028",
+            "display_label": "2028 / Campaign",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+            "label": "ENRO",
+            "display_label": "Enroll / Enrollment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+            "label": "MENTH",
+            "display_label": "Mental Health",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+            "label": "2028",
+            "display_label": "2028 / Campaign",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+            "label": "ENRO",
+            "display_label": "Enroll / Enrollment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+            "label": "MENTH",
+            "display_label": "Mental Health",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENT",
+            "label": "MENT",
+            "display_label": "Mentor / Mentorship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-2028",
+            "label": "2028",
+            "display_label": "2028 / Campaign",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-ENRO",
+            "label": "ENRO",
+            "display_label": "Enroll / Enrollment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENTH",
+            "label": "MENTH",
+            "display_label": "Mental Health",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-MENT",
+            "label": "MENT",
+            "display_label": "Mentor / Mentorship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-REPU",
+            "label": "REPU",
+            "display_label": "Republican",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-SUIC",
+            "label": "SUIC",
+            "display_label": "Suicide",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNEWSOMMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь local/state news за последние 48–72 часа; свежие инциденты часто ломают исторический baseline.",
+        "Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent."
+      ],
+      "live_trading_summary": [
+        "В первые минуты определи dominant theme cluster, а не отдельное слово.",
+        "Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу."
+      ],
+      "risk_summary": [
+        "Высокая чувствительность к current events.",
+        "Связанные страйки могут быть по сути одной ставкой на один narrative."
+      ],
+      "manual_trader_prompts": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot.",
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера.",
+        "Для speech baskets полезнее смотреть похожие scripted openings, а не любые политические появления подряд."
+      ],
+      "consensus_misread": [
+        "В speech basket рынок часто путает broad theme с exact token hit rate; правильная идея не равна правильному слову.",
+        "Здесь особенно важно не ставить baseline words и odd tails в один bucket: opening basket и дальние хвосты должны прайситься по-разному.",
+        "Tech tails типа AI/ChatGPT выглядят современно и headline-friendly, но без явного мостика из темы события это чаще false relevance, чем core basket.",
+        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+      ],
+      "semantic_families": [
+        {
+          "family": "stretch-economy-work",
+          "labels": [
+            "Afford / Affordable / Affordability",
+            "Economy / Economic"
+          ]
+        },
+        {
+          "family": "stretch-geopolitics-security",
+          "labels": [
+            "Iran"
+          ]
+        },
+        {
+          "family": "odd-tail",
+          "labels": [
+            "AI / Artificial Intelligence",
+            "Event does not qualify"
+          ]
+        }
+      ],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "gavin-newsom-governor-gavin-newsom-launches-effort-to-recruit-young-people-to-serve-communities-gain"
+    },
+    {
       "group_key": "KXLEAVITTMENTIONDURATION-MAR2626",
       "event_title": "How long will Karoline Leavitt speak for at Press Briefing by the White House Press Secretary Karoline Leavitt?",
       "event_ticker": "KXLEAVITTMENTIONDURATION-MAR2626",
@@ -21275,7 +22201,7 @@
       "event_title": "Keir Starmer — next Prime Minister's Questions (UK House of Commons)",
       "event_ticker": "KXSTARMERMENTIONB-26MAR25",
       "series_ticker": "",
-      "status": "determined",
+      "status": "finalized",
       "open_time": "2026-03-19T22:00:00Z",
       "close_time": "2026-03-25T16:02:03Z",
       "market_count": 13,
@@ -34046,7 +34972,8 @@
         "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
         "Заранее раздели strikes на baseline-driven и game-state-driven.",
         "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
-        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
       ],
       "likely_hooks": [
         "replay sequence",
@@ -34054,12 +34981,16 @@
         "blowout yap risk",
         "injury report",
         "seeding narrative",
-        "broadcast storyline"
+        "broadcast storyline",
+        "fresh headline pressure",
+        "prematch storyline today"
       ],
       "context_notes": [
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
-        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: Boston Celtics injury report: Payton Pritchard remains on the list vs. Detroit - Sports Illustrated",
+        "Свежий headline: Quin Snyder Previews Tomorrow's Matchup With The Pistons + Talks About Detroit's Growth This Season - Sports Illustrated"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
