@@ -7579,7 +7579,7 @@
       "event_title": "Cory Booker — MS NOW: All in with Chris Hayes",
       "event_ticker": "KXPOLITICSMENTION-26MAR24",
       "series_ticker": "",
-      "status": "active",
+      "status": "inactive",
       "open_time": "2026-03-24T21:20:00Z",
       "close_time": "2026-03-25T14:00:00Z",
       "market_count": 12,
@@ -36854,115 +36854,115 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BARR",
             "label": "Barry Bonds",
             "short_label": "BARR",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
             "label": "Bases Loaded",
             "short_label": "BASE",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BUNT",
             "label": "Bunt / Bunts",
             "short_label": "BUNT",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "Challenge",
             "short_label": "CHAL",
-            "note": "review/whistle trigger · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-COVE",
             "label": "Cove",
             "short_label": "COVE",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
             "label": "Double Play",
             "short_label": "DOUB",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ERRO",
             "label": "Error",
             "short_label": "ERRO",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-EXTR",
             "label": "Extra Inning",
             "short_label": "EXTR",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-GRAN",
             "label": "Grand Slam",
             "short_label": "GRAN",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-JETE",
             "label": "Jeter",
             "short_label": "JETE",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
             "label": "MVP",
             "short_label": "MVP",
-            "note": "narrative tag · tail"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-OHTA",
             "label": "Ohtani",
             "short_label": "OHTA",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ORAC",
             "label": "Oracle Park",
             "short_label": "ORAC",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-PITC",
             "label": "Pitch Clock",
             "short_label": "PITC",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ROBO",
             "label": "Robot",
             "short_label": "ROBO",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRIP",
             "label": "Triple",
             "short_label": "TRIP",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WALK",
             "label": "Walk Off",
             "short_label": "WALK",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WHAT",
             "label": "What a Catch",
             "short_label": "WHAT",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           },
           {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WILD",
             "label": "Wild Pitch",
             "short_label": "WILD",
-            "note": "broadcast-flow dependent · live"
+            "note": "game-state dependent · live"
           }
         ],
         "likely_trap": [
@@ -36985,7 +36985,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-BARR",
           "label": "Barry Bonds",
           "short_label": "BARR",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BARR",
@@ -36995,8 +36995,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 51.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37010,33 +37010,32 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
           "label": "Bases Loaded",
           "short_label": "BASE",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
             "label": "BASE",
             "display_label": "Bases Loaded",
-            "score": -1,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
+            "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 78.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "rich price"
+              "broadcast sensitive"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-green"
           },
           "phase_fit": "game-state-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-BUNT",
           "label": "Bunt / Bunts",
           "short_label": "BUNT",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-BUNT",
@@ -37046,8 +37045,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.00000000000001,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37061,33 +37060,33 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
           "label": "Challenge",
           "short_label": "CHAL",
-          "note": "review/whistle trigger · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 3,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "score": 4,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "game-state",
-            "yes_reference_price": 97.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "review/whistle trigger",
-              "alive but rich"
+              "scarce live path"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-green"
           },
           "phase_fit": "game-state-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-COVE",
           "label": "Cove",
           "short_label": "COVE",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-COVE",
@@ -37097,8 +37096,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37112,33 +37111,32 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
           "label": "Double Play",
           "short_label": "DOUB",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
             "label": "DOUB",
             "display_label": "Double Play",
-            "score": -1,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
+            "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "rich price"
+              "broadcast sensitive"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-green"
           },
           "phase_fit": "game-state-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-ERRO",
           "label": "Error",
           "short_label": "ERRO",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ERRO",
@@ -37148,8 +37146,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 64.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37163,7 +37161,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-EXTR",
           "label": "Extra Inning",
           "short_label": "EXTR",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-EXTR",
@@ -37173,8 +37171,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 34.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37188,7 +37186,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-GRAN",
           "label": "Grand Slam",
           "short_label": "GRAN",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-GRAN",
@@ -37198,8 +37196,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 32.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37213,7 +37211,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-JETE",
           "label": "Jeter",
           "short_label": "JETE",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-JETE",
@@ -37223,8 +37221,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 59.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37238,27 +37236,26 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
           "label": "MVP",
           "short_label": "MVP",
-          "note": "narrative tag · tail",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
             "label": "MVP",
             "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "narrative tag",
-              "headline overread"
+              "narrative tag"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
             "type_class": "type-green"
           },
           "phase_fit": "game-state-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-NQE",
@@ -37274,8 +37271,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
               "weak tail cluster"
@@ -37290,7 +37287,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-OHTA",
           "label": "Ohtani",
           "short_label": "OHTA",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-OHTA",
@@ -37300,8 +37297,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 70.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37315,33 +37312,32 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-ORAC",
           "label": "Oracle Park",
           "short_label": "ORAC",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ORAC",
             "label": "ORAC",
             "display_label": "Oracle Park",
-            "score": -1,
+            "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
+            "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "rich price"
+              "broadcast sensitive"
             ],
-            "status_class": "status-red",
+            "status_class": "status-gray",
             "type_class": "type-green"
           },
           "phase_fit": "game-state-sensitive",
-          "attention_allocation": "manual only"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-PITC",
           "label": "Pitch Clock",
           "short_label": "PITC",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-PITC",
@@ -37351,8 +37347,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 65.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37366,7 +37362,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-ROBO",
           "label": "Robot",
           "short_label": "ROBO",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-ROBO",
@@ -37376,8 +37372,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37397,15 +37393,15 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -6,
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
@@ -37417,7 +37413,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRIP",
           "label": "Triple",
           "short_label": "TRIP",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRIP",
@@ -37427,8 +37423,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 62.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37442,7 +37438,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-WALK",
           "label": "Walk Off",
           "short_label": "WALK",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WALK",
@@ -37452,11 +37448,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 18.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "cheap tail"
+              "broadcast sensitive"
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
@@ -37468,7 +37463,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-WHAT",
           "label": "What a Catch",
           "short_label": "WHAT",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WHAT",
@@ -37478,11 +37473,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 10.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "cheap tail"
+              "broadcast sensitive"
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
@@ -37494,7 +37488,7 @@
           "market_id": "KXMLBMENTION-26MAR252005NYYSF-WILD",
           "label": "Wild Pitch",
           "short_label": "WILD",
-          "note": "broadcast-flow dependent · live",
+          "note": "game-state dependent · live",
           "bucket": "game_state_sensitive",
           "rank": {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-WILD",
@@ -37504,8 +37498,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 33.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37553,17 +37547,33 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 3,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "score": 4,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "game-state",
-            "yes_reference_price": 97.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "review/whistle trigger",
-              "alive but rich"
+              "scarce live path"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag"
+            ],
+            "status_class": "status-yellow",
             "type_class": "type-green"
           },
           {
@@ -37574,8 +37584,24 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 51.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
+            "label": "BASE",
+            "display_label": "Bases Loaded",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37590,40 +37616,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.00000000000001,
-            "price_bucket": "mid",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-COVE",
-            "label": "COVE",
-            "display_label": "Cove",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-ERRO",
-            "label": "ERRO",
-            "display_label": "Error",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 64.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37634,23 +37628,6 @@
         "cheap_watchlist": [],
         "likely_overreactions": [
           {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
@@ -37658,8 +37635,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
               "weak tail cluster"
@@ -37671,15 +37648,15 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -6,
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
@@ -37694,8 +37671,24 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 51.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
+            "label": "BASE",
+            "display_label": "Bases Loaded",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37710,8 +37703,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.00000000000001,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37726,8 +37719,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37735,31 +37728,15 @@
             "type_class": "type-green"
           },
           {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-ERRO",
-            "label": "ERRO",
-            "display_label": "Error",
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
+            "label": "DOUB",
+            "display_label": "Double Play",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 64.0,
-            "price_bucket": "mid",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-EXTR",
-            "label": "EXTR",
-            "display_label": "Extra Inning",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 34.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37772,17 +37749,33 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-CHAL",
             "label": "CHAL",
             "display_label": "Challenge",
-            "score": 3,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "требует осторожности",
+            "score": 4,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
             "strike_type": "game-state",
-            "yes_reference_price": 97.0,
-            "price_bucket": "very_rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "review/whistle trigger",
-              "alive but rich"
+              "scarce live path"
             ],
-            "status_class": "status-red",
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag"
+            ],
+            "status_class": "status-yellow",
             "type_class": "type-green"
           },
           {
@@ -37793,8 +37786,24 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 51.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
+            "label": "BASE",
+            "display_label": "Bases Loaded",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37809,8 +37818,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 56.00000000000001,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37825,8 +37834,24 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 66.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
+            "label": "DOUB",
+            "display_label": "Double Play",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37841,8 +37866,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 64.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37857,8 +37882,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 34.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37873,8 +37898,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 32.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37889,29 +37914,12 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 59.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
             "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-MVP",
-            "label": "MVP",
-            "display_label": "MVP",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 91.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "narrative tag",
-              "headline overread"
-            ],
-            "status_class": "status-red",
             "type_class": "type-green"
           },
           {
@@ -37922,8 +37930,24 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 70.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR252005NYYSF-ORAC",
+            "label": "ORAC",
+            "display_label": "Oracle Park",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37938,8 +37962,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 65.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37954,8 +37978,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 35.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37970,8 +37994,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 62.0,
-            "price_bucket": "mid",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
@@ -37986,11 +38010,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 18.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "cheap tail"
+              "broadcast sensitive"
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
@@ -38003,11 +38026,10 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 10.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "broadcast sensitive",
-              "cheap tail"
+              "broadcast sensitive"
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
@@ -38020,63 +38042,12 @@
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "broadcast-flow",
-            "yes_reference_price": 33.0,
-            "price_bucket": "mid_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "broadcast sensitive"
             ],
             "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-BASE",
-            "label": "BASE",
-            "display_label": "Bases Loaded",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 78.0,
-            "price_bucket": "rich",
-            "reasons": [
-              "broadcast sensitive",
-              "rich price"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-DOUB",
-            "label": "DOUB",
-            "display_label": "Double Play",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 94.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "broadcast sensitive",
-              "rich price"
-            ],
-            "status_class": "status-red",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXMLBMENTION-26MAR252005NYYSF-ORAC",
-            "label": "ORAC",
-            "display_label": "Oracle Park",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "требует осторожности",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": 90.0,
-            "price_bucket": "very_rich",
-            "reasons": [
-              "broadcast sensitive",
-              "rich price"
-            ],
-            "status_class": "status-red",
             "type_class": "type-green"
           },
           {
@@ -38087,8 +38058,8 @@
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
               "weak tail cluster"
@@ -38100,15 +38071,15 @@
             "market_id": "KXMLBMENTION-26MAR252005NYYSF-TRAD",
             "label": "TRAD",
             "display_label": "Trade / Trades / Traded",
-            "score": -6,
+            "score": -4,
             "priority_band": "можно отложить",
             "edge_tag": "рынок может переоценивать",
             "strike_type": "odd tail",
-            "yes_reference_price": 77.0,
-            "price_bucket": "rich",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "weird tail",
-              "rich tail"
+              "weak tail cluster"
             ],
             "status_class": "status-red",
             "type_class": "type-gray"
