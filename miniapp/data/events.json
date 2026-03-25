@@ -13932,18 +13932,21 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening."
+        "Отдели headline frame события от того, что реально естественно для scripted opening.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure"
+        "headline-topic pressure",
+        "fresh headline pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: Fact Check: No, There’s No Link Between Wind Farms and Cancer Like Trump Claimed - Bloomberg.com"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -46957,8 +46960,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room",
-        "Свежий headline: Jay Bilas picks every single game in the 2025 men's NCAA basketball tournament - ESPN"
+        "Свежий headline: ESPN Announces Commentator Pairings for Exclusive Coverage of NCAA March Madness Women’s Basketball - ESPN Press Room",
+        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -66214,8 +66217,8 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
-        "Свежий headline: ESPN men’s college basketball schedule delivers six days of conference showdowns and ranked matchups, Jan. 27–Feb. 1 - ESPN Press Room",
         "Свежий headline: ESPN men’s college basketball schedule showcases six days of conference matchups and ranked showdowns, Jan. 20-25 - ESPN Press Room",
+        "Свежий headline: College Basketball is Back: ESPN Opens Men’s Season with Feast Week Presented by Lowe’s - ESPN Press Room",
         "Свежий headline: ESPN College Basketball Schedule Changes – Jan. 24-25 - ESPN Press Room"
       ],
       "opening_plan": [
