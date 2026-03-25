@@ -17562,14 +17562,14 @@
       "slug": "jeff-probst-survivor-season-50-episode-5"
     },
     {
-      "group_key": "KXHOCHULMENTION-26MAR24",
+      "group_key": "KXHOCHULMENTION-26MAR25",
       "event_title": "Kathy Hochul — next Governor Kathy Hochul announcement",
-      "event_ticker": "KXHOCHULMENTION-26MAR24",
+      "event_ticker": "KXHOCHULMENTION-26MAR25",
       "series_ticker": "",
-      "status": "finalized",
-      "open_time": "2026-03-24T02:10:00Z",
-      "close_time": "2026-03-24T17:30:19Z",
-      "market_count": 15,
+      "status": "active",
+      "open_time": "2026-03-25T02:35:00Z",
+      "close_time": "2026-03-27T14:00:00Z",
+      "market_count": 13,
       "dominant_group": "political_mentions",
       "dominant_subtype": "speech",
       "dominant_rules_risk": "medium",
@@ -17579,38 +17579,42 @@
       "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
       "priority": "high",
       "strike_codes": [
-        "Afford / Affordable / Affordability",
         "Buffalo",
+        "Childcare",
         "Common Sense",
+        "Commute / Commuter",
         "Economy / Economic",
-        "Florida",
-        "Healthcare",
-        "Homeless / Homelessness",
         "Housing",
+        "Inflation",
         "Iran",
-        "Lock / Locked",
         "Mayor / Mamdani",
-        "Mental Health",
         "Oil / Gas / Gasoline",
         "Republican",
+        "Tariff",
         "Trump"
       ],
       "strike_buckets": {
-        "count": 15,
-        "context_sensitive_hint": 15
+        "count": 13,
+        "context_sensitive_hint": 13
       },
       "strike_intel": {
         "structural": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-ECON",
+            "market_id": "KXHOCHULMENTION-26MAR25-ECON",
             "label": "Economy / Economic",
             "short_label": "ECON",
             "note": "macro-policy lane · opening"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-INFL",
+            "label": "Inflation",
+            "short_label": "INFL",
+            "note": "opening-relevant core theme · opening"
           }
         ],
         "qa_sensitive": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-IRAN",
+            "market_id": "KXHOCHULMENTION-26MAR25-IRAN",
             "label": "Iran",
             "short_label": "IRAN",
             "note": "geo/conflict dependent · q&a"
@@ -17618,61 +17622,55 @@
         ],
         "contextual": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
+            "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
             "label": "Buffalo",
             "short_label": "BUFF",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-COMM",
+            "market_id": "KXHOCHULMENTION-26MAR25-CHIL",
+            "label": "Childcare",
+            "short_label": "CHIL",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-COMM",
             "label": "Common Sense",
             "short_label": "COMM",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-FLOR",
-            "label": "Florida",
-            "short_label": "FLOR",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+            "label": "Commute / Commuter",
+            "short_label": "COMMU",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-HEAL",
-            "label": "Healthcare",
-            "short_label": "HEAL",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOUS",
+            "market_id": "KXHOCHULMENTION-26MAR25-HOUS",
             "label": "Housing",
             "short_label": "HOUS",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-LOCK",
-            "label": "Lock / Locked",
-            "short_label": "LOCK",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-MAYO",
+            "market_id": "KXHOCHULMENTION-26MAR25-MAYO",
             "label": "Mayor / Mamdani",
             "short_label": "MAYO",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-MENT",
-            "label": "Mental Health",
-            "short_label": "MENT",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-REPU",
+            "market_id": "KXHOCHULMENTION-26MAR25-REPU",
             "label": "Republican",
             "short_label": "REPU",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-TRUM",
+            "market_id": "KXHOCHULMENTION-26MAR25-TARI",
+            "label": "Tariff",
+            "short_label": "TARI",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-TRUM",
             "label": "Trump",
             "short_label": "TRUM",
             "note": "name-only exposure · tail"
@@ -17681,19 +17679,7 @@
         "game_state_sensitive": [],
         "likely_trap": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-            "label": "Afford / Affordable / Affordability",
-            "short_label": "AFFO",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOME",
-            "label": "Homeless / Homelessness",
-            "short_label": "HOME",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-OIL",
+            "market_id": "KXHOCHULMENTION-26MAR25-OIL",
             "label": "Oil / Gas / Gasoline",
             "short_label": "OIL",
             "note": "special-rule / exact-token risk · rules"
@@ -17702,38 +17688,13 @@
       },
       "strike_analyses": [
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-          "label": "Afford / Affordable / Affordability",
-          "short_label": "AFFO",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-            "label": "AFFO",
-            "display_label": "Afford / Affordable / Affordability",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "opening-or-transition",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
+          "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
           "label": "Buffalo",
           "short_label": "BUFF",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
+            "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
             "label": "BUFF",
             "display_label": "Buffalo",
             "score": 0,
@@ -17752,13 +17713,38 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-COMM",
+          "market_id": "KXHOCHULMENTION-26MAR25-CHIL",
+          "label": "Childcare",
+          "short_label": "CHIL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOCHULMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Childcare",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "stretch cluster",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-adjacent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "opening-if-theme-expands",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOCHULMENTION-26MAR25-COMM",
           "label": "Common Sense",
           "short_label": "COMM",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-COMM",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMM",
             "label": "COMM",
             "display_label": "Common Sense",
             "score": 0,
@@ -17777,13 +17763,38 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-ECON",
+          "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+          "label": "Commute / Commuter",
+          "short_label": "COMMU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+            "label": "COMMU",
+            "display_label": "Commute / Commuter",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOCHULMENTION-26MAR25-ECON",
           "label": "Economy / Economic",
           "short_label": "ECON",
           "note": "macro-policy lane · opening",
           "bucket": "structural",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-ECON",
+            "market_id": "KXHOCHULMENTION-26MAR25-ECON",
             "label": "ECON",
             "display_label": "Economy / Economic",
             "score": 3,
@@ -17802,88 +17813,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-FLOR",
-          "label": "Florida",
-          "short_label": "FLOR",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-FLOR",
-            "label": "FLOR",
-            "display_label": "Florida",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "opening-or-transition",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-HEAL",
-          "label": "Healthcare",
-          "short_label": "HEAL",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-HEAL",
-            "label": "HEAL",
-            "display_label": "Healthcare",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "stretch cluster",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-adjacent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          "phase_fit": "opening-if-theme-expands",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-HOME",
-          "label": "Homeless / Homelessness",
-          "short_label": "HOME",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "opening-or-transition",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-HOUS",
+          "market_id": "KXHOCHULMENTION-26MAR25-HOUS",
           "label": "Housing",
           "short_label": "HOUS",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOUS",
+            "market_id": "KXHOCHULMENTION-26MAR25-HOUS",
             "label": "HOUS",
             "display_label": "Housing",
             "score": 0,
@@ -17902,13 +17838,38 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-IRAN",
+          "market_id": "KXHOCHULMENTION-26MAR25-INFL",
+          "label": "Inflation",
+          "short_label": "INFL",
+          "note": "opening-relevant core theme · opening",
+          "bucket": "structural",
+          "rank": {
+            "market_id": "KXHOCHULMENTION-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOCHULMENTION-26MAR25-IRAN",
           "label": "Iran",
           "short_label": "IRAN",
           "note": "geo/conflict dependent · q&a",
           "bucket": "qa_sensitive",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-IRAN",
+            "market_id": "KXHOCHULMENTION-26MAR25-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
             "score": -3,
@@ -17927,38 +17888,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-LOCK",
-          "label": "Lock / Locked",
-          "short_label": "LOCK",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-LOCK",
-            "label": "LOCK",
-            "display_label": "Lock / Locked",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "opening-or-transition",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-MAYO",
+          "market_id": "KXHOCHULMENTION-26MAR25-MAYO",
           "label": "Mayor / Mamdani",
           "short_label": "MAYO",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-MAYO",
+            "market_id": "KXHOCHULMENTION-26MAR25-MAYO",
             "label": "MAYO",
             "display_label": "Mayor / Mamdani",
             "score": 0,
@@ -17977,38 +17913,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-MENT",
-          "label": "Mental Health",
-          "short_label": "MENT",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-MENT",
-            "label": "MENT",
-            "display_label": "Mental Health",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "opening-or-transition",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXHOCHULMENTION-26MAR24-OIL",
+          "market_id": "KXHOCHULMENTION-26MAR25-OIL",
           "label": "Oil / Gas / Gasoline",
           "short_label": "OIL",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-OIL",
+            "market_id": "KXHOCHULMENTION-26MAR25-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
             "score": 0,
@@ -18027,13 +17938,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-REPU",
+          "market_id": "KXHOCHULMENTION-26MAR25-REPU",
           "label": "Republican",
           "short_label": "REPU",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-REPU",
+            "market_id": "KXHOCHULMENTION-26MAR25-REPU",
             "label": "REPU",
             "display_label": "Republican",
             "score": 0,
@@ -18052,13 +17963,38 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXHOCHULMENTION-26MAR24-TRUM",
+          "market_id": "KXHOCHULMENTION-26MAR25-TARI",
+          "label": "Tariff",
+          "short_label": "TARI",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOCHULMENTION-26MAR25-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOCHULMENTION-26MAR25-TRUM",
           "label": "Trump",
           "short_label": "TRUM",
           "note": "name-only exposure · tail",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXHOCHULMENTION-26MAR24-TRUM",
+            "market_id": "KXHOCHULMENTION-26MAR25-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
             "score": 0,
@@ -18114,7 +18050,7 @@
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-ECON",
+            "market_id": "KXHOCHULMENTION-26MAR25-ECON",
             "label": "ECON",
             "display_label": "Economy / Economic",
             "score": 3,
@@ -18130,9 +18066,9 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-HEAL",
-            "label": "HEAL",
-            "display_label": "Healthcare",
+            "market_id": "KXHOCHULMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Childcare",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -18146,23 +18082,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-            "label": "AFFO",
-            "display_label": "Afford / Affordable / Affordability",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
+            "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
             "label": "BUFF",
             "display_label": "Buffalo",
             "score": 0,
@@ -18178,9 +18098,25 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-COMM",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMM",
             "label": "COMM",
             "display_label": "Common Sense",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+            "label": "COMMU",
+            "display_label": "Commute / Commuter",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -18198,23 +18134,7 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-            "label": "AFFO",
-            "display_label": "Afford / Affordable / Affordability",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
+            "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
             "label": "BUFF",
             "display_label": "Buffalo",
             "score": 0,
@@ -18230,7 +18150,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-COMM",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMM",
             "label": "COMM",
             "display_label": "Common Sense",
             "score": 0,
@@ -18246,9 +18166,9 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-FLOR",
-            "label": "FLOR",
-            "display_label": "Florida",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+            "label": "COMMU",
+            "display_label": "Commute / Commuter",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -18262,137 +18182,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          }
-        ],
-        "full_ranking": [
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-ECON",
-            "label": "ECON",
-            "display_label": "Economy / Economic",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
-            "strike_type": "baseline speech",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "baseline basket"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-HEAL",
-            "label": "HEAL",
-            "display_label": "Healthcare",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "stretch cluster",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-adjacent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-AFFO",
-            "label": "AFFO",
-            "display_label": "Afford / Affordable / Affordability",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-BUFF",
-            "label": "BUFF",
-            "display_label": "Buffalo",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-COMM",
-            "label": "COMM",
-            "display_label": "Common Sense",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-FLOR",
-            "label": "FLOR",
-            "display_label": "Florida",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-HOUS",
+            "market_id": "KXHOCHULMENTION-26MAR25-HOUS",
             "label": "HOUS",
             "display_label": "Housing",
             "score": 0,
@@ -18408,9 +18198,59 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-LOCK",
-            "label": "LOCK",
-            "display_label": "Lock / Locked",
+            "market_id": "KXHOCHULMENTION-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Childcare",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "stretch cluster",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-adjacent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-BUFF",
+            "label": "BUFF",
+            "display_label": "Buffalo",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -18424,7 +18264,71 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-MAYO",
+            "market_id": "KXHOCHULMENTION-26MAR25-COMM",
+            "label": "COMM",
+            "display_label": "Common Sense",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-COMMU",
+            "label": "COMMU",
+            "display_label": "Commute / Commuter",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-HOUS",
+            "label": "HOUS",
+            "display_label": "Housing",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-INFL",
+            "label": "INFL",
+            "display_label": "Inflation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-MAYO",
             "label": "MAYO",
             "display_label": "Mayor / Mamdani",
             "score": 0,
@@ -18440,23 +18344,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-MENT",
-            "label": "MENT",
-            "display_label": "Mental Health",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "theme-linked"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXHOCHULMENTION-26MAR24-OIL",
+            "market_id": "KXHOCHULMENTION-26MAR25-OIL",
             "label": "OIL",
             "display_label": "Oil / Gas / Gasoline",
             "score": 0,
@@ -18472,7 +18360,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-REPU",
+            "market_id": "KXHOCHULMENTION-26MAR25-REPU",
             "label": "REPU",
             "display_label": "Republican",
             "score": 0,
@@ -18488,7 +18376,23 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-TRUM",
+            "market_id": "KXHOCHULMENTION-26MAR25-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOCHULMENTION-26MAR25-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
             "score": 0,
@@ -18504,7 +18408,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXHOCHULMENTION-26MAR24-IRAN",
+            "market_id": "KXHOCHULMENTION-26MAR25-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
             "score": -3,
@@ -18555,10 +18459,16 @@
       ],
       "semantic_families": [
         {
+          "family": "baseline-family-safety",
+          "labels": [
+            "Childcare"
+          ]
+        },
+        {
           "family": "stretch-economy-work",
           "labels": [
-            "Afford / Affordable / Affordability",
-            "Economy / Economic"
+            "Economy / Economic",
+            "Inflation"
           ]
         },
         {
