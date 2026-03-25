@@ -24,9 +24,10 @@
     button { border: 1px solid #2f426a; background: #17233f; color: #e7ecf5; padding: 8px 10px; border-radius: 10px; cursor: pointer; }
     button:hover { background: #1d2d4f; }
     .checklist { display: grid; gap: 8px; margin-top: 8px; }
-    .item { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid #23304f; border-radius: 10px; background: #10182d; }
+    .item { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid #23304f; border-radius: 10px; background: #10182d; }
     .item input { margin: 0; }
-    .item-label { line-height: 1.25; }
+    .item-label { line-height: 1.25; min-width: 0; }
+    .color-input { width: 34px; height: 28px; padding: 0; border: 1px solid #2f426a; border-radius: 8px; background: transparent; cursor: pointer; }
     #chart { width: 100%; height: 78vh; min-height: 680px; }
     .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
     .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 10px 12px; }
@@ -105,10 +106,13 @@
 
 <script>
 const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.csv';
+const STORAGE_KEY = 'kalshi-price-history-kxsecpressmention-26mar29-colors';
+const DEFAULT_COLORS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#ff8fab','#72efdd','#c77dff','#ff9f1c','#90be6d','#e76f51','#5dade2','#f28482'];
 const state = {
   timestamps: [],
   series: [],
   visible: new Set(),
+  colors: {},
   chartReady: false,
 };
 
@@ -118,6 +122,25 @@ function esc(s) {
 
 function fmtPrice(v) {
   return Number.isFinite(v) ? v.toFixed(2) : '—';
+}
+
+function loadColors() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveColors() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.colors));
+  } catch {}
+}
+
+function getSeriesColor(name, index) {
+  return state.colors[name] || DEFAULT_COLORS[index % DEFAULT_COLORS.length];
 }
 
 function computeExtrema(points) {
@@ -145,26 +168,30 @@ function parseCsv() {
 
 function boot(rows) {
   if (!rows || !rows.length) return;
+  state.colors = loadColors();
   const columns = Object.keys(rows[0]).filter(k => k !== 'timestamp');
   state.timestamps = rows.map(r => r.timestamp).filter(Boolean);
 
-  state.series = columns.map(name => {
+  state.series = columns.map((name, index) => {
     const points = rows
       .map(r => ({ x: r.timestamp, y: r[name] === '' || r[name] == null ? NaN : parseFloat(r[name]) }))
       .filter(p => p.x);
     const valid = points.filter(p => Number.isFinite(p.y));
     const extrema = computeExtrema(valid);
+    if (!state.colors[name]) state.colors[name] = DEFAULT_COLORS[index % DEFAULT_COLORS.length];
     return {
       name,
       points,
       validCount: valid.length,
       extrema,
+      color: state.colors[name],
     };
   }).filter(s => s.validCount > 0);
 
   state.series.sort((a, b) => ((b.extrema.range ?? -1) - (a.extrema.range ?? -1)) || a.name.localeCompare(b.name));
   state.series.slice(0, 8).forEach(s => state.visible.add(s.name));
 
+  saveColors();
   renderMeta();
   renderChecklist();
   renderChart();
@@ -188,13 +215,14 @@ function renderChecklist(filter = '') {
   const root = document.getElementById('checklist');
   const q = filter.trim().toLowerCase();
   const items = state.series.filter(s => !q || s.name.toLowerCase().includes(q));
-  root.innerHTML = items.map(s => `
+  root.innerHTML = items.map((s, idx) => `
     <label class="item">
       <input type="checkbox" data-name="${esc(s.name)}" ${state.visible.has(s.name) ? 'checked' : ''}>
       <div class="item-label">
         <div><strong>${esc(s.name)}</strong></div>
         <div class="muted small">range ${fmtPrice(s.extrema.range)} · min ${fmtPrice(s.extrema.min?.y)} · max ${fmtPrice(s.extrema.max?.y)}</div>
       </div>
+      <input class="color-input" type="color" data-color-name="${esc(s.name)}" value="${esc(state.colors[s.name] || DEFAULT_COLORS[idx % DEFAULT_COLORS.length])}" title="Цвет страйка">
     </label>
   `).join('');
 
@@ -205,19 +233,31 @@ function renderChecklist(filter = '') {
       refresh();
     });
   });
+
+  root.querySelectorAll('input[type="color"]').forEach(input => {
+    input.addEventListener('input', () => {
+      const name = input.dataset.colorName;
+      state.colors[name] = input.value;
+      const series = state.series.find(s => s.name === name);
+      if (series) series.color = input.value;
+      saveColors();
+      if (state.chartReady) updateTraceColors();
+    });
+  });
 }
 
 function renderChart() {
   const traces = [];
   for (const s of state.series) {
     const visible = state.visible.has(s.name);
+    const color = state.colors[s.name] || s.color;
     traces.push({
       x: s.points.map(p => p.x),
       y: s.points.map(p => Number.isFinite(p.y) ? p.y : null),
       mode: 'lines',
       name: s.name,
       visible: visible ? true : 'legendonly',
-      line: { width: 2 },
+      line: { width: 2, color },
       hovertemplate: `<b>${esc(s.name)}</b><br>%{x}<br>Цена: %{y:.2f}<extra></extra>`,
     });
     if (s.extrema.min) {
@@ -228,7 +268,7 @@ function renderChart() {
         name: `${s.name} — min`,
         showlegend: false,
         visible: visible ? true : 'legendonly',
-        marker: { size: 9, symbol: 'triangle-down', color: '#ff7b7b' },
+        marker: { size: 9, symbol: 'triangle-down', color },
         hovertemplate: `<b>${esc(s.name)} — MIN</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
       });
     }
@@ -240,7 +280,7 @@ function renderChart() {
         name: `${s.name} — max`,
         showlegend: false,
         visible: visible ? true : 'legendonly',
-        marker: { size: 9, symbol: 'triangle-up', color: '#73e0a9' },
+        marker: { size: 9, symbol: 'triangle-up', color },
         hovertemplate: `<b>${esc(s.name)} — MAX</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
       });
     }
@@ -286,6 +326,20 @@ function applyVisibilityToPlot() {
     updates.push(state.visible.has(baseName) ? true : 'legendonly');
   }
   Plotly.restyle(chart, { visible: updates });
+}
+
+function updateTraceColors() {
+  const chart = document.getElementById('chart');
+  const lineColors = [];
+  const markerColors = [];
+  for (let i = 0; i < chart.data.length; i++) {
+    const trace = chart.data[i];
+    const baseName = trace.name.replace(/ — min$| — max$/, '');
+    const color = state.colors[baseName] || '#4cc9f0';
+    lineColors.push(trace.mode === 'lines' ? color : null);
+    markerColors.push(trace.mode === 'markers' ? color : null);
+  }
+  Plotly.restyle(chart, { 'line.color': lineColors, 'marker.color': markerColors });
 }
 
 function renderExtremaTable() {
