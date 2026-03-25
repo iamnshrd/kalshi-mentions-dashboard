@@ -23747,7 +23747,7 @@
       "event_title": "Melania Trump — Fostering the Future Together Global Coalition Summit on March 25th",
       "event_ticker": "KXMELANIAMENTION-26MAR25",
       "series_ticker": "",
-      "status": "determined",
+      "status": "finalized",
       "open_time": "2026-03-25T02:00:00Z",
       "close_time": "2026-03-25T17:38:35Z",
       "market_count": 17,
@@ -24327,19 +24327,22 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening."
+        "Отдели headline frame события от того, что реально естественно для scripted opening.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure"
+        "headline-topic pressure",
+        "fresh headline pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Family/social cluster сейчас выглядит как headline-sensitive; важно проверить, это реальная текущая повестка или просто framing названия события.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: Robot joins Melania Trump at White House event to tout AI teachers - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -61384,8 +61387,8 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: Divided Fed lowers rates, signals pause and one cut next year as growth rebounds - Reuters",
-        "Свежий headline: Fed Cuts Rates Again, Is Divided Over Future Moves - The New York Times",
-        "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times"
+        "Свежий headline: Fed's Powell dodges questions on his future, but has advice for his successor - Reuters",
+        "Свежий headline: Fed's Powell says larger-than-expected tariffs likely to boost inflation, slow growth - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
