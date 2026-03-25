@@ -51,7 +51,7 @@
     <div class="topbar">
       <div>
         <div><a href="../index.html">← Назад к dashboard</a></div>
-        <h1 style="margin:8px 0 8px;">История цен по страйкам — KXSECPRESSMENTION-26MAR29</h1>
+        <h1 id="pageTitle" style="margin:8px 0 8px;">История цен по страйкам — локальный CSV snapshot</h1>
         <div class="muted">Отдельная страница для разбора minute-level history. Можно вставить ссылку на рынок Kalshi: страница сама подтянет все страйки события через API. Кривые можно включать/выключать чекбоксами или через легенду графика.</div>
       </div>
       <div class="card small" style="max-width:620px;">
@@ -132,6 +132,7 @@ const state = {
   sourceType: 'csv',
   sourceLabel: 'KXSECPRESSMENTION-26MAR29 CSV',
   currentEventTicker: null,
+  eventMeta: null,
 };
 
 function esc(s) {
@@ -140,6 +141,30 @@ function esc(s) {
 
 function fmtPrice(v) {
   return Number.isFinite(v) ? v.toFixed(2) : '—';
+}
+
+function fmtEventDate(value) {
+  if (!value) return '—';
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return String(value);
+  return d.toLocaleString('ru-RU', {
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', timeZone: 'UTC'
+  }) + ' UTC';
+}
+
+function updatePageTitle() {
+  const titleEl = document.getElementById('pageTitle');
+  if (state.sourceType === 'csv' || !state.eventMeta) {
+    titleEl.textContent = 'История цен по страйкам — локальный CSV snapshot';
+    document.title = 'Kalshi Price History — локальный CSV snapshot';
+    return;
+  }
+  const eventTitle = state.eventMeta.title || state.eventMeta.event_title || state.currentEventTicker || 'Событие';
+  const eventTime = state.eventMeta.close_time || state.eventMeta.event_date || state.eventMeta.open_time || state.eventMeta.settlement_time || state.eventMeta.expiration_time;
+  const rendered = `История цен по страйкам — ${eventTitle}${eventTime ? ' · ' + fmtEventDate(eventTime) : ''}`;
+  titleEl.textContent = rendered;
+  document.title = rendered;
 }
 
 function loadColors() {
@@ -201,6 +226,7 @@ function parseCsv() {
   state.sourceType = 'csv';
   state.sourceLabel = 'KXSECPRESSMENTION-26MAR29 CSV';
   state.currentEventTicker = null;
+  state.eventMeta = null;
   document.getElementById('sourceLabel').innerHTML = `<strong>${esc(state.sourceLabel)}</strong>`;
   Papa.parse(CSV_PATH, {
     download: true,
@@ -252,6 +278,7 @@ async function loadFromKalshiUrl(inputUrl) {
       throw new Error(`proxy ${res.status} ${text.slice(0, 160)}`);
     }
     const payload = await res.json();
+    state.eventMeta = payload.event || null;
     bootApi(payload.markets || [], payload.candlesticks || []);
     const qp = new URLSearchParams(location.search);
     qp.set('market_url', inputUrl);
@@ -295,6 +322,7 @@ function renderMeta() {
   document.getElementById('coverage').innerHTML = `<strong>${esc(first)} → ${esc(last)}</strong>`;
   document.getElementById('sourceLabel').innerHTML = `<strong>${esc(state.sourceLabel)}</strong>`;
   updateVisibleCount();
+  updatePageTitle();
 }
 
 function updateVisibleCount() {
