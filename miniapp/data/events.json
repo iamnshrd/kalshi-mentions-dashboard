@@ -54339,7 +54339,7 @@
       "status": "active",
       "open_time": "2026-03-11T00:00:00Z",
       "close_time": "2026-03-31T14:00:00Z",
-      "market_count": 32,
+      "market_count": 34,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
       "dominant_rules_risk": "medium",
@@ -54354,6 +54354,7 @@
         "Border",
         "China",
         "Crypto / Bitcoin",
+        "Endorse / Endorsed / Endorsement",
         "Epic Fury",
         "Epstein",
         "Fake News",
@@ -54366,6 +54367,7 @@
         "Illegal Alien",
         "Iran",
         "Israel",
+        "LaGuardia",
         "Negotiate / Negotiated / Negotiation",
         "Nuclear",
         "Oil",
@@ -54383,8 +54385,8 @@
         "Venezuela / Venezuelan"
       ],
       "strike_buckets": {
-        "count": 32,
-        "context_sensitive_hint": 32
+        "count": 34,
+        "context_sensitive_hint": 34
       },
       "strike_intel": {
         "structural": [
@@ -54489,6 +54491,12 @@
             "note": "context-dependent token · pivot"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
+            "label": "LaGuardia",
+            "short_label": "LAGU",
+            "note": "context-dependent token · pivot"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
             "label": "Nuclear",
             "short_label": "NUCL",
@@ -54555,6 +54563,12 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
             "label": "Affordable / Affordability",
             "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
+            "label": "Endorse / Endorsed / Endorsement",
+            "short_label": "ENDO",
             "note": "special-rule / exact-token risk · rules"
           },
           {
@@ -54717,6 +54731,32 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
+          "label": "Endorse / Endorsed / Endorsement",
+          "short_label": "ENDO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
+            "label": "ENDO",
+            "display_label": "Endorse / Endorsed / Endorsement",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXSECPRESSMENTION-26MAR31-EPIC",
@@ -55019,6 +55059,31 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
+          "label": "LaGuardia",
+          "short_label": "LAGU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
+            "label": "LAGU",
+            "display_label": "LaGuardia",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
@@ -55540,6 +55605,23 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
+            "label": "ENDO",
+            "display_label": "Endorse / Endorsed / Endorsement",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-ID",
             "label": "ID",
             "display_label": "ID / Identification",
@@ -55577,23 +55659,6 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
-            "label": "SHUT",
-            "display_label": "Shutdown / Shut Down",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
@@ -55870,6 +55935,22 @@
             "type_class": "type-gray"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
+            "label": "LAGU",
+            "display_label": "LaGuardia",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
@@ -56017,6 +56098,23 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
             "label": "AFFO",
             "display_label": "Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
+            "label": "ENDO",
+            "display_label": "Endorse / Endorsed / Endorsement",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
