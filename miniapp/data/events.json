@@ -7241,6 +7241,967 @@
       "slug": "any-supreme-court-justice-oral-arguments-of-noem-sec-of-homeland-security-v-al-otro-lado"
     },
     {
+      "group_key": "KXBERNIEMENTION-26MAR25",
+      "event_title": "Bernie Sanders — Press Conference on AI Data Centers",
+      "event_ticker": "KXBERNIEMENTION-26MAR25",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-25T15:45:00Z",
+      "close_time": "2026-03-26T14:00:00Z",
+      "market_count": 14,
+      "dominant_group": "political_mentions",
+      "dominant_subtype": "press_conference",
+      "dominant_rules_risk": "medium",
+      "speaker": "bernie sanders",
+      "format_confidence": 0.85,
+      "prep_focus": "Собери контекст, формат события и кластеры страйков перед торговлей.",
+      "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
+      "priority": "high",
+      "strike_codes": [
+        "Afford / Affordable / Affordability",
+        "Bezos",
+        "Billionaire (3+ times)",
+        "Bipartisan",
+        "ChatGPT / OpenAI",
+        "Climate",
+        "Crypto / Cryptocurrency",
+        "Elon / Musk",
+        "Iran",
+        "Event does not qualify",
+        "Oil / Gas / Gasoline",
+        "Robot / Robotic / Robotics",
+        "Trump",
+        "Water"
+      ],
+      "strike_buckets": {
+        "count": 14,
+        "context_sensitive_hint": 14
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
+            "label": "Iran",
+            "short_label": "IRAN",
+            "note": "geo/conflict dependent · q&a"
+          }
+        ],
+        "contextual": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
+            "label": "Bezos",
+            "short_label": "BEZO",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BILL",
+            "label": "Billionaire (3+ times)",
+            "short_label": "BILL",
+            "note": "theme bridge required · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BIPA",
+            "label": "Bipartisan",
+            "short_label": "BIPA",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
+            "label": "ChatGPT / OpenAI",
+            "short_label": "CHAT",
+            "note": "theme bridge required · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
+            "label": "Climate",
+            "short_label": "CLIM",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-ELON",
+            "label": "Elon / Musk",
+            "short_label": "ELON",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-TRUM",
+            "label": "Trump",
+            "short_label": "TRUM",
+            "note": "name-only exposure · tail"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-WATE",
+            "label": "Water",
+            "short_label": "WATE",
+            "note": "context-dependent token · pivot"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-AFFO",
+            "label": "Afford / Affordable / Affordability",
+            "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CRYP",
+            "label": "Crypto / Cryptocurrency",
+            "short_label": "CRYP",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-OIL",
+            "label": "Oil / Gas / Gasoline",
+            "short_label": "OIL",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
+            "label": "Robot / Robotic / Robotics",
+            "short_label": "ROBO",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-AFFO",
+          "label": "Afford / Affordable / Affordability",
+          "short_label": "AFFO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
+          "label": "Bezos",
+          "short_label": "BEZO",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
+            "label": "BEZO",
+            "display_label": "Bezos",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-BILL",
+          "label": "Billionaire (3+ times)",
+          "short_label": "BILL",
+          "note": "theme bridge required · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billionaire (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-BIPA",
+          "label": "Bipartisan",
+          "short_label": "BIPA",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-BIPA",
+            "label": "BIPA",
+            "display_label": "Bipartisan",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
+          "label": "ChatGPT / OpenAI",
+          "short_label": "CHAT",
+          "note": "theme bridge required · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
+            "label": "CHAT",
+            "display_label": "ChatGPT / OpenAI",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
+          "label": "Climate",
+          "short_label": "CLIM",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-CRYP",
+          "label": "Crypto / Cryptocurrency",
+          "short_label": "CRYP",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Cryptocurrency",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-ELON",
+          "label": "Elon / Musk",
+          "short_label": "ELON",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-ELON",
+            "label": "ELON",
+            "display_label": "Elon / Musk",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
+          "label": "Iran",
+          "short_label": "IRAN",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-OIL",
+          "label": "Oil / Gas / Gasoline",
+          "short_label": "OIL",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
+          "label": "Robot / Robotic / Robotics",
+          "short_label": "ROBO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-TRUM",
+          "label": "Trump",
+          "short_label": "TRUM",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-WATE",
+          "label": "Water",
+          "short_label": "WATE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-WATE",
+            "label": "WATE",
+            "display_label": "Water",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "local incident",
+        "policy headline",
+        "question-driven narrative shift",
+        "fresh headline pressure"
+      ],
+      "context_notes": [
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Свежий headline: A.I. Is Coming for the 2026 Midterms - The New York Times",
+        "Свежий headline: Exclusive | The Political Left Is Dialing Up Scrutiny of Data Centers - WSJ",
+        "Свежий headline: Kennedy Rejects Criticism, Data and Decorum in Contentious Hearing - The New York Times"
+      ],
+      "opening_plan": [
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot."
+      ],
+      "post_opening_plan": [
+        "Если opening прошёл без hit, не держи NO автоматически: сначала реши, был ли strike opening-heavy или Q&A-heavy.",
+        "Переоцени narrative buckets целиком, а не отдельные слова."
+      ],
+      "qa_transition_plan": [
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
+            "label": "BEZO",
+            "display_label": "Bezos",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billionaire (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BIPA",
+            "label": "BIPA",
+            "display_label": "Bipartisan",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
+            "label": "CHAT",
+            "display_label": "ChatGPT / OpenAI",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Cryptocurrency",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
+            "label": "BEZO",
+            "display_label": "Bezos",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billionaire (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-BIPA",
+            "label": "BIPA",
+            "display_label": "Bipartisan",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
+            "label": "CHAT",
+            "display_label": "ChatGPT / OpenAI",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-ELON",
+            "label": "ELON",
+            "display_label": "Elon / Musk",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-WATE",
+            "label": "WATE",
+            "display_label": "Water",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Cryptocurrency",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-OIL",
+            "label": "OIL",
+            "display_label": "Oil / Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь local/state news за последние 48–72 часа; свежие инциденты часто ломают исторический baseline.",
+        "Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent."
+      ],
+      "live_trading_summary": [
+        "В первые минуты определи dominant theme cluster, а не отдельное слово.",
+        "Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу."
+      ],
+      "risk_summary": [
+        "Высокая чувствительность к current events.",
+        "Связанные страйки могут быть по сути одной ставкой на один narrative."
+      ],
+      "manual_trader_prompts": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot.",
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера."
+      ],
+      "consensus_misread": [
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase.",
+        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "bernie-sanders-press-conference-on-ai-data-centers"
+    },
+    {
       "group_key": "KXMENTIONEARNCCL-26MAR27",
       "event_title": "Carnival Corporation & plc — their next earnings call",
       "event_ticker": "KXMENTIONEARNCCL-26MAR27",
