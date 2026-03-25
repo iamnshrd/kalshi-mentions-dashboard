@@ -44155,7 +44155,7 @@
       "event_title": "the announcers — Saint Joseph's vs New Mexico College Basketball Game",
       "event_ticker": "KXNCAABMENTION-26MAR24JOESUNM",
       "series_ticker": "",
-      "status": "closed",
+      "status": "finalized",
       "open_time": "2026-03-24T16:11:00Z",
       "close_time": "2026-03-25T07:54:54Z",
       "market_count": 16,
@@ -49590,7 +49590,7 @@
       "event_title": "the announcers — Wichita St. vs Tulsa College Basketball Game",
       "event_ticker": "KXNCAABMENTION-26MAR24WICHTLSA",
       "series_ticker": "",
-      "status": "closed",
+      "status": "finalized",
       "open_time": "2026-03-24T16:11:00Z",
       "close_time": "2026-03-25T07:40:19Z",
       "market_count": 16,
@@ -50153,9 +50153,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: ESPN men’s college basketball schedule delivers six days of conference showdowns and ranked matchups, Jan. 27–Feb. 1 - ESPN Press Room",
         "Свежий headline: ESPN men’s college basketball schedule showcases six days of conference matchups and ranked showdowns, Jan. 20-25 - ESPN Press Room",
-        "Свежий headline: College Basketball is Back: ESPN Opens Men’s Season with Feast Week Presented by Lowe’s - ESPN Press Room",
-        "Свежий headline: ESPN College Basketball Schedule Changes – Jan. 24-25 - ESPN Press Room"
+        "Свежий headline: College Basketball is Back: ESPN Opens Men’s Season with Feast Week Presented by Lowe’s - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
