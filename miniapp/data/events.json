@@ -18862,9 +18862,9 @@
       "event_title": "How long will Karoline Leavitt speak for at Press Briefing by the White House Press Secretary Karoline Leavitt?",
       "event_ticker": "KXLEAVITTMENTIONDURATION-MAR2626",
       "series_ticker": "",
-      "status": "active",
+      "status": "finalized",
       "open_time": "2026-03-25T13:50:00Z",
-      "close_time": "2026-03-26T03:59:00Z",
+      "close_time": "2026-03-25T18:26:13Z",
       "market_count": 9,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
@@ -19193,7 +19193,6 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: The White House is starting a new media policy that restricts wire services' access to the president - AP News",
-        "Свежий headline: White House says it has the right to punish AP reporters over Gulf naming dispute - AP News",
         "Свежий headline: ‘We’ll Sue’: White House’s Warning to CBS Is Sign of a New Media Status Quo - The New York Times"
       ],
       "opening_plan": [
@@ -53380,9 +53379,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: College Basketball is Back: ESPN Opens Men’s Season with Feast Week Presented by Lowe’s - ESPN Press Room",
         "Свежий headline: Dancin’ to Dallas: ESPN Once Again Exclusive Home of March Madness Women’s Basketball - ESPN Press Room",
-        "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
+        "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -56526,7 +56525,7 @@
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: ESPN men’s college basketball schedule delivers six days of conference showdowns and ranked matchups, Jan. 27–Feb. 1 - ESPN Press Room",
         "Свежий headline: ESPN men’s college basketball schedule showcases six days of conference matchups and ranked showdowns, Jan. 20-25 - ESPN Press Room",
-        "Свежий headline: College Basketball is Back: ESPN Opens Men’s Season with Feast Week Presented by Lowe’s - ESPN Press Room"
+        "Свежий headline: ESPN College Basketball Schedule Changes – Jan. 24-25 - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
