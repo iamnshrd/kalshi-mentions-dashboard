@@ -19823,6 +19823,1142 @@
       "slug": "max-marchione-or-martin-shkreli-tbpn-podcast"
     },
     {
+      "group_key": "KXMELANIAMENTION-26MAR25",
+      "event_title": "Melania Trump — Fostering the Future Together Global Coalition Summit on March 25th",
+      "event_ticker": "KXMELANIAMENTION-26MAR25",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-25T02:00:00Z",
+      "close_time": "2026-03-26T14:00:00Z",
+      "market_count": 17,
+      "dominant_group": "political_mentions",
+      "dominant_subtype": "speech",
+      "dominant_rules_risk": "medium",
+      "speaker": "melania trump",
+      "format_confidence": 0.85,
+      "prep_focus": "Собери контекст, формат события и кластеры страйков перед торговлей.",
+      "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
+      "priority": "high",
+      "strike_codes": [
+        "AI / Artificial Intelligence",
+        "Barron",
+        "ChatGPT",
+        "Children",
+        "Donald",
+        "Economy / Economic",
+        "Education",
+        "History / Historic",
+        "Homeless / Homelessness",
+        "Lead / Leader / Leadership",
+        "Event does not qualify",
+        "Peace",
+        "Privacy / Security",
+        "Robot / Robotic / Robotics",
+        "Safe / Safer / Safety",
+        "School",
+        "Take It Down"
+      ],
+      "strike_buckets": {
+        "count": 17,
+        "context_sensitive_hint": 17
+      },
+      "strike_intel": {
+        "structural": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ECON",
+            "label": "Economy / Economic",
+            "short_label": "ECON",
+            "note": "macro-policy lane · opening"
+          }
+        ],
+        "qa_sensitive": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-PEAC",
+            "label": "Peace",
+            "short_label": "PEAC",
+            "note": "geo/conflict dependent · q&a"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-PRIV",
+            "label": "Privacy / Security",
+            "short_label": "PRIV",
+            "note": "geo/conflict dependent · q&a"
+          }
+        ],
+        "contextual": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-BARR",
+            "label": "Barron",
+            "short_label": "BARR",
+            "note": "name-only exposure · tail"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHAT",
+            "label": "ChatGPT",
+            "short_label": "CHAT",
+            "note": "theme bridge required · pivot"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHIL",
+            "label": "Children",
+            "short_label": "CHIL",
+            "note": "social/family lane only · theme"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-DONA",
+            "label": "Donald",
+            "short_label": "DONA",
+            "note": "name-only exposure · tail"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-EDUC",
+            "label": "Education",
+            "short_label": "EDUC",
+            "note": "social/family lane only · theme"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HIST",
+            "label": "History / Historic",
+            "short_label": "HIST",
+            "note": "rhetorical token · tail"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-SCHO",
+            "label": "School",
+            "short_label": "SCHO",
+            "note": "social/family lane only · theme"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-TAKE",
+            "label": "Take It Down",
+            "short_label": "TAKE",
+            "note": "context-dependent token · pivot"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-AI",
+            "label": "AI / Artificial Intelligence",
+            "short_label": "AI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HOME",
+            "label": "Homeless / Homelessness",
+            "short_label": "HOME",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-LEAD",
+            "label": "Lead / Leader / Leadership",
+            "short_label": "LEAD",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ROBO",
+            "label": "Robot / Robotic / Robotics",
+            "short_label": "ROBO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-SAFE",
+            "label": "Safe / Safer / Safety",
+            "short_label": "SAFE",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-AI",
+          "label": "AI / Artificial Intelligence",
+          "short_label": "AI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-BARR",
+          "label": "Barron",
+          "short_label": "BARR",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-BARR",
+            "label": "BARR",
+            "display_label": "Barron",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-CHAT",
+          "label": "ChatGPT",
+          "short_label": "CHAT",
+          "note": "theme bridge required · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHAT",
+            "label": "CHAT",
+            "display_label": "ChatGPT",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-CHIL",
+          "label": "Children",
+          "short_label": "CHIL",
+          "note": "social/family lane only · theme",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Children",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-DONA",
+          "label": "Donald",
+          "short_label": "DONA",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-DONA",
+            "label": "DONA",
+            "display_label": "Donald",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "only-alive-if-topic-breaks",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-ECON",
+          "label": "Economy / Economic",
+          "short_label": "ECON",
+          "note": "macro-policy lane · opening",
+          "bucket": "structural",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-EDUC",
+          "label": "Education",
+          "short_label": "EDUC",
+          "note": "social/family lane only · theme",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-EDUC",
+            "label": "EDUC",
+            "display_label": "Education",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-HIST",
+          "label": "History / Historic",
+          "short_label": "HIST",
+          "note": "rhetorical token · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-HIST",
+            "label": "HIST",
+            "display_label": "History / Historic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-HOME",
+          "label": "Homeless / Homelessness",
+          "short_label": "HOME",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-HOME",
+            "label": "HOME",
+            "display_label": "Homeless / Homelessness",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-LEAD",
+          "label": "Lead / Leader / Leadership",
+          "short_label": "LEAD",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-LEAD",
+            "label": "LEAD",
+            "display_label": "Lead / Leader / Leadership",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          },
+          "phase_fit": "service-only",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-PEAC",
+          "label": "Peace",
+          "short_label": "PEAC",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-PRIV",
+          "label": "Privacy / Security",
+          "short_label": "PRIV",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-PRIV",
+            "label": "PRIV",
+            "display_label": "Privacy / Security",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-ROBO",
+          "label": "Robot / Robotic / Robotics",
+          "short_label": "ROBO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-SAFE",
+          "label": "Safe / Safer / Safety",
+          "short_label": "SAFE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-SAFE",
+            "label": "SAFE",
+            "display_label": "Safe / Safer / Safety",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-SCHO",
+          "label": "School",
+          "short_label": "SCHO",
+          "note": "social/family lane only · theme",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-SCHO",
+            "label": "SCHO",
+            "display_label": "School",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXMELANIAMENTION-26MAR25-TAKE",
+          "label": "Take It Down",
+          "short_label": "TAKE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMELANIAMENTION-26MAR25-TAKE",
+            "label": "TAKE",
+            "display_label": "Take It Down",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-heavy",
+          "attention_allocation": "secondary watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
+      ],
+      "likely_hooks": [
+        "local incident",
+        "policy headline",
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure"
+      ],
+      "context_notes": [
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Family/social cluster сейчас выглядит как headline-sensitive; важно проверить, это реальная текущая повестка или просто framing названия события.",
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
+      ],
+      "opening_plan": [
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot."
+      ],
+      "post_opening_plan": [
+        "Если opening прошёл без hit, не держи NO автоматически: сначала реши, был ли strike opening-heavy или Q&A-heavy.",
+        "Переоцени narrative buckets целиком, а не отдельные слова."
+      ],
+      "qa_transition_plan": [
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Children",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HIST",
+            "label": "HIST",
+            "display_label": "History / Historic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-LEAD",
+            "label": "LEAD",
+            "display_label": "Lead / Leader / Leadership",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-EDUC",
+            "label": "EDUC",
+            "display_label": "Education",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HOME",
+            "label": "HOME",
+            "display_label": "Homeless / Homelessness",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-BARR",
+            "label": "BARR",
+            "display_label": "Barron",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHIL",
+            "label": "CHIL",
+            "display_label": "Children",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HIST",
+            "label": "HIST",
+            "display_label": "History / Historic",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-LEAD",
+            "label": "LEAD",
+            "display_label": "Lead / Leader / Leadership",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-PRIV",
+            "label": "PRIV",
+            "display_label": "Privacy / Security",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-SAFE",
+            "label": "SAFE",
+            "display_label": "Safe / Safer / Safety",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-SCHO",
+            "label": "SCHO",
+            "display_label": "School",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-TAKE",
+            "label": "TAKE",
+            "display_label": "Take It Down",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "baseline speech",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "baseline basket"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-EDUC",
+            "label": "EDUC",
+            "display_label": "Education",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-HOME",
+            "label": "HOME",
+            "display_label": "Homeless / Homelessness",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-ROBO",
+            "label": "ROBO",
+            "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-BARR",
+            "label": "BARR",
+            "display_label": "Barron",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-CHAT",
+            "label": "CHAT",
+            "display_label": "ChatGPT",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-DONA",
+            "label": "DONA",
+            "display_label": "Donald",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "odd tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMELANIAMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь local/state news за последние 48–72 часа; свежие инциденты часто ломают исторический baseline.",
+        "Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent."
+      ],
+      "live_trading_summary": [
+        "В первые минуты определи dominant theme cluster, а не отдельное слово.",
+        "Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу."
+      ],
+      "risk_summary": [
+        "Высокая чувствительность к current events.",
+        "Связанные страйки могут быть по сути одной ставкой на один narrative."
+      ],
+      "manual_trader_prompts": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot.",
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера.",
+        "Для speech baskets полезнее смотреть похожие scripted openings, а не любые политические появления подряд."
+      ],
+      "consensus_misread": [
+        "В speech basket рынок часто путает broad theme с exact token hit rate; правильная идея не равна правильному слову.",
+        "Здесь особенно важно не ставить baseline words и odd tails в один bucket: opening basket и дальние хвосты должны прайситься по-разному.",
+        "Если название события тянет в family/social framing, crowd может механически завышать весь family cluster, хотя реальный opening может задеть только 1–2 базовых слова.",
+        "Geo/conflict words здесь легко перепрайсить по headline association, хотя без явного topic pivot они могут вообще не ожить в opening.",
+        "Name strikes crowd часто тащит вслед за общим Trump-family narrative, хотя exact name exposure обычно уже намного уже, чем общий тематический фон.",
+        "Tech tails типа AI/ChatGPT выглядят современно и headline-friendly, но без явного мостика из темы события это чаще false relevance, чем core basket."
+      ],
+      "semantic_families": [
+        {
+          "family": "baseline-family-safety",
+          "labels": [
+            "Children",
+            "Privacy / Security",
+            "Safe / Safer / Safety",
+            "School"
+          ]
+        },
+        {
+          "family": "baseline-leadership-future",
+          "labels": [
+            "History / Historic",
+            "Lead / Leader / Leadership"
+          ]
+        },
+        {
+          "family": "stretch-economy-work",
+          "labels": [
+            "Economy / Economic"
+          ]
+        },
+        {
+          "family": "stretch-geopolitics-security",
+          "labels": [
+            "Peace"
+          ]
+        },
+        {
+          "family": "odd-tail",
+          "labels": [
+            "AI / Artificial Intelligence",
+            "Barron",
+            "ChatGPT",
+            "Donald",
+            "Event does not qualify"
+          ]
+        }
+      ],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "melania-trump-fostering-the-future-together-global-coalition-summit-on-march-25th"
+    },
+    {
       "group_key": "KXMELANIAMENTION-26MAR24",
       "event_title": "Melania Trump — Opening Remarks at the Fostering the Future Together Global Coalition Summit",
       "event_ticker": "KXMELANIAMENTION-26MAR24",
