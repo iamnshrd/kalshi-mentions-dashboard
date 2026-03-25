@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalshi Price History — KXSECPRESSMENTION-26MAR29</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #0b1020; color: #e7ecf5; }
+    a { color: #8cc8ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1600px; margin: 0 auto; padding: 20px; }
+    .topbar { display: flex; justify-content: space-between; gap: 16px; align-items: start; flex-wrap: wrap; margin-bottom: 16px; }
+    .muted { color: #9fb0cf; }
+    .layout { display: grid; grid-template-columns: 340px 1fr; gap: 16px; }
+    .card { background: #141a2e; border: 1px solid #23304f; border-radius: 14px; padding: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+    .sidebar { position: sticky; top: 16px; align-self: start; max-height: calc(100vh - 32px); overflow: auto; }
+    .controls { display: grid; gap: 10px; }
+    .search { width: 100%; border: 1px solid #23304f; background: #0f1629; color: #e7ecf5; border-radius: 10px; padding: 10px 12px; }
+    .btnrow { display: flex; gap: 8px; flex-wrap: wrap; }
+    button { border: 1px solid #2f426a; background: #17233f; color: #e7ecf5; padding: 8px 10px; border-radius: 10px; cursor: pointer; }
+    button:hover { background: #1d2d4f; }
+    .checklist { display: grid; gap: 8px; margin-top: 8px; }
+    .item { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid #23304f; border-radius: 10px; background: #10182d; }
+    .item input { margin: 0; }
+    .item-label { line-height: 1.25; }
+    #chart { width: 100%; height: 78vh; min-height: 680px; }
+    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
+    .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 10px 12px; }
+    .extrema-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14px; }
+    .extrema-table th, .extrema-table td { text-align: left; padding: 8px; border-bottom: 1px solid #23304f; vertical-align: top; }
+    .warn { color: #ffd86b; }
+    .small { font-size: 13px; }
+    @media (max-width: 1100px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; max-height: none; }
+      #chart { height: 60vh; min-height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <div><a href="../index.html">← Назад к dashboard</a></div>
+        <h1 style="margin:8px 0 8px;">История цен по страйкам — KXSECPRESSMENTION-26MAR29</h1>
+        <div class="muted">Отдельная страница для разбора minute-level history. Кривые можно включать/выключать чекбоксами или через легенду графика.</div>
+      </div>
+      <div class="card small" style="max-width:520px;">
+        <strong>Важно:</strong> в этом CSV есть цены, но <span class="warn">нет объёма</span> по минутам / экстремумам. Поэтому на странице я показываю min/max по цене и помечаю, что объём недоступен из источника. Если дашь файл со сделками/volume, сюда можно будет добавить реальный size-at-extreme.
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="sidebar card">
+        <div class="controls">
+          <input id="search" class="search" placeholder="Фильтр по названию страйка...">
+          <div class="btnrow">
+            <button id="showTopBtn">Показать top 8</button>
+            <button id="showAllBtn">Показать все</button>
+            <button id="hideAllBtn">Скрыть все</button>
+          </div>
+          <div class="small muted">Top 8 = страйки с наибольшим диапазоном хода (max-min).</div>
+          <div id="checklist" class="checklist"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div id="chart"></div>
+        </div>
+        <div class="meta-grid">
+          <div class="stat"><div class="muted small">Источник</div><div><strong>KXSECPRESSMENTION-26MAR29 CSV</strong></div></div>
+          <div class="stat"><div class="muted small">Покрытие</div><div id="coverage"><strong>—</strong></div></div>
+          <div class="stat"><div class="muted small">Всего страйков</div><div id="strikeCount"><strong>—</strong></div></div>
+          <div class="stat"><div class="muted small">Сейчас отображается</div><div id="visibleCount"><strong>—</strong></div></div>
+        </div>
+        <div class="card" style="margin-top:16px;">
+          <h2 style="margin:0 0 10px;">Экстремумы по страйкам</h2>
+          <div class="small muted">Таблица обновляется по текущему набору включённых страйков. Для каждого страйка: минимум, максимум, диапазон. Объём на экстремумах сейчас недоступен в исходном CSV.</div>
+          <div style="overflow:auto; margin-top:10px;">
+            <table class="extrema-table" id="extremaTable">
+              <thead>
+                <tr>
+                  <th>Страйк</th>
+                  <th>Min</th>
+                  <th>Время min</th>
+                  <th>Объём @ min</th>
+                  <th>Max</th>
+                  <th>Время max</th>
+                  <th>Объём @ max</th>
+                  <th>Диапазон</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.csv';
+const state = {
+  timestamps: [],
+  series: [],
+  visible: new Set(),
+  chartReady: false,
+};
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function fmtPrice(v) {
+  return Number.isFinite(v) ? v.toFixed(2) : '—';
+}
+
+function computeExtrema(points) {
+  let min = null, max = null;
+  for (const p of points) {
+    if (!Number.isFinite(p.y)) continue;
+    if (!min || p.y < min.y) min = p;
+    if (!max || p.y > max.y) max = p;
+  }
+  return { min, max, range: min && max ? (max.y - min.y) : null };
+}
+
+function parseCsv() {
+  Papa.parse(CSV_PATH, {
+    download: true,
+    header: true,
+    dynamicTyping: false,
+    skipEmptyLines: true,
+    complete: (results) => boot(results.data),
+    error: (err) => {
+      document.getElementById('chart').innerHTML = `<div class="warn">Не удалось загрузить CSV: ${esc(err.message || err)}</div>`;
+    }
+  });
+}
+
+function boot(rows) {
+  if (!rows || !rows.length) return;
+  const columns = Object.keys(rows[0]).filter(k => k !== 'timestamp');
+  state.timestamps = rows.map(r => r.timestamp).filter(Boolean);
+
+  state.series = columns.map(name => {
+    const points = rows
+      .map(r => ({ x: r.timestamp, y: r[name] === '' || r[name] == null ? NaN : parseFloat(r[name]) }))
+      .filter(p => p.x);
+    const valid = points.filter(p => Number.isFinite(p.y));
+    const extrema = computeExtrema(valid);
+    return {
+      name,
+      points,
+      validCount: valid.length,
+      extrema,
+    };
+  }).filter(s => s.validCount > 0);
+
+  state.series.sort((a, b) => ((b.extrema.range ?? -1) - (a.extrema.range ?? -1)) || a.name.localeCompare(b.name));
+  state.series.slice(0, 8).forEach(s => state.visible.add(s.name));
+
+  renderMeta();
+  renderChecklist();
+  renderChart();
+  renderExtremaTable();
+  wireSearch();
+}
+
+function renderMeta() {
+  document.getElementById('strikeCount').innerHTML = `<strong>${state.series.length}</strong>`;
+  const first = state.timestamps[0] || '—';
+  const last = state.timestamps[state.timestamps.length - 1] || '—';
+  document.getElementById('coverage').innerHTML = `<strong>${esc(first)} → ${esc(last)}</strong>`;
+  updateVisibleCount();
+}
+
+function updateVisibleCount() {
+  document.getElementById('visibleCount').innerHTML = `<strong>${state.visible.size}</strong>`;
+}
+
+function renderChecklist(filter = '') {
+  const root = document.getElementById('checklist');
+  const q = filter.trim().toLowerCase();
+  const items = state.series.filter(s => !q || s.name.toLowerCase().includes(q));
+  root.innerHTML = items.map(s => `
+    <label class="item">
+      <input type="checkbox" data-name="${esc(s.name)}" ${state.visible.has(s.name) ? 'checked' : ''}>
+      <div class="item-label">
+        <div><strong>${esc(s.name)}</strong></div>
+        <div class="muted small">range ${fmtPrice(s.extrema.range)} · min ${fmtPrice(s.extrema.min?.y)} · max ${fmtPrice(s.extrema.max?.y)}</div>
+      </div>
+    </label>
+  `).join('');
+
+  root.querySelectorAll('input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', () => {
+      const name = input.dataset.name;
+      if (input.checked) state.visible.add(name); else state.visible.delete(name);
+      refresh();
+    });
+  });
+}
+
+function renderChart() {
+  const traces = [];
+  for (const s of state.series) {
+    const visible = state.visible.has(s.name);
+    traces.push({
+      x: s.points.map(p => p.x),
+      y: s.points.map(p => Number.isFinite(p.y) ? p.y : null),
+      mode: 'lines',
+      name: s.name,
+      visible: visible ? true : 'legendonly',
+      line: { width: 2 },
+      hovertemplate: `<b>${esc(s.name)}</b><br>%{x}<br>Цена: %{y:.2f}<extra></extra>`,
+    });
+    if (s.extrema.min) {
+      traces.push({
+        x: [s.extrema.min.x],
+        y: [s.extrema.min.y],
+        mode: 'markers',
+        name: `${s.name} — min`,
+        showlegend: false,
+        visible: visible ? true : 'legendonly',
+        marker: { size: 9, symbol: 'triangle-down', color: '#ff7b7b' },
+        hovertemplate: `<b>${esc(s.name)} — MIN</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
+      });
+    }
+    if (s.extrema.max) {
+      traces.push({
+        x: [s.extrema.max.x],
+        y: [s.extrema.max.y],
+        mode: 'markers',
+        name: `${s.name} — max`,
+        showlegend: false,
+        visible: visible ? true : 'legendonly',
+        marker: { size: 9, symbol: 'triangle-up', color: '#73e0a9' },
+        hovertemplate: `<b>${esc(s.name)} — MAX</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
+      });
+    }
+  }
+
+  Plotly.newPlot('chart', traces, {
+    paper_bgcolor: '#141a2e',
+    plot_bgcolor: '#10182d',
+    font: { color: '#e7ecf5' },
+    hovermode: 'x unified',
+    margin: { l: 60, r: 20, t: 20, b: 50 },
+    xaxis: { gridcolor: '#243250', title: 'Время (UTC)' },
+    yaxis: { gridcolor: '#243250', title: 'Цена' },
+    legend: { orientation: 'h', yanchor: 'bottom', y: 1.02, x: 0 },
+  }, { responsive: true, displaylogo: false });
+
+  const chart = document.getElementById('chart');
+  chart.on('plotly_legendclick', syncVisibleFromPlot);
+  chart.on('plotly_legenddoubleclick', () => setTimeout(syncVisibleFromPlot, 0));
+  state.chartReady = true;
+}
+
+function syncVisibleFromPlot() {
+  const chart = document.getElementById('chart');
+  const data = chart.data || [];
+  const next = new Set();
+  for (const trace of data) {
+    if (trace.showlegend === false) continue;
+    if (trace.visible === true || trace.visible === undefined) next.add(trace.name);
+  }
+  state.visible = next;
+  updateVisibleCount();
+  renderChecklist(document.getElementById('search').value || '');
+  renderExtremaTable();
+}
+
+function applyVisibilityToPlot() {
+  const chart = document.getElementById('chart');
+  const updates = [];
+  for (let i = 0; i < chart.data.length; i++) {
+    const trace = chart.data[i];
+    const baseName = trace.name.replace(/ — min$| — max$/, '');
+    updates.push(state.visible.has(baseName) ? true : 'legendonly');
+  }
+  Plotly.restyle(chart, { visible: updates });
+}
+
+function renderExtremaTable() {
+  const body = document.querySelector('#extremaTable tbody');
+  const rows = state.series
+    .filter(s => state.visible.has(s.name))
+    .sort((a, b) => ((b.extrema.range ?? -1) - (a.extrema.range ?? -1)) || a.name.localeCompare(b.name));
+
+  body.innerHTML = rows.map(s => `
+    <tr>
+      <td><strong>${esc(s.name)}</strong></td>
+      <td>${fmtPrice(s.extrema.min?.y)}</td>
+      <td>${esc(s.extrema.min?.x || '—')}</td>
+      <td class="muted">нет в CSV</td>
+      <td>${fmtPrice(s.extrema.max?.y)}</td>
+      <td>${esc(s.extrema.max?.x || '—')}</td>
+      <td class="muted">нет в CSV</td>
+      <td><strong>${fmtPrice(s.extrema.range)}</strong></td>
+    </tr>
+  `).join('') || '<tr><td colspan="8" class="muted">Нет выбранных страйков.</td></tr>';
+}
+
+function refresh() {
+  updateVisibleCount();
+  if (state.chartReady) applyVisibilityToPlot();
+  renderExtremaTable();
+}
+
+function wireSearch() {
+  document.getElementById('search').addEventListener('input', (e) => renderChecklist(e.target.value || ''));
+  document.getElementById('showTopBtn').addEventListener('click', () => {
+    state.visible = new Set(state.series.slice(0, 8).map(s => s.name));
+    renderChecklist(document.getElementById('search').value || '');
+    refresh();
+  });
+  document.getElementById('showAllBtn').addEventListener('click', () => {
+    state.visible = new Set(state.series.map(s => s.name));
+    renderChecklist(document.getElementById('search').value || '');
+    refresh();
+  });
+  document.getElementById('hideAllBtn').addEventListener('click', () => {
+    state.visible = new Set();
+    renderChecklist(document.getElementById('search').value || '');
+    refresh();
+  });
+}
+
+parseCsv();
+</script>
+</body>
+</html>
