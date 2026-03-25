@@ -6084,7 +6084,7 @@
       "event_title": "Carnival Corporation & plc — their next earnings call",
       "event_ticker": "KXMENTIONEARNCCL-26MAR27",
       "series_ticker": "",
-      "status": "initialized",
+      "status": "active",
       "open_time": "2026-03-24T22:30:00Z",
       "close_time": "2026-06-30T14:00:00Z",
       "market_count": 10,
@@ -6193,15 +6193,14 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "rules / wording risk"
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
@@ -6219,21 +6218,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-CELE",
             "label": "CELE",
             "display_label": "Celebration Key",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-DIVI",
@@ -6245,21 +6241,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-DIVI",
             "label": "DIVI",
             "display_label": "Dividend",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-DRY",
@@ -6271,21 +6264,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-DRY",
             "label": "DRY",
             "display_label": "Dry Dock",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-HEAD",
@@ -6297,15 +6287,14 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-HEAD",
             "label": "HEAD",
             "display_label": "Headwind",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "weak setup",
-              "cheap tail"
+              "weak setup"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
@@ -6323,15 +6312,13 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-INFL",
             "label": "INFL",
             "display_label": "Inflation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "late-phase optionality"
-            ],
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
@@ -6348,21 +6335,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-OIL",
@@ -6374,21 +6358,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-TAIL",
@@ -6400,21 +6381,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-TAIL",
             "label": "TAIL",
             "display_label": "Tailwind",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXMENTIONEARNCCL-26MAR27-TARI",
@@ -6426,21 +6404,18 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-TARI",
             "label": "TARI",
             "display_label": "Tariff",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
@@ -6475,15 +6450,13 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-INFL",
             "label": "INFL",
             "display_label": "Inflation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "late-phase optionality"
-            ],
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
@@ -6491,68 +6464,56 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-CELE",
             "label": "CELE",
             "display_label": "Celebration Key",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-DIVI",
             "label": "DIVI",
             "display_label": "Dividend",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-DRY",
             "label": "DRY",
             "display_label": "Dry Dock",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ],
@@ -6560,36 +6521,72 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXMENTIONEARNCCL-26MAR27-AI",
-            "label": "AI",
-            "display_label": "AI / Artificial Intelligence",
+            "market_id": "KXMENTIONEARNCCL-26MAR27-CELE",
+            "label": "CELE",
+            "display_label": "Celebration Key",
             "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "rules / wording risk",
-              "cheap tail"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           },
           {
-            "market_id": "KXMENTIONEARNCCL-26MAR27-HEAD",
-            "label": "HEAD",
-            "display_label": "Headwind",
-            "score": -1,
+            "market_id": "KXMENTIONEARNCCL-26MAR27-DIVI",
+            "label": "DIVI",
+            "display_label": "Dividend",
+            "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
-            "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "weak setup",
-              "cheap tail"
-            ],
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMENTIONEARNCCL-26MAR27-DRY",
+            "label": "DRY",
+            "display_label": "Dry Dock",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMENTIONEARNCCL-26MAR27-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXMENTIONEARNCCL-26MAR27-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
             "status_class": "status-gray",
             "type_class": "type-gray"
           }
@@ -6599,15 +6596,13 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-INFL",
             "label": "INFL",
             "display_label": "Inflation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "late-phase optionality"
-            ],
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
@@ -6615,134 +6610,112 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-CELE",
             "label": "CELE",
             "display_label": "Celebration Key",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-DIVI",
             "label": "DIVI",
             "display_label": "Dividend",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-DRY",
             "label": "DRY",
             "display_label": "Dry Dock",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-TAIL",
             "label": "TAIL",
             "display_label": "Tailwind",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-TARI",
             "label": "TARI",
             "display_label": "Tariff",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXMENTIONEARNCCL-26MAR27-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "rules / wording risk"
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
@@ -6751,15 +6724,14 @@
             "market_id": "KXMENTIONEARNCCL-26MAR27-HEAD",
             "label": "HEAD",
             "display_label": "Headwind",
-            "score": -1,
+            "score": -2,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "weak setup",
-              "cheap tail"
+              "weak setup"
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
