@@ -52,10 +52,18 @@
       <div>
         <div><a href="../index.html">← Назад к dashboard</a></div>
         <h1 style="margin:8px 0 8px;">История цен по страйкам — KXSECPRESSMENTION-26MAR29</h1>
-        <div class="muted">Отдельная страница для разбора minute-level history. Кривые можно включать/выключать чекбоксами или через легенду графика.</div>
+        <div class="muted">Отдельная страница для разбора minute-level history. Можно вставить ссылку на рынок Kalshi: страница сама подтянет все страйки события через API. Кривые можно включать/выключать чекбоксами или через легенду графика.</div>
       </div>
-      <div class="card small" style="max-width:520px;">
-        <strong>Важно:</strong> в этом CSV есть цены, но <span class="warn">нет объёма</span> по минутам / экстремумам. Поэтому на странице я показываю min/max по цене и помечаю, что объём недоступен из источника. Если дашь файл со сделками/volume, сюда можно будет добавить реальный size-at-extreme.
+      <div class="card small" style="max-width:620px;">
+        <div style="display:grid; gap:8px;">
+          <strong>Загрузка по ссылке Kalshi</strong>
+          <input id="marketUrlInput" class="search" placeholder="https://kalshi.com/markets/.../kxsecpressmention-26mar15">
+          <div class="btnrow">
+            <button id="loadFromUrlBtn">Загрузить по ссылке</button>
+            <button id="loadCsvFallbackBtn">Вернуться к локальному CSV</button>
+          </div>
+          <div id="loadStatus" class="muted">По умолчанию открыт локальный CSV snapshot.</div>
+        </div>
       </div>
     </div>
 
@@ -78,7 +86,7 @@
           <div id="chart"></div>
         </div>
         <div class="meta-grid">
-          <div class="stat"><div class="muted small">Источник</div><div><strong>KXSECPRESSMENTION-26MAR29 CSV</strong></div></div>
+          <div class="stat"><div class="muted small">Источник</div><div id="sourceLabel"><strong>KXSECPRESSMENTION-26MAR29 CSV</strong></div></div>
           <div class="stat"><div class="muted small">Покрытие</div><div id="coverage"><strong>—</strong></div></div>
           <div class="stat"><div class="muted small">Всего страйков</div><div id="strikeCount"><strong>—</strong></div></div>
           <div class="stat"><div class="muted small">Сейчас отображается</div><div id="visibleCount"><strong>—</strong></div></div>
