@@ -11153,21 +11153,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-ACQU",
             "label": "ACQU",
             "display_label": "Acquisition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-APEX",
@@ -11179,21 +11176,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-APEX",
             "label": "APEX",
             "display_label": "Apex Legends",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-COMP",
@@ -11205,21 +11199,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-COMP",
             "label": "COMP",
             "display_label": "Competition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-ENGA",
@@ -11231,21 +11222,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-ENGA",
             "label": "ENGA",
             "display_label": "Player Engagement",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-JARE",
@@ -11257,21 +11245,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-JARE",
             "label": "JARE",
             "display_label": "Jared / Kushner",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-LIVE",
@@ -11283,15 +11268,14 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-LIVE",
             "label": "LIVE",
             "display_label": "Live Service",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "rules / wording risk"
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
@@ -11309,21 +11293,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-MOBL",
             "label": "MOBL",
             "display_label": "Mobile",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-SAUD",
@@ -11335,21 +11316,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SAUD",
             "label": "SAUD",
             "display_label": "Saudi Arabia",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-SIMS",
@@ -11361,21 +11339,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SIMS",
             "label": "SIMS",
             "display_label": "The Sims",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-SKAT",
@@ -11387,21 +11362,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SKAT",
             "label": "SKAT",
             "display_label": "Skate",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-SPFC",
@@ -11413,21 +11385,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SPFC",
             "label": "SPFC",
             "display_label": "EA Sports FC",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXEARNINGSMENTIONEA-25OCT28-UNDP",
@@ -11439,21 +11408,18 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-UNDP",
             "label": "UNDP",
             "display_label": "Underperformance",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           "phase_fit": "q&a-watch",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
@@ -11488,85 +11454,70 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-ACQU",
             "label": "ACQU",
             "display_label": "Acquisition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-APEX",
             "label": "APEX",
             "display_label": "Apex Legends",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-COMP",
             "label": "COMP",
             "display_label": "Competition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SPFC",
             "label": "SPFC",
             "display_label": "EA Sports FC",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-JARE",
             "label": "JARE",
             "display_label": "Jared / Kushner",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           }
         ],
@@ -11574,21 +11525,74 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXEARNINGSMENTIONEA-25OCT28-LIVE",
-            "label": "LIVE",
-            "display_label": "Live Service",
+            "market_id": "KXEARNINGSMENTIONEA-25OCT28-ACQU",
+            "label": "ACQU",
+            "display_label": "Acquisition",
             "score": 0,
             "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "rules / wording risk",
-              "cheap tail"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXEARNINGSMENTIONEA-25OCT28-APEX",
+            "label": "APEX",
+            "display_label": "Apex Legends",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXEARNINGSMENTIONEA-25OCT28-COMP",
+            "label": "COMP",
+            "display_label": "Competition",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXEARNINGSMENTIONEA-25OCT28-SPFC",
+            "label": "SPFC",
+            "display_label": "EA Sports FC",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXEARNINGSMENTIONEA-25OCT28-JARE",
+            "label": "JARE",
+            "display_label": "Jared / Kushner",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
           }
         ],
         "full_ranking": [
@@ -11596,202 +11600,168 @@
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-ACQU",
             "label": "ACQU",
             "display_label": "Acquisition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-APEX",
             "label": "APEX",
             "display_label": "Apex Legends",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-COMP",
             "label": "COMP",
             "display_label": "Competition",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SPFC",
             "label": "SPFC",
             "display_label": "EA Sports FC",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-JARE",
             "label": "JARE",
             "display_label": "Jared / Kushner",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-MOBL",
             "label": "MOBL",
             "display_label": "Mobile",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-ENGA",
             "label": "ENGA",
             "display_label": "Player Engagement",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SAUD",
             "label": "SAUD",
             "display_label": "Saudi Arabia",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SKAT",
             "label": "SKAT",
             "display_label": "Skate",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-SIMS",
             "label": "SIMS",
             "display_label": "The Sims",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-UNDP",
             "label": "UNDP",
             "display_label": "Underperformance",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
             "strike_type": "generic",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "cheap tail",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
             "type_class": "type-gray"
           },
           {
             "market_id": "KXEARNINGSMENTIONEA-25OCT28-LIVE",
             "label": "LIVE",
             "display_label": "Live Service",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 1.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "rules / wording risk",
-              "cheap tail"
+              "rules / wording risk"
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
