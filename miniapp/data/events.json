@@ -15769,6 +15769,628 @@
       "slug": "gary-peters-the-last-word-with-lawrence-o-donnell"
     },
     {
+      "group_key": "KXLEAVITTMENTIONDURATION-MAR2626",
+      "event_title": "How long will Karoline Leavitt speak for at Press Briefing by the White House Press Secretary Karoline Leavitt?",
+      "event_ticker": "KXLEAVITTMENTIONDURATION-MAR2626",
+      "series_ticker": "",
+      "status": "initialized",
+      "open_time": "2026-03-25T13:50:00Z",
+      "close_time": "2026-03-26T03:59:00Z",
+      "market_count": 9,
+      "dominant_group": "political_mentions",
+      "dominant_subtype": "press_conference",
+      "dominant_rules_risk": "low",
+      "speaker": "unknown",
+      "format_confidence": 0.85,
+      "prep_focus": "Собери контекст, формат события и кластеры страйков перед торговлей.",
+      "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
+      "priority": "high",
+      "strike_codes": [
+        "25 or above",
+        "30 or above",
+        "35 or above",
+        "40 or above",
+        "45 or above",
+        "50 or above",
+        "55 or above",
+        "60 or above",
+        "65 or above"
+      ],
+      "strike_buckets": {
+        "count": 9,
+        "context_sensitive_hint": 9
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-24",
+            "label": "25 or above",
+            "short_label": "24",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-29",
+            "label": "30 or above",
+            "short_label": "29",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-34",
+            "label": "35 or above",
+            "short_label": "34",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-39",
+            "label": "40 or above",
+            "short_label": "39",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-44",
+            "label": "45 or above",
+            "short_label": "44",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-49",
+            "label": "50 or above",
+            "short_label": "49",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-54",
+            "label": "55 or above",
+            "short_label": "54",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-59",
+            "label": "60 or above",
+            "short_label": "59",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-64",
+            "label": "65 or above",
+            "short_label": "64",
+            "note": "context-dependent token · pivot"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": []
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-24",
+          "label": "25 or above",
+          "short_label": "24",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-24",
+            "label": "24",
+            "display_label": "25 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-29",
+          "label": "30 or above",
+          "short_label": "29",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-29",
+            "label": "29",
+            "display_label": "30 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-34",
+          "label": "35 or above",
+          "short_label": "34",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-34",
+            "label": "34",
+            "display_label": "35 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-39",
+          "label": "40 or above",
+          "short_label": "39",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-39",
+            "label": "39",
+            "display_label": "40 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-44",
+          "label": "45 or above",
+          "short_label": "44",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-44",
+            "label": "44",
+            "display_label": "45 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-49",
+          "label": "50 or above",
+          "short_label": "49",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-49",
+            "label": "49",
+            "display_label": "50 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-54",
+          "label": "55 or above",
+          "short_label": "54",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-54",
+            "label": "54",
+            "display_label": "55 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-59",
+          "label": "60 or above",
+          "short_label": "59",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-59",
+            "label": "59",
+            "display_label": "60 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-64",
+          "label": "65 or above",
+          "short_label": "64",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-64",
+            "label": "64",
+            "display_label": "65 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "local incident",
+        "policy headline",
+        "question-driven narrative shift",
+        "fresh headline pressure"
+      ],
+      "context_notes": [
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Свежий headline: Karoline Leavitt, the youngest White House press secretary, makes her debut in the briefing room - AP News",
+        "Свежий headline: The White House is starting a new media policy that restricts wire services' access to the president - AP News",
+        "Свежий headline: White House says it has the right to punish AP reporters over Gulf naming dispute - AP News"
+      ],
+      "opening_plan": [
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot."
+      ],
+      "post_opening_plan": [
+        "Если opening прошёл без hit, не держи NO автоматически: сначала реши, был ли strike opening-heavy или Q&A-heavy.",
+        "Переоцени narrative buckets целиком, а не отдельные слова."
+      ],
+      "qa_transition_plan": [
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-24",
+            "label": "24",
+            "display_label": "25 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-29",
+            "label": "29",
+            "display_label": "30 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-34",
+            "label": "34",
+            "display_label": "35 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-39",
+            "label": "39",
+            "display_label": "40 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-44",
+            "label": "44",
+            "display_label": "45 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [],
+        "full_ranking": [
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-24",
+            "label": "24",
+            "display_label": "25 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-29",
+            "label": "29",
+            "display_label": "30 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-34",
+            "label": "34",
+            "display_label": "35 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-39",
+            "label": "39",
+            "display_label": "40 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-44",
+            "label": "44",
+            "display_label": "45 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-49",
+            "label": "49",
+            "display_label": "50 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-54",
+            "label": "54",
+            "display_label": "55 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-59",
+            "label": "59",
+            "display_label": "60 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXLEAVITTMENTIONDURATION-MAR2626-64",
+            "label": "64",
+            "display_label": "65 or above",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь local/state news за последние 48–72 часа; свежие инциденты часто ломают исторический baseline.",
+        "Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent."
+      ],
+      "live_trading_summary": [
+        "В первые минуты определи dominant theme cluster, а не отдельное слово.",
+        "Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу."
+      ],
+      "risk_summary": [
+        "Высокая чувствительность к current events.",
+        "Связанные страйки могут быть по сути одной ставкой на один narrative."
+      ],
+      "manual_trader_prompts": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot.",
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера."
+      ],
+      "consensus_misread": [
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала."
+      },
+      "transcript_matches": [],
+      "slug": "how-long-will-karoline-leavitt-speak-for-at-press-briefing-by-the-white-house-press-secretary-karoli"
+    },
+    {
       "group_key": "KXSNLMENTION-26APR04",
       "event_title": "Jack Black — Saturday Night Live opening monologue",
       "event_ticker": "KXSNLMENTION-26APR04",
