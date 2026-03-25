@@ -121,12 +121,17 @@ const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.c
 const STORAGE_KEY = 'kalshi-price-history-kxsecpressmention-26mar29-colors';
 const DEFAULT_COLORS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#ff8fab','#72efdd','#c77dff','#ff9f1c','#90be6d','#e76f51','#5dade2','#f28482'];
 const QUICK_PRESETS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#c77dff','#ff9f1c','#72efdd','#ff6b6b','#95d5b2','#a0c4ff'];
+const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.csv';
+const API_BASE = 'https://api.elections.kalshi.com/trade-api/v2';
 const state = {
   timestamps: [],
   series: [],
   visible: new Set(),
   colors: {},
   chartReady: false,
+  sourceType: 'csv',
+  sourceLabel: 'KXSECPRESSMENTION-26MAR29 CSV',
+  currentEventTicker: null,
 };
 
 function esc(s) {
@@ -166,50 +171,121 @@ function computeExtrema(points) {
   return { min, max, range: min && max ? (max.y - min.y) : null };
 }
 
+function setStatus(text, isWarn = false) {
+  const el = document.getElementById('loadStatus');
+  el.textContent = text;
+  el.className = isWarn ? 'warn' : 'muted';
+}
+
+function resetStateForNewData() {
+  state.timestamps = [];
+  state.series = [];
+  state.visible = new Set();
+  state.chartReady = false;
+}
+
+function finalizeSeries(series) {
+  resetStateForNewData();
+  state.colors = loadColors();
+  state.series = series.filter(s => s.validCount > 0);
+  state.series.sort((a, b) => ((b.extrema.range ?? -1) - (a.extrema.range ?? -1)) || a.name.localeCompare(b.name));
+  state.series.slice(0, 8).forEach(s => state.visible.add(s.name));
+  saveColors();
+  renderMeta();
+  renderChecklist();
+  renderChart();
+  renderExtremaTable();
+}
+
 function parseCsv() {
+  state.sourceType = 'csv';
+  state.sourceLabel = 'KXSECPRESSMENTION-26MAR29 CSV';
+  state.currentEventTicker = null;
+  document.getElementById('sourceLabel').innerHTML = `<strong>${esc(state.sourceLabel)}</strong>`;
   Papa.parse(CSV_PATH, {
     download: true,
     header: true,
     dynamicTyping: false,
     skipEmptyLines: true,
-    complete: (results) => boot(results.data),
+    complete: (results) => bootCsv(results.data),
     error: (err) => {
       document.getElementById('chart').innerHTML = `<div class="warn">Не удалось загрузить CSV: ${esc(err.message || err)}</div>`;
     }
   });
 }
 
-function boot(rows) {
+function bootCsv(rows) {
   if (!rows || !rows.length) return;
-  state.colors = loadColors();
   const columns = Object.keys(rows[0]).filter(k => k !== 'timestamp');
   state.timestamps = rows.map(r => r.timestamp).filter(Boolean);
-
-  state.series = columns.map((name, index) => {
+  const series = columns.map((name, index) => {
     const points = rows
-      .map(r => ({ x: r.timestamp, y: r[name] === '' || r[name] == null ? NaN : parseFloat(r[name]) }))
+      .map(r => ({ x: r.timestamp, y: r[name] === '' || r[name] == null ? NaN : parseFloat(r[name]), volume: null }))
       .filter(p => p.x);
     const valid = points.filter(p => Number.isFinite(p.y));
     const extrema = computeExtrema(valid);
     if (!state.colors[name]) state.colors[name] = DEFAULT_COLORS[index % DEFAULT_COLORS.length];
-    return {
-      name,
-      points,
-      validCount: valid.length,
-      extrema,
-      color: state.colors[name],
-    };
-  }).filter(s => s.validCount > 0);
+    return { name, points, validCount: valid.length, extrema, color: state.colors[name], hasVolume: false };
+  });
+  finalizeSeries(series);
+  setStatus('Открыт локальный CSV snapshot.');
+}
 
-  state.series.sort((a, b) => ((b.extrema.range ?? -1) - (a.extrema.range ?? -1)) || a.name.localeCompare(b.name));
-  state.series.slice(0, 8).forEach(s => state.visible.add(s.name));
+async function loadFromKalshiUrl(inputUrl) {
+  const eventTicker = extractEventTicker(inputUrl);
+  if (!eventTicker) {
+    setStatus('Не смог распарсить event ticker из ссылки Kalshi.', true);
+    return;
+  }
+  setStatus(`Гружу ${eventTicker} через Kalshi API...`);
+  state.sourceType = 'api';
+  state.sourceLabel = eventTicker;
+  state.currentEventTicker = eventTicker;
+  document.getElementById('sourceLabel').innerHTML = `<strong>${esc(eventTicker)} API</strong>`;
+  try {
+    const marketsResp = await fetch(`${API_BASE}/markets?event_ticker=${encodeURIComponent(eventTicker)}&limit=200`);
+    if (!marketsResp.ok) throw new Error(`markets ${marketsResp.status}`);
+    const marketsPayload = await marketsResp.json();
+    const markets = (marketsPayload.markets || []).filter(m => m.ticker);
+    if (!markets.length) throw new Error('no markets');
 
-  saveColors();
-  renderMeta();
-  renderChecklist();
-  renderChart();
-  renderExtremaTable();
-  wireSearch();
+    const times = markets.flatMap(m => [m.created_time, m.open_time, m.close_time, m.expiration_time]).filter(Boolean).map(x => Date.parse(x)).filter(Number.isFinite);
+    const startTs = Math.floor((Math.min(...times) - 6 * 3600 * 1000) / 1000);
+    const endTs = Math.floor((Math.max(...times) + 6 * 3600 * 1000) / 1000);
+    const marketTickers = markets.map(m => m.ticker).join(',');
+    const candlesResp = await fetch(`${API_BASE}/markets/candlesticks?market_tickers=${encodeURIComponent(marketTickers)}&start_ts=${startTs}&end_ts=${endTs}&period_interval=1`);
+    if (!candlesResp.ok) throw new Error(`candlesticks ${candlesResp.status}`);
+    const candlesPayload = await candlesResp.json();
+    bootApi(markets, candlesPayload.markets || []);
+    const qp = new URLSearchParams(location.search);
+    qp.set('market_url', inputUrl);
+    history.replaceState({}, '', `${location.pathname}?${qp.toString()}`);
+    setStatus(`Загружено из Kalshi API: ${eventTicker} (${markets.length} страйков).`);
+  } catch (err) {
+    setStatus(`Ошибка загрузки из Kalshi API: ${err.message || err}`, true);
+  }
+}
+
+function bootApi(markets, groupedCandles) {
+  const marketMap = new Map(markets.map(m => [m.ticker, m]));
+  const allTs = new Set();
+  const series = groupedCandles.map((entry, index) => {
+    const meta = marketMap.get(entry.market_ticker) || {};
+    const name = meta.yes_sub_title || meta.subtitle || meta.title || entry.market_ticker;
+    const points = (entry.candlesticks || []).map(c => {
+      const x = new Date((c.end_period_ts || 0) * 1000).toISOString();
+      allTs.add(x);
+      const price = c.price?.close_dollars ?? c.price?.mean_dollars ?? c.price?.previous_dollars ?? null;
+      const volume = c.volume_fp != null ? parseFloat(c.volume_fp) : null;
+      return { x, y: price == null ? NaN : parseFloat(price) * 100, volume };
+    });
+    const valid = points.filter(p => Number.isFinite(p.y));
+    const extrema = computeExtrema(valid);
+    if (!state.colors[name]) state.colors[name] = DEFAULT_COLORS[index % DEFAULT_COLORS.length];
+    return { name, points, validCount: valid.length, extrema, color: state.colors[name], hasVolume: true, ticker: entry.market_ticker };
+  });
+  state.timestamps = [...allTs].sort();
+  finalizeSeries(series);
 }
 
 function renderMeta() {
@@ -217,6 +293,7 @@ function renderMeta() {
   const first = state.timestamps[0] || '—';
   const last = state.timestamps[state.timestamps.length - 1] || '—';
   document.getElementById('coverage').innerHTML = `<strong>${esc(first)} → ${esc(last)}</strong>`;
+  document.getElementById('sourceLabel').innerHTML = `<strong>${esc(state.sourceLabel)}</strong>`;
   updateVisibleCount();
 }
 
@@ -317,7 +394,8 @@ function renderChart() {
         showlegend: false,
         visible: visible ? true : 'legendonly',
         marker: { size: 9, symbol: 'triangle-down', color },
-        hovertemplate: `<b>${esc(s.name)} — MIN</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
+        hovertemplate: `<b>${esc(s.name)} — MIN</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: ${s.hasVolume ? '%{customdata:.2f}' : 'недоступен в CSV'}<extra></extra>`,
+        customdata: [s.extrema.min.volume ?? null],
       });
     }
     if (s.extrema.max) {
@@ -329,7 +407,8 @@ function renderChart() {
         showlegend: false,
         visible: visible ? true : 'legendonly',
         marker: { size: 9, symbol: 'triangle-up', color },
-        hovertemplate: `<b>${esc(s.name)} — MAX</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: недоступен в CSV<extra></extra>`,
+        hovertemplate: `<b>${esc(s.name)} — MAX</b><br>%{x}<br>Цена: %{y:.2f}<br>Объём: ${s.hasVolume ? '%{customdata:.2f}' : 'недоступен в CSV'}<extra></extra>`,
+        customdata: [s.extrema.max.volume ?? null],
       });
     }
   }
@@ -401,10 +480,10 @@ function renderExtremaTable() {
       <td><strong>${esc(s.name)}</strong></td>
       <td>${fmtPrice(s.extrema.min?.y)}</td>
       <td>${esc(s.extrema.min?.x || '—')}</td>
-      <td class="muted">нет в CSV</td>
+      <td class="muted">${s.hasVolume ? fmtPrice(s.extrema.min?.volume) : 'нет в CSV'}</td>
       <td>${fmtPrice(s.extrema.max?.y)}</td>
       <td>${esc(s.extrema.max?.x || '—')}</td>
-      <td class="muted">нет в CSV</td>
+      <td class="muted">${s.hasVolume ? fmtPrice(s.extrema.max?.volume) : 'нет в CSV'}</td>
       <td><strong>${fmtPrice(s.extrema.range)}</strong></td>
     </tr>
   `).join('') || '<tr><td colspan="8" class="muted">Нет выбранных страйков.</td></tr>';
@@ -414,6 +493,13 @@ function refresh() {
   updateVisibleCount();
   if (state.chartReady) applyVisibilityToPlot();
   renderExtremaTable();
+}
+
+function extractEventTicker(input) {
+  const raw = String(input || '').trim();
+  if (!raw) return null;
+  const m = raw.match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d{2})\b/i);
+  return m ? m[1].toUpperCase() : null;
 }
 
 function wireSearch() {
@@ -433,9 +519,27 @@ function wireSearch() {
     renderChecklist(document.getElementById('search').value || '');
     refresh();
   });
+  document.getElementById('loadFromUrlBtn').addEventListener('click', () => {
+    const v = document.getElementById('marketUrlInput').value;
+    loadFromKalshiUrl(v);
+  });
+  document.getElementById('loadCsvFallbackBtn').addEventListener('click', () => {
+    const qp = new URLSearchParams(location.search);
+    qp.delete('market_url');
+    history.replaceState({}, '', `${location.pathname}${qp.toString() ? '?' + qp.toString() : ''}`);
+    parseCsv();
+  });
 }
 
-parseCsv();
+wireSearch();
+const qp = new URLSearchParams(location.search);
+const initialMarketUrl = qp.get('market_url');
+if (initialMarketUrl) {
+  document.getElementById('marketUrlInput').value = initialMarketUrl;
+  loadFromKalshiUrl(initialMarketUrl);
+} else {
+  parseCsv();
+}
 </script>
 </body>
 </html>
