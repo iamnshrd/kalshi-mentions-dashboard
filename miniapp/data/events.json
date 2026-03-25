@@ -8210,7 +8210,7 @@
       "status": "active",
       "open_time": "2026-03-25T15:45:00Z",
       "close_time": "2026-03-26T14:00:00Z",
-      "market_count": 14,
+      "market_count": 20,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
       "dominant_rules_risk": "medium",
@@ -8227,17 +8227,23 @@
         "ChatGPT / OpenAI",
         "Climate",
         "Crypto / Cryptocurrency",
+        "Dario / Anthropic",
+        "Department of Defense / Department of War",
         "Elon / Musk",
+        "Immigrant / Immigration",
         "Iran",
         "Event does not qualify",
+        "Nuclear / Nuke",
         "Oil / Gas / Gasoline",
+        "Revolution / Revolutionary",
         "Robot / Robotic / Robotics",
+        "Subsidy / Subsidize",
         "Trump",
         "Water"
       ],
       "strike_buckets": {
-        "count": 14,
-        "context_sensitive_hint": 14
+        "count": 20,
+        "context_sensitive_hint": 20
       },
       "strike_intel": {
         "structural": [],
@@ -8281,9 +8287,21 @@
             "note": "context-dependent token · pivot"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-DARI",
+            "label": "Dario / Anthropic",
+            "short_label": "DARI",
+            "note": "context-dependent token · pivot"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-ELON",
             "label": "Elon / Musk",
             "short_label": "ELON",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-NUCL",
+            "label": "Nuclear / Nuke",
+            "short_label": "NUCL",
             "note": "context-dependent token · pivot"
           },
           {
@@ -8314,6 +8332,18 @@
             "note": "special-rule / exact-token risk · rules"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-DEPA",
+            "label": "Department of Defense / Department of War",
+            "short_label": "DEPA",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-IMMI",
+            "label": "Immigrant / Immigration",
+            "short_label": "IMMI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-NQE",
             "label": "Event does not qualify",
             "short_label": "NQE",
@@ -8326,9 +8356,21 @@
             "note": "special-rule / exact-token risk · rules"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-REVO",
+            "label": "Revolution / Revolutionary",
+            "short_label": "REVO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
             "label": "Robot / Robotic / Robotics",
             "short_label": "ROBO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-SUBS",
+            "label": "Subsidy / Subsidize",
+            "short_label": "SUBS",
             "note": "special-rule / exact-token risk · rules"
           }
         ]
@@ -8512,6 +8554,57 @@
           "attention_allocation": "pass"
         },
         {
+          "market_id": "KXBERNIEMENTION-26MAR25-DARI",
+          "label": "Dario / Anthropic",
+          "short_label": "DARI",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-DARI",
+            "label": "DARI",
+            "display_label": "Dario / Anthropic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-DEPA",
+          "label": "Department of Defense / Department of War",
+          "short_label": "DEPA",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-DEPA",
+            "label": "DEPA",
+            "display_label": "Department of Defense / Department of War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
           "market_id": "KXBERNIEMENTION-26MAR25-ELON",
           "label": "Elon / Musk",
           "short_label": "ELON",
@@ -8535,6 +8628,32 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-IMMI",
+          "label": "Immigrant / Immigration",
+          "short_label": "IMMI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "secondary watch"
         },
         {
           "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
@@ -8588,6 +8707,31 @@
           "attention_allocation": "pass"
         },
         {
+          "market_id": "KXBERNIEMENTION-26MAR25-NUCL",
+          "label": "Nuclear / Nuke",
+          "short_label": "NUCL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-NUCL",
+            "label": "NUCL",
+            "display_label": "Nuclear / Nuke",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
           "market_id": "KXBERNIEMENTION-26MAR25-OIL",
           "label": "Oil / Gas / Gasoline",
           "short_label": "OIL",
@@ -8614,6 +8758,32 @@
           "attention_allocation": "pass"
         },
         {
+          "market_id": "KXBERNIEMENTION-26MAR25-REVO",
+          "label": "Revolution / Revolutionary",
+          "short_label": "REVO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-REVO",
+            "label": "REVO",
+            "display_label": "Revolution / Revolutionary",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
           "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
           "label": "Robot / Robotic / Robotics",
           "short_label": "ROBO",
@@ -8623,6 +8793,32 @@
             "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
             "label": "ROBO",
             "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXBERNIEMENTION-26MAR25-SUBS",
+          "label": "Subsidy / Subsidize",
+          "short_label": "SUBS",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXBERNIEMENTION-26MAR25-SUBS",
+            "label": "SUBS",
+            "display_label": "Subsidy / Subsidize",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
@@ -8723,6 +8919,23 @@
       "strike_priority": {
         "top_watchlist": [
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
             "label": "BEZO",
             "display_label": "Bezos",
@@ -8774,22 +8987,6 @@
             "market_id": "KXBERNIEMENTION-26MAR25-CHAT",
             "label": "CHAT",
             "display_label": "ChatGPT / OpenAI",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXBERNIEMENTION-26MAR25-CLIM",
-            "label": "CLIM",
-            "display_label": "Climate",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -8841,6 +9038,23 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-DEPA",
+            "label": "DEPA",
+            "display_label": "Department of Defense / Department of War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
@@ -8873,26 +9087,26 @@
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
-          },
-          {
-            "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
-            "label": "ROBO",
-            "display_label": "Robot / Robotic / Robotics",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
           }
         ],
         "full_ranking": [
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
           {
             "market_id": "KXBERNIEMENTION-26MAR25-BEZO",
             "label": "BEZO",
@@ -8974,6 +9188,22 @@
             "type_class": "type-gray"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-DARI",
+            "label": "DARI",
+            "display_label": "Dario / Anthropic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-ELON",
             "label": "ELON",
             "display_label": "Elon / Musk",
@@ -8993,6 +9223,22 @@
             "market_id": "KXBERNIEMENTION-26MAR25-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-NUCL",
+            "label": "NUCL",
+            "display_label": "Nuclear / Nuke",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -9072,6 +9318,23 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-DEPA",
+            "label": "DEPA",
+            "display_label": "Department of Defense / Department of War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-NQE",
             "label": "NQE",
             "display_label": "Event does not qualify",
@@ -9106,9 +9369,43 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXBERNIEMENTION-26MAR25-REVO",
+            "label": "REVO",
+            "display_label": "Revolution / Revolutionary",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXBERNIEMENTION-26MAR25-ROBO",
             "label": "ROBO",
             "display_label": "Robot / Robotic / Robotics",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXBERNIEMENTION-26MAR25-SUBS",
+            "label": "SUBS",
+            "display_label": "Subsidy / Subsidize",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
