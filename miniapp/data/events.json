@@ -28037,6 +28037,1102 @@
       "slug": "smithfield-foods-inc-their-next-earnings-call"
     },
     {
+      "group_key": "KXFIGHTMENTION-26MAR28ADEPYF",
+      "event_title": "the announcers — Adesanya vs Pyfer professional MMA fight originally scheduled for Mar 28, 2026",
+      "event_ticker": "KXFIGHTMENTION-26MAR28ADEPYF",
+      "series_ticker": "",
+      "status": "initialized",
+      "open_time": "2026-03-25T17:30:00Z",
+      "close_time": "2026-04-12T01:40:00Z",
+      "market_count": 17,
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nfl_announcer_market",
+      "dominant_rules_risk": "medium",
+      "speaker": "announcers",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
+      "strike_codes": [
+        "Blood / Bloody",
+        "Bodybagz / Body Bag",
+        "Championship",
+        "Choke / Choked / Chokehold",
+        "Climate Pledge Arena",
+        "Dana",
+        "Decision / Judged",
+        "Knockout / Knock Out / Knocked Out",
+        "Legal / Illegal",
+        "Lights Out",
+        "Event does not qualify",
+        "Slip / Slips / Slipped",
+        "Stylebender",
+        "Tired / Tiring",
+        "Train / Trained / Training",
+        "Triangle",
+        "What a Fight"
+      ],
+      "strike_buckets": {
+        "count": 17,
+        "context_sensitive_hint": 17
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [],
+        "game_state_sensitive": [
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+            "label": "Blood / Bloody",
+            "short_label": "BLOO",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+            "label": "Championship",
+            "short_label": "CHAM",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+            "label": "Climate Pledge Arena",
+            "short_label": "CLIM",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DANA",
+            "label": "Dana",
+            "short_label": "DANA",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DECI",
+            "label": "Decision / Judged",
+            "short_label": "DECI",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LEGA",
+            "label": "Legal / Illegal",
+            "short_label": "LEGA",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LIGH",
+            "label": "Lights Out",
+            "short_label": "LIGH",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-STYL",
+            "label": "Stylebender",
+            "short_label": "STYL",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TIRE",
+            "label": "Tired / Tiring",
+            "short_label": "TIRE",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRIA",
+            "label": "Triangle",
+            "short_label": "TRIA",
+            "note": "broadcast-flow dependent · live"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-WHAT",
+            "label": "What a Fight",
+            "short_label": "WHAT",
+            "note": "broadcast-flow dependent · live"
+          }
+        ],
+        "likely_trap": [
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+            "label": "Bodybagz / Body Bag",
+            "short_label": "BODY",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+            "label": "Choke / Choked / Chokehold",
+            "short_label": "CHOK",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-KNOC",
+            "label": "Knockout / Knock Out / Knocked Out",
+            "short_label": "KNOC",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-SLIP",
+            "label": "Slip / Slips / Slipped",
+            "short_label": "SLIP",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRAI",
+            "label": "Train / Trained / Training",
+            "short_label": "TRAI",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+          "label": "Blood / Bloody",
+          "short_label": "BLOO",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+            "label": "BLOO",
+            "display_label": "Blood / Bloody",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+          "label": "Bodybagz / Body Bag",
+          "short_label": "BODY",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+            "label": "BODY",
+            "display_label": "Bodybagz / Body Bag",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+          "label": "Championship",
+          "short_label": "CHAM",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+            "label": "CHAM",
+            "display_label": "Championship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+          "label": "Choke / Choked / Chokehold",
+          "short_label": "CHOK",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+            "label": "CHOK",
+            "display_label": "Choke / Choked / Chokehold",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+          "label": "Climate Pledge Arena",
+          "short_label": "CLIM",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate Pledge Arena",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DANA",
+          "label": "Dana",
+          "short_label": "DANA",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DANA",
+            "label": "DANA",
+            "display_label": "Dana",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DECI",
+          "label": "Decision / Judged",
+          "short_label": "DECI",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DECI",
+            "label": "DECI",
+            "display_label": "Decision / Judged",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-KNOC",
+          "label": "Knockout / Knock Out / Knocked Out",
+          "short_label": "KNOC",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-KNOC",
+            "label": "KNOC",
+            "display_label": "Knockout / Knock Out / Knocked Out",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LEGA",
+          "label": "Legal / Illegal",
+          "short_label": "LEGA",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LEGA",
+            "label": "LEGA",
+            "display_label": "Legal / Illegal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LIGH",
+          "label": "Lights Out",
+          "short_label": "LIGH",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LIGH",
+            "label": "LIGH",
+            "display_label": "Lights Out",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-SLIP",
+          "label": "Slip / Slips / Slipped",
+          "short_label": "SLIP",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-SLIP",
+            "label": "SLIP",
+            "display_label": "Slip / Slips / Slipped",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-STYL",
+          "label": "Stylebender",
+          "short_label": "STYL",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-STYL",
+            "label": "STYL",
+            "display_label": "Stylebender",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TIRE",
+          "label": "Tired / Tiring",
+          "short_label": "TIRE",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TIRE",
+            "label": "TIRE",
+            "display_label": "Tired / Tiring",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRAI",
+          "label": "Train / Trained / Training",
+          "short_label": "TRAI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRAI",
+            "label": "TRAI",
+            "display_label": "Train / Trained / Training",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRIA",
+          "label": "Triangle",
+          "short_label": "TRIA",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRIA",
+            "label": "TRIA",
+            "display_label": "Triangle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-WHAT",
+          "label": "What a Fight",
+          "short_label": "WHAT",
+          "note": "broadcast-flow dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-WHAT",
+            "label": "WHAT",
+            "display_label": "What a Fight",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "replay sequence",
+        "close game script",
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline",
+        "fresh headline pressure",
+        "prematch storyline today"
+      ],
+      "context_notes": [
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: UFC CEO Dana White drops huge UFC Seattle main event featuring ex-middleweight champ - Sports Illustrated"
+      ],
+      "opening_plan": [
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
+      ],
+      "post_opening_plan": [
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
+      ],
+      "qa_transition_plan": [
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+            "label": "BLOO",
+            "display_label": "Blood / Bloody",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+            "label": "BODY",
+            "display_label": "Bodybagz / Body Bag",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+            "label": "CHAM",
+            "display_label": "Championship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+            "label": "CHOK",
+            "display_label": "Choke / Choked / Chokehold",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate Pledge Arena",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+            "label": "BLOO",
+            "display_label": "Blood / Bloody",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+            "label": "BODY",
+            "display_label": "Bodybagz / Body Bag",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+            "label": "CHAM",
+            "display_label": "Championship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+            "label": "CHOK",
+            "display_label": "Choke / Choked / Chokehold",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate Pledge Arena",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BLOO",
+            "label": "BLOO",
+            "display_label": "Blood / Bloody",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-BODY",
+            "label": "BODY",
+            "display_label": "Bodybagz / Body Bag",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHAM",
+            "label": "CHAM",
+            "display_label": "Championship",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CHOK",
+            "label": "CHOK",
+            "display_label": "Choke / Choked / Chokehold",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-CLIM",
+            "label": "CLIM",
+            "display_label": "Climate Pledge Arena",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DANA",
+            "label": "DANA",
+            "display_label": "Dana",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-DECI",
+            "label": "DECI",
+            "display_label": "Decision / Judged",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-KNOC",
+            "label": "KNOC",
+            "display_label": "Knockout / Knock Out / Knocked Out",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LEGA",
+            "label": "LEGA",
+            "display_label": "Legal / Illegal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-LIGH",
+            "label": "LIGH",
+            "display_label": "Lights Out",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-SLIP",
+            "label": "SLIP",
+            "display_label": "Slip / Slips / Slipped",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-STYL",
+            "label": "STYL",
+            "display_label": "Stylebender",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TIRE",
+            "label": "TIRE",
+            "display_label": "Tired / Tiring",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRAI",
+            "label": "TRAI",
+            "display_label": "Train / Trained / Training",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-TRIA",
+            "label": "TRIA",
+            "display_label": "Triangle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-WHAT",
+            "label": "WHAT",
+            "display_label": "What a Fight",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXFIGHTMENTION-26MAR28ADEPYF-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
+      ],
+      "live_trading_summary": [
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
+      ],
+      "risk_summary": [
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
+      ],
+      "manual_trader_prompts": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
+        "Когда live-structural cluster узкий, полезнее смотреть похожие игры с тем же announcer crew, а не broad sample."
+      ],
+      "consensus_misread": [
+        "В sports mentions crowd часто недооценивает, насколько сильно same announcer меняет hit rate при другом game script.",
+        "Если в basket мало реально live-structural words, эти немногие paths могут быть важнее, чем общий шум narrative cluster.",
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "the-announcers-adesanya-vs-pyfer-professional-mma-fight-originally-scheduled-for-mar-28-2026"
+    },
+    {
       "group_key": "KXNCAABMENTION-26MAR27ALAMICH",
       "event_title": "the announcers — Alabama vs Michigan College Basketball Game",
       "event_ticker": "KXNCAABMENTION-26MAR27ALAMICH",
