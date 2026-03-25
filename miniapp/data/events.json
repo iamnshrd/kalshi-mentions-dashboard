@@ -53243,7 +53243,7 @@
       "status": "active",
       "open_time": "2026-03-11T00:00:00Z",
       "close_time": "2026-03-31T14:00:00Z",
-      "market_count": 24,
+      "market_count": 32,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
       "dominant_rules_risk": "medium",
@@ -53260,15 +53260,21 @@
         "Crypto / Bitcoin",
         "Epic Fury",
         "Epstein",
+        "Fake News",
         "FBI",
+        "Fraud",
         "Healthcare",
         "Hormuz",
         "ICE / DHS",
+        "ID / Identification",
         "Illegal Alien",
         "Iran",
         "Israel",
+        "Negotiate / Negotiated / Negotiation",
         "Nuclear",
+        "Oil",
         "Radical Left",
+        "Sanctuary",
         "Save Act / Save America Act",
         "Shutdown / Shut Down",
         "Stock Market",
@@ -53276,11 +53282,13 @@
         "Supreme Court",
         "Tariff",
         "Transgender",
-        "Ukraine"
+        "TSA",
+        "Ukraine",
+        "Venezuela / Venezuelan"
       ],
       "strike_buckets": {
-        "count": 24,
-        "context_sensitive_hint": 24
+        "count": 32,
+        "context_sensitive_hint": 32
       },
       "strike_intel": {
         "structural": [
@@ -53343,9 +53351,21 @@
             "note": "context-dependent token · pivot"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
+            "label": "Fake News",
+            "short_label": "FAKE",
+            "note": "context-dependent token · pivot"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
             "label": "FBI",
             "short_label": "FBI",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "label": "Fraud",
+            "short_label": "FRAU",
             "note": "context-dependent token · pivot"
           },
           {
@@ -53379,9 +53399,21 @@
             "note": "context-dependent token · pivot"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "label": "Oil",
+            "short_label": "OIL",
+            "note": "context-dependent token · pivot"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
             "label": "Radical Left",
             "short_label": "RADI",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "label": "Sanctuary",
+            "short_label": "SANC",
             "note": "context-dependent token · pivot"
           },
           {
@@ -53413,6 +53445,12 @@
             "label": "Transgender",
             "short_label": "TRAN",
             "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "label": "TSA",
+            "short_label": "TSA",
+            "note": "context-dependent token · pivot"
           }
         ],
         "game_state_sensitive": [],
@@ -53421,6 +53459,18 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
             "label": "Affordable / Affordability",
             "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "label": "ID / Identification",
+            "short_label": "ID",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "label": "Negotiate / Negotiated / Negotiation",
+            "short_label": "NEGO",
             "note": "special-rule / exact-token risk · rules"
           },
           {
@@ -53433,6 +53483,12 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
             "label": "Shutdown / Shut Down",
             "short_label": "SHUT",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
+            "label": "Venezuela / Venezuelan",
+            "short_label": "VENE",
             "note": "special-rule / exact-token risk · rules"
           }
         ]
@@ -53617,6 +53673,31 @@
           "attention_allocation": "phase watch"
         },
         {
+          "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
+          "label": "Fake News",
+          "short_label": "FAKE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
+            "label": "FAKE",
+            "display_label": "Fake News",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
           "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
           "label": "FBI",
           "short_label": "FBI",
@@ -53626,6 +53707,31 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
             "label": "FBI",
             "display_label": "FBI",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+          "label": "Fraud",
+          "short_label": "FRAU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -53717,6 +53823,32 @@
           "attention_allocation": "phase watch"
         },
         {
+          "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+          "label": "ID / Identification",
+          "short_label": "ID",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "label": "ID",
+            "display_label": "ID / Identification",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
           "market_id": "KXSECPRESSMENTION-26MAR31-ILLE",
           "label": "Illegal Alien",
           "short_label": "ILLE",
@@ -53793,6 +53925,32 @@
           "attention_allocation": "secondary watch"
         },
         {
+          "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+          "label": "Negotiate / Negotiated / Negotiation",
+          "short_label": "NEGO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "label": "NEGO",
+            "display_label": "Negotiate / Negotiated / Negotiation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
           "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
           "label": "Nuclear",
           "short_label": "NUCL",
@@ -53802,6 +53960,31 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+          "label": "Oil",
+          "short_label": "OIL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -53842,6 +54025,31 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+          "label": "Sanctuary",
+          "short_label": "SANC",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "label": "SANC",
+            "display_label": "Sanctuary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
@@ -54021,6 +54229,31 @@
           "attention_allocation": "phase watch"
         },
         {
+          "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+          "label": "TSA",
+          "short_label": "TSA",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
           "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
           "label": "Ukraine",
           "short_label": "UKRA",
@@ -54045,6 +54278,32 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
+          "label": "Venezuela / Venezuelan",
+          "short_label": "VENE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
+            "label": "VENE",
+            "display_label": "Venezuela / Venezuelan",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
@@ -54185,6 +54444,40 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "label": "ID",
+            "display_label": "ID / Identification",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "label": "NEGO",
+            "display_label": "Negotiate / Negotiated / Negotiation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
@@ -54217,23 +54510,6 @@
             ],
             "status_class": "status-yellow",
             "type_class": "type-red"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
-            "label": "RADI",
-            "display_label": "Radical Left",
-            "score": -1,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "odd tail",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "weak setup"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
           }
         ],
         "full_ranking": [
@@ -54386,6 +54662,38 @@
             "type_class": "type-gray"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
+            "label": "FAKE",
+            "display_label": "Fake News",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-HEAL",
             "label": "HEAL",
             "display_label": "Healthcare",
@@ -54482,6 +54790,38 @@
             "type_class": "type-gray"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "label": "SANC",
+            "display_label": "Sanctuary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-STOC",
             "label": "STOC",
             "display_label": "Stock Market",
@@ -54517,6 +54857,22 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-SUPR",
             "label": "SUPR",
             "display_label": "Supreme Court",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -54579,6 +54935,40 @@
             "type_class": "type-red"
           },
           {
+            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "label": "ID",
+            "display_label": "ID / Identification",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "label": "NEGO",
+            "display_label": "Negotiate / Negotiated / Negotiation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
             "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
@@ -54599,6 +54989,23 @@
             "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
+            "label": "VENE",
+            "display_label": "Venezuela / Venezuelan",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
