@@ -163,8 +163,9 @@ function updatePageTitle() {
     document.title = 'Kalshi Price History — локальный CSV snapshot';
     return;
   }
-  const eventTitle = state.eventMeta.title || state.eventMeta.event_title || state.currentEventTicker || 'Событие';
-  const eventTime = state.eventMeta.close_time || state.eventMeta.event_date || state.eventMeta.open_time || state.eventMeta.settlement_time || state.eventMeta.expiration_time;
+  const eventData = state.eventMeta?.event || state.eventMeta || {};
+  const eventTitle = eventData.title || eventData.event_title || state.currentEventTicker || 'Событие';
+  const eventTime = eventData.close_time || eventData.event_date || eventData.open_time || eventData.settlement_time || eventData.expiration_time || eventData.sub_title;
   const rendered = `История цен по страйкам — ${eventTitle}${eventTime ? ' · ' + fmtEventDate(eventTime) : ''}`;
   titleEl.textContent = rendered;
   document.title = rendered;
