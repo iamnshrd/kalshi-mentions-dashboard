@@ -256,7 +256,7 @@ async function loadFromKalshiUrl(inputUrl) {
     const qp = new URLSearchParams(location.search);
     qp.set('market_url', inputUrl);
     history.replaceState({}, '', `${location.pathname}?${qp.toString()}`);
-    setStatus(`Загружено через proxy: ${payload.event_ticker} (${(payload.markets || []).length} страйков).`);
+    setStatus(`Загружено через proxy: ${payload.event_ticker} (${(payload.markets || []).length} страйков, interval=${payload.period_interval || 1}m).`);
   } catch (err) {
     if (String(err.message || err) === 'proxy_not_configured') {
       setStatus('Cloudflare Worker proxy ещё не прописан в странице. Нужно задеплоить worker и подставить его URL.', true);
