@@ -62,6 +62,7 @@
             <button id="loadFromUrlBtn">Загрузить по ссылке</button>
             <button id="loadCsvFallbackBtn">Вернуться к локальному CSV</button>
           </div>
+          <div class="small muted">Для auto-load нужен Cloudflare Worker proxy. Пока он не задеплоен, этот режим не сработает на GitHub Pages из-за CORS Kalshi.</div>
           <div id="loadStatus" class="muted">По умолчанию открыт локальный CSV snapshot.</div>
         </div>
       </div>
@@ -121,7 +122,7 @@ const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.c
 const STORAGE_KEY = 'kalshi-price-history-kxsecpressmention-26mar29-colors';
 const DEFAULT_COLORS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#ff8fab','#72efdd','#c77dff','#ff9f1c','#90be6d','#e76f51','#5dade2','#f28482'];
 const QUICK_PRESETS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#c77dff','#ff9f1c','#72efdd','#ff6b6b','#95d5b2','#a0c4ff'];
-const API_BASE = 'https://api.elections.kalshi.com/trade-api/v2';
+const PROXY_BASE = 'https://kalshi-pages-proxy.YOUR-SUBDOMAIN.workers.dev';
 const state = {
   timestamps: [],
   series: [],
@@ -236,32 +237,32 @@ async function loadFromKalshiUrl(inputUrl) {
     setStatus('Не смог распарсить event ticker из ссылки Kalshi.', true);
     return;
   }
-  setStatus(`Гружу ${eventTicker} через Kalshi API...`);
+  setStatus(`Гружу ${eventTicker} через proxy...`);
   state.sourceType = 'api';
   state.sourceLabel = eventTicker;
   state.currentEventTicker = eventTicker;
   document.getElementById('sourceLabel').innerHTML = `<strong>${esc(eventTicker)} API</strong>`;
   try {
-    const marketsResp = await fetch(`${API_BASE}/markets?event_ticker=${encodeURIComponent(eventTicker)}&limit=200`);
-    if (!marketsResp.ok) throw new Error(`markets ${marketsResp.status}`);
-    const marketsPayload = await marketsResp.json();
-    const markets = (marketsPayload.markets || []).filter(m => m.ticker);
-    if (!markets.length) throw new Error('no markets');
-
-    const times = markets.flatMap(m => [m.created_time, m.open_time, m.close_time, m.expiration_time]).filter(Boolean).map(x => Date.parse(x)).filter(Number.isFinite);
-    const startTs = Math.floor((Math.min(...times) - 6 * 3600 * 1000) / 1000);
-    const endTs = Math.floor((Math.max(...times) + 6 * 3600 * 1000) / 1000);
-    const marketTickers = markets.map(m => m.ticker).join(',');
-    const candlesResp = await fetch(`${API_BASE}/markets/candlesticks?market_tickers=${encodeURIComponent(marketTickers)}&start_ts=${startTs}&end_ts=${endTs}&period_interval=1`);
-    if (!candlesResp.ok) throw new Error(`candlesticks ${candlesResp.status}`);
-    const candlesPayload = await candlesResp.json();
-    bootApi(markets, candlesPayload.markets || []);
+    if (PROXY_BASE.includes('YOUR-SUBDOMAIN')) {
+      throw new Error('proxy_not_configured');
+    }
+    const res = await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(inputUrl)}`);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`proxy ${res.status} ${text.slice(0, 160)}`);
+    }
+    const payload = await res.json();
+    bootApi(payload.markets || [], payload.candlesticks || []);
     const qp = new URLSearchParams(location.search);
     qp.set('market_url', inputUrl);
     history.replaceState({}, '', `${location.pathname}?${qp.toString()}`);
-    setStatus(`Загружено из Kalshi API: ${eventTicker} (${markets.length} страйков).`);
+    setStatus(`Загружено через proxy: ${payload.event_ticker} (${(payload.markets || []).length} страйков).`);
   } catch (err) {
-    setStatus(`Ошибка загрузки из Kalshi API: ${err.message || err}`, true);
+    if (String(err.message || err) === 'proxy_not_configured') {
+      setStatus('Cloudflare Worker proxy ещё не прописан в странице. Нужно задеплоить worker и подставить его URL.', true);
+    } else {
+      setStatus(`Ошибка загрузки через proxy: ${err.message || err}`, true);
+    }
   }
 }
 
