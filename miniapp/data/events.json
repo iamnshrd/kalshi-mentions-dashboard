@@ -24390,7 +24390,7 @@
         "Для political mentions current events часто важнее последних transcript counts.",
         "Family/social cluster сейчас выглядит как headline-sensitive; важно проверить, это реальная текущая повестка или просто framing названия события.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Robot joins Melania Trump at White House event to tout AI teachers - Reuters"
+        "Свежий headline: Melania Trump addresses the RNC - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
