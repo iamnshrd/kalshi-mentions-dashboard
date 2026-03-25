@@ -11565,7 +11565,7 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Fact Check: No, There’s No Link Between Wind Farms and Cancer Like Trump Claimed - Bloomberg.com"
+        "Свежий headline: Fact Check: No, There’s No Link Between Wind Farms and Cancer Like Trump Claimed - Bloomberg"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -14957,7 +14957,7 @@
       "event_title": "Gary Peters — The Last Word With Lawrence O'Donnell",
       "event_ticker": "KXLASTWORDMENTION-26MAR24",
       "series_ticker": "",
-      "status": "determined",
+      "status": "finalized",
       "open_time": "2026-03-24T23:05:00Z",
       "close_time": "2026-03-25T03:04:12Z",
       "market_count": 11,
@@ -51700,7 +51700,7 @@
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: Divided Fed lowers rates, signals pause and one cut next year as growth rebounds - Reuters",
         "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times",
-        "Свежий headline: Fed Cuts Rates for First Time This Year - The New York Times"
+        "Свежий headline: Fed in no rush to cut rates; Trump disagrees - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
