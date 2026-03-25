@@ -4097,6 +4097,1167 @@
       "slug": "any-participating-witness-senate-committee-on-the-judiciary-arctic-frost-a-modern-watergate-hearing"
     },
     {
+      "group_key": "KXCONGRESSMENTION-26MAR25",
+      "event_title": "any participating witness — Senate Committee on the Judiciary: Protecting American Citizenship II: Federalism, Sanctuary Cities, and the Rule of Law hearing",
+      "event_ticker": "KXCONGRESSMENTION-26MAR25",
+      "series_ticker": "",
+      "status": "initialized",
+      "open_time": "2026-03-25T02:30:00Z",
+      "close_time": "2026-03-26T14:00:00Z",
+      "market_count": 20,
+      "dominant_group": "legal_court_mentions",
+      "dominant_subtype": "court_hearing",
+      "dominant_rules_risk": "medium",
+      "speaker": "any participating witness",
+      "format_confidence": 0.9,
+      "prep_focus": "Сначала подтверди, кто именно должен сказать фразу и что считается по rules.",
+      "live_focus": "Следи за speaker identity и логикой hearing/oral arguments, а не за случайными словами.",
+      "priority": "high",
+      "strike_codes": [
+        "Biden",
+        "Billion",
+        "Constitution / Constitutional / Unconstitutional",
+        "Crime / Criminal",
+        "Deport / Deported / Deportation",
+        "Fraud",
+        "Healthcare",
+        "Homan",
+        "ICE / DHS",
+        "Immigrant / Immigration",
+        "Insurance / Insured",
+        "Kristi / Noem",
+        "New York",
+        "Event does not qualify",
+        "Renee / Pretti",
+        "San Francisco",
+        "Somali / Somalia / Somalian",
+        "Taxpayer",
+        "Terrorist / Terrorism",
+        "Walz"
+      ],
+      "strike_buckets": {
+        "count": 20,
+        "context_sensitive_hint": 20
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+            "label": "Biden",
+            "short_label": "BIDE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+            "label": "Billion",
+            "short_label": "BILL",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+            "label": "Crime / Criminal",
+            "short_label": "CRIM",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+            "label": "Fraud",
+            "short_label": "FRAU",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HEAL",
+            "label": "Healthcare",
+            "short_label": "HEAL",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HOMA",
+            "label": "Homan",
+            "short_label": "HOMA",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-ICE",
+            "label": "ICE / DHS",
+            "short_label": "ICE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-KRIS",
+            "label": "Kristi / Noem",
+            "short_label": "KRIS",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NEW",
+            "label": "New York",
+            "short_label": "NEW",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-RENE",
+            "label": "Renee / Pretti",
+            "short_label": "RENE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SAN",
+            "label": "San Francisco",
+            "short_label": "SAN",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TAXP",
+            "label": "Taxpayer",
+            "short_label": "TAXP",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-WALZ",
+            "label": "Walz",
+            "short_label": "WALZ",
+            "note": "context-dependent token · pivot"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CONS",
+            "label": "Constitution / Constitutional / Unconstitutional",
+            "short_label": "CONS",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-DEPO",
+            "label": "Deport / Deported / Deportation",
+            "short_label": "DEPO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-IMMI",
+            "label": "Immigrant / Immigration",
+            "short_label": "IMMI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-INSU",
+            "label": "Insurance / Insured",
+            "short_label": "INSU",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SOMA",
+            "label": "Somali / Somalia / Somalian",
+            "short_label": "SOMA",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TERR",
+            "label": "Terrorist / Terrorism",
+            "short_label": "TERR",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+          "label": "Biden",
+          "short_label": "BIDE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+          "label": "Billion",
+          "short_label": "BILL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billion",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-CONS",
+          "label": "Constitution / Constitutional / Unconstitutional",
+          "short_label": "CONS",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CONS",
+            "label": "CONS",
+            "display_label": "Constitution / Constitutional / Unconstitutional",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+          "label": "Crime / Criminal",
+          "short_label": "CRIM",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+            "label": "CRIM",
+            "display_label": "Crime / Criminal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-DEPO",
+          "label": "Deport / Deported / Deportation",
+          "short_label": "DEPO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-DEPO",
+            "label": "DEPO",
+            "display_label": "Deport / Deported / Deportation",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+          "label": "Fraud",
+          "short_label": "FRAU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-HEAL",
+          "label": "Healthcare",
+          "short_label": "HEAL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HEAL",
+            "label": "HEAL",
+            "display_label": "Healthcare",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-HOMA",
+          "label": "Homan",
+          "short_label": "HOMA",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HOMA",
+            "label": "HOMA",
+            "display_label": "Homan",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-ICE",
+          "label": "ICE / DHS",
+          "short_label": "ICE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-ICE",
+            "label": "ICE",
+            "display_label": "ICE / DHS",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-IMMI",
+          "label": "Immigrant / Immigration",
+          "short_label": "IMMI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-INSU",
+          "label": "Insurance / Insured",
+          "short_label": "INSU",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-INSU",
+            "label": "INSU",
+            "display_label": "Insurance / Insured",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-KRIS",
+          "label": "Kristi / Noem",
+          "short_label": "KRIS",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-NEW",
+          "label": "New York",
+          "short_label": "NEW",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NEW",
+            "label": "NEW",
+            "display_label": "New York",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-RENE",
+          "label": "Renee / Pretti",
+          "short_label": "RENE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-RENE",
+            "label": "RENE",
+            "display_label": "Renee / Pretti",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-SAN",
+          "label": "San Francisco",
+          "short_label": "SAN",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SAN",
+            "label": "SAN",
+            "display_label": "San Francisco",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-SOMA",
+          "label": "Somali / Somalia / Somalian",
+          "short_label": "SOMA",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SOMA",
+            "label": "SOMA",
+            "display_label": "Somali / Somalia / Somalian",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-TAXP",
+          "label": "Taxpayer",
+          "short_label": "TAXP",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TAXP",
+            "label": "TAXP",
+            "display_label": "Taxpayer",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-TERR",
+          "label": "Terrorist / Terrorism",
+          "short_label": "TERR",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TERR",
+            "label": "TERR",
+            "display_label": "Terrorist / Terrorism",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          "phase_fit": "speaker-identity-and-rules-sensitive",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXCONGRESSMENTION-26MAR25-WALZ",
+          "label": "Walz",
+          "short_label": "WALZ",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXCONGRESSMENTION-26MAR25-WALZ",
+            "label": "WALZ",
+            "display_label": "Walz",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "question-chain-sensitive",
+          "attention_allocation": "pass"
+        }
+      ],
+      "context_checks": [
+        "Проверь, кто именно участвует: justice, witness, counsel, committee members.",
+        "Прочитай rules буквально: кто должен сказать phrase, чтобы strike засчитался.",
+        "Уточни, это formal hearing / oral arguments / testimony или remarks-style event."
+      ],
+      "likely_hooks": [
+        "speaker identity",
+        "question chain",
+        "case-specific terminology"
+      ],
+      "context_notes": [
+        "В legal/court markets wording и identity speaker risk почти всегда выше среднего."
+      ],
+      "opening_plan": [
+        "Сначала убедись, кто именно говорит и кто вообще может зарезолвить strike.",
+        "Не путай procedural language с meaningful strike context."
+      ],
+      "post_opening_plan": [
+        "После старта hearing/oral arguments сильнее отслеживай chains of questioning, а не isolated remarks.",
+        "Если event оказался более adversarial, повышай вес Q&A-sensitive/legal-context strikes."
+      ],
+      "qa_transition_plan": [
+        "На question-heavy flow внимательно следи за speaker identity и wording precision.",
+        "Не overreact на partial phrase, если rules чувствительны к точной формулировке."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billion",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+            "label": "CRIM",
+            "display_label": "Crime / Criminal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billion",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+            "label": "CRIM",
+            "display_label": "Crime / Criminal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HEAL",
+            "label": "HEAL",
+            "display_label": "Healthcare",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-IMMI",
+            "label": "IMMI",
+            "display_label": "Immigrant / Immigration",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "current-events lane",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-BILL",
+            "label": "BILL",
+            "display_label": "Billion",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CRIM",
+            "label": "CRIM",
+            "display_label": "Crime / Criminal",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-FRAU",
+            "label": "FRAU",
+            "display_label": "Fraud",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HEAL",
+            "label": "HEAL",
+            "display_label": "Healthcare",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-HOMA",
+            "label": "HOMA",
+            "display_label": "Homan",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-ICE",
+            "label": "ICE",
+            "display_label": "ICE / DHS",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NEW",
+            "label": "NEW",
+            "display_label": "New York",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-RENE",
+            "label": "RENE",
+            "display_label": "Renee / Pretti",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SAN",
+            "label": "SAN",
+            "display_label": "San Francisco",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TAXP",
+            "label": "TAXP",
+            "display_label": "Taxpayer",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-WALZ",
+            "label": "WALZ",
+            "display_label": "Walz",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-CONS",
+            "label": "CONS",
+            "display_label": "Constitution / Constitutional / Unconstitutional",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-DEPO",
+            "label": "DEPO",
+            "display_label": "Deport / Deported / Deportation",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-INSU",
+            "label": "INSU",
+            "display_label": "Insurance / Insured",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-SOMA",
+            "label": "SOMA",
+            "display_label": "Somali / Somalia / Somalian",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXCONGRESSMENTION-26MAR25-TERR",
+            "label": "TERR",
+            "display_label": "Terrorist / Terrorism",
+            "score": -1,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Сначала пойми формат: oral arguments, hearing, prepared remarks или Q&A-like exchange.",
+        "Проверь, кто именно должен сказать слово и как rules трактуют judge/justice/lawyer mentions."
+      ],
+      "live_trading_summary": [
+        "Следи за тем, кто говорит: судья, адвокат, представитель стороны — это может быть критично для резолва.",
+        "Если формат похож на hearing/oral arguments, Q&A-heavy repricing обязательна."
+      ],
+      "risk_summary": [
+        "Высокий риск ошибиться в том, кто именно должен произнести phrase.",
+        "Legal context может увеличивать side-door hit risk для seemingly narrow strikes."
+      ],
+      "manual_trader_prompts": [
+        "Проверь, кто именно участвует: justice, witness, counsel, committee members.",
+        "Прочитай rules буквально: кто должен сказать phrase, чтобы strike засчитался.",
+        "Уточни, это formal hearing / oral arguments / testimony или remarks-style event.",
+        "Сначала убедись, кто именно говорит и кто вообще может зарезолвить strike.",
+        "Не путай procedural language с meaningful strike context.",
+        "На question-heavy flow внимательно следи за speaker identity и wording precision.",
+        "Не overreact на partial phrase, если rules чувствительны к точной формулировке.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера."
+      ],
+      "consensus_misread": [
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase.",
+        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "any-participating-witness-senate-committee-on-the-judiciary-protecting-american-citizenship-ii-feder"
+    },
+    {
       "group_key": "KXSCOTUSMENTION-26MAR26",
       "event_title": "any Supreme Court Justice — Oral Arguments of FLOWERS FOODS, INC. V. BROCK",
       "event_ticker": "KXSCOTUSMENTION-26MAR26",
@@ -47811,7 +48972,7 @@
       "event_title": "Will Powell say AI / Artificial Intelligence at his Apr 2026 press conference?",
       "event_ticker": "KXFEDMENTION-26APR",
       "series_ticker": "",
-      "status": "initialized",
+      "status": "active",
       "open_time": "2026-03-25T01:00:00Z",
       "close_time": "2026-04-30T14:00:00Z",
       "market_count": 48,
@@ -48187,12 +49348,12 @@
             "market_id": "KXFEDMENTION-26APR-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -48201,7 +49362,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-ANCH",
@@ -48213,15 +49374,14 @@
             "market_id": "KXFEDMENTION-26APR-ANCH",
             "label": "ANCH",
             "display_label": "Anchor / Anchored",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48239,15 +49399,14 @@
             "market_id": "KXFEDMENTION-26APR-BALA",
             "label": "BALA",
             "display_label": "Balance Sheet",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48265,15 +49424,14 @@
             "market_id": "KXFEDMENTION-26APR-BITC",
             "label": "BITC",
             "display_label": "Bitcoin",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48291,15 +49449,14 @@
             "market_id": "KXFEDMENTION-26APR-CENT",
             "label": "CENT",
             "display_label": "Central Bank",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48317,15 +49474,14 @@
             "market_id": "KXFEDMENTION-26APR-CONS",
             "label": "CONS",
             "display_label": "Consumer Confidence",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48343,15 +49499,14 @@
             "market_id": "KXFEDMENTION-26APR-CRED",
             "label": "CRED",
             "display_label": "Credit",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48369,15 +49524,14 @@
             "market_id": "KXFEDMENTION-26APR-DISS",
             "label": "DISS",
             "display_label": "Dissent",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48395,15 +49549,14 @@
             "market_id": "KXFEDMENTION-26APR-DOLL",
             "label": "DOLL",
             "display_label": "Dollar",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48421,15 +49574,14 @@
             "market_id": "KXFEDMENTION-26APR-DOT",
             "label": "DOT",
             "display_label": "Dot Plot",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48447,15 +49599,14 @@
             "market_id": "KXFEDMENTION-26APR-EGG",
             "label": "EGG",
             "display_label": "Egg",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48473,15 +49624,14 @@
             "market_id": "KXFEDMENTION-26APR-EXPE",
             "label": "EXPE",
             "display_label": "Expectation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48499,12 +49649,12 @@
             "market_id": "KXFEDMENTION-26APR-GAS",
             "label": "GAS",
             "display_label": "Gas / Gasoline / Natural Gas",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -48513,7 +49663,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-GOLD",
@@ -48525,15 +49675,14 @@
             "market_id": "KXFEDMENTION-26APR-GOLD",
             "label": "GOLD",
             "display_label": "Gold",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48551,21 +49700,20 @@
             "market_id": "KXFEDMENTION-26APR-GOOD",
             "label": "GOOD",
             "display_label": "Goods inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "secondary watch"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXFEDMENTION-26APR-GOODA",
@@ -48577,15 +49725,14 @@
             "market_id": "KXFEDMENTION-26APR-GOODA",
             "label": "GOODA",
             "display_label": "Good Afternoon",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48603,15 +49750,14 @@
             "market_id": "KXFEDMENTION-26APR-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48629,15 +49775,14 @@
             "market_id": "KXFEDMENTION-26APR-KALS",
             "label": "KALS",
             "display_label": "Kalshi",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48655,15 +49800,14 @@
             "market_id": "KXFEDMENTION-26APR-LAYO",
             "label": "LAYO",
             "display_label": "Layoff",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48681,15 +49825,14 @@
             "market_id": "KXFEDMENTION-26APR-MEDI",
             "label": "MEDI",
             "display_label": "Median",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48707,15 +49850,14 @@
             "market_id": "KXFEDMENTION-26APR-NATI",
             "label": "NATI",
             "display_label": "National Debt",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48733,15 +49875,14 @@
             "market_id": "KXFEDMENTION-26APR-OIL",
             "label": "OIL",
             "display_label": "Oil",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48759,15 +49900,14 @@
             "market_id": "KXFEDMENTION-26APR-PAND",
             "label": "PAND",
             "display_label": "Pandemic",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48785,15 +49925,14 @@
             "market_id": "KXFEDMENTION-26APR-PARD",
             "label": "PARD",
             "display_label": "Pardon",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48811,15 +49950,14 @@
             "market_id": "KXFEDMENTION-26APR-PRES",
             "label": "PRES",
             "display_label": "President",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48837,15 +49975,14 @@
             "market_id": "KXFEDMENTION-26APR-PROB",
             "label": "PROB",
             "display_label": "Probability",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48863,12 +50000,12 @@
             "market_id": "KXFEDMENTION-26APR-PROD",
             "label": "PROD",
             "display_label": "Productivity",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -48877,7 +50014,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-PROJ",
@@ -48889,15 +50026,14 @@
             "market_id": "KXFEDMENTION-26APR-PROJ",
             "label": "PROJ",
             "display_label": "Projection",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48915,12 +50051,12 @@
             "market_id": "KXFEDMENTION-26APR-QE",
             "label": "QE",
             "display_label": "QE / Quantitative Easing",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -48929,7 +50065,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-QT",
@@ -48941,12 +50077,12 @@
             "market_id": "KXFEDMENTION-26APR-QT",
             "label": "QT",
             "display_label": "QT / Quantitative Tightening",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -48955,7 +50091,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-RECE",
@@ -48967,15 +50103,14 @@
             "market_id": "KXFEDMENTION-26APR-RECE",
             "label": "RECE",
             "display_label": "Recession",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -48993,15 +50128,14 @@
             "market_id": "KXFEDMENTION-26APR-RENO",
             "label": "RENO",
             "display_label": "Renovation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49019,12 +50153,12 @@
             "market_id": "KXFEDMENTION-26APR-REPL",
             "label": "REPL",
             "display_label": "Replace / Replaces / Replaced / Replacement",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -49033,7 +50167,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-REST",
@@ -49045,15 +50179,14 @@
             "market_id": "KXFEDMENTION-26APR-REST",
             "label": "REST",
             "display_label": "Restrictive",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49071,15 +50204,14 @@
             "market_id": "KXFEDMENTION-26APR-SHOC",
             "label": "SHOC",
             "display_label": "Shock",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49097,12 +50229,12 @@
             "market_id": "KXFEDMENTION-26APR-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -49111,7 +50243,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-SLOW",
@@ -49123,12 +50255,12 @@
             "market_id": "KXFEDMENTION-26APR-SLOW",
             "label": "SLOW",
             "display_label": "Slowdown / Slow Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -49137,7 +50269,7 @@
             "type_class": "type-red"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
+          "attention_allocation": "pass"
         },
         {
           "market_id": "KXFEDMENTION-26APR-SOFT",
@@ -49149,15 +50281,14 @@
             "market_id": "KXFEDMENTION-26APR-SOFT",
             "label": "SOFT",
             "display_label": "Softening",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49175,15 +50306,14 @@
             "market_id": "KXFEDMENTION-26APR-SOFTL",
             "label": "SOFTL",
             "display_label": "Soft Landing",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49201,15 +50331,14 @@
             "market_id": "KXFEDMENTION-26APR-STAG",
             "label": "STAG",
             "display_label": "Stagflation",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49227,21 +50356,20 @@
             "market_id": "KXFEDMENTION-26APR-TARI",
             "label": "TARI",
             "display_label": "Tariff Inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
           },
           "phase_fit": "mixed",
-          "attention_allocation": "secondary watch"
+          "attention_allocation": "phase watch"
         },
         {
           "market_id": "KXFEDMENTION-26APR-TAX",
@@ -49253,15 +50381,14 @@
             "market_id": "KXFEDMENTION-26APR-TAX",
             "label": "TAX",
             "display_label": "Tax",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49279,12 +50406,12 @@
             "market_id": "KXFEDMENTION-26APR-TRAD",
             "label": "TRAD",
             "display_label": "Trade War",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "weak setup"
@@ -49305,15 +50432,14 @@
             "market_id": "KXFEDMENTION-26APR-TRUM",
             "label": "TRUM",
             "display_label": "Trump",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49331,15 +50457,14 @@
             "market_id": "KXFEDMENTION-26APR-UNCE",
             "label": "UNCE",
             "display_label": "Uncertainty",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49357,15 +50482,14 @@
             "market_id": "KXFEDMENTION-26APR-UNCH",
             "label": "UNCH",
             "display_label": "Unchanged",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49383,15 +50507,14 @@
             "market_id": "KXFEDMENTION-26APR-VOLA",
             "label": "VOLA",
             "display_label": "Volatility",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49409,15 +50532,14 @@
             "market_id": "KXFEDMENTION-26APR-YIEL",
             "label": "YIEL",
             "display_label": "Yield Curve",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49462,15 +50584,14 @@
             "market_id": "KXFEDMENTION-26APR-GOOD",
             "label": "GOOD",
             "display_label": "Goods inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -49479,15 +50600,14 @@
             "market_id": "KXFEDMENTION-26APR-TARI",
             "label": "TARI",
             "display_label": "Tariff Inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
             "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-blue"
@@ -49496,15 +50616,14 @@
             "market_id": "KXFEDMENTION-26APR-ANCH",
             "label": "ANCH",
             "display_label": "Anchor / Anchored",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49513,15 +50632,14 @@
             "market_id": "KXFEDMENTION-26APR-BALA",
             "label": "BALA",
             "display_label": "Balance Sheet",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49530,15 +50648,14 @@
             "market_id": "KXFEDMENTION-26APR-BITC",
             "label": "BITC",
             "display_label": "Bitcoin",
-            "score": 2,
+            "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
+              "opening-relevant"
             ],
             "status_class": "status-yellow",
             "type_class": "type-gray"
@@ -49548,697 +50665,15 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXFEDMENTION-26APR-TRAD",
-            "label": "TRAD",
-            "display_label": "Trade War",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "weak setup"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-gray"
-          }
-        ],
-        "full_ranking": [
-          {
-            "market_id": "KXFEDMENTION-26APR-GOOD",
-            "label": "GOOD",
-            "display_label": "Goods inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-TARI",
-            "label": "TARI",
-            "display_label": "Tariff Inflation",
-            "score": 3,
-            "priority_band": "проверить после",
-            "edge_tag": "рабочая идея",
-            "strike_type": "theme-linked",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-ANCH",
-            "label": "ANCH",
-            "display_label": "Anchor / Anchored",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-BALA",
-            "label": "BALA",
-            "display_label": "Balance Sheet",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-BITC",
-            "label": "BITC",
-            "display_label": "Bitcoin",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-CENT",
-            "label": "CENT",
-            "display_label": "Central Bank",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-CONS",
-            "label": "CONS",
-            "display_label": "Consumer Confidence",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-CRED",
-            "label": "CRED",
-            "display_label": "Credit",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-DISS",
-            "label": "DISS",
-            "display_label": "Dissent",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-DOLL",
-            "label": "DOLL",
-            "display_label": "Dollar",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-DOT",
-            "label": "DOT",
-            "display_label": "Dot Plot",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-EGG",
-            "label": "EGG",
-            "display_label": "Egg",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-EXPE",
-            "label": "EXPE",
-            "display_label": "Expectation",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-GOLD",
-            "label": "GOLD",
-            "display_label": "Gold",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-GOODA",
-            "label": "GOODA",
-            "display_label": "Good Afternoon",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-IRAN",
-            "label": "IRAN",
-            "display_label": "Iran",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-KALS",
-            "label": "KALS",
-            "display_label": "Kalshi",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-LAYO",
-            "label": "LAYO",
-            "display_label": "Layoff",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-MEDI",
-            "label": "MEDI",
-            "display_label": "Median",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-NATI",
-            "label": "NATI",
-            "display_label": "National Debt",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-OIL",
-            "label": "OIL",
-            "display_label": "Oil",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-PAND",
-            "label": "PAND",
-            "display_label": "Pandemic",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-PARD",
-            "label": "PARD",
-            "display_label": "Pardon",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-PRES",
-            "label": "PRES",
-            "display_label": "President",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-PROB",
-            "label": "PROB",
-            "display_label": "Probability",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-PROJ",
-            "label": "PROJ",
-            "display_label": "Projection",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-RECE",
-            "label": "RECE",
-            "display_label": "Recession",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-RENO",
-            "label": "RENO",
-            "display_label": "Renovation",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-REST",
-            "label": "REST",
-            "display_label": "Restrictive",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-SHOC",
-            "label": "SHOC",
-            "display_label": "Shock",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-SOFTL",
-            "label": "SOFTL",
-            "display_label": "Soft Landing",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-SOFT",
-            "label": "SOFT",
-            "display_label": "Softening",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-STAG",
-            "label": "STAG",
-            "display_label": "Stagflation",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-TAX",
-            "label": "TAX",
-            "display_label": "Tax",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-TRUM",
-            "label": "TRUM",
-            "display_label": "Trump",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-UNCE",
-            "label": "UNCE",
-            "display_label": "Uncertainty",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-UNCH",
-            "label": "UNCH",
-            "display_label": "Unchanged",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-VOLA",
-            "label": "VOLA",
-            "display_label": "Volatility",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXFEDMENTION-26APR-YIEL",
-            "label": "YIEL",
-            "display_label": "Yield Curve",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
-            "reasons": [
-              "opening-relevant",
-              "late-phase optionality"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
             "market_id": "KXFEDMENTION-26APR-AI",
             "label": "AI",
             "display_label": "AI / Artificial Intelligence",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50250,12 +50685,12 @@
             "market_id": "KXFEDMENTION-26APR-GAS",
             "label": "GAS",
             "display_label": "Gas / Gasoline / Natural Gas",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50267,12 +50702,12 @@
             "market_id": "KXFEDMENTION-26APR-PROD",
             "label": "PROD",
             "display_label": "Productivity",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50284,12 +50719,12 @@
             "market_id": "KXFEDMENTION-26APR-QE",
             "label": "QE",
             "display_label": "QE / Quantitative Easing",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50301,12 +50736,723 @@
             "market_id": "KXFEDMENTION-26APR-QT",
             "label": "QT",
             "display_label": "QT / Quantitative Tightening",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXFEDMENTION-26APR-GOOD",
+            "label": "GOOD",
+            "display_label": "Goods inflation",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-TARI",
+            "label": "TARI",
+            "display_label": "Tariff Inflation",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-ANCH",
+            "label": "ANCH",
+            "display_label": "Anchor / Anchored",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-BALA",
+            "label": "BALA",
+            "display_label": "Balance Sheet",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-BITC",
+            "label": "BITC",
+            "display_label": "Bitcoin",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-CENT",
+            "label": "CENT",
+            "display_label": "Central Bank",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-CONS",
+            "label": "CONS",
+            "display_label": "Consumer Confidence",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-CRED",
+            "label": "CRED",
+            "display_label": "Credit",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-DISS",
+            "label": "DISS",
+            "display_label": "Dissent",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-DOLL",
+            "label": "DOLL",
+            "display_label": "Dollar",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-DOT",
+            "label": "DOT",
+            "display_label": "Dot Plot",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-EGG",
+            "label": "EGG",
+            "display_label": "Egg",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-EXPE",
+            "label": "EXPE",
+            "display_label": "Expectation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-GOLD",
+            "label": "GOLD",
+            "display_label": "Gold",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-GOODA",
+            "label": "GOODA",
+            "display_label": "Good Afternoon",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-KALS",
+            "label": "KALS",
+            "display_label": "Kalshi",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-LAYO",
+            "label": "LAYO",
+            "display_label": "Layoff",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-MEDI",
+            "label": "MEDI",
+            "display_label": "Median",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-NATI",
+            "label": "NATI",
+            "display_label": "National Debt",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PAND",
+            "label": "PAND",
+            "display_label": "Pandemic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PARD",
+            "label": "PARD",
+            "display_label": "Pardon",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PRES",
+            "label": "PRES",
+            "display_label": "President",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PROB",
+            "label": "PROB",
+            "display_label": "Probability",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PROJ",
+            "label": "PROJ",
+            "display_label": "Projection",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-RECE",
+            "label": "RECE",
+            "display_label": "Recession",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-RENO",
+            "label": "RENO",
+            "display_label": "Renovation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-REST",
+            "label": "REST",
+            "display_label": "Restrictive",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-SHOC",
+            "label": "SHOC",
+            "display_label": "Shock",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-SOFTL",
+            "label": "SOFTL",
+            "display_label": "Soft Landing",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-SOFT",
+            "label": "SOFT",
+            "display_label": "Softening",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-STAG",
+            "label": "STAG",
+            "display_label": "Stagflation",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-TAX",
+            "label": "TAX",
+            "display_label": "Tax",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-UNCE",
+            "label": "UNCE",
+            "display_label": "Uncertainty",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-UNCH",
+            "label": "UNCH",
+            "display_label": "Unchanged",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-VOLA",
+            "label": "VOLA",
+            "display_label": "Volatility",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-YIEL",
+            "label": "YIEL",
+            "display_label": "Yield Curve",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "generic",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-AI",
+            "label": "AI",
+            "display_label": "AI / Artificial Intelligence",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-GAS",
+            "label": "GAS",
+            "display_label": "Gas / Gasoline / Natural Gas",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-PROD",
+            "label": "PROD",
+            "display_label": "Productivity",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-QE",
+            "label": "QE",
+            "display_label": "QE / Quantitative Easing",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXFEDMENTION-26APR-QT",
+            "label": "QT",
+            "display_label": "QT / Quantitative Tightening",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50318,12 +51464,12 @@
             "market_id": "KXFEDMENTION-26APR-REPL",
             "label": "REPL",
             "display_label": "Replace / Replaces / Replaced / Replacement",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50335,12 +51481,12 @@
             "market_id": "KXFEDMENTION-26APR-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50352,12 +51498,12 @@
             "market_id": "KXFEDMENTION-26APR-SLOW",
             "label": "SLOW",
             "display_label": "Slowdown / Slow Down",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
+            "score": 0,
+            "priority_band": "можно отложить",
             "edge_tag": "осторожно",
             "strike_type": "special rule",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "rules / wording risk"
@@ -50369,12 +51515,12 @@
             "market_id": "KXFEDMENTION-26APR-TRAD",
             "label": "TRAD",
             "display_label": "Trade War",
-            "score": 0,
+            "score": -1,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
             "strike_type": "odd tail",
-            "yes_reference_price": 0.0,
-            "price_bucket": "cheap_tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
             "reasons": [
               "opening-relevant",
               "weak setup"
