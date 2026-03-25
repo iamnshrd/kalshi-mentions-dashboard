@@ -27,7 +27,11 @@
     .item { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid #23304f; border-radius: 10px; background: #10182d; }
     .item input { margin: 0; }
     .item-label { line-height: 1.25; min-width: 0; }
+    .preset-wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
     .color-input { width: 34px; height: 28px; padding: 0; border: 1px solid #2f426a; border-radius: 8px; background: transparent; cursor: pointer; }
+    .preset-btn { width: 20px; height: 20px; border-radius: 999px; border: 2px solid rgba(255,255,255,.18); cursor: pointer; padding: 0; }
+    .preset-btn:hover { transform: scale(1.08); border-color: rgba(255,255,255,.5); }
+    .reset-btn { font-size: 11px; padding: 4px 6px; border-radius: 8px; }
     #chart { width: 100%; height: 78vh; min-height: 680px; }
     .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
     .stat { background: #10182d; border: 1px solid #23304f; border-radius: 10px; padding: 10px 12px; }
@@ -108,6 +112,7 @@
 const CSV_PATH = './data/kalshi-price-history-kxsecpressmention-26mar29-minute.csv';
 const STORAGE_KEY = 'kalshi-price-history-kxsecpressmention-26mar29-colors';
 const DEFAULT_COLORS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#ff8fab','#72efdd','#c77dff','#ff9f1c','#90be6d','#e76f51','#5dade2','#f28482'];
+const QUICK_PRESETS = ['#4cc9f0','#f72585','#b8f35d','#ffd166','#c77dff','#ff9f1c','#72efdd','#ff6b6b','#95d5b2','#a0c4ff'];
 const state = {
   timestamps: [],
   series: [],
@@ -222,7 +227,11 @@ function renderChecklist(filter = '') {
         <div><strong>${esc(s.name)}</strong></div>
         <div class="muted small">range ${fmtPrice(s.extrema.range)} · min ${fmtPrice(s.extrema.min?.y)} · max ${fmtPrice(s.extrema.max?.y)}</div>
       </div>
-      <input class="color-input" type="color" data-color-name="${esc(s.name)}" value="${esc(state.colors[s.name] || DEFAULT_COLORS[idx % DEFAULT_COLORS.length])}" title="Цвет страйка">
+      <div class="preset-wrap">
+        ${QUICK_PRESETS.map(color => `<button class="preset-btn" type="button" data-preset-name="${esc(s.name)}" data-preset-color="${color}" style="background:${color}" title="${color}"></button>`).join('')}
+        <button class="reset-btn" type="button" data-reset-name="${esc(s.name)}">reset</button>
+        <input class="color-input" type="color" data-color-name="${esc(s.name)}" value="${esc(state.colors[s.name] || DEFAULT_COLORS[idx % DEFAULT_COLORS.length])}" title="Цвет страйка">
+      </div>
     </label>
   `).join('');
 
@@ -240,6 +249,37 @@ function renderChecklist(filter = '') {
       state.colors[name] = input.value;
       const series = state.series.find(s => s.name === name);
       if (series) series.color = input.value;
+      saveColors();
+      if (state.chartReady) updateTraceColors();
+    });
+  });
+
+  root.querySelectorAll('[data-preset-name]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = btn.dataset.presetName;
+      const color = btn.dataset.presetColor;
+      state.colors[name] = color;
+      const series = state.series.find(s => s.name === name);
+      if (series) series.color = color;
+      const colorInput = root.querySelector(`input[data-color-name="${CSS.escape(name)}"]`);
+      if (colorInput) colorInput.value = color;
+      saveColors();
+      if (state.chartReady) updateTraceColors();
+    });
+  });
+
+  root.querySelectorAll('[data-reset-name]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = btn.dataset.resetName;
+      const idx = state.series.findIndex(s => s.name === name);
+      const color = DEFAULT_COLORS[(idx >= 0 ? idx : 0) % DEFAULT_COLORS.length];
+      state.colors[name] = color;
+      const series = state.series.find(s => s.name === name);
+      if (series) series.color = color;
+      const colorInput = root.querySelector(`input[data-color-name="${CSS.escape(name)}"]`);
+      if (colorInput) colorInput.value = color;
       saveColors();
       if (state.chartReady) updateTraceColors();
     });
