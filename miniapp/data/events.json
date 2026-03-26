@@ -2845,7 +2845,7 @@
       "event_title": "any participating contestant — Survivor Season 50 Episode 5",
       "event_ticker": "KXSURVIVORMENTION-26MAR25B",
       "series_ticker": "",
-      "status": "closed",
+      "status": "finalized",
       "open_time": "2026-03-21T00:00:00Z",
       "close_time": "2026-03-26T14:00:00Z",
       "market_count": 16,
@@ -84885,14 +84885,14 @@
       "slug": "winnebago-industries-inc-their-next-earnings-call"
     },
     {
-      "group_key": "KXMAMDANIMENTION-26MAR25",
+      "group_key": "KXMAMDANIMENTION-26MAR26B",
       "event_title": "Zohran Mamdani — next NYC Mayor's Office announcement",
-      "event_ticker": "KXMAMDANIMENTION-26MAR25",
+      "event_ticker": "KXMAMDANIMENTION-26MAR26B",
       "series_ticker": "",
-      "status": "finalized",
-      "open_time": "2026-03-25T14:35:00Z",
-      "close_time": "2026-03-25T16:15:05Z",
-      "market_count": 12,
+      "status": "active",
+      "open_time": "2026-03-26T14:10:00Z",
+      "close_time": "2026-03-28T14:00:00Z",
+      "market_count": 13,
       "dominant_group": "political_mentions",
       "dominant_subtype": "civic_announcement",
       "dominant_rules_risk": "medium",
@@ -84903,82 +84903,89 @@
       "priority": "high",
       "strike_codes": [
         "Afford / Affordable / Affordability",
-        "Billion",
         "Budget / Deficit",
         "Childcare",
+        "Five Borough",
+        "Freeze / Freezing",
         "Governor / Hochul",
-        "Homeless / Homelessness",
         "LaGuardia",
         "Landlord",
         "NYPD",
         "Property Tax",
-        "Tenant",
-        "Trump / President"
+        "Ripoff / Rip Off",
+        "Trump / President",
+        "Working Class / Middle Class"
       ],
       "strike_buckets": {
-        "count": 12,
-        "context_sensitive_hint": 12
+        "count": 13,
+        "context_sensitive_hint": 13
       },
       "strike_intel": {
         "structural": [],
         "qa_sensitive": [],
         "contextual": [
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BILL",
-            "label": "Billion",
-            "short_label": "BILL",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BUDG",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-BUDG",
             "label": "Budget / Deficit",
             "short_label": "BUDG",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-CHIL",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-CHIL",
             "label": "Childcare",
             "short_label": "CHIL",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-GOVE",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FIVE",
+            "label": "Five Borough",
+            "short_label": "FIVE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FREE",
+            "label": "Freeze / Freezing",
+            "short_label": "FREE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-GOVE",
             "label": "Governor / Hochul",
             "short_label": "GOVE",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAGU",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAGU",
             "label": "LaGuardia",
             "short_label": "LAGU",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAND",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAND",
             "label": "Landlord",
             "short_label": "LAND",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-NYPD",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-NYPD",
             "label": "NYPD",
             "short_label": "NYPD",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-PROP",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-PROP",
             "label": "Property Tax",
             "short_label": "PROP",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TENA",
-            "label": "Tenant",
-            "short_label": "TENA",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-RIPO",
+            "label": "Ripoff / Rip Off",
+            "short_label": "RIPO",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TRUM",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-TRUM",
             "label": "Trump / President",
             "short_label": "TRUM",
             "note": "name-only exposure · tail"
@@ -84987,28 +84994,28 @@
         "game_state_sensitive": [],
         "likely_trap": [
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-AFFO",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-AFFO",
             "label": "Afford / Affordable / Affordability",
             "short_label": "AFFO",
             "note": "special-rule / exact-token risk · rules"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-HOME",
-            "label": "Homeless / Homelessness",
-            "short_label": "HOME",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-WORK",
+            "label": "Working Class / Middle Class",
+            "short_label": "WORK",
             "note": "special-rule / exact-token risk · rules"
           }
         ]
       },
       "strike_analyses": [
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-AFFO",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-AFFO",
           "label": "Afford / Affordable / Affordability",
           "short_label": "AFFO",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-AFFO",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
@@ -85028,38 +85035,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-BILL",
-          "label": "Billion",
-          "short_label": "BILL",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BILL",
-            "label": "BILL",
-            "display_label": "Billion",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "office-framing dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXMAMDANIMENTION-26MAR25-BUDG",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-BUDG",
           "label": "Budget / Deficit",
           "short_label": "BUDG",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BUDG",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-BUDG",
             "label": "BUDG",
             "display_label": "Budget / Deficit",
             "score": 3,
@@ -85078,13 +85060,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-CHIL",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-CHIL",
           "label": "Childcare",
           "short_label": "CHIL",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-CHIL",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-CHIL",
             "label": "CHIL",
             "display_label": "Childcare",
             "score": 1,
@@ -85103,13 +85085,63 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-GOVE",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-FIVE",
+          "label": "Five Borough",
+          "short_label": "FIVE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FIVE",
+            "label": "FIVE",
+            "display_label": "Five Borough",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "office-framing dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMAMDANIMENTION-26MAR26B-FREE",
+          "label": "Freeze / Freezing",
+          "short_label": "FREE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FREE",
+            "label": "FREE",
+            "display_label": "Freeze / Freezing",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "office-framing dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMAMDANIMENTION-26MAR26B-GOVE",
           "label": "Governor / Hochul",
           "short_label": "GOVE",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-GOVE",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-GOVE",
             "label": "GOVE",
             "display_label": "Governor / Hochul",
             "score": 1,
@@ -85128,39 +85160,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-HOME",
-          "label": "Homeless / Homelessness",
-          "short_label": "HOME",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "office-framing dependent",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXMAMDANIMENTION-26MAR25-LAGU",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-LAGU",
           "label": "LaGuardia",
           "short_label": "LAGU",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAGU",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAGU",
             "label": "LAGU",
             "display_label": "LaGuardia",
             "score": 1,
@@ -85179,13 +85185,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-LAND",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-LAND",
           "label": "Landlord",
           "short_label": "LAND",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAND",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAND",
             "label": "LAND",
             "display_label": "Landlord",
             "score": 1,
@@ -85204,13 +85210,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-NYPD",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-NYPD",
           "label": "NYPD",
           "short_label": "NYPD",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-NYPD",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-NYPD",
             "label": "NYPD",
             "display_label": "NYPD",
             "score": 3,
@@ -85229,13 +85235,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-PROP",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-PROP",
           "label": "Property Tax",
           "short_label": "PROP",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-PROP",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-PROP",
             "label": "PROP",
             "display_label": "Property Tax",
             "score": 3,
@@ -85254,15 +85260,15 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-TENA",
-          "label": "Tenant",
-          "short_label": "TENA",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-RIPO",
+          "label": "Ripoff / Rip Off",
+          "short_label": "RIPO",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TENA",
-            "label": "TENA",
-            "display_label": "Tenant",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-RIPO",
+            "label": "RIPO",
+            "display_label": "Ripoff / Rip Off",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -85279,13 +85285,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXMAMDANIMENTION-26MAR25-TRUM",
+          "market_id": "KXMAMDANIMENTION-26MAR26B-TRUM",
           "label": "Trump / President",
           "short_label": "TRUM",
           "note": "name-only exposure · tail",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TRUM",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-TRUM",
             "label": "TRUM",
             "display_label": "Trump / President",
             "score": -1,
@@ -85299,6 +85305,32 @@
             ],
             "status_class": "status-gray",
             "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXMAMDANIMENTION-26MAR26B-WORK",
+          "label": "Working Class / Middle Class",
+          "short_label": "WORK",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-WORK",
+            "label": "WORK",
+            "display_label": "Working Class / Middle Class",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "office-framing dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
           },
           "phase_fit": "mixed",
           "attention_allocation": "pass"
@@ -85347,7 +85379,7 @@
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BUDG",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-BUDG",
             "label": "BUDG",
             "display_label": "Budget / Deficit",
             "score": 3,
@@ -85363,7 +85395,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-NYPD",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-NYPD",
             "label": "NYPD",
             "display_label": "NYPD",
             "score": 3,
@@ -85379,7 +85411,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-PROP",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-PROP",
             "label": "PROP",
             "display_label": "Property Tax",
             "score": 3,
@@ -85395,7 +85427,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-AFFO",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
@@ -85412,9 +85444,9 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BILL",
-            "label": "BILL",
-            "display_label": "Billion",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-CHIL",
+            "label": "CHIL",
+            "display_label": "Childcare",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -85432,9 +85464,9 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-WORK",
+            "label": "WORK",
+            "display_label": "Working Class / Middle Class",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
@@ -85449,7 +85481,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TRUM",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-TRUM",
             "label": "TRUM",
             "display_label": "Trump / President",
             "score": -1,
@@ -85467,7 +85499,7 @@
         ],
         "full_ranking": [
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BUDG",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-BUDG",
             "label": "BUDG",
             "display_label": "Budget / Deficit",
             "score": 3,
@@ -85483,7 +85515,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-NYPD",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-NYPD",
             "label": "NYPD",
             "display_label": "NYPD",
             "score": 3,
@@ -85499,7 +85531,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-PROP",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-PROP",
             "label": "PROP",
             "display_label": "Property Tax",
             "score": 3,
@@ -85515,7 +85547,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-AFFO",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-AFFO",
             "label": "AFFO",
             "display_label": "Afford / Affordable / Affordability",
             "score": 2,
@@ -85532,23 +85564,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-BILL",
-            "label": "BILL",
-            "display_label": "Billion",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "theme-linked",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "office-framing dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-blue"
-          },
-          {
-            "market_id": "KXMAMDANIMENTION-26MAR25-CHIL",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-CHIL",
             "label": "CHIL",
             "display_label": "Childcare",
             "score": 1,
@@ -85564,7 +85580,39 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-GOVE",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FIVE",
+            "label": "FIVE",
+            "display_label": "Five Borough",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "office-framing dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-FREE",
+            "label": "FREE",
+            "display_label": "Freeze / Freezing",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "office-framing dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXMAMDANIMENTION-26MAR26B-GOVE",
             "label": "GOVE",
             "display_label": "Governor / Hochul",
             "score": 1,
@@ -85580,7 +85628,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAGU",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAGU",
             "label": "LAGU",
             "display_label": "LaGuardia",
             "score": 1,
@@ -85596,7 +85644,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-LAND",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-LAND",
             "label": "LAND",
             "display_label": "Landlord",
             "score": 1,
@@ -85612,9 +85660,9 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TENA",
-            "label": "TENA",
-            "display_label": "Tenant",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-RIPO",
+            "label": "RIPO",
+            "display_label": "Ripoff / Rip Off",
             "score": 1,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
@@ -85628,9 +85676,9 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-HOME",
-            "label": "HOME",
-            "display_label": "Homeless / Homelessness",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-WORK",
+            "label": "WORK",
+            "display_label": "Working Class / Middle Class",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
@@ -85645,7 +85693,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXMAMDANIMENTION-26MAR25-TRUM",
+            "market_id": "KXMAMDANIMENTION-26MAR26B-TRUM",
             "label": "TRUM",
             "display_label": "Trump / President",
             "score": -1,
