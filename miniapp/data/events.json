@@ -40419,7 +40419,7 @@
       "status": "active",
       "open_time": "2026-03-25T22:15:00Z",
       "close_time": "2026-04-10T00:30:00Z",
-      "market_count": 18,
+      "market_count": 19,
       "dominant_group": "sports_announcer_mentions",
       "dominant_subtype": "nfl_announcer_market",
       "dominant_rules_risk": "medium",
@@ -40444,13 +40444,14 @@
         "Robot",
         "Trade / Traded",
         "Triple",
+        "UNIQLO Field",
         "Walk Off",
         "What a Catch",
         "Wild Pitch"
       ],
       "strike_buckets": {
-        "count": 18,
-        "context_sensitive_hint": 18
+        "count": 19,
+        "context_sensitive_hint": 19
       },
       "strike_intel": {
         "structural": [],
@@ -40539,6 +40540,12 @@
             "market_id": "KXMLBMENTION-26MAR26AZLAD-TRIP",
             "label": "Triple",
             "short_label": "TRIP",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR26AZLAD-UNIQ",
+            "label": "UNIQLO Field",
+            "short_label": "UNIQ",
             "note": "game-state dependent · live"
           },
           {
@@ -40931,6 +40938,31 @@
             "market_id": "KXMLBMENTION-26MAR26AZLAD-TRIP",
             "label": "TRIP",
             "display_label": "Triple",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXMLBMENTION-26MAR26AZLAD-UNIQ",
+          "label": "UNIQLO Field",
+          "short_label": "UNIQ",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXMLBMENTION-26MAR26AZLAD-UNIQ",
+            "label": "UNIQ",
+            "display_label": "UNIQLO Field",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -41435,6 +41467,22 @@
             "market_id": "KXMLBMENTION-26MAR26AZLAD-TRIP",
             "label": "TRIP",
             "display_label": "Triple",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXMLBMENTION-26MAR26AZLAD-UNIQ",
+            "label": "UNIQ",
+            "display_label": "UNIQLO Field",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -62156,9 +62204,9 @@
       "event_title": "the announcers — New York Y vs San Francisco professional baseball game originally scheduled for Mar 25, 2026 at 8:05 PM EDT",
       "event_ticker": "KXMLBMENTION-26MAR252005NYYSF",
       "series_ticker": "",
-      "status": "active",
+      "status": "closed",
       "open_time": "2026-03-23T18:10:00Z",
-      "close_time": "2026-04-09T00:05:00Z",
+      "close_time": "2026-03-26T13:50:34Z",
       "market_count": 21,
       "dominant_group": "sports_announcer_mentions",
       "dominant_subtype": "nfl_announcer_market",
