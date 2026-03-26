@@ -14539,9 +14539,9 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Judge Allows Deportation of Venezuelans Under Alien Enemies Act - The New York Times",
-        "Свежий headline: Trump 'garbage' rhetoric about Somalis draws cheers from administration, silence from Republicans and alarm from critics - Reuters",
-        "Свежий headline: Trump Calls Somalis ‘Garbage’ He Doesn’t Want in the Country - The New York Times"
+        "Свежий headline: Mark Carney Says Firmly That ‘Canada Doesn’t Live Because of the United States’ - The New York Times",
+        "Свежий headline: Trump Calls Somalis ‘Garbage’ He Doesn’t Want in the Country - The New York Times",
+        "Свежий headline: Trump Calls Somalis ‘Garbage’ in Anti-Immigrant Tirade - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -20893,18 +20893,21 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening."
+        "Отдели headline frame события от того, что реально естественно для scripted opening.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure"
+        "headline-topic pressure",
+        "fresh headline pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: Trump urges Iran to make a deal or US will 'keep blowing them away' - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
