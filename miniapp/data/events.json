@@ -13526,6 +13526,1749 @@
       "slug": "delta-air-lines-inc-their-next-earnings-call"
     },
     {
+      "group_key": "KXTRUMPMENTION-26MAR26B",
+      "event_title": "Donald Trump — Cabinet Meeting",
+      "event_ticker": "KXTRUMPMENTION-26MAR26B",
+      "series_ticker": "",
+      "status": "initialized",
+      "open_time": "2026-03-26T03:30:00Z",
+      "close_time": "2026-03-27T14:00:00Z",
+      "market_count": 30,
+      "dominant_group": "political_mentions",
+      "dominant_subtype": "speech",
+      "dominant_rules_risk": "medium",
+      "speaker": "donald trump",
+      "format_confidence": 0.9,
+      "prep_focus": "Собери контекст, формат события и кластеры страйков перед торговлей.",
+      "live_focus": "Используй opening как быстрый тест того, какой narrative cluster реально живёт.",
+      "priority": "high",
+      "strike_codes": [
+        "Afford / Affordable / Affordability",
+        "Biden",
+        "Crypto / Bitcoin",
+        "Deal / Settle",
+        "Eight War",
+        "Epic Fury",
+        "Fake News",
+        "Gas / Gasoline",
+        "Hormuz",
+        "Hottest",
+        "Iran (3+ times)",
+        "Israel / Israeli",
+        "Kristi / Noem",
+        "LaGuardia",
+        "Midterm",
+        "Negotiate / Negotiated / Negotiation",
+        "Event does not qualify",
+        "Oil",
+        "Radical Left",
+        "Save America Act",
+        "Shutdown / Shut Down",
+        "Sleepy Joe",
+        "Stock Market",
+        "Supreme Court",
+        "Tariff",
+        "Terrorist / Terrorism",
+        "Too Late",
+        "TrumpRX",
+        "Trump",
+        "TSA"
+      ],
+      "strike_buckets": {
+        "count": 30,
+        "context_sensitive_hint": 30
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+            "label": "Eight War",
+            "short_label": "EIGH",
+            "note": "geo/conflict dependent · q&a"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-IRAN",
+            "label": "Iran (3+ times)",
+            "short_label": "IRAN",
+            "note": "geo/conflict dependent · q&a"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-ISRA",
+            "label": "Israel / Israeli",
+            "short_label": "ISRA",
+            "note": "needs Q&A / topic pivot · q&a"
+          }
+        ],
+        "contextual": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+            "label": "Biden",
+            "short_label": "BIDE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+            "label": "Crypto / Bitcoin",
+            "short_label": "CRYP",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+            "label": "Deal / Settle",
+            "short_label": "DEAL",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EPIC",
+            "label": "Epic Fury",
+            "short_label": "EPIC",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-FAKE",
+            "label": "Fake News",
+            "short_label": "FAKE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-GAS",
+            "label": "Gas / Gasoline",
+            "short_label": "GAS",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HORM",
+            "label": "Hormuz",
+            "short_label": "HORM",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HOTT",
+            "label": "Hottest",
+            "short_label": "HOTT",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-KRIS",
+            "label": "Kristi / Noem",
+            "short_label": "KRIS",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-LAGU",
+            "label": "LaGuardia",
+            "short_label": "LAGU",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-MIDT",
+            "label": "Midterm",
+            "short_label": "MIDT",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-OIL",
+            "label": "Oil",
+            "short_label": "OIL",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-RADI",
+            "label": "Radical Left",
+            "short_label": "RADI",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SAVE",
+            "label": "Save America Act",
+            "short_label": "SAVE",
+            "note": "rhetorical token · tail"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SLEE",
+            "label": "Sleepy Joe",
+            "short_label": "SLEE",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-STOC",
+            "label": "Stock Market",
+            "short_label": "STOC",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SUPR",
+            "label": "Supreme Court",
+            "short_label": "SUPR",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TARI",
+            "label": "Tariff",
+            "short_label": "TARI",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TOO",
+            "label": "Too Late",
+            "short_label": "TOO",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUM",
+            "label": "TrumpRX",
+            "short_label": "TRUM",
+            "note": "name-only exposure · tail"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUMP",
+            "label": "Trump",
+            "short_label": "TRUMP",
+            "note": "name-only exposure · tail"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TSA",
+            "label": "TSA",
+            "short_label": "TSA",
+            "note": "context-dependent token · pivot"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+            "label": "Afford / Affordable / Affordability",
+            "short_label": "AFFO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NEGO",
+            "label": "Negotiate / Negotiated / Negotiation",
+            "short_label": "NEGO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SHUT",
+            "label": "Shutdown / Shut Down",
+            "short_label": "SHUT",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TERR",
+            "label": "Terrorist / Terrorism",
+            "short_label": "TERR",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+          "label": "Afford / Affordable / Affordability",
+          "short_label": "AFFO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+          "label": "Biden",
+          "short_label": "BIDE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+          "label": "Crypto / Bitcoin",
+          "short_label": "CRYP",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Bitcoin",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+          "label": "Deal / Settle",
+          "short_label": "DEAL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+            "label": "DEAL",
+            "display_label": "Deal / Settle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+          "label": "Eight War",
+          "short_label": "EIGH",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+            "label": "EIGH",
+            "display_label": "Eight War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-EPIC",
+          "label": "Epic Fury",
+          "short_label": "EPIC",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EPIC",
+            "label": "EPIC",
+            "display_label": "Epic Fury",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-FAKE",
+          "label": "Fake News",
+          "short_label": "FAKE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-FAKE",
+            "label": "FAKE",
+            "display_label": "Fake News",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-GAS",
+          "label": "Gas / Gasoline",
+          "short_label": "GAS",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-GAS",
+            "label": "GAS",
+            "display_label": "Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-HORM",
+          "label": "Hormuz",
+          "short_label": "HORM",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HORM",
+            "label": "HORM",
+            "display_label": "Hormuz",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-HOTT",
+          "label": "Hottest",
+          "short_label": "HOTT",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HOTT",
+            "label": "HOTT",
+            "display_label": "Hottest",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-IRAN",
+          "label": "Iran (3+ times)",
+          "short_label": "IRAN",
+          "note": "geo/conflict dependent · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran (3+ times)",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-ISRA",
+          "label": "Israel / Israeli",
+          "short_label": "ISRA",
+          "note": "needs Q&A / topic pivot · q&a",
+          "bucket": "qa_sensitive",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-ISRA",
+            "label": "ISRA",
+            "display_label": "Israel / Israeli",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-KRIS",
+          "label": "Kristi / Noem",
+          "short_label": "KRIS",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-LAGU",
+          "label": "LaGuardia",
+          "short_label": "LAGU",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-LAGU",
+            "label": "LAGU",
+            "display_label": "LaGuardia",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-MIDT",
+          "label": "Midterm",
+          "short_label": "MIDT",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-MIDT",
+            "label": "MIDT",
+            "display_label": "Midterm",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-NEGO",
+          "label": "Negotiate / Negotiated / Negotiation",
+          "short_label": "NEGO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NEGO",
+            "label": "NEGO",
+            "display_label": "Negotiate / Negotiated / Negotiation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          },
+          "phase_fit": "service-only",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-OIL",
+          "label": "Oil",
+          "short_label": "OIL",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-RADI",
+          "label": "Radical Left",
+          "short_label": "RADI",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-RADI",
+            "label": "RADI",
+            "display_label": "Radical Left",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-SAVE",
+          "label": "Save America Act",
+          "short_label": "SAVE",
+          "note": "rhetorical token · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SAVE",
+            "label": "SAVE",
+            "display_label": "Save America Act",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-SHUT",
+          "label": "Shutdown / Shut Down",
+          "short_label": "SHUT",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-SLEE",
+          "label": "Sleepy Joe",
+          "short_label": "SLEE",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SLEE",
+            "label": "SLEE",
+            "display_label": "Sleepy Joe",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-STOC",
+          "label": "Stock Market",
+          "short_label": "STOC",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-STOC",
+            "label": "STOC",
+            "display_label": "Stock Market",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-SUPR",
+          "label": "Supreme Court",
+          "short_label": "SUPR",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SUPR",
+            "label": "SUPR",
+            "display_label": "Supreme Court",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TARI",
+          "label": "Tariff",
+          "short_label": "TARI",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TERR",
+          "label": "Terrorist / Terrorism",
+          "short_label": "TERR",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TERR",
+            "label": "TERR",
+            "display_label": "Terrorist / Terrorism",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TOO",
+          "label": "Too Late",
+          "short_label": "TOO",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TOO",
+            "label": "TOO",
+            "display_label": "Too Late",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TRUM",
+          "label": "TrumpRX",
+          "short_label": "TRUM",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUM",
+            "label": "TRUM",
+            "display_label": "TrumpRX",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TRUMP",
+          "label": "Trump",
+          "short_label": "TRUMP",
+          "note": "name-only exposure · tail",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUMP",
+            "label": "TRUMP",
+            "display_label": "Trump",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTION-26MAR26B-TSA",
+          "label": "TSA",
+          "short_label": "TSA",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        }
+      ],
+      "context_checks": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
+        "Отдели headline frame события от того, что реально естественно для scripted opening.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "local incident",
+        "policy headline",
+        "question-driven narrative shift",
+        "opening frame",
+        "headline-topic pressure",
+        "fresh headline pressure"
+      ],
+      "context_notes": [
+        "Для political mentions current events часто важнее последних transcript counts.",
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: Trump 'garbage' rhetoric about Somalis draws cheers from administration, silence from Republicans and alarm from critics - Reuters",
+        "Свежий headline: Trump Calls Affordability a ‘Con Job’ as His Edge on the Economy Slips - The New York Times",
+        "Свежий headline: Trump Calls Somalis ‘Garbage’ He Doesn’t Want in the Country - The New York Times"
+      ],
+      "opening_plan": [
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot."
+      ],
+      "post_opening_plan": [
+        "Если opening прошёл без hit, не держи NO автоматически: сначала реши, был ли strike opening-heavy или Q&A-heavy.",
+        "Переоцени narrative buckets целиком, а не отдельные слова."
+      ],
+      "qa_transition_plan": [
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Bitcoin",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+            "label": "DEAL",
+            "display_label": "Deal / Settle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+            "label": "EIGH",
+            "display_label": "Eight War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Bitcoin",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+            "label": "DEAL",
+            "display_label": "Deal / Settle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+            "label": "EIGH",
+            "display_label": "Eight War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-AFFO",
+            "label": "AFFO",
+            "display_label": "Afford / Affordable / Affordability",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-CRYP",
+            "label": "CRYP",
+            "display_label": "Crypto / Bitcoin",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-DEAL",
+            "label": "DEAL",
+            "display_label": "Deal / Settle",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EIGH",
+            "label": "EIGH",
+            "display_label": "Eight War",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-EPIC",
+            "label": "EPIC",
+            "display_label": "Epic Fury",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-FAKE",
+            "label": "FAKE",
+            "display_label": "Fake News",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-GAS",
+            "label": "GAS",
+            "display_label": "Gas / Gasoline",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HORM",
+            "label": "HORM",
+            "display_label": "Hormuz",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-HOTT",
+            "label": "HOTT",
+            "display_label": "Hottest",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran (3+ times)",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-ISRA",
+            "label": "ISRA",
+            "display_label": "Israel / Israeli",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-LAGU",
+            "label": "LAGU",
+            "display_label": "LaGuardia",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-MIDT",
+            "label": "MIDT",
+            "display_label": "Midterm",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NEGO",
+            "label": "NEGO",
+            "display_label": "Negotiate / Negotiated / Negotiation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-OIL",
+            "label": "OIL",
+            "display_label": "Oil",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-RADI",
+            "label": "RADI",
+            "display_label": "Radical Left",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SAVE",
+            "label": "SAVE",
+            "display_label": "Save America Act",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SLEE",
+            "label": "SLEE",
+            "display_label": "Sleepy Joe",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-STOC",
+            "label": "STOC",
+            "display_label": "Stock Market",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-SUPR",
+            "label": "SUPR",
+            "display_label": "Supreme Court",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TSA",
+            "label": "TSA",
+            "display_label": "TSA",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TARI",
+            "label": "TARI",
+            "display_label": "Tariff",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TERR",
+            "label": "TERR",
+            "display_label": "Terrorist / Terrorism",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TOO",
+            "label": "TOO",
+            "display_label": "Too Late",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUMP",
+            "label": "TRUMP",
+            "display_label": "Trump",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-TRUM",
+            "label": "TRUM",
+            "display_label": "TrumpRX",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTION-26MAR26B-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -5,
+            "priority_band": "можно отложить",
+            "edge_tag": "служебный",
+            "strike_type": "nqe",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "service-only"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-red"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь local/state news за последние 48–72 часа; свежие инциденты часто ломают исторический baseline.",
+        "Не опирайся только на последние speeches/transcript counts; раздели strikes на structural, contextual и Q&A-dependent."
+      ],
+      "live_trading_summary": [
+        "В первые минуты определи dominant theme cluster, а не отдельное слово.",
+        "Если спикер подхватывает локальную новость, перепрайсь весь связанный bucket сразу."
+      ],
+      "risk_summary": [
+        "Высокая чувствительность к current events.",
+        "Связанные страйки могут быть по сути одной ставкой на один narrative."
+      ],
+      "manual_trader_prompts": [
+        "Проверь новости за 48–72 часа по стране / штату / площадке события.",
+        "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
+        "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
+        "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
+        "Смотри, подтверждает ли opening базовый expected theme или ломает его через current event pivot.",
+        "При переходе в Q&A поднимай вес question-driven strikes.",
+        "Если журналисты или оппоненты тащат новую тему, перепрайсь whole related cluster immediately.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase."
+      ],
+      "relevant_history_notes": [
+        "Не смешивай opening remarks, interview, hearing и press conference в один historical bucket.",
+        "Recent-format samples обычно полезнее, чем дальняя история без учёта текущего режима спикера.",
+        "Для speech baskets полезнее смотреть похожие scripted openings, а не любые политические появления подряд."
+      ],
+      "consensus_misread": [
+        "В speech basket рынок часто путает broad theme с exact token hit rate; правильная идея не равна правильному слову.",
+        "Geo/conflict words здесь легко перепрайсить по headline association, хотя без явного topic pivot они могут вообще не ожить в opening.",
+        "Name strikes crowd часто тащит вслед за общим Trump-family narrative, хотя exact name exposure обычно уже намного уже, чем общий тематический фон.",
+        "Rules-sensitive strikes нельзя прайсить как обычные basket words: range / wording caveats здесь сами по себе часть риска."
+      ],
+      "semantic_families": [
+        {
+          "family": "stretch-economy-work",
+          "labels": [
+            "Afford / Affordable / Affordability"
+          ]
+        },
+        {
+          "family": "stretch-geopolitics-security",
+          "labels": [
+            "Eight War",
+            "Iran (3+ times)",
+            "Israel / Israeli"
+          ]
+        },
+        {
+          "family": "odd-tail",
+          "labels": [
+            "Event does not qualify"
+          ]
+        }
+      ],
+      "attention_allocation": {
+        "prep_allocation": "full prep",
+        "live_allocation": "full live monitor",
+        "summary": "Полезно заранее собрать контекст и быть у экрана с самого начала. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "donald-trump-cabinet-meeting"
+    },
+    {
       "group_key": "KXTRUMPMENTION-26MAR27",
       "event_title": "Donald Trump — Remarks at FII PRIORITY Summit",
       "event_ticker": "KXTRUMPMENTION-26MAR27",
@@ -16491,21 +18234,18 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening.",
-        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure",
-        "fresh headline pressure"
+        "headline-topic pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Fact Check: No, There’s No Link Between Wind Farms and Cancer Like Trump Claimed - Bloomberg.com"
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
