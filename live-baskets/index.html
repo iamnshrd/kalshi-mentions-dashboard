@@ -13,23 +13,24 @@
     .card { background:#141a2e; border:1px solid #23304f; border-radius:14px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.2); }
     .topbar { position:sticky; top:0; z-index:30; margin-bottom:16px; }
     .topbar-inner { display:grid; grid-template-columns:1.3fr auto auto auto auto auto 1fr; gap:8px; align-items:center; background:#0d1324ee; backdrop-filter: blur(8px); border:1px solid #23304f; border-radius:14px; padding:12px; }
-    .input,.select,button { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
+    .input,.select,.btn { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
     .input,.select { width:100%; background:#0f1629; border-color:#23304f; }
-    button { cursor:pointer; }
+    .btn { cursor:pointer; }
     .muted { color:#9fb0cf; }
     .small { font-size:13px; }
     .warn { color:#ffd86b; }
     .danger { color:#ff9b9b; }
     .layout-top { display:grid; grid-template-columns:300px 1fr; gap:16px; align-items:start; }
     .sticky-col { position:sticky; top:82px; max-height:calc(100vh - 96px); overflow:auto; }
-    .strike-list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
-    .strike-chip { padding:10px; border:1px solid #23304f; border-radius:10px; background:#10182d; min-width:0; cursor:grab; }
+    .board-header { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:10px; }
+    .strike-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; min-height:80px; }
+    .strike-list.drop-target-active { outline:1px dashed #8cc8ff; outline-offset:3px; border-radius:12px; }
+    .strike-chip { padding:10px; border:1px solid #23304f; border-radius:10px; background:#10182d; min-width:0; cursor:grab; user-select:none; touch-action:none; }
     .strike-chip strong { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
-    .board-header { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
     .basket-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
     .basket-card { position:relative; background:#10182d; border:2px solid #23304f; border-radius:18px; padding:10px; min-height:232px; display:grid; gap:8px; transition:.12s ease; }
     .basket-card.active { border-color:#8cc8ff; box-shadow:0 0 0 1px rgba(140,200,255,.2), 0 0 16px rgba(140,200,255,.08); }
-    .basket-card.over { border-color:#8cc8ff; box-shadow: inset 0 0 0 1px rgba(140,200,255,.45), 0 0 0 1px rgba(140,200,255,.12); }
+    .basket-card.drop-target-active { border-color:#8cc8ff; box-shadow: inset 0 0 0 1px rgba(140,200,255,.45), 0 0 0 1px rgba(140,200,255,.12); }
     .basket-head { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
     .basket-title { display:flex; align-items:center; gap:8px; min-width:0; }
     .basket-dot { width:12px; height:12px; border-radius:999px; flex:0 0 auto; }
@@ -37,96 +38,127 @@
     .basket-actions { display:flex; gap:6px; }
     .mini-btn { padding:2px 6px; font-size:11px; min-width:24px; height:24px; border-radius:8px; }
     .basket-pill-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:34px; gap:8px; min-height:168px; max-height:168px; }
-    .basket-pill { display:flex; align-items:center; justify-content:space-between; gap:8px; border:1px solid #3B4D70; border-radius:999px; padding:6px 10px; background:#24324A; color:#dbe6f7; font-size:11px; font-weight:500; min-width:0; min-height:34px; transition:.12s ease; }
+    .basket-pill { display:flex; align-items:center; justify-content:space-between; gap:8px; border:1px solid #3B4D70; border-radius:999px; padding:6px 10px; background:#24324A; color:#dbe6f7; font-size:11px; font-weight:500; min-width:0; min-height:34px; transition:.12s ease; cursor:grab; user-select:none; touch-action:none; }
     .basket-pill:hover { background:#2a3954; border-color:#5f7fb5; box-shadow:0 0 0 1px rgba(95,127,181,.18), 0 0 10px rgba(95,127,181,.14); }
-    .basket-pill.placeholder { background:#1a2238; border-color:#2a3656; color:#51617f; pointer-events:none; }
+    .basket-pill.placeholder { background:#1a2238; border-color:#2a3656; color:#51617f; pointer-events:none; cursor:default; }
     .basket-pill-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-transform:lowercase; }
     .basket-pill-price { flex:0 0 auto; font-variant-numeric: tabular-nums; font-size:11px; font-weight:600; color:#e7ecf5; background:#1B2438; border:1px solid #31415f; border-radius:999px; padding:2px 6px; }
     .basket-pill-dot { width:7px; height:7px; border-radius:999px; flex:0 0 auto; }
+    .drag-proxy { position:fixed; z-index:9999; pointer-events:none; transform:translate(-9999px,-9999px); padding:10px 12px; border:1px solid #5f7fb5; border-radius:10px; background:#24324A; color:#e7ecf5; box-shadow:0 12px 28px rgba(0,0,0,.35); }
     .chart-section,.timeline-section { margin-top:16px; }
     .subhead { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:10px; }
-    .chart-controls,.legend-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-    .legend-chip { padding:5px 8px; border-radius:999px; border:1px solid #2a3d63; background:#10182d; font-size:12px; cursor:pointer; }
-    .legend-chip.off { opacity:.45; }
     #chart { width:100%; height:520px; min-height:520px; }
     .timeline-row { display:flex; gap:8px; overflow:auto; padding-bottom:4px; }
     .timeline-item { white-space:nowrap; padding:6px 10px; border-radius:999px; border:1px solid #23304f; background:#10182d; font-size:12px; }
-    .drop-target-unassigned.over { outline:1px dashed #8cc8ff; outline-offset:3px; border-radius:12px; }
-    .drag-overlay { padding:10px 12px; border:1px solid #5f7fb5; border-radius:10px; background:#24324A; color:#e7ecf5; box-shadow:0 12px 28px rgba(0,0,0,.35); }
     @media (max-width:1450px){ .topbar-inner{grid-template-columns:1fr 1fr 1fr;} .basket-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
     @media (max-width:980px){ .layout-top{grid-template-columns:1fr;} .sticky-col{position:static;max-height:none;} .basket-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .topbar-inner{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
-<div id="app"></div>
-<script type="module">
-import React, {useEffect, useMemo, useState} from 'https://esm.sh/react@18.3.1';
-import {createRoot} from 'https://esm.sh/react-dom@18.3.1/client';
-import htm from 'https://esm.sh/htm@3.1.1';
-import * as SortableModule from 'https://esm.sh/react-sortablejs@6.1.4?dev';
-const ReactSortable = SortableModule.ReactSortable || SortableModule.default?.ReactSortable || SortableModule.default;
-const html = htm.bind(React.createElement);
-const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
-const DEFAULT_BASKETS = [
-  { name: 'Domestic politics', color: '#4cc9f0' },
-  { name: 'Geopolitics', color: '#f72585' },
-  { name: 'Economy / inflation', color: '#ffd166' },
-  { name: 'Immigration / border', color: '#72efdd' },
-  { name: 'Media / grievance', color: '#c77dff' },
-  { name: 'Tails / noise', color: '#95a4c6' },
-];
-const BASKET_COLORS = ['#4cc9f0','#f72585','#ffd166','#72efdd','#c77dff','#90be6d','#ff8fab','#ff9f1c','#5dade2','#f28482'];
-const fmtPrice = (v) => Number.isFinite(v) ? v.toFixed(2) : '—';
-const fmtTs = (v) => { if(!v) return '—'; const d = new Date(v); if (Number.isNaN(d.getTime())) return String(v); return d.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'}) + ' UTC'; };
-const avg = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : NaN; };
-const sum = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0) : NaN; };
-const extractEventTicker = (input) => { const m = String(input||'').trim().match(/([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)/i); return m ? m[1].toUpperCase() : null; };
-const extractMarketSnapshotPrice = (meta) => { for (const v of [meta.last_price_dollars,meta.yes_price_dollars,meta.last_price,meta.yes_price,meta.yes_bid_dollars,meta.yes_ask_dollars]) { const n = parseFloat(v); if (Number.isFinite(n)) return n*100; } return NaN; };
-const extractMarketSnapshotVolume = (meta) => { for (const v of [meta.volume_fp,meta.volume,meta.open_interest_fp]) { const n = parseFloat(v); if (Number.isFinite(n)) return n; } return NaN; };
-const computeSeriesMetrics = (points) => { const valid=points.filter(p=>Number.isFinite(p.y)); if(!valid.length) return {last:NaN,delta1m:NaN,delta5m:NaN,vol5m:NaN}; const last=valid.at(-1); const prev1=valid.length>=2?valid.at(-2):null; const prev5=valid.length>=6?valid.at(-6):valid[0]; return {last:last.y,delta1m:prev1?(last.y-prev1.y):NaN,delta5m:prev5?(last.y-prev5.y):NaN,vol5m:sum(valid.slice(-5).map(p=>p.volume))}; };
-const classifyBasketSeed = (name) => { const s = name.toLowerCase(); if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if (/(ice|dhs|border|illegal|id|identification|sanctuary)/.test(s)) return 'Immigration / border'; if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise'; };
+<div class="wrap">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <input id="marketUrlInput" class="input" placeholder="Paste Kalshi event URL...">
+      <button id="loadBtn" class="btn">Load event</button>
+      <button id="refreshBtn" class="btn">Refresh now</button>
+      <button id="saveTemplateBtn" class="btn">Save template</button>
+      <button id="createBasketBtn" class="btn">Create basket</button>
+      <button id="autoSeedBtn" class="btn">Auto-seed baskets</button>
+      <div id="status" class="muted small">Load a Kalshi event to begin.</div>
+    </div>
+  </div>
 
-function StrikeChip({item}) {
-  return html`<div className="strike-chip"><strong>${item.name}</strong></div>`;
-}
-function BasketPill({item, color}) {
-  return html`<div className="basket-pill"><span className="basket-pill-dot" style=${{background:color}}></span><span className="basket-pill-name">${item.name}</span><span className="basket-pill-price">${fmtPrice(item.price)}</span></div>`;
-}
-function App() {
-  const [marketUrl, setMarketUrl] = useState('');
-  const [status, setStatus] = useState('Load a Kalshi event to begin.');
-  const [statusClass, setStatusClass] = useState('muted small');
-  const [eventMeta, setEventMeta] = useState(null);
-  const [currentEventTicker, setCurrentEventTicker] = useState(null);
-  const [series, setSeries] = useState([]);
-  const [baskets, setBaskets] = useState([]);
-  const [basketMembers, setBasketMembers] = useState({});
-  const [unassignedItems, setUnassignedItems] = useState([]);
-  const [selectedBasket, setSelectedBasket] = useState(null);
-  const [timeline, setTimeline] = useState([]);
-  const initialMarketUrl = new URLSearchParams(location.search).get('market_url') || '';
-  useEffect(()=>{ if(initialMarketUrl){ setMarketUrl(initialMarketUrl); loadEvent(initialMarketUrl); } }, []);
-  const marketMap = useMemo(()=> new Map(series.map(s=>[s.name,s])), [series]);
-  function rebuildUnassigned(nextBasketMembers, allSeries=series){
-    const assigned = new Set(Object.values(nextBasketMembers).flat().map(x=>x.name));
-    return allSeries.filter(s=>!assigned.has(s.name)).map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}));
+  <div class="layout-top">
+    <div class="card sticky-col">
+      <div class="board-header"><h2 style="margin:0;">Unassigned strikes</h2></div>
+      <div id="unassignedList" class="strike-list"></div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="subhead">
+          <div>
+            <h1 style="margin:0; font-size:24px;">Live Basket Terminal</h1>
+            <div class="muted small">Interact.js-based container drag-and-drop.</div>
+          </div>
+          <div id="eventLabel" class="small muted">—</div>
+        </div>
+        <div id="basketGrid" class="basket-grid"></div>
+      </div>
+      <div class="card chart-section">
+        <div class="subhead"><h2 style="margin:0;">Basket chart</h2></div>
+        <div id="chart"></div>
+      </div>
+      <div class="card timeline-section">
+        <div class="subhead"><h2 style="margin:0;">Timeline / tape</h2></div>
+        <div id="timelineRow" class="timeline-row"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="dragProxy" class="drag-proxy"></div>
+
+<script type="module">
+  import interact from 'https://esm.sh/interactjs@1.10.27';
+
+  const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
+  const DEFAULT_BASKETS = [
+    { name: 'Domestic politics', color: '#4cc9f0' },
+    { name: 'Geopolitics', color: '#f72585' },
+    { name: 'Economy / inflation', color: '#ffd166' },
+    { name: 'Immigration / border', color: '#72efdd' },
+    { name: 'Media / grievance', color: '#c77dff' },
+    { name: 'Tails / noise', color: '#95a4c6' },
+  ];
+  const BASKET_COLORS = ['#4cc9f0','#f72585','#ffd166','#72efdd','#c77dff','#90be6d','#ff8fab','#ff9f1c','#5dade2','#f28482'];
+  const state = {
+    marketUrl: '', eventMeta: null, currentEventTicker: null,
+    series: [], baskets: [], basketMembers: {}, selectedBasket: null,
+    timeline: [], dragStrike: null,
+  };
+
+  const fmtPrice = (v) => Number.isFinite(v) ? v.toFixed(2) : '—';
+  const fmtTs = (v) => { if(!v) return '—'; const d = new Date(v); if (Number.isNaN(d.getTime())) return String(v); return d.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'}) + ' UTC'; };
+  const avg = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : NaN; };
+  const sum = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0) : NaN; };
+  const extractEventTicker = (input) => { const m = String(input||'').trim().match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)\b/i); return m ? m[1].toUpperCase() : null; };
+  const extractMarketSnapshotPrice = (meta) => { for (const v of [meta.last_price_dollars,meta.yes_price_dollars,meta.last_price,meta.yes_price,meta.yes_bid_dollars,meta.yes_ask_dollars]) { const n = parseFloat(v); if (Number.isFinite(n)) return n*100; } return NaN; };
+  const extractMarketSnapshotVolume = (meta) => { for (const v of [meta.volume_fp,meta.volume,meta.open_interest_fp]) { const n = parseFloat(v); if (Number.isFinite(n)) return n; } return NaN; };
+  const computeSeriesMetrics = (points) => { const valid=points.filter(p=>Number.isFinite(p.y)); if(!valid.length) return {last:NaN,delta1m:NaN,delta5m:NaN,vol5m:NaN}; const last=valid.at(-1); const prev1=valid.length>=2?valid.at(-2):null; const prev5=valid.length>=6?valid.at(-6):valid[0]; return {last:last.y,delta1m:prev1?(last.y-prev1.y):NaN,delta5m:prev5?(last.y-prev5.y):NaN,vol5m:sum(valid.slice(-5).map(p=>p.volume))}; };
+  const classifyBasketSeed = (name) => { const s = name.toLowerCase(); if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if (/(ice|dhs|border|illegal|id\b|identification|sanctuary)/.test(s)) return 'Immigration / border'; if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise'; };
+
+  function setStatus(text, cls='muted small') { const el=document.getElementById('status'); el.textContent=text; el.className=cls; }
+  function pushTimeline(text) { state.timeline.unshift({ ts:new Date().toISOString(), text }); state.timeline = state.timeline.slice(0,20); renderTimeline(); }
+  function marketMap() { return new Map(state.series.map(s=>[s.name,s])); }
+  function assignedNames() { return new Set(Object.values(state.basketMembers).flat()); }
+  function unassignedSeries() { const assigned = assignedNames(); return state.series.filter(s=>!assigned.has(s.name)); }
+  function buildDefaultBaskets() { state.baskets=[]; state.basketMembers={}; state.selectedBasket=null; }
+  function addBasket() { let i=1, name=`New basket ${i}`; while(state.baskets.some(b=>b.name===name)){ i++; name=`New basket ${i}`; } state.baskets.push({name, color:BASKET_COLORS[state.baskets.length % BASKET_COLORS.length]}); state.basketMembers[name]=[]; state.selectedBasket=name; pushTimeline(`basket created: ${name}`); renderAll(); }
+  function removeBasket(name) { delete state.basketMembers[name]; state.baskets = state.baskets.filter(b=>b.name!==name); if(state.selectedBasket===name) state.selectedBasket = state.baskets[0]?.name || null; pushTimeline(`basket deleted: ${name}`); renderAll(); }
+  function renameBasket(name) { const next = prompt('Rename basket', name); if(!next || next===name || state.baskets.some(b=>b.name===next)) return; state.baskets = state.baskets.map(b=>b.name===name ? {...b,name:next} : b); state.basketMembers[next] = state.basketMembers[name] || []; delete state.basketMembers[name]; if(state.selectedBasket===name) state.selectedBasket = next; pushTimeline(`basket renamed to ${next}`); renderAll(); }
+  function moveStrike(strikeName, targetType, targetName=null) {
+    for (const key of Object.keys(state.basketMembers)) state.basketMembers[key] = (state.basketMembers[key] || []).filter(x => x !== strikeName);
+    if (targetType === 'basket' && targetName) {
+      if (!state.basketMembers[targetName]) state.basketMembers[targetName] = [];
+      state.basketMembers[targetName].push(strikeName);
+      pushTimeline(`strike moved to ${targetName}`);
+    } else {
+      pushTimeline('strike returned to unassigned');
+    }
+    renderAll();
   }
-  function pushTimeline(text){ setTimeline(prev => [{ts:new Date().toISOString(), text}, ...prev].slice(0,20)); }
-  function addBasket(){ let i=1, name=`New basket ${i}`; while(baskets.some(b=>b.name===name)){ i++; name=`New basket ${i}`; } setBaskets(prev=>[...prev, {name, color:BASKET_COLORS[prev.length % BASKET_COLORS.length]}]); setBasketMembers(prev=>({...prev, [name]:[]})); setSelectedBasket(name); pushTimeline(`basket created: ${name}`); }
-  function removeBasket(name){ setBaskets(prev=>prev.filter(b=>b.name!==name)); setBasketMembers(prev=>{ const copy={...prev}; delete copy[name]; const rebuilt=rebuildUnassigned(copy); setUnassignedItems(rebuilt); return copy; }); setSelectedBasket(prev=>prev===name?null:prev); pushTimeline(`basket deleted: ${name}`); }
-  function renameBasket(oldName){ const nextName = prompt('Rename basket', oldName); if(!nextName || nextName===oldName || baskets.some(b=>b.name===nextName)) return; setBaskets(prev=>prev.map(b=>b.name===oldName?({...b,name:nextName}):b)); setBasketMembers(prev=>{ const copy={...prev, [nextName]: prev[oldName] || []}; delete copy[oldName]; return copy; }); if(selectedBasket===oldName) setSelectedBasket(nextName); pushTimeline(`basket renamed to ${nextName}`); }
-  async function loadEvent(url){
-    const eventTicker=extractEventTicker(url); if(!eventTicker){ setStatus('Could not parse Kalshi event ticker from URL.'); setStatusClass('warn'); return; }
-    setCurrentEventTicker(eventTicker); setStatus(`Loading ${eventTicker}...`); setStatusClass('muted small');
-    try{
+
+  async function loadEvent(url) {
+    const eventTicker=extractEventTicker(url); if(!eventTicker){ setStatus('Could not parse Kalshi event ticker from URL.','warn'); return; }
+    state.currentEventTicker=eventTicker; setStatus(`Loading ${eventTicker}...`);
+    try {
       const res=await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(url)}`);
       if(!res.ok){ const txt=await res.text(); throw new Error(`proxy ${res.status} ${txt.slice(0,160)}`); }
       const payload=await res.json();
-      setEventMeta(payload.event||null);
-      const marketMap=new Map((payload.markets||[]).map(m=>[m.ticker,m]));
+      state.eventMeta=payload.event||null;
       const candleMap=new Map((payload.candlesticks||[]).map(entry=>[entry.market_ticker,entry]));
       const nowIso=new Date().toISOString();
-      const nextSeries=(payload.markets||[]).map(meta=>{
+      state.series=(payload.markets||[]).map(meta=>{
         const entry=candleMap.get(meta.ticker)||{candlesticks:[]}; const name=meta.yes_sub_title||meta.subtitle||meta.title||meta.ticker;
         let points=(entry.candlesticks||[]).map(c=>({x:new Date((c.end_period_ts||0)*1000).toISOString(), y:(()=>{const p=c.price?.close_dollars??c.price?.mean_dollars??c.price?.previous_dollars??null; return p==null?NaN:parseFloat(p)*100;})(), volume:c.volume_fp!=null?parseFloat(c.volume_fp):NaN})).filter(p=>Number.isFinite(p.y));
         const snapshotPrice=extractMarketSnapshotPrice(meta); const snapshotVolume=extractMarketSnapshotVolume(meta);
@@ -134,35 +166,124 @@ function App() {
         else if(Number.isFinite(snapshotPrice)) points=[...points,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240);
         return {name,ticker:meta.ticker,points,pointMap:new Map(points.map(p=>[p.x,p])),metrics:computeSeriesMetrics(points)};
       }).filter(s=>s.points.length);
-      setSeries(nextSeries);
-      setBaskets([]); setBasketMembers({}); setSelectedBasket(null);
-      setUnassignedItems(nextSeries.map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last})));
-      const human=payload.event?.event?.title || payload.event?.title || payload.event_ticker;
-      setStatus(`Loaded ${human} (${nextSeries.length} strikes, interval=${payload.period_interval||1}m).`); setStatusClass('muted small');
+      buildDefaultBaskets();
       pushTimeline(`loaded ${payload.event_ticker}`);
+      setStatus(`Loaded ${(payload.event?.event?.title || payload.event?.title || payload.event_ticker)} (${state.series.length} strikes, interval=${payload.period_interval||1}m).`,'muted small');
       history.replaceState({},'',`${location.pathname}?market_url=${encodeURIComponent(url)}`);
-    }catch(err){ setStatus(`Load error: ${err.message||err}`); setStatusClass('danger'); }
+      renderAll();
+    } catch(err) { setStatus(`Load error: ${err.message||err}`,'danger'); }
   }
-  function autoSeed(){
-    const newBaskets = DEFAULT_BASKETS.map(x=>({...x}));
-    const members = Object.fromEntries(newBaskets.map(b=>[b.name,[]]));
-    for (const s of series){ const target=classifyBasketSeed(s.name); if(members[target]) members[target].push({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}); }
-    setBaskets(newBaskets); setBasketMembers(members); setSelectedBasket(newBaskets[0]?.name||null); setUnassignedItems(rebuildUnassigned(members)); pushTimeline('auto-seeded baskets');
+
+  function autoSeed() {
+    state.baskets = DEFAULT_BASKETS.map(x=>({...x}));
+    state.basketMembers = Object.fromEntries(state.baskets.map(b=>[b.name,[]]));
+    for (const s of state.series) {
+      const target = classifyBasketSeed(s.name);
+      if (state.basketMembers[target]) state.basketMembers[target].push(s.name);
+    }
+    state.selectedBasket = state.baskets[0]?.name || null;
+    pushTimeline('auto-seeded baskets');
+    renderAll();
   }
-  useEffect(()=>{
-    const selected=selectedBasket || baskets[0]?.name;
-    const basket = baskets.find(b=>b.name===selected);
-    if(!selected || !basket){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">Select a basket.</div>'; return; }
-    const members=(basketMembers[selected]||[]).map(item=>marketMap.get(item.name)).filter(Boolean);
-    if(!members.length){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">No strikes in basket.</div>'; return; }
+
+  function renderUnassigned() {
+    const root=document.getElementById('unassignedList');
+    const items=unassignedSeries();
+    root.innerHTML = items.map(s=>`<div class="strike-chip draggable-strike" data-strike-name="${s.name}"><strong>${s.name}</strong></div>`).join('') || '<div class="muted small">No unassigned strikes.</div>';
+  }
+
+  function renderBaskets() {
+    const root=document.getElementById('basketGrid');
+    if (!state.baskets.length) { root.innerHTML = '<div class="card muted small">No baskets yet. Create one or auto-seed baskets.</div>'; return; }
+    const mm=marketMap();
+    root.innerHTML = state.baskets.map(b=>{
+      const members=(state.basketMembers[b.name]||[]).slice(0,8);
+      const slots=[];
+      for (const name of members) {
+        const s=mm.get(name);
+        slots.push(`<div class="basket-pill draggable-strike" data-strike-name="${name}"><span class="basket-pill-dot" style="background:${b.color}"></span><span class="basket-pill-name">${name}</span><span class="basket-pill-price">${fmtPrice(s?.metrics.last)}</span></div>`);
+      }
+      while (slots.length<8) slots.push('<div class="basket-pill placeholder"><span class="basket-pill-dot" style="background:#51617f"></span><span class="basket-pill-name">—</span><span class="basket-pill-price"></span></div>');
+      return `<div class="basket-card droppable-basket ${state.selectedBasket===b.name?'active':''}" data-basket-name="${b.name}"><div class="basket-head"><div class="basket-title"><span class="basket-dot" style="background:${b.color}"></span><div class="basket-name">${b.name}</div></div><div class="basket-actions"><button class="btn mini-btn rename-btn" data-rename="${b.name}">r</button><button class="btn mini-btn delete-btn" data-delete="${b.name}">×</button></div></div><div class="basket-pill-grid">${slots.join('')}</div></div>`;
+    }).join('');
+    root.querySelectorAll('.basket-card').forEach(card=>card.addEventListener('click', (e)=>{ if(e.target.closest('button')) return; state.selectedBasket=card.dataset.basketName; renderChart(); root.querySelectorAll('.basket-card').forEach(x=>x.classList.toggle('active', x===card)); }));
+    root.querySelectorAll('.rename-btn').forEach(btn=>btn.addEventListener('click', e=>{ e.stopPropagation(); renameBasket(btn.dataset.rename); }));
+    root.querySelectorAll('.delete-btn').forEach(btn=>btn.addEventListener('click', e=>{ e.stopPropagation(); removeBasket(btn.dataset.delete); }));
+  }
+
+  function renderTimeline() {
+    document.getElementById('timelineRow').innerHTML = state.timeline.map(item=>`<div class="timeline-item">${fmtTs(item.ts)} ${item.text}</div>`).join('');
+  }
+
+  function renderChart() {
+    const selected=state.selectedBasket || state.baskets[0]?.name;
+    const basket=state.baskets.find(b=>b.name===selected);
+    if(!selected || !basket){ document.getElementById('chart').innerHTML='<div class="muted">Select a basket.</div>'; return; }
+    const mm=marketMap();
+    const members=(state.basketMembers[selected]||[]).map(n=>mm.get(n)).filter(Boolean);
+    if(!members.length){ document.getElementById('chart').innerHTML='<div class="muted">No strikes in basket.</div>'; return; }
     const ts=[...new Set(members.flatMap(m=>m.points.map(p=>p.x)))].sort().slice(-60);
     const avgY=ts.map(t=>avg(members.map(m=>m.pointMap.get(t)?.y)));
     Plotly.newPlot('chart', [{x:ts,y:avgY,mode:'lines',name:`${selected} avg`,line:{width:4,color:basket.color}}], {paper_bgcolor:'#141a2e',plot_bgcolor:'#10182d',font:{color:'#e7ecf5'},hovermode:'x unified',margin:{l:60,r:20,t:10,b:50},xaxis:{gridcolor:'#20304d',title:'Time (UTC)'},yaxis:{gridcolor:'#20304d',title:'Price (cents)'},legend:{orientation:'h',y:-0.2,x:0}}, {responsive:true,displaylogo:false});
-  }, [selectedBasket, baskets, basketMembers, series]);
-  const commonGroup = {name:'shared-strikes', pull:true, put:true};
-  return html`<div className="wrap"><div className="topbar"><div className="topbar-inner"><input className="input" value=${marketUrl} onInput=${e=>setMarketUrl(e.target.value)} placeholder="Paste Kalshi event URL..." /><button onClick=${()=>loadEvent(marketUrl)}>Load event</button><button onClick=${()=>loadEvent(marketUrl)}>Refresh now</button><button onClick=${()=>pushTimeline('template saved')}>Save template</button><button onClick=${addBasket}>Create basket</button><button onClick=${autoSeed}>Auto-seed baskets</button><div className=${statusClass}>${status}</div></div></div><div className="layout-top"><div className="card sticky-col"><div className="board-header"><h2 style=${{margin:0}}>Unassigned strikes</h2></div><${ReactSortable} list=${unassignedItems} setList=${(next)=>{ setUnassignedItems(next); const names = new Set(next.map(x=>x.name)); setBasketMembers(prev=>{ const copy={}; for(const key of Object.keys(prev)){ copy[key]=(prev[key]||[]).filter(x=>!names.has(x.name)); } return copy; }); }} group=${commonGroup} animation=${150} className="strike-list">${unassignedItems.map(item=>html`<${StrikeChip} key=${item.id} item=${item} />`)}</${ReactSortable}></div><div><div className="card"><div className="subhead"><div><h1 style=${{margin:0,fontSize:'24px'}}>Live Basket Terminal</h1><div className="muted small">React Sortable baskets page.</div></div><div className="small muted">${eventMeta?.event?.title || eventMeta?.title || currentEventTicker || '—'}</div></div><div className="basket-grid">${baskets.length ? baskets.map(b=>html`<div key=${b.name} className=${`basket-card ${selectedBasket===b.name?'active':''}`} onClick=${()=>setSelectedBasket(b.name)}><div className="basket-head"><div className="basket-title"><span className="basket-dot" style=${{background:b.color}}></span><div className="basket-name">${b.name}</div></div><div className="basket-actions"><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); renameBasket(b.name);}}>r</button><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); removeBasket(b.name);}}>×</button></div></div><${ReactSortable} list=${basketMembers[b.name] || []} setList=${(next)=>{ setBasketMembers(prev=>{ const copy={...prev, [b.name]: next}; const assigned = new Set(Object.values(copy).flat().map(x=>x.name)); setUnassignedItems(series.filter(s=>!assigned.has(s.name)).map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}))); return copy; }); }} group=${commonGroup} animation=${150} className="basket-pill-grid">${(basketMembers[b.name]||[]).slice(0,8).map(item=>html`<${BasketPill} key=${item.id} item=${item} color=${b.color} />`)}${Array.from({length: Math.max(0, 8 - (basketMembers[b.name]||[]).length)}).map((_,i)=>html`<div className="basket-pill placeholder" key=${`ph-${i}`}><span className="basket-pill-dot" style=${{background:'#51617f'}}></span><span className="basket-pill-name">—</span><span className="basket-pill-price"></span></div>`)}</${ReactSortable}></div>`) : html`<div className="card muted small">No baskets yet. Create one or auto-seed baskets.</div>`}</div></div><div className="card chart-section"><div className="subhead"><h2 style=${{margin:0}}>Basket chart</h2></div><div id="chart"></div></div><div className="card timeline-section"><div className="subhead"><h2 style=${{margin:0}}>Timeline / tape</h2></div><div className="timeline-row">${timeline.map((item,idx)=>html`<div className="timeline-item" key=${idx}>${fmtTs(item.ts)} ${item.text}</div>`)}</div></div></div></div></div>`;
-}
-createRoot(document.getElementById('app')).render(html`<${App} />`);
+  }
+
+  function mountDnD() {
+    interact('.draggable-strike').unset();
+    interact('.droppable-basket').unset();
+    interact('#unassignedList').unset();
+
+    const proxy=document.getElementById('dragProxy');
+
+    interact('.draggable-strike').draggable({
+      listeners: {
+        start (event) {
+          const strikeName = event.target.dataset.strikeName;
+          state.dragStrike = strikeName;
+          proxy.textContent = strikeName;
+          proxy.style.transform = `translate(${event.pageX + 12}px, ${event.pageY + 12}px)`;
+          event.target.style.opacity = '0.6';
+        },
+        move (event) {
+          proxy.style.transform = `translate(${event.pageX + 12}px, ${event.pageY + 12}px)`;
+        },
+        end (event) {
+          proxy.style.transform = 'translate(-9999px,-9999px)';
+          event.target.style.opacity = '';
+          state.dragStrike = null;
+          document.querySelectorAll('.drop-target-active').forEach(el=>el.classList.remove('drop-target-active'));
+        }
+      }
+    });
+
+    interact('.droppable-basket').dropzone({
+      overlap: 0.2,
+      ondragenter (event) { event.target.classList.add('drop-target-active'); },
+      ondragleave (event) { event.target.classList.remove('drop-target-active'); },
+      ondrop (event) { event.target.classList.remove('drop-target-active'); moveStrike(state.dragStrike, 'basket', event.target.dataset.basketName); },
+    });
+
+    interact('#unassignedList').dropzone({
+      overlap: 0.2,
+      ondragenter (event) { event.target.classList.add('drop-target-active'); },
+      ondragleave (event) { event.target.classList.remove('drop-target-active'); },
+      ondrop (event) { event.target.classList.remove('drop-target-active'); moveStrike(state.dragStrike, 'unassigned'); },
+    });
+  }
+
+  function renderAll() {
+    document.getElementById('eventLabel').textContent = state.eventMeta?.event?.title || state.eventMeta?.title || state.currentEventTicker || '—';
+    renderUnassigned(); renderBaskets(); renderTimeline(); renderChart(); mountDnD();
+  }
+
+  document.getElementById('loadBtn').addEventListener('click', ()=>loadEvent(document.getElementById('marketUrlInput').value));
+  document.getElementById('refreshBtn').addEventListener('click', ()=>loadEvent(document.getElementById('marketUrlInput').value));
+  document.getElementById('saveTemplateBtn').addEventListener('click', ()=>pushTimeline('template saved'));
+  document.getElementById('createBasketBtn').addEventListener('click', addBasket);
+  document.getElementById('autoSeedBtn').addEventListener('click', autoSeed);
+
+  const initial = new URLSearchParams(location.search).get('market_url');
+  if (initial) { document.getElementById('marketUrlInput').value = initial; loadEvent(initial); }
+  else renderAll();
 </script>
 </body>
 </html>
