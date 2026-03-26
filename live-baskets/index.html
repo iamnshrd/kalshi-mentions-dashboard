@@ -29,8 +29,8 @@
     .strike-chip { padding:9px 10px; border:1px solid #23304f; border-radius:10px; background:#10182d; cursor:grab; user-select:none; }
     .strike-chip strong { display:block; }
     .strike-chip small { color:#9fb0cf; display:block; margin-top:3px; }
-    .basket-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .basket-card { background:#10182d; border:1px solid #23304f; border-radius:14px; padding:12px; min-height:220px; display:grid; gap:10px; transition:.15s ease; }
+    .basket-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items:start; }
+    .basket-card { background:#10182d; border:1px solid #23304f; border-radius:14px; padding:12px; min-height:198px; display:grid; gap:8px; transition:.15s ease; }
     .basket-card.active { border-color:#5a81d6; box-shadow:0 0 0 1px rgba(90,129,214,.35), 0 0 18px rgba(90,129,214,.14); }
     .basket-head { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
     .basket-title { display:flex; align-items:center; gap:8px; min-width:0; }
@@ -42,11 +42,11 @@
     .signal.green { background:#163929; color:#8be0af; }
     .signal.red { background:#4a1f1f; color:#ff9b9b; }
     .signal.neutral { background:#23304f; color:#b9c7e7; }
-    .basket-metrics { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:8px; }
-    .metric { background:#141d34; border:1px solid #23304f; border-radius:10px; padding:8px; }
+    .basket-metrics { display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap:8px; }
+    .metric { background:#141d34; border:1px solid #23304f; border-radius:10px; padding:8px; min-width:0; }
     .metric .label { color:#9fb0cf; font-size:12px; }
     .metric .value { margin-top:3px; font-weight:700; }
-    .sparkline { height:44px; border:1px solid #23304f; border-radius:8px; background:#0c1222; }
+    .sparkline { height:34px; border:1px solid #23304f; border-radius:8px; background:#0c1222; }
     .chip-row { display:flex; gap:6px; flex-wrap:wrap; }
     .member-chip { padding:5px 8px; border-radius:999px; background:#17233f; border:1px solid #2a3d63; font-size:12px; cursor:pointer; }
     .member-chip:hover, .member-chip.hovered { border-color:#8cc8ff; background:#1a2b4d; }
@@ -55,6 +55,7 @@
     .inspector-grid { display:grid; gap:10px; }
     .contrib-bar { height:8px; border-radius:999px; background:#243250; overflow:hidden; }
     .contrib-fill { height:100%; background:#4cc9f0; }
+    .inspector-section-title { margin:2px 0 4px; font-size:12px; color:#9fb0cf; text-transform:uppercase; letter-spacing:.04em; }
     .chart-section, .timeline-section { margin-top:16px; }
     .chart-controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
     .legend-chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
@@ -62,7 +63,7 @@
     .legend-chip.off { opacity:.45; }
     #chart { width:100%; height:520px; min-height:520px; }
     .timeline-row { display:flex; gap:8px; overflow:auto; padding-bottom:4px; }
-    .timeline-item { white-space:nowrap; padding:8px 10px; border-radius:999px; border:1px solid #23304f; background:#10182d; font-size:13px; }
+    .timeline-item { white-space:nowrap; padding:6px 10px; border-radius:999px; border:1px solid #23304f; background:#10182d; font-size:12px; }
     .subhead { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:10px; }
     @media (max-width: 1450px) {
       .layout-top { grid-template-columns: 280px 1fr; }
