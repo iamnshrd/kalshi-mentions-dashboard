@@ -18186,7 +18186,7 @@
       "status": "active",
       "open_time": "2026-03-26T14:25:00Z",
       "close_time": "2026-03-27T14:00:00Z",
-      "market_count": 23,
+      "market_count": 26,
       "dominant_group": "political_mentions",
       "dominant_subtype": "speech",
       "dominant_rules_risk": "medium",
@@ -18204,9 +18204,11 @@
         "Crypto / Bitcoin",
         "Cyprus",
         "Democrat",
+        "Democracy",
         "Excursion",
         "Gas / Gasoline",
         "Golden Age",
+        "Heritage",
         "Hormuz",
         "Hottest",
         "Iran",
@@ -18218,11 +18220,12 @@
         "Oil",
         "Ottoman",
         "Shutdown / Shut Down",
-        "Turkey"
+        "Turkey",
+        "Zohran / Mamdani"
       ],
       "strike_buckets": {
-        "count": 23,
-        "context_sensitive_hint": 23
+        "count": 26,
+        "context_sensitive_hint": 26
       },
       "strike_intel": {
         "structural": [],
@@ -18284,6 +18287,12 @@
             "note": "context-dependent token · pivot"
           },
           {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-DEMOC",
+            "label": "Democracy",
+            "short_label": "DEMOC",
+            "note": "context-dependent token · pivot"
+          },
+          {
             "market_id": "KXTRUMPMENTIONB-26MAR26B-EXCU",
             "label": "Excursion",
             "short_label": "EXCU",
@@ -18299,6 +18308,12 @@
             "market_id": "KXTRUMPMENTIONB-26MAR26B-GOLD",
             "label": "Golden Age",
             "short_label": "GOLD",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-HERI",
+            "label": "Heritage",
+            "short_label": "HERI",
             "note": "context-dependent token · pivot"
           },
           {
@@ -18353,6 +18368,12 @@
             "market_id": "KXTRUMPMENTIONB-26MAR26B-TURK",
             "label": "Turkey",
             "short_label": "TURK",
+            "note": "context-dependent token · pivot"
+          },
+          {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-ZOHR",
+            "label": "Zohran / Mamdani",
+            "short_label": "ZOHR",
             "note": "context-dependent token · pivot"
           }
         ],
@@ -18574,6 +18595,31 @@
           "attention_allocation": "pass"
         },
         {
+          "market_id": "KXTRUMPMENTIONB-26MAR26B-DEMOC",
+          "label": "Democracy",
+          "short_label": "DEMOC",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-DEMOC",
+            "label": "DEMOC",
+            "display_label": "Democracy",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
           "market_id": "KXTRUMPMENTIONB-26MAR26B-EXCU",
           "label": "Excursion",
           "short_label": "EXCU",
@@ -18633,6 +18679,31 @@
             "market_id": "KXTRUMPMENTIONB-26MAR26B-GOLD",
             "label": "GOLD",
             "display_label": "Golden Age",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTIONB-26MAR26B-HERI",
+          "label": "Heritage",
+          "short_label": "HERI",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-HERI",
+            "label": "HERI",
+            "display_label": "Heritage",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -18947,6 +19018,31 @@
           },
           "phase_fit": "opening-or-transition",
           "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXTRUMPMENTIONB-26MAR26B-ZOHR",
+          "label": "Zohran / Mamdani",
+          "short_label": "ZOHR",
+          "note": "context-dependent token · pivot",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-ZOHR",
+            "label": "ZOHR",
+            "display_label": "Zohran / Mamdani",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "opening-or-transition",
+          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
@@ -18967,8 +19063,9 @@
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
+        "Свежий headline: Courts Must ‘Check the Excesses’ of Congress and the President, Roberts Says - The New York Times",
         "Свежий headline: In their own words: Trump officials shrugging off Signal leak once decried Clinton’s server - AP News",
-        "Свежий headline: Trump downplays national security team texting military operation plan on Signal as a minor 'glitch' - AP News"
+        "Свежий headline: July Fourth for presidents has been a day for golf, fishing, speeches and one perilous stomachache - AP News"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -19263,6 +19360,22 @@
             "type_class": "type-blue"
           },
           {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-DEMOC",
+            "label": "DEMOC",
+            "display_label": "Democracy",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
             "market_id": "KXTRUMPMENTIONB-26MAR26B-DEMO",
             "label": "DEMO",
             "display_label": "Democrat",
@@ -19314,6 +19427,22 @@
             "market_id": "KXTRUMPMENTIONB-26MAR26B-GOLD",
             "label": "GOLD",
             "display_label": "Golden Age",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-HERI",
+            "label": "HERI",
+            "display_label": "Heritage",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -19474,6 +19603,22 @@
             "market_id": "KXTRUMPMENTIONB-26MAR26B-TURK",
             "label": "TURK",
             "display_label": "Turkey",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "theme-linked"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXTRUMPMENTIONB-26MAR26B-ZOHR",
+            "label": "ZOHR",
+            "display_label": "Zohran / Mamdani",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "пока не приоритет",
@@ -79134,9 +79279,9 @@
       "event_title": "Todd Blanche — CPAC: Fireside Chat — Deputy Attorney General Todd Blanche",
       "event_ticker": "KXPOLITICSMENTION-26MAR26",
       "series_ticker": "",
-      "status": "active",
+      "status": "determined",
       "open_time": "2026-03-26T01:00:00Z",
-      "close_time": "2026-03-27T14:00:00Z",
+      "close_time": "2026-03-26T17:22:24Z",
       "market_count": 10,
       "dominant_group": "culture_entertainment_mentions",
       "dominant_subtype": "podcast_or_stream",
