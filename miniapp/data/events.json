@@ -26261,6 +26261,814 @@
       "slug": "gavin-newsom-governor-gavin-newsom-launches-effort-to-recruit-young-people-to-serve-communities-gain"
     },
     {
+      "group_key": "KXINFANTINOMENTION-26MAR27",
+      "event_title": "Gianni Infantino — FII PRIORITY Miami Summit: DO SPORT & CULTURE HAVE EXPONENTIAL RETURN",
+      "event_ticker": "KXINFANTINOMENTION-26MAR27",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-26T20:30:00Z",
+      "close_time": "2026-03-28T14:00:00Z",
+      "market_count": 12,
+      "dominant_group": "culture_entertainment_mentions",
+      "dominant_subtype": "podcast_or_stream",
+      "dominant_rules_risk": "medium",
+      "speaker": "gianni infantino",
+      "format_confidence": 0.85,
+      "prep_focus": "Пойми формат подкаста, co-host dynamic и какие темы реально могут organically зайти в разговор.",
+      "live_focus": "Следи за topic drift, banter flow и guest/host pivots, а не за scripted-opening логикой.",
+      "priority": "normal",
+      "strike_codes": [
+        "250",
+        "Economy / Economic",
+        "Gaza",
+        "Globe / Global",
+        "Investment / Invested",
+        "Iran",
+        "Mexico",
+        "Event does not qualify",
+        "Peace",
+        "Saudi",
+        "Soccer",
+        "Trump"
+      ],
+      "strike_buckets": {
+        "count": 12,
+        "context_sensitive_hint": 12
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-250",
+            "label": "250",
+            "short_label": "250",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-ECON",
+            "label": "Economy / Economic",
+            "short_label": "ECON",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GAZA",
+            "label": "Gaza",
+            "short_label": "GAZA",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GLOB",
+            "label": "Globe / Global",
+            "short_label": "GLOB",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-IRAN",
+            "label": "Iran",
+            "short_label": "IRAN",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-MEXI",
+            "label": "Mexico",
+            "short_label": "MEXI",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-PEAC",
+            "label": "Peace",
+            "short_label": "PEAC",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SAUD",
+            "label": "Saudi",
+            "short_label": "SAUD",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SOCC",
+            "label": "Soccer",
+            "short_label": "SOCC",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-TRUM",
+            "label": "Trump",
+            "short_label": "TRUM",
+            "note": "manual review · mixed"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-INVE",
+            "label": "Investment / Invested",
+            "short_label": "INVE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-250",
+          "label": "250",
+          "short_label": "250",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-250",
+            "label": "250",
+            "display_label": "250",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-ECON",
+          "label": "Economy / Economic",
+          "short_label": "ECON",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-GAZA",
+          "label": "Gaza",
+          "short_label": "GAZA",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GAZA",
+            "label": "GAZA",
+            "display_label": "Gaza",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-GLOB",
+          "label": "Globe / Global",
+          "short_label": "GLOB",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GLOB",
+            "label": "GLOB",
+            "display_label": "Globe / Global",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-INVE",
+          "label": "Investment / Invested",
+          "short_label": "INVE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-INVE",
+            "label": "INVE",
+            "display_label": "Investment / Invested",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-IRAN",
+          "label": "Iran",
+          "short_label": "IRAN",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-MEXI",
+          "label": "Mexico",
+          "short_label": "MEXI",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-MEXI",
+            "label": "MEXI",
+            "display_label": "Mexico",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-PEAC",
+          "label": "Peace",
+          "short_label": "PEAC",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-SAUD",
+          "label": "Saudi",
+          "short_label": "SAUD",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SAUD",
+            "label": "SAUD",
+            "display_label": "Saudi",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-SOCC",
+          "label": "Soccer",
+          "short_label": "SOCC",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SOCC",
+            "label": "SOCC",
+            "display_label": "Soccer",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXINFANTINOMENTION-26MAR27-TRUM",
+          "label": "Trump",
+          "short_label": "TRUM",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXINFANTINOMENTION-26MAR27-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
+      ],
+      "likely_hooks": [
+        "segment transition",
+        "surprise cameo",
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
+      ],
+      "context_notes": [
+        "В culture/entertainment markets часто важнее flow и structure of show, чем история.",
+        "Hard-news tails без свежего media trigger обычно слабее, чем кажется на бумаге."
+      ],
+      "opening_plan": [
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters."
+      ],
+      "post_opening_plan": [
+        "Если разговор закрепился в одном lane, режь страйки, которым нужен жёсткий topic pivot.",
+        "На podcasts важнее flow and chemistry, чем scripted-opening analogies."
+      ],
+      "qa_transition_plan": [
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-250",
+            "label": "250",
+            "display_label": "250",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GAZA",
+            "label": "GAZA",
+            "display_label": "Gaza",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GLOB",
+            "label": "GLOB",
+            "display_label": "Globe / Global",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-INVE",
+            "label": "INVE",
+            "display_label": "Investment / Invested",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-250",
+            "label": "250",
+            "display_label": "250",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-ECON",
+            "label": "ECON",
+            "display_label": "Economy / Economic",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GAZA",
+            "label": "GAZA",
+            "display_label": "Gaza",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-GLOB",
+            "label": "GLOB",
+            "display_label": "Globe / Global",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-IRAN",
+            "label": "IRAN",
+            "display_label": "Iran",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-MEXI",
+            "label": "MEXI",
+            "display_label": "Mexico",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-PEAC",
+            "label": "PEAC",
+            "display_label": "Peace",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SAUD",
+            "label": "SAUD",
+            "display_label": "Saudi",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-SOCC",
+            "label": "SOCC",
+            "display_label": "Soccer",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXINFANTINOMENTION-26MAR27-INVE",
+            "label": "INVE",
+            "display_label": "Investment / Invested",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь structure of show: segments, host duties, performer slots, likely cameos.",
+        "Ожидай dumb flow на front-page массовых событиях и заранее выдели narrative-driven traps."
+      ],
+      "live_trading_summary": [
+        "Реагируй на segment transitions, а не только на сами слова.",
+        "Если это one-off show, уменьшай уверенность в сырых historical comparisons."
+      ],
+      "risk_summary": [
+        "Высокий front-page / retail flow risk.",
+        "One-off format risk: мало повторяемой истории."
+      ],
+      "manual_trader_prompts": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters.",
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Используй только максимально близкий comparison set по формату события; generic history здесь слабее помогает.",
+        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances."
+      ],
+      "consensus_misread": [
+        "В podcasts crowd часто путает broad topic affinity гостей с реальным probability, что тема вообще зайдёт в live conversation.",
+        "Long-form banter markets легко перепрайсить по clip-worthy narrative, хотя разговор может уйти совсем в другой lane.",
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "live only",
+        "summary": "Достаточно короткой проверки контекста и наблюдения за opening. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "gianni-infantino-fii-priority-miami-summit-do-sport-culture-have-exponential-return"
+    },
+    {
       "group_key": "KXLEAVITTMENTIONDURATION-MAR2626",
       "event_title": "How long will Karoline Leavitt speak for at Press Briefing by the White House Press Secretary Karoline Leavitt?",
       "event_ticker": "KXLEAVITTMENTIONDURATION-MAR2626",
