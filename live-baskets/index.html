@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalshi Live Basket Builder</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #0b1020; color: #e7ecf5; }
+    a { color: #8cc8ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1720px; margin: 0 auto; padding: 20px; }
+    .topbar { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; flex-wrap:wrap; margin-bottom:16px; }
+    .muted { color:#9fb0cf; }
+    .warn { color:#ffd86b; }
+    .danger { color:#ff9b9b; }
+    .card { background:#141a2e; border:1px solid #23304f; border-radius:14px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.2); }
+    .layout { display:grid; grid-template-columns: 320px 420px 1fr; gap:16px; }
+    .sidebar, .baskets { position:sticky; top:16px; align-self:start; max-height:calc(100vh - 32px); overflow:auto; }
+    .search, .input, .select { width:100%; border:1px solid #23304f; background:#0f1629; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
+    .btnrow { display:flex; gap:8px; flex-wrap:wrap; }
+    button { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; padding:8px 10px; border-radius:10px; cursor:pointer; }
+    button:hover { background:#1d2d4f; }
+    button.danger-btn { border-color:#7a2d2d; background:#3a1d22; }
+    .controls { display:grid; gap:10px; }
+    .stat-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px; margin-top:12px; }
+    .stat { background:#10182d; border:1px solid #23304f; border-radius:10px; padding:10px 12px; }
+    .strike-list, .basket-list { display:grid; gap:8px; margin-top:10px; }
+    .strike-chip { padding:8px 10px; border:1px solid #23304f; border-radius:10px; background:#10182d; cursor:grab; user-select:none; }
+    .strike-chip small { display:block; color:#9fb0cf; margin-top:2px; }
+    .basket-card { border:1px solid #23304f; border-radius:12px; background:#10182d; padding:10px; }
+    .basket-head { display:flex; justify-content:space-between; gap:8px; align-items:center; margin-bottom:8px; }
+    .basket-name { font-weight:700; }
+    .dropzone { min-height:56px; border:1px dashed #37507f; border-radius:10px; padding:8px; background:#0e1528; display:grid; gap:8px; }
+    .dropzone.empty::before { content:'Drop strikes here'; color:#7084ab; font-size:13px; }
+    .basket-stats { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; margin-top:8px; }
+    .mini-stat { background:#141d34; border:1px solid #23304f; border-radius:8px; padding:8px; }
+    .pill { display:inline-block; padding:3px 8px; border-radius:999px; font-size:12px; background:#23304f; }
+    .pill.green { background:#163929; color:#8be0af; }
+    .pill.red { background:#4a1f1f; color:#ff9b9b; }
+    .pill.yellow { background:#473814; color:#ffd86b; }
+    .pill.blue { background:#172f56; color:#9fcbff; }
+    .maincol { display:grid; gap:16px; }
+    #chart { width:100%; height:68vh; min-height:620px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { text-align:left; padding:8px; border-bottom:1px solid #23304f; vertical-align:top; }
+    .row-good { background:rgba(47,179,109,.06); }
+    .row-bad { background:rgba(217,92,92,.06); }
+    .section-title { margin:0 0 10px; }
+    .small { font-size:13px; }
+    @media (max-width: 1320px) { .layout { grid-template-columns:1fr; } .sidebar, .baskets { position:static; max-height:none; } #chart { height:56vh; min-height:520px; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div>
+      <div><a href="../index.html">← Back to dashboard</a></div>
+      <h1 id="pageTitle" style="margin:8px 0 8px;">Live Basket Builder</h1>
+      <div class="muted">Build live thematic baskets with drag-and-drop, then monitor how grouped strikes react in real time.</div>
+    </div>
+    <div class="card" style="max-width:760px; width:100%;">
+      <div class="controls">
+        <strong>Load event from Kalshi</strong>
+        <input id="marketUrlInput" class="input" placeholder="https://kalshi.com/markets/.../kxtrumpmentionb-26mar26">
+        <div class="btnrow">
+          <button id="loadBtn">Load event</button>
+          <button id="refreshBtn">Refresh now</button>
+          <button id="saveTemplateBtn">Save template</button>
+        </div>
+        <div class="btnrow">
+          <label class="small muted" style="display:flex; align-items:center; gap:8px;"><input id="autoRefreshToggle" type="checkbox"> Auto-refresh</label>
+          <select id="refreshInterval" class="select" style="max-width:120px;">
+            <option value="5">5s</option>
+            <option value="10" selected>10s</option>
+            <option value="15">15s</option>
+            <option value="30">30s</option>
+          </select>
+          <label class="small muted" style="display:flex; align-items:center; gap:8px;"><input id="showComponentsToggle" type="checkbox" checked> Show component lines</label>
+        </div>
+        <div id="loadStatus" class="muted">Load a Kalshi event URL to start.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar card">
+      <h2 class="section-title">Available strikes</h2>
+      <input id="strikeSearch" class="search" placeholder="Filter strikes...">
+      <div class="btnrow" style="margin-top:10px;">
+        <button id="clearAssignmentsBtn">Clear assignments</button>
+        <button id="seedBasketsBtn">Auto-seed baskets</button>
+      </div>
+      <div class="small muted" style="margin-top:8px;">Drag strike cards into baskets. One strike belongs to one basket in this version.</div>
+      <div id="unassignedList" class="strike-list" style="margin-top:12px;"></div>
+    </div>
+
+    <div class="baskets card">
+      <div style="display:flex; justify-content:space-between; gap:8px; align-items:center;">
+        <h2 class="section-title" style="margin:0;">Baskets</h2>
+        <button id="addBasketBtn">+ Basket</button>
+      </div>
+      <div id="basketList" class="basket-list"></div>
+    </div>
+
+    <div class="maincol">
+      <div class="card">
+        <div id="chart"></div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><div class="muted small">Source</div><div id="sourceLabel"><strong>—</strong></div></div>
+        <div class="stat"><div class="muted small">Coverage</div><div id="coverage"><strong>—</strong></div></div>
+        <div class="stat"><div class="muted small">Last refresh</div><div id="lastRefresh"><strong>—</strong></div></div>
+        <div class="stat"><div class="muted small">Visible traces</div><div id="traceCount"><strong>—</strong></div></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Basket summary</h2>
+        <div class="small muted">Use this to see whether a move is thematic or just a single-token spike.</div>
+        <div style="overflow:auto; margin-top:10px;">
+          <table>
+            <thead>
+              <tr>
+                <th>Basket</th>
+                <th>Members</th>
+                <th>Last avg</th>
+                <th>1m Δ</th>
+                <th>5m Δ</th>
+                <th>Vol (5m)</th>
+                <th>Breadth</th>
+                <th>Leader</th>
+              </tr>
+            </thead>
+            <tbody id="basketSummaryBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
+const DEFAULT_BASKETS = [
+  { name: 'Domestic politics', color: '#4cc9f0' },
+  { name: 'Geopolitics', color: '#f72585' },
+  { name: 'Economy / inflation', color: '#ffd166' },
+  { name: 'Immigration / border', color: '#72efdd' },
+  { name: 'Media / grievance', color: '#c77dff' },
+  { name: 'Tails / noise', color: '#95a4c6' },
+];
+const BASKET_COLORS = ['#4cc9f0','#f72585','#ffd166','#72efdd','#c77dff','#90be6d','#ff8fab','#ff9f1c','#5dade2','#f28482'];
+const state = {
+  currentEventTicker: null,
+  currentUrl: null,
+  eventMeta: null,
+  markets: [],
+  series: [],
+  baskets: [],
+  basketMembers: {},
+  refreshTimer: null,
+  showComponents: true,
+};
+
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function fmtPrice(v) { return Number.isFinite(v) ? v.toFixed(2) : '—'; }
+function fmtSigned(v) { return Number.isFinite(v) ? `${v > 0 ? '+' : ''}${v.toFixed(2)}` : '—'; }
+function fmtTs(v) {
+  if (!v) return '—';
+  const d = new Date(v);
+  if (Number.isNaN(d.getTime())) return String(v);
+  return d.toLocaleString('en-GB', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit', timeZone:'UTC' }) + ' UTC';
+}
+function setStatus(text, cls='muted') {
+  const el = document.getElementById('loadStatus');
+  el.textContent = text;
+  el.className = cls;
+}
+function extractEventTicker(input) {
+  const raw = String(input || '').trim();
+  const m = raw.match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)\b/i);
+  return m ? m[1].toUpperCase() : null;
+}
+function pageTitle() {
+  const eventData = state.eventMeta?.event || state.eventMeta || {};
+  const title = eventData.title || state.currentEventTicker || 'Live Basket Builder';
+  return `Live Basket Builder — ${title}`;
+}
+function basketStorageKey() {
+  return state.currentEventTicker ? `kalshi-live-baskets:${state.currentEventTicker}` : null;
+}
+function templateStorageKey() {
+  return state.currentEventTicker ? `kalshi-live-template:${state.currentEventTicker}` : null;
+}
+function getSeriesMap() {
+  return new Map(state.series.map(s => [s.name, s]));
+}
+function computeSeriesMetrics(points) {
+  const valid = points.filter(p => Number.isFinite(p.y));
+  if (!valid.length) return { last: NaN, delta1m: NaN, delta5m: NaN, vol5m: NaN };
+  const last = valid[valid.length - 1];
+  const prev1 = valid.length >= 2 ? valid[valid.length - 2] : null;
+  const prev5 = valid.length >= 6 ? valid[valid.length - 6] : valid[0];
+  const vol5m = valid.slice(Math.max(0, valid.length - 5)).reduce((acc, p) => acc + (Number.isFinite(p.volume) ? p.volume : 0), 0);
+  return {
+    last: last.y,
+    delta1m: prev1 ? (last.y - prev1.y) : NaN,
+    delta5m: prev5 ? (last.y - prev5.y) : NaN,
+    vol5m,
+  };
+}
+function saveAssignments() {
+  const key = basketStorageKey();
+  if (!key) return;
+  localStorage.setItem(key, JSON.stringify({ baskets: state.baskets, basketMembers: state.basketMembers }));
+}
+function loadAssignments() {
+  const key = basketStorageKey();
+  if (!key) return false;
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return false;
+    const data = JSON.parse(raw);
+    state.baskets = Array.isArray(data.baskets) && data.baskets.length ? data.baskets : structuredClone(DEFAULT_BASKETS);
+    state.basketMembers = data.basketMembers || {};
+    return true;
+  } catch { return false; }
+}
+function saveTemplate() {
+  const key = templateStorageKey();
+  if (!key) return;
+  localStorage.setItem(key, JSON.stringify({ baskets: state.baskets, basketMembers: state.basketMembers }));
+  setStatus('Template saved in browser storage.', 'muted');
+}
+function buildDefaultBaskets() {
+  state.baskets = structuredClone(DEFAULT_BASKETS);
+  state.basketMembers = Object.fromEntries(state.baskets.map(b => [b.name, []]));
+}
+function normalizeAssignments() {
+  const validNames = new Set(state.series.map(s => s.name));
+  const seen = new Set();
+  for (const basket of state.baskets) {
+    const items = (state.basketMembers[basket.name] || []).filter(name => validNames.has(name) && !seen.has(name));
+    items.forEach(name => seen.add(name));
+    state.basketMembers[basket.name] = items;
+  }
+}
+function getUnassigned(filter='') {
+  const assigned = new Set(Object.values(state.basketMembers).flat());
+  const q = filter.trim().toLowerCase();
+  return state.series.filter(s => !assigned.has(s.name) && (!q || s.name.toLowerCase().includes(q)));
+}
+function renderStrikes() {
+  const root = document.getElementById('unassignedList');
+  const items = getUnassigned(document.getElementById('strikeSearch').value || '');
+  root.innerHTML = items.map(s => {
+    const m = s.metrics || {};
+    return `<div class="strike-chip" data-strike-name="${esc(s.name)}"><strong>${esc(s.name)}</strong><small>last ${fmtPrice(m.last)} · 1m ${fmtSigned(m.delta1m)} · 5m ${fmtSigned(m.delta5m)}</small></div>`;
+  }).join('') || '<div class="muted small">No unassigned strikes.</div>';
+  makeSortable(root, 'unassigned');
+}
+function renderBaskets() {
+  const root = document.getElementById('basketList');
+  root.innerHTML = state.baskets.map((basket, idx) => {
+    const members = state.basketMembers[basket.name] || [];
+    const stats = basketStats(basket.name);
+    const tone = !Number.isFinite(stats.delta1mAvg) ? 'blue' : stats.delta1mAvg > 0.25 ? 'green' : stats.delta1mAvg < -0.25 ? 'red' : 'yellow';
+    return `<div class="basket-card">
+      <div class="basket-head">
+        <div style="display:flex; align-items:center; gap:8px; min-width:0;">
+          <span style="width:12px; height:12px; border-radius:999px; background:${basket.color}; display:inline-block;"></span>
+          <input class="input basket-name-input" data-basket-old="${esc(basket.name)}" value="${esc(basket.name)}" style="padding:6px 8px; min-width:0;">
+        </div>
+        <button class="danger-btn remove-basket-btn" data-basket-remove="${esc(basket.name)}">×</button>
+      </div>
+      <div class="dropzone ${members.length ? '' : 'empty'}" data-basket-zone="${esc(basket.name)}">
+        ${members.map(name => {
+          const s = state.series.find(x => x.name === name);
+          const m = s?.metrics || {};
+          return `<div class="strike-chip" data-strike-name="${esc(name)}"><strong>${esc(name)}</strong><small>last ${fmtPrice(m.last)} · 1m ${fmtSigned(m.delta1m)} · 5m ${fmtSigned(m.delta5m)}</small></div>`;
+        }).join('')}
+      </div>
+      <div class="basket-stats">
+        <div class="mini-stat"><div class="muted small">Members</div><strong>${members.length}</strong></div>
+        <div class="mini-stat"><div class="muted small">Signal</div><span class="pill ${tone}">${Number.isFinite(stats.delta1mAvg) ? fmtSigned(stats.delta1mAvg) + ' /1m' : 'idle'}</span></div>
+        <div class="mini-stat"><div class="muted small">5m avg</div><strong>${fmtSigned(stats.delta5mAvg)}</strong></div>
+        <div class="mini-stat"><div class="muted small">Leader</div><strong>${esc(stats.leader || '—')}</strong></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  root.querySelectorAll('[data-basket-zone]').forEach(el => makeSortable(el, el.dataset.basketZone));
+  root.querySelectorAll('.basket-name-input').forEach(input => {
+    input.addEventListener('change', () => renameBasket(input.dataset.basketOld, input.value.trim()));
+  });
+  root.querySelectorAll('.remove-basket-btn').forEach(btn => {
+    btn.addEventListener('click', () => removeBasket(btn.dataset.basketRemove));
+  });
+}
+function makeSortable(el, groupName) {
+  if (!el || el.dataset.sortableReady === '1') return;
+  Sortable.create(el, {
+    group: 'live-baskets',
+    animation: 150,
+    onEnd: syncAssignmentsFromDom,
+    ghostClass: 'ghost',
+  });
+  el.dataset.sortableReady = '1';
+}
+function syncAssignmentsFromDom() {
+  const next = Object.fromEntries(state.baskets.map(b => [b.name, []]));
+  document.querySelectorAll('[data-basket-zone]').forEach(zone => {
+    const basketName = zone.dataset.basketZone;
+    next[basketName] = [...zone.querySelectorAll('[data-strike-name]')].map(node => node.dataset.strikeName);
+  });
+  state.basketMembers = next;
+  normalizeAssignments();
+  saveAssignments();
+  rerender();
+}
+function renameBasket(oldName, newName) {
+  if (!oldName || !newName || oldName === newName) return rerender();
+  if (state.baskets.some(b => b.name === newName)) {
+    setStatus('Basket name already exists.', 'warn');
+    return rerender();
+  }
+  const basket = state.baskets.find(b => b.name === oldName);
+  if (!basket) return;
+  basket.name = newName;
+  state.basketMembers[newName] = state.basketMembers[oldName] || [];
+  delete state.basketMembers[oldName];
+  saveAssignments();
+  rerender();
+}
+function removeBasket(name) {
+  const members = state.basketMembers[name] || [];
+  delete state.basketMembers[name];
+  state.baskets = state.baskets.filter(b => b.name !== name);
+  if (!state.baskets.length) buildDefaultBaskets();
+  const fallback = state.baskets[0].name;
+  state.basketMembers[fallback] = [...(state.basketMembers[fallback] || []), ...members];
+  normalizeAssignments();
+  saveAssignments();
+  rerender();
+}
+function addBasket() {
+  const base = 'New basket';
+  let n = 1;
+  let name = `${base} ${n}`;
+  while (state.baskets.some(b => b.name === name)) { n += 1; name = `${base} ${n}`; }
+  state.baskets.push({ name, color: BASKET_COLORS[state.baskets.length % BASKET_COLORS.length] });
+  state.basketMembers[name] = [];
+  saveAssignments();
+  rerender();
+}
+function basketStats(name) {
+  const members = (state.basketMembers[name] || []).map(m => state.series.find(s => s.name === m)).filter(Boolean);
+  if (!members.length) return { count:0, lastAvg:NaN, delta1mAvg:NaN, delta5mAvg:NaN, vol5m:NaN, breadth:'0/0', leader:null };
+  const lastAvg = avg(members.map(x => x.metrics.last));
+  const delta1mAvg = avg(members.map(x => x.metrics.delta1m));
+  const delta5mAvg = avg(members.map(x => x.metrics.delta5m));
+  const vol5m = sum(members.map(x => x.metrics.vol5m));
+  const positives = members.filter(x => Number.isFinite(x.metrics.delta1m) && x.metrics.delta1m > 0).length;
+  const leaderObj = [...members].sort((a,b) => (b.metrics.delta1m || -999) - (a.metrics.delta1m || -999))[0];
+  return { count: members.length, lastAvg, delta1mAvg, delta5mAvg, vol5m, breadth:`${positives}/${members.length}`, leader: leaderObj?.name || null };
+}
+function avg(arr) {
+  const v = arr.filter(Number.isFinite);
+  return v.length ? v.reduce((a,b) => a+b, 0) / v.length : NaN;
+}
+function sum(arr) {
+  const v = arr.filter(Number.isFinite);
+  return v.length ? v.reduce((a,b) => a+b, 0) : NaN;
+}
+function renderSummaryTable() {
+  const body = document.getElementById('basketSummaryBody');
+  body.innerHTML = state.baskets.map(basket => {
+    const stats = basketStats(basket.name);
+    const cls = Number.isFinite(stats.delta1mAvg) ? (stats.delta1mAvg > 0.25 ? 'row-good' : stats.delta1mAvg < -0.25 ? 'row-bad' : '') : '';
+    return `<tr class="${cls}">
+      <td><strong>${esc(basket.name)}</strong></td>
+      <td>${stats.count}</td>
+      <td>${fmtPrice(stats.lastAvg)}</td>
+      <td>${fmtSigned(stats.delta1mAvg)}</td>
+      <td>${fmtSigned(stats.delta5mAvg)}</td>
+      <td>${fmtPrice(stats.vol5m)}</td>
+      <td>${esc(stats.breadth)}</td>
+      <td>${esc(stats.leader || '—')}</td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="8" class="muted">No baskets yet.</td></tr>';
+}
+function buildChart() {
+  const traces = [];
+  const showComponents = document.getElementById('showComponentsToggle').checked;
+  for (const basket of state.baskets) {
+    const members = (state.basketMembers[basket.name] || []).map(n => state.series.find(s => s.name === n)).filter(Boolean);
+    if (!members.length) continue;
+    const timestampSet = [...new Set(members.flatMap(m => m.points.map(p => p.x)))].sort();
+    const basketY = timestampSet.map(ts => avg(members.map(m => {
+      const p = m.pointMap.get(ts);
+      return p ? p.y : NaN;
+    })));
+    traces.push({ x: timestampSet, y: basketY, mode:'lines', name:`${basket.name} avg`, line:{ width:4, color:basket.color }, hovertemplate:`<b>${esc(basket.name)} avg</b><br>%{x}<br>%{y:.2f}<extra></extra>` });
+    if (showComponents) {
+      for (const member of members) {
+        traces.push({ x: member.points.map(p => p.x), y: member.points.map(p => Number.isFinite(p.y) ? p.y : null), mode:'lines', name:`${basket.name} · ${member.name}`, line:{ width:1.5, color:basket.color, dash:'dot' }, opacity:0.45, hovertemplate:`<b>${esc(member.name)}</b><br>%{x}<br>%{y:.2f}<extra></extra>` });
+      }
+    }
+  }
+  if (!traces.length) {
+    document.getElementById('chart').innerHTML = '<div class="muted">Load an event and assign strikes into baskets.</div>';
+    document.getElementById('traceCount').innerHTML = '<strong>0</strong>';
+    return;
+  }
+  Plotly.newPlot('chart', traces, {
+    paper_bgcolor:'#141a2e', plot_bgcolor:'#10182d', font:{ color:'#e7ecf5' }, hovermode:'x unified',
+    margin:{ l:60, r:20, t:20, b:50 }, xaxis:{ gridcolor:'#243250', title:'Time (UTC)' }, yaxis:{ gridcolor:'#243250', title:'Price (cents)' },
+    legend:{ orientation:'h', yanchor:'bottom', y:1.02, x:0 }
+  }, { responsive:true, displaylogo:false });
+  document.getElementById('traceCount').innerHTML = `<strong>${traces.length}</strong>`;
+}
+function updateMeta() {
+  document.getElementById('pageTitle').textContent = pageTitle();
+  document.title = pageTitle();
+  document.getElementById('sourceLabel').innerHTML = `<strong>${esc(state.currentEventTicker || '—')}</strong>`;
+  const points = state.series.flatMap(s => s.points.map(p => p.x));
+  const sorted = [...new Set(points)].sort();
+  document.getElementById('coverage').innerHTML = `<strong>${esc(sorted[0] || '—')} → ${esc(sorted.at(-1) || '—')}</strong>`;
+}
+function rerender() {
+  renderStrikes();
+  renderBaskets();
+  renderSummaryTable();
+  buildChart();
+  updateMeta();
+}
+function classifyBasketSeed(name) {
+  const s = name.toLowerCase();
+  if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics';
+  if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation';
+  if (/(ice|dhs|border|illegal|id\b|identification|sanctuary)/.test(s)) return 'Immigration / border';
+  if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics';
+  if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance';
+  return 'Tails / noise';
+}
+function autoSeedBaskets() {
+  if (!state.series.length) return;
+  for (const basket of state.baskets) state.basketMembers[basket.name] = [];
+  for (const s of state.series) {
+    const target = classifyBasketSeed(s.name);
+    if (!state.basketMembers[target]) continue;
+    state.basketMembers[target].push(s.name);
+  }
+  normalizeAssignments();
+  saveAssignments();
+  rerender();
+}
+async function loadEvent(url) {
+  const eventTicker = extractEventTicker(url);
+  if (!eventTicker) return setStatus('Could not parse Kalshi event ticker from URL.', 'warn');
+  state.currentEventTicker = eventTicker;
+  state.currentUrl = url;
+  setStatus(`Loading ${eventTicker}...`, 'muted');
+  try {
+    const res = await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(url)}`);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`proxy ${res.status} ${text.slice(0, 200)}`);
+    }
+    const payload = await res.json();
+    state.eventMeta = payload.event || null;
+    state.markets = payload.markets || [];
+    const marketMap = new Map(state.markets.map(m => [m.ticker, m]));
+    state.series = (payload.candlesticks || []).map(entry => {
+      const meta = marketMap.get(entry.market_ticker) || {};
+      const name = meta.yes_sub_title || meta.subtitle || meta.title || entry.market_ticker;
+      const points = (entry.candlesticks || []).map(c => ({
+        x: new Date((c.end_period_ts || 0) * 1000).toISOString(),
+        y: (() => {
+          const price = c.price?.close_dollars ?? c.price?.mean_dollars ?? c.price?.previous_dollars ?? null;
+          return price == null ? NaN : parseFloat(price) * 100;
+        })(),
+        volume: c.volume_fp != null ? parseFloat(c.volume_fp) : NaN,
+      }));
+      const pointMap = new Map(points.map(p => [p.x, p]));
+      return { name, ticker: entry.market_ticker, points, pointMap, metrics: computeSeriesMetrics(points) };
+    }).filter(s => s.points.some(p => Number.isFinite(p.y)));
+
+    if (!loadAssignments()) buildDefaultBaskets();
+    normalizeAssignments();
+    rerender();
+    document.getElementById('lastRefresh').innerHTML = `<strong>${esc(fmtTs(new Date().toISOString()))}</strong>`;
+    const human = state.eventMeta?.event?.title || state.eventMeta?.title || payload.event_ticker;
+    setStatus(`Loaded ${human} (${state.series.length} strikes, interval=${payload.period_interval || 1}m).`, 'muted');
+    const qp = new URLSearchParams(location.search);
+    qp.set('market_url', url);
+    history.replaceState({}, '', `${location.pathname}?${qp.toString()}`);
+  } catch (err) {
+    setStatus(`Load error: ${err.message || err}`, 'danger');
+  }
+}
+async function refreshEvent() {
+  if (!state.currentUrl) return;
+  const prevAssignments = JSON.parse(JSON.stringify(state.basketMembers));
+  const prevBaskets = JSON.parse(JSON.stringify(state.baskets));
+  await loadEvent(state.currentUrl);
+  state.baskets = prevBaskets;
+  state.basketMembers = prevAssignments;
+  normalizeAssignments();
+  saveAssignments();
+  rerender();
+  document.getElementById('lastRefresh').innerHTML = `<strong>${esc(fmtTs(new Date().toISOString()))}</strong>`;
+}
+function clearAssignments() {
+  for (const basket of state.baskets) state.basketMembers[basket.name] = [];
+  saveAssignments();
+  rerender();
+}
+function updateAutoRefresh() {
+  if (state.refreshTimer) clearInterval(state.refreshTimer);
+  state.refreshTimer = null;
+  if (!document.getElementById('autoRefreshToggle').checked) return;
+  const sec = Number(document.getElementById('refreshInterval').value || 10);
+  state.refreshTimer = setInterval(refreshEvent, sec * 1000);
+}
+
+document.getElementById('loadBtn').addEventListener('click', () => loadEvent(document.getElementById('marketUrlInput').value));
+document.getElementById('refreshBtn').addEventListener('click', refreshEvent);
+document.getElementById('addBasketBtn').addEventListener('click', addBasket);
+document.getElementById('clearAssignmentsBtn').addEventListener('click', clearAssignments);
+document.getElementById('seedBasketsBtn').addEventListener('click', autoSeedBaskets);
+document.getElementById('saveTemplateBtn').addEventListener('click', saveTemplate);
+document.getElementById('showComponentsToggle').addEventListener('change', rerender);
+document.getElementById('autoRefreshToggle').addEventListener('change', updateAutoRefresh);
+document.getElementById('refreshInterval').addEventListener('change', updateAutoRefresh);
+document.getElementById('strikeSearch').addEventListener('input', renderStrikes);
+
+const qp = new URLSearchParams(location.search);
+const initial = qp.get('market_url');
+if (initial) {
+  document.getElementById('marketUrlInput').value = initial;
+  loadEvent(initial);
+} else {
+  buildDefaultBaskets();
+  rerender();
+}
+</script>
+</body>
+</html>
