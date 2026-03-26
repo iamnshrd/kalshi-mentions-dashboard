@@ -63,7 +63,7 @@
 import React, {useEffect, useMemo, useState} from 'https://esm.sh/react@18.3.1';
 import {createRoot} from 'https://esm.sh/react-dom@18.3.1/client';
 import htm from 'https://esm.sh/htm@3.1.1';
-import {DndContext, DragOverlay, PointerSensor, useDraggable, useDroppable, useSensor, useSensors} from 'https://esm.sh/@dnd-kit/core@6.3.1';
+import { ReactSortable } from 'https://esm.sh/react-sortablejs@6.1.4';
 const html = htm.bind(React.createElement);
 const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
 const DEFAULT_BASKETS = [
@@ -75,35 +75,21 @@ const DEFAULT_BASKETS = [
   { name: 'Tails / noise', color: '#95a4c6' },
 ];
 const BASKET_COLORS = ['#4cc9f0','#f72585','#ffd166','#72efdd','#c77dff','#90be6d','#ff8fab','#ff9f1c','#5dade2','#f28482'];
-const esc = (s) => String(s ?? '');
 const fmtPrice = (v) => Number.isFinite(v) ? v.toFixed(2) : '—';
 const fmtTs = (v) => { if(!v) return '—'; const d = new Date(v); if (Number.isNaN(d.getTime())) return String(v); return d.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'}) + ' UTC'; };
 const avg = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : NaN; };
 const sum = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0) : NaN; };
-const extractEventTicker = (input) => { const m = String(input||'').trim().match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)\b/i); return m ? m[1].toUpperCase() : null; };
+const extractEventTicker = (input) => { const m = String(input||'').trim().match(/([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)/i); return m ? m[1].toUpperCase() : null; };
 const extractMarketSnapshotPrice = (meta) => { for (const v of [meta.last_price_dollars,meta.yes_price_dollars,meta.last_price,meta.yes_price,meta.yes_bid_dollars,meta.yes_ask_dollars]) { const n = parseFloat(v); if (Number.isFinite(n)) return n*100; } return NaN; };
 const extractMarketSnapshotVolume = (meta) => { for (const v of [meta.volume_fp,meta.volume,meta.open_interest_fp]) { const n = parseFloat(v); if (Number.isFinite(n)) return n; } return NaN; };
 const computeSeriesMetrics = (points) => { const valid=points.filter(p=>Number.isFinite(p.y)); if(!valid.length) return {last:NaN,delta1m:NaN,delta5m:NaN,vol5m:NaN}; const last=valid.at(-1); const prev1=valid.length>=2?valid.at(-2):null; const prev5=valid.length>=6?valid.at(-6):valid[0]; return {last:last.y,delta1m:prev1?(last.y-prev1.y):NaN,delta5m:prev5?(last.y-prev5.y):NaN,vol5m:sum(valid.slice(-5).map(p=>p.volume))}; };
-const classifyBasketSeed = (name) => { const s = name.toLowerCase(); if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if (/(ice|dhs|border|illegal|id\b|identification|sanctuary)/.test(s)) return 'Immigration / border'; if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise'; };
-function StrikeChip({name, draggableId}) {
-  const {attributes, listeners, setNodeRef, transform, isDragging} = useDraggable({id: draggableId, data:{strikeName:name}});
-  const style = transform ? {transform:`translate3d(${transform.x}px, ${transform.y}px, 0)`} : undefined;
-  return html`<div ref=${setNodeRef} style=${style} className="strike-chip" ...${attributes} ...${listeners}><strong>${name}</strong></div>`;
+const classifyBasketSeed = (name) => { const s = name.toLowerCase(); if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if (/(ice|dhs|border|illegal|id|identification|sanctuary)/.test(s)) return 'Immigration / border'; if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise'; };
+
+function StrikeChip({item}) {
+  return html`<div className="strike-chip"><strong>${item.name}</strong></div>`;
 }
-function BasketPill({name, price, color, draggableId}) {
-  const {attributes, listeners, setNodeRef, transform} = useDraggable({id: draggableId, data:{strikeName:name}});
-  const style = transform ? {transform:`translate3d(${transform.x}px, ${transform.y}px, 0)`} : undefined;
-  return html`<div ref=${setNodeRef} style=${style} className="basket-pill" ...${attributes} ...${listeners}><span className="basket-pill-dot" style=${{background:color}}></span><span className="basket-pill-name">${name}</span><span className="basket-pill-price">${fmtPrice(price)}</span></div>`;
-}
-function BasketCard({basket, members, selected, onSelect, onRename, onDelete, marketMap, over}) {
-  const {setNodeRef} = useDroppable({id:`basket:${basket.name}`});
-  const slots = [];
-  for (const name of members.slice(0,8)) {
-    const s = marketMap.get(name);
-    slots.push(html`<${BasketPill} key=${name} name=${name} price=${s?.metrics?.last} color=${basket.color} draggableId=${`strike:${name}`} />`);
-  }
-  while (slots.length < 8) slots.push(html`<div className="basket-pill placeholder" key=${`ph-${slots.length}`}><span className="basket-pill-dot" style=${{background:'#51617f'}}></span><span className="basket-pill-name">—</span><span className="basket-pill-price"></span></div>`);
-  return html`<div ref=${setNodeRef} className=${`basket-card ${selected?'active':''} ${over?'over':''}`} onClick=${onSelect}><div className="basket-head"><div className="basket-title"><span className="basket-dot" style=${{background:basket.color}}></span><div className="basket-name">${basket.name}</div></div><div className="basket-actions"><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); onRename();}}>r</button><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); onDelete();}}>×</button></div></div><div className="basket-pill-grid">${slots}</div></div>`;
+function BasketPill({item, color}) {
+  return html`<div className="basket-pill"><span className="basket-pill-dot" style=${{background:color}}></span><span className="basket-pill-name">${item.name}</span><span className="basket-pill-price">${fmtPrice(item.price)}</span></div>`;
 }
 function App() {
   const [marketUrl, setMarketUrl] = useState('');
@@ -111,41 +97,23 @@ function App() {
   const [statusClass, setStatusClass] = useState('muted small');
   const [eventMeta, setEventMeta] = useState(null);
   const [currentEventTicker, setCurrentEventTicker] = useState(null);
-  const [markets, setMarkets] = useState([]);
   const [series, setSeries] = useState([]);
   const [baskets, setBaskets] = useState([]);
   const [basketMembers, setBasketMembers] = useState({});
+  const [unassignedItems, setUnassignedItems] = useState([]);
   const [selectedBasket, setSelectedBasket] = useState(null);
   const [timeline, setTimeline] = useState([]);
-  const [dragId, setDragId] = useState(null);
-  const [overId, setOverId] = useState(null);
-  const [liveSnapshots, setLiveSnapshots] = useState({});
-  const sensors = useSensors(useSensor(PointerSensor, {activationConstraint:{distance:4}}));
-  const qs = new URLSearchParams(location.search);
-  const initialMarketUrl = qs.get('market_url') || '';
+  const initialMarketUrl = new URLSearchParams(location.search).get('market_url') || '';
   useEffect(()=>{ if(initialMarketUrl){ setMarketUrl(initialMarketUrl); loadEvent(initialMarketUrl); } }, []);
   const marketMap = useMemo(()=> new Map(series.map(s=>[s.name,s])), [series]);
-  const assigned = useMemo(()=> new Set(Object.values(basketMembers).flat()), [basketMembers]);
-  const unassigned = useMemo(()=> series.filter(s=>!assigned.has(s.name)), [series, assigned]);
-  const basketStats = (name) => {
-    const members=(basketMembers[name]||[]).map(n=>marketMap.get(n)).filter(Boolean);
-    if(!members.length) return {lastAvg:NaN};
-    return {lastAvg:avg(members.map(m=>m.metrics.last))};
-  };
-  function pushTimeline(text){ setTimeline(prev => [{ts:new Date().toISOString(), text}, ...prev].slice(0,20)); }
-  function buildDefaultBaskets(){ setBaskets([]); setBasketMembers({}); setSelectedBasket(null); }
-  function addBasket(){ let i=1, name=`New basket ${i}`; while(baskets.some(b=>b.name===name)){ i++; name=`New basket ${i}`; } const next=[...baskets, {name, color:BASKET_COLORS[baskets.length % BASKET_COLORS.length]}]; setBaskets(next); setBasketMembers(prev=>({...prev, [name]:[]})); setSelectedBasket(name); pushTimeline(`basket created: ${name}`); }
-  function removeBasket(name){ setBaskets(prev=>prev.filter(b=>b.name!==name)); setBasketMembers(prev=>{ const n={...prev}; delete n[name]; return n; }); setSelectedBasket(prev=>prev===name ? null : prev); pushTimeline(`basket deleted: ${name}`); }
-  function renameBasket(oldName){ const nextName = prompt('Rename basket', oldName); if(!nextName || nextName===oldName || baskets.some(b=>b.name===nextName)) return; setBaskets(prev=>prev.map(b=>b.name===oldName?({...b,name:nextName}):b)); setBasketMembers(prev=>{ const n={...prev, [nextName]: prev[oldName] || []}; delete n[oldName]; return n; }); if(selectedBasket===oldName) setSelectedBasket(nextName); pushTimeline(`basket renamed to ${nextName}`); }
-  function moveStrike(strikeName, target){
-    setBasketMembers(prev=>{
-      const next={...prev};
-      for(const key of Object.keys(next)) next[key]=(next[key]||[]).filter(x=>x!==strikeName);
-      if(target && target.startsWith('basket:')){ const basket=target.slice(7); next[basket]=[...(next[basket]||[]), strikeName]; }
-      return next;
-    });
-    pushTimeline(target==='unassigned' ? 'strike returned to unassigned' : `strike moved to ${target.slice(7)}`);
+  function rebuildUnassigned(nextBasketMembers, allSeries=series){
+    const assigned = new Set(Object.values(nextBasketMembers).flat().map(x=>x.name));
+    return allSeries.filter(s=>!assigned.has(s.name)).map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}));
   }
+  function pushTimeline(text){ setTimeline(prev => [{ts:new Date().toISOString(), text}, ...prev].slice(0,20)); }
+  function addBasket(){ let i=1, name=`New basket ${i}`; while(baskets.some(b=>b.name===name)){ i++; name=`New basket ${i}`; } setBaskets(prev=>[...prev, {name, color:BASKET_COLORS[prev.length % BASKET_COLORS.length]}]); setBasketMembers(prev=>({...prev, [name]:[]})); setSelectedBasket(name); pushTimeline(`basket created: ${name}`); }
+  function removeBasket(name){ setBaskets(prev=>prev.filter(b=>b.name!==name)); setBasketMembers(prev=>{ const copy={...prev}; delete copy[name]; const rebuilt=rebuildUnassigned(copy); setUnassignedItems(rebuilt); return copy; }); setSelectedBasket(prev=>prev===name?null:prev); pushTimeline(`basket deleted: ${name}`); }
+  function renameBasket(oldName){ const nextName = prompt('Rename basket', oldName); if(!nextName || nextName===oldName || baskets.some(b=>b.name===nextName)) return; setBaskets(prev=>prev.map(b=>b.name===oldName?({...b,name:nextName}):b)); setBasketMembers(prev=>{ const copy={...prev, [nextName]: prev[oldName] || []}; delete copy[oldName]; return copy; }); if(selectedBasket===oldName) setSelectedBasket(nextName); pushTimeline(`basket renamed to ${nextName}`); }
   async function loadEvent(url){
     const eventTicker=extractEventTicker(url); if(!eventTicker){ setStatus('Could not parse Kalshi event ticker from URL.'); setStatusClass('warn'); return; }
     setCurrentEventTicker(eventTicker); setStatus(`Loading ${eventTicker}...`); setStatusClass('muted small');
@@ -153,19 +121,21 @@ function App() {
       const res=await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(url)}`);
       if(!res.ok){ const txt=await res.text(); throw new Error(`proxy ${res.status} ${txt.slice(0,160)}`); }
       const payload=await res.json();
-      setEventMeta(payload.event||null); setMarkets(payload.markets||[]);
+      setEventMeta(payload.event||null);
       const marketMap=new Map((payload.markets||[]).map(m=>[m.ticker,m]));
       const candleMap=new Map((payload.candlesticks||[]).map(entry=>[entry.market_ticker,entry]));
       const nowIso=new Date().toISOString();
-      const nextSnapshots={...liveSnapshots};
       const nextSeries=(payload.markets||[]).map(meta=>{
         const entry=candleMap.get(meta.ticker)||{candlesticks:[]}; const name=meta.yes_sub_title||meta.subtitle||meta.title||meta.ticker;
         let points=(entry.candlesticks||[]).map(c=>({x:new Date((c.end_period_ts||0)*1000).toISOString(), y:(()=>{const p=c.price?.close_dollars??c.price?.mean_dollars??c.price?.previous_dollars??null; return p==null?NaN:parseFloat(p)*100;})(), volume:c.volume_fp!=null?parseFloat(c.volume_fp):NaN})).filter(p=>Number.isFinite(p.y));
-        const snapshotPrice=extractMarketSnapshotPrice(meta); const snapshotVolume=extractMarketSnapshotVolume(meta); const prev=nextSnapshots[name]||[];
-        if(!points.length && Number.isFinite(snapshotPrice)) points=[...prev,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240); else if(Number.isFinite(snapshotPrice)) points=[...points,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240);
-        nextSnapshots[name]=points; return {name,ticker:meta.ticker,points,pointMap:new Map(points.map(p=>[p.x,p])),metrics:computeSeriesMetrics(points)};
+        const snapshotPrice=extractMarketSnapshotPrice(meta); const snapshotVolume=extractMarketSnapshotVolume(meta);
+        if(!points.length && Number.isFinite(snapshotPrice)) points=[{x:nowIso,y:snapshotPrice,volume:snapshotVolume}];
+        else if(Number.isFinite(snapshotPrice)) points=[...points,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240);
+        return {name,ticker:meta.ticker,points,pointMap:new Map(points.map(p=>[p.x,p])),metrics:computeSeriesMetrics(points)};
       }).filter(s=>s.points.length);
-      setLiveSnapshots(nextSnapshots); setSeries(nextSeries);
+      setSeries(nextSeries);
+      setBaskets([]); setBasketMembers({}); setSelectedBasket(null);
+      setUnassignedItems(nextSeries.map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last})));
       const human=payload.event?.event?.title || payload.event?.title || payload.event_ticker;
       setStatus(`Loaded ${human} (${nextSeries.length} strikes, interval=${payload.period_interval||1}m).`); setStatusClass('muted small');
       pushTimeline(`loaded ${payload.event_ticker}`);
@@ -175,22 +145,21 @@ function App() {
   function autoSeed(){
     const newBaskets = DEFAULT_BASKETS.map(x=>({...x}));
     const members = Object.fromEntries(newBaskets.map(b=>[b.name,[]]));
-    for (const s of series){ const target=classifyBasketSeed(s.name); if(members[target]) members[target].push(s.name); }
-    setBaskets(newBaskets); setBasketMembers(members); setSelectedBasket(newBaskets[0]?.name||null); pushTimeline('auto-seeded baskets');
+    for (const s of series){ const target=classifyBasketSeed(s.name); if(members[target]) members[target].push({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}); }
+    setBaskets(newBaskets); setBasketMembers(members); setSelectedBasket(newBaskets[0]?.name||null); setUnassignedItems(rebuildUnassigned(members)); pushTimeline('auto-seeded baskets');
   }
   useEffect(()=>{
     const selected=selectedBasket || baskets[0]?.name;
     const basket = baskets.find(b=>b.name===selected);
     if(!selected || !basket){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">Select a basket.</div>'; return; }
-    const members=(basketMembers[selected]||[]).map(n=>marketMap.get(n)).filter(Boolean);
+    const members=(basketMembers[selected]||[]).map(item=>marketMap.get(item.name)).filter(Boolean);
     if(!members.length){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">No strikes in basket.</div>'; return; }
     const ts=[...new Set(members.flatMap(m=>m.points.map(p=>p.x)))].sort().slice(-60);
     const avgY=ts.map(t=>avg(members.map(m=>m.pointMap.get(t)?.y)));
-    const traces=[{x:ts,y:avgY,mode:'lines',name:`${selected} avg`,line:{width:4,color:basket.color}}];
-    Plotly.newPlot('chart', traces, {paper_bgcolor:'#141a2e',plot_bgcolor:'#10182d',font:{color:'#e7ecf5'},hovermode:'x unified',margin:{l:60,r:20,t:10,b:50},xaxis:{gridcolor:'#20304d',title:'Time (UTC)'},yaxis:{gridcolor:'#20304d',title:'Price (cents)'},legend:{orientation:'h',y:-0.2,x:0}}, {responsive:true,displaylogo:false});
+    Plotly.newPlot('chart', [{x:ts,y:avgY,mode:'lines',name:`${selected} avg`,line:{width:4,color:basket.color}}], {paper_bgcolor:'#141a2e',plot_bgcolor:'#10182d',font:{color:'#e7ecf5'},hovermode:'x unified',margin:{l:60,r:20,t:10,b:50},xaxis:{gridcolor:'#20304d',title:'Time (UTC)'},yaxis:{gridcolor:'#20304d',title:'Price (cents)'},legend:{orientation:'h',y:-0.2,x:0}}, {responsive:true,displaylogo:false});
   }, [selectedBasket, baskets, basketMembers, series]);
-  const {setNodeRef: setUnassignedRef, isOver: isOverUnassigned} = useDroppable({id:'unassigned'});
-  return html`<${DndContext} sensors=${sensors} onDragStart=${(e)=>setDragId(e.active.id)} onDragOver=${(e)=>setOverId(e.over?.id || null)} onDragEnd=${(e)=>{ const strikeName=e.active?.data?.current?.strikeName; const target=e.over?.id; setDragId(null); setOverId(null); if(strikeName && target) moveStrike(strikeName, String(target)); }} onDragCancel=${()=>{setDragId(null); setOverId(null);}}><div className="wrap"><div className="topbar"><div className="topbar-inner"><input className="input" value=${marketUrl} onInput=${e=>setMarketUrl(e.target.value)} placeholder="Paste Kalshi event URL..." /><button onClick=${()=>loadEvent(marketUrl)}>Load event</button><button onClick=${()=>loadEvent(marketUrl)}>Refresh now</button><button onClick=${()=>pushTimeline('template saved')}>Save template</button><button onClick=${addBasket}>Create basket</button><button onClick=${autoSeed}>Auto-seed baskets</button><div className=${statusClass}>${status}</div></div></div><div className="layout-top"><div className="card sticky-col"><div className="board-header"><h2 style=${{margin:0}}>Unassigned strikes</h2></div><div ref=${setUnassignedRef} className=${`strike-list drop-target-unassigned ${isOverUnassigned?'over drop-active':''}`}>${unassigned.map(s=>html`<${StrikeChip} key=${s.name} name=${s.name} draggableId=${`strike:${s.name}`} />`)}</div></div><div><div className="card"><div className="subhead"><div><h1 style=${{margin:0,fontSize:'24px'}}>Live Basket Terminal</h1><div className="muted small">Compact basket board with reliable container drag-and-drop.</div></div><div className="small muted">${eventMeta?.event?.title || eventMeta?.title || currentEventTicker || '—'}</div></div><div className="basket-grid">${baskets.length ? baskets.map(b=>html`<${BasketCard} key=${b.name} basket=${b} members=${basketMembers[b.name]||[]} selected=${selectedBasket===b.name} onSelect=${()=>setSelectedBasket(b.name)} onRename=${()=>renameBasket(b.name)} onDelete=${()=>removeBasket(b.name)} marketMap=${marketMap} over=${overId===`basket:${b.name}`} />`) : html`<div className="card muted small">No baskets yet. Create one or auto-seed baskets.</div>`}</div></div><div className="card chart-section"><div className="subhead"><h2 style=${{margin:0}}>Basket chart</h2></div><div id="chart"></div></div><div className="card timeline-section"><div className="subhead"><h2 style=${{margin:0}}>Timeline / tape</h2></div><div className="timeline-row">${timeline.map((item,idx)=>html`<div className="timeline-item" key=${idx}>${fmtTs(item.ts)} ${item.text}</div>`)}</div></div></div></div><${DragOverlay}>${dragId ? html`<div className="drag-overlay">${String(dragId).replace(/^strike:/,'')}</div>` : null}</${DragOverlay}></div></${DndContext}>`;
+  const commonGroup = {name:'shared-strikes', pull:true, put:true};
+  return html`<div className="wrap"><div className="topbar"><div className="topbar-inner"><input className="input" value=${marketUrl} onInput=${e=>setMarketUrl(e.target.value)} placeholder="Paste Kalshi event URL..." /><button onClick=${()=>loadEvent(marketUrl)}>Load event</button><button onClick=${()=>loadEvent(marketUrl)}>Refresh now</button><button onClick=${()=>pushTimeline('template saved')}>Save template</button><button onClick=${addBasket}>Create basket</button><button onClick=${autoSeed}>Auto-seed baskets</button><div className=${statusClass}>${status}</div></div></div><div className="layout-top"><div className="card sticky-col"><div className="board-header"><h2 style=${{margin:0}}>Unassigned strikes</h2></div><${ReactSortable} list=${unassignedItems} setList=${(next)=>{ setUnassignedItems(next); const names = new Set(next.map(x=>x.name)); setBasketMembers(prev=>{ const copy={}; for(const key of Object.keys(prev)){ copy[key]=(prev[key]||[]).filter(x=>!names.has(x.name)); } return copy; }); }} group=${commonGroup} animation=${150} className="strike-list">${unassignedItems.map(item=>html`<${StrikeChip} key=${item.id} item=${item} />`)}</${ReactSortable}></div><div><div className="card"><div className="subhead"><div><h1 style=${{margin:0,fontSize:'24px'}}>Live Basket Terminal</h1><div className="muted small">React Sortable baskets page.</div></div><div className="small muted">${eventMeta?.event?.title || eventMeta?.title || currentEventTicker || '—'}</div></div><div className="basket-grid">${baskets.length ? baskets.map(b=>html`<div key=${b.name} className=${`basket-card ${selectedBasket===b.name?'active':''}`} onClick=${()=>setSelectedBasket(b.name)}><div className="basket-head"><div className="basket-title"><span className="basket-dot" style=${{background:b.color}}></span><div className="basket-name">${b.name}</div></div><div className="basket-actions"><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); renameBasket(b.name);}}>r</button><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); removeBasket(b.name);}}>×</button></div></div><${ReactSortable} list=${basketMembers[b.name] || []} setList=${(next)=>{ setBasketMembers(prev=>{ const copy={...prev, [b.name]: next}; const assigned = new Set(Object.values(copy).flat().map(x=>x.name)); setUnassignedItems(series.filter(s=>!assigned.has(s.name)).map(s=>({id:`strike:${s.name}`, name:s.name, price:s.metrics.last}))); return copy; }); }} group=${commonGroup} animation=${150} className="basket-pill-grid">${(basketMembers[b.name]||[]).slice(0,8).map(item=>html`<${BasketPill} key=${item.id} item=${item} color=${b.color} />`)}${Array.from({length: Math.max(0, 8 - (basketMembers[b.name]||[]).length)}).map((_,i)=>html`<div className="basket-pill placeholder" key=${`ph-${i}`}><span className="basket-pill-dot" style=${{background:'#51617f'}}></span><span className="basket-pill-name">—</span><span className="basket-pill-price"></span></div>`)}</${ReactSortable}></div>`) : html`<div className="card muted small">No baskets yet. Create one or auto-seed baskets.</div>`}</div></div><div className="card chart-section"><div className="subhead"><h2 style=${{margin:0}}>Basket chart</h2></div><div id="chart"></div></div><div className="card timeline-section"><div className="subhead"><h2 style=${{margin:0}}>Timeline / tape</h2></div><div className="timeline-row">${timeline.map((item,idx)=>html`<div className="timeline-item" key=${idx}>${fmtTs(item.ts)} ${item.text}</div>`)}</div></div></div></div></div>`;
 }
 createRoot(document.getElementById('app')).render(html`<${App} />`);
 </script>
