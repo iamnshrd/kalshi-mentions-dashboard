@@ -23412,7 +23412,7 @@
       "event_title": "Keir Starmer — next Prime Minister's Questions (UK House of Commons)",
       "event_ticker": "KXSTARMERMENTIONB-26APR15",
       "series_ticker": "",
-      "status": "initialized",
+      "status": "active",
       "open_time": "2026-03-26T00:00:00Z",
       "close_time": "2026-04-23T14:00:00Z",
       "market_count": 14,
@@ -69135,6 +69135,918 @@
       },
       "transcript_matches": [],
       "slug": "todd-blanche-cpac-fireside-chat-deputy-attorney-general-todd-blanche"
+    },
+    {
+      "group_key": "KXHOMANMENTION-26MAR26B",
+      "event_title": "Tom Homan — CPAC: Walls Work — Fireside Chat with Tom Homan",
+      "event_ticker": "KXHOMANMENTION-26MAR26B",
+      "series_ticker": "",
+      "status": "initialized",
+      "open_time": "2026-03-26T01:10:00Z",
+      "close_time": "2026-03-27T14:00:00Z",
+      "market_count": 13,
+      "dominant_group": "culture_entertainment_mentions",
+      "dominant_subtype": "podcast_or_stream",
+      "dominant_rules_risk": "medium",
+      "speaker": "tom homan",
+      "format_confidence": 0.85,
+      "prep_focus": "Пойми формат подкаста, co-host dynamic и какие темы реально могут organically зайти в разговор.",
+      "live_focus": "Следи за topic drift, banter flow и guest/host pivots, а не за scripted-opening логикой.",
+      "priority": "normal",
+      "strike_codes": [
+        "Biden (3+ times)",
+        "Body Camera / Body Cam",
+        "Democrat",
+        "Deport / Deported / Deportation",
+        "Fentanyl",
+        "Fraud",
+        "Kristi / Noem",
+        "National Security",
+        "Event does not qualify",
+        "Protest / Protester",
+        "Sanctuary",
+        "Shutdown / Shut Down",
+        "Trump"
+      ],
+      "strike_buckets": {
+        "count": 13,
+        "context_sensitive_hint": 13
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BIDE",
+            "label": "Biden (3+ times)",
+            "short_label": "BIDE",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEMO",
+            "label": "Democrat",
+            "short_label": "DEMO",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FENT",
+            "label": "Fentanyl",
+            "short_label": "FENT",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FRAUD",
+            "label": "Fraud",
+            "short_label": "FRAUD",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-KRIS",
+            "label": "Kristi / Noem",
+            "short_label": "KRIS",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-NATI",
+            "label": "National Security",
+            "short_label": "NATI",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-SANC",
+            "label": "Sanctuary",
+            "short_label": "SANC",
+            "note": "manual review · mixed"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-TRUM",
+            "label": "Trump",
+            "short_label": "TRUM",
+            "note": "manual review · mixed"
+          }
+        ],
+        "game_state_sensitive": [],
+        "likely_trap": [
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BODY",
+            "label": "Body Camera / Body Cam",
+            "short_label": "BODY",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEPO",
+            "label": "Deport / Deported / Deportation",
+            "short_label": "DEPO",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-PROT",
+            "label": "Protest / Protester",
+            "short_label": "PROT",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-SHUT",
+            "label": "Shutdown / Shut Down",
+            "short_label": "SHUT",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-BIDE",
+          "label": "Biden (3+ times)",
+          "short_label": "BIDE",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-BODY",
+          "label": "Body Camera / Body Cam",
+          "short_label": "BODY",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-BODY",
+            "label": "BODY",
+            "display_label": "Body Camera / Body Cam",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-DEMO",
+          "label": "Democrat",
+          "short_label": "DEMO",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEMO",
+            "label": "DEMO",
+            "display_label": "Democrat",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-DEPO",
+          "label": "Deport / Deported / Deportation",
+          "short_label": "DEPO",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEPO",
+            "label": "DEPO",
+            "display_label": "Deport / Deported / Deportation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-FENT",
+          "label": "Fentanyl",
+          "short_label": "FENT",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-FENT",
+            "label": "FENT",
+            "display_label": "Fentanyl",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-FRAUD",
+          "label": "Fraud",
+          "short_label": "FRAUD",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-FRAUD",
+            "label": "FRAUD",
+            "display_label": "Fraud",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-KRIS",
+          "label": "Kristi / Noem",
+          "short_label": "KRIS",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-NATI",
+          "label": "National Security",
+          "short_label": "NATI",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-NATI",
+            "label": "NATI",
+            "display_label": "National Security",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-PROT",
+          "label": "Protest / Protester",
+          "short_label": "PROT",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-PROT",
+            "label": "PROT",
+            "display_label": "Protest / Protester",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-SANC",
+          "label": "Sanctuary",
+          "short_label": "SANC",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-SANC",
+            "label": "SANC",
+            "display_label": "Sanctuary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-SHUT",
+          "label": "Shutdown / Shut Down",
+          "short_label": "SHUT",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXHOMANMENTION-26MAR26B-TRUM",
+          "label": "Trump",
+          "short_label": "TRUM",
+          "note": "manual review · mixed",
+          "bucket": "contextual",
+          "rank": {
+            "market_id": "KXHOMANMENTION-26MAR26B-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Проверь, что именно сейчас двигает conversation incentives у host/guest: свежий clip cycle, Twitter beef, product/news hook или recurring obsession.",
+        "Не путай topic affinity с actual live entry point в разговор."
+      ],
+      "likely_hooks": [
+        "segment transition",
+        "surprise cameo",
+        "retail narrative blowoff",
+        "host chemistry",
+        "fresh clip cycle",
+        "guest pivot"
+      ],
+      "context_notes": [
+        "В culture/entertainment markets часто важнее flow и structure of show, чем история."
+      ],
+      "opening_plan": [
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters."
+      ],
+      "post_opening_plan": [
+        "Если разговор закрепился в одном lane, режь страйки, которым нужен жёсткий topic pivot.",
+        "На podcasts важнее flow and chemistry, чем scripted-opening analogies."
+      ],
+      "qa_transition_plan": [
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEMO",
+            "label": "DEMO",
+            "display_label": "Democrat",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FENT",
+            "label": "FENT",
+            "display_label": "Fentanyl",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FRAUD",
+            "label": "FRAUD",
+            "display_label": "Fraud",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BODY",
+            "label": "BODY",
+            "display_label": "Body Camera / Body Cam",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEPO",
+            "label": "DEPO",
+            "display_label": "Deport / Deported / Deportation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-PROT",
+            "label": "PROT",
+            "display_label": "Protest / Protester",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BIDE",
+            "label": "BIDE",
+            "display_label": "Biden (3+ times)",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEMO",
+            "label": "DEMO",
+            "display_label": "Democrat",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FENT",
+            "label": "FENT",
+            "display_label": "Fentanyl",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-FRAUD",
+            "label": "FRAUD",
+            "display_label": "Fraud",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-KRIS",
+            "label": "KRIS",
+            "display_label": "Kristi / Noem",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-NATI",
+            "label": "NATI",
+            "display_label": "National Security",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-SANC",
+            "label": "SANC",
+            "display_label": "Sanctuary",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-TRUM",
+            "label": "TRUM",
+            "display_label": "Trump",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-BODY",
+            "label": "BODY",
+            "display_label": "Body Camera / Body Cam",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-DEPO",
+            "label": "DEPO",
+            "display_label": "Deport / Deported / Deportation",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-PROT",
+            "label": "PROT",
+            "display_label": "Protest / Protester",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          },
+          {
+            "market_id": "KXHOMANMENTION-26MAR26B-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "theme-linked",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "conversation-flow dependent",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-blue"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь structure of show: segments, host duties, performer slots, likely cameos.",
+        "Ожидай dumb flow на front-page массовых событиях и заранее выдели narrative-driven traps."
+      ],
+      "live_trading_summary": [
+        "Реагируй на segment transitions, а не только на сами слова.",
+        "Если это one-off show, уменьшай уверенность в сырых historical comparisons."
+      ],
+      "risk_summary": [
+        "Высокий front-page / retail flow risk.",
+        "One-off format risk: мало повторяемой истории."
+      ],
+      "manual_trader_prompts": [
+        "Проверь run-of-show, performer order, host duties и вероятные cameo/appearance hooks.",
+        "Отдельно смотри social narrative и front-page retail flow risk.",
+        "Проверь wording/rules для appearance, brand mention и identity-sensitive strikes.",
+        "Не переоцени intro banter: сначала пойми, какой conversational lane реально закрепился.",
+        "Смотри, есть ли у co-hosts/guest естественный bridge к нужным topic clusters.",
+        "Классического Q&A может не быть; вместо этого следи за guest pivot, tangent и reaction loops.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Используй только максимально близкий comparison set по формату события; generic history здесь слабее помогает.",
+        "Для podcasts полезнее same-host chemistry и same-show format, чем generic long-form media appearances."
+      ],
+      "consensus_misread": [
+        "В podcasts crowd часто путает broad topic affinity гостей с реальным probability, что тема вообще зайдёт в live conversation.",
+        "Long-form banter markets легко перепрайсить по clip-worthy narrative, хотя разговор может уйти совсем в другой lane.",
+        "Рынок может слишком рано убивать yes после opening, хотя часть страйков живёт только в Q&A / follow-up phase."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "live only",
+        "summary": "Достаточно короткой проверки контекста и наблюдения за opening. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "tom-homan-cpac-walls-work-fireside-chat-with-tom-homan"
     },
     {
       "group_key": "KXFEDMENTION-26APR",
