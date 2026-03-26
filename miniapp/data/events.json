@@ -49834,6 +49834,1249 @@
       "slug": "the-announcers-cleveland-vs-seattle-professional-baseball-game"
     },
     {
+      "group_key": "KXNBAMENTION-26MAR27DALPOR",
+      "event_title": "the announcers — Dallas vs Portland Professional Basketball Game originally scheduled for March 27, 2026 at 10pm",
+      "event_ticker": "KXNBAMENTION-26MAR27DALPOR",
+      "series_ticker": "",
+      "status": "inactive",
+      "open_time": "2026-03-26T19:10:00Z",
+      "close_time": "2026-04-11T02:00:00Z",
+      "market_count": 19,
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nba_announcer_market",
+      "dominant_rules_risk": "medium",
+      "speaker": "announcers",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
+      "strike_codes": [
+        "Airball / Airballs / Airballed",
+        "Alley-oop",
+        "Ankle",
+        "Buzzer",
+        "Crowd / Crowded",
+        "Draft / Drafted",
+        "Elbow",
+        "Injury / Injured",
+        "Jordan",
+        "Moda",
+        "MVP",
+        "Event does not qualify",
+        "Overtime",
+        "Playoff",
+        "Retire / Retired / Retirement",
+        "Rookie",
+        "Tech / Technical",
+        "Trade / Trades / Traded",
+        "Triple Double"
+      ],
+      "strike_buckets": {
+        "count": 19,
+        "context_sensitive_hint": 19
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [],
+        "game_state_sensitive": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ALLE",
+            "label": "Alley-oop",
+            "short_label": "ALLE",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ANKL",
+            "label": "Ankle",
+            "short_label": "ANKL",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-BUZZ",
+            "label": "Buzzer",
+            "short_label": "BUZZ",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-CROW",
+            "label": "Crowd / Crowded",
+            "short_label": "CROW",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-DRAF",
+            "label": "Draft / Drafted",
+            "short_label": "DRAF",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ELBO",
+            "label": "Elbow",
+            "short_label": "ELBO",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-INJU",
+            "label": "Injury / Injured",
+            "short_label": "INJU",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-JORD",
+            "label": "Jordan",
+            "short_label": "JORD",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MODA",
+            "label": "Moda",
+            "short_label": "MODA",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MVP",
+            "label": "MVP",
+            "short_label": "MVP",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-OVER",
+            "label": "Overtime",
+            "short_label": "OVER",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-PLAY",
+            "label": "Playoff",
+            "short_label": "PLAY",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ROOK",
+            "label": "Rookie",
+            "short_label": "ROOK",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TECH",
+            "label": "Tech / Technical",
+            "short_label": "TECH",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRIP",
+            "label": "Triple Double",
+            "short_label": "TRIP",
+            "note": "game-state dependent · live"
+          }
+        ],
+        "likely_trap": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-AIRB",
+            "label": "Airball / Airballs / Airballed",
+            "short_label": "AIRB",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+            "label": "Retire / Retired / Retirement",
+            "short_label": "RETI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+            "label": "Trade / Trades / Traded",
+            "short_label": "TRAD",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-AIRB",
+          "label": "Airball / Airballs / Airballed",
+          "short_label": "AIRB",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-ALLE",
+          "label": "Alley-oop",
+          "short_label": "ALLE",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-ANKL",
+          "label": "Ankle",
+          "short_label": "ANKL",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-BUZZ",
+          "label": "Buzzer",
+          "short_label": "BUZZ",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-CROW",
+          "label": "Crowd / Crowded",
+          "short_label": "CROW",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast filler"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-DRAF",
+          "label": "Draft / Drafted",
+          "short_label": "DRAF",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-ELBO",
+          "label": "Elbow",
+          "short_label": "ELBO",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-INJU",
+          "label": "Injury / Injured",
+          "short_label": "INJU",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-INJU",
+            "label": "INJU",
+            "display_label": "Injury / Injured",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-JORD",
+          "label": "Jordan",
+          "short_label": "JORD",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-MODA",
+          "label": "Moda",
+          "short_label": "MODA",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MODA",
+            "label": "MODA",
+            "display_label": "Moda",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-MVP",
+          "label": "MVP",
+          "short_label": "MVP",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-OVER",
+          "label": "Overtime",
+          "short_label": "OVER",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-PLAY",
+          "label": "Playoff",
+          "short_label": "PLAY",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+          "label": "Retire / Retired / Retirement",
+          "short_label": "RETI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-ROOK",
+          "label": "Rookie",
+          "short_label": "ROOK",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-TECH",
+          "label": "Tech / Technical",
+          "short_label": "TECH",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+          "label": "Trade / Trades / Traded",
+          "short_label": "TRAD",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27DALPOR-TRIP",
+          "label": "Triple Double",
+          "short_label": "TRIP",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRIP",
+            "label": "TRIP",
+            "display_label": "Triple Double",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
+      ],
+      "likely_hooks": [
+        "replay sequence",
+        "close game script",
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
+      ],
+      "context_notes": [
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
+      ],
+      "opening_plan": [
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
+      ],
+      "post_opening_plan": [
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
+      ],
+      "qa_transition_plan": [
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MODA",
+            "label": "MODA",
+            "display_label": "Moda",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-INJU",
+            "label": "INJU",
+            "display_label": "Injury / Injured",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRIP",
+            "label": "TRIP",
+            "display_label": "Triple Double",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast filler"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-MODA",
+            "label": "MODA",
+            "display_label": "Moda",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27DALPOR-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
+      ],
+      "live_trading_summary": [
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
+      ],
+      "risk_summary": [
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
+      ],
+      "manual_trader_prompts": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
+        "Если basket перегружен narrative tags, same-game history по shouty storylines полезнее общей сезонной частоты."
+      ],
+      "consensus_misread": [
+        "В sports mentions crowd часто недооценивает, насколько сильно same announcer меняет hit rate при другом game script.",
+        "Narrative-tag cluster может быть переполнен headline associations: MVP/Jordan/Playoff/Draft не равны live path сами по себе.",
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "the-announcers-dallas-vs-portland-professional-basketball-game-originally-scheduled-for-march-27-202"
+    },
+    {
       "group_key": "KXNBAMENTION-26MAR28DALPOR",
       "event_title": "the announcers — Dallas vs Portland Professional Basketball Game",
       "event_ticker": "KXNBAMENTION-26MAR28DALPOR",
@@ -78590,6 +79833,1254 @@
       },
       "transcript_matches": [],
       "slug": "the-announcers-texas-vs-purdue-college-basketball-game"
+    },
+    {
+      "group_key": "KXNBAMENTION-26MAR28UTAPHX",
+      "event_title": "the announcers — Utah vs Phoenix Professional Basketball Game originally scheduled for March 28, 2026 at 10pm",
+      "event_ticker": "KXNBAMENTION-26MAR28UTAPHX",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-26T19:10:00Z",
+      "close_time": "2026-04-12T02:00:00Z",
+      "market_count": 19,
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nba_announcer_market",
+      "dominant_rules_risk": "medium",
+      "speaker": "announcers",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
+      "strike_codes": [
+        "Airball / Airballs / Airballed",
+        "Alley-oop",
+        "Ankle",
+        "Buzzer",
+        "Crowd / Crowded",
+        "Draft / Drafted",
+        "Elbow",
+        "Injury / Injured",
+        "Jordan",
+        "Mortgage Matchup",
+        "MVP",
+        "Event does not qualify",
+        "Overtime",
+        "Playoff",
+        "Retire / Retired / Retirement",
+        "Rookie",
+        "Tech / Technical",
+        "Trade / Trades / Traded",
+        "Triple Double"
+      ],
+      "strike_buckets": {
+        "count": 19,
+        "context_sensitive_hint": 19
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [],
+        "game_state_sensitive": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ALLE",
+            "label": "Alley-oop",
+            "short_label": "ALLE",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ANKL",
+            "label": "Ankle",
+            "short_label": "ANKL",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-BUZZ",
+            "label": "Buzzer",
+            "short_label": "BUZZ",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-CROW",
+            "label": "Crowd / Crowded",
+            "short_label": "CROW",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-DRAF",
+            "label": "Draft / Drafted",
+            "short_label": "DRAF",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ELBO",
+            "label": "Elbow",
+            "short_label": "ELBO",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-INJU",
+            "label": "Injury / Injured",
+            "short_label": "INJU",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-JORD",
+            "label": "Jordan",
+            "short_label": "JORD",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MORT",
+            "label": "Mortgage Matchup",
+            "short_label": "MORT",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MVP",
+            "label": "MVP",
+            "short_label": "MVP",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-OVER",
+            "label": "Overtime",
+            "short_label": "OVER",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-PLAY",
+            "label": "Playoff",
+            "short_label": "PLAY",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ROOK",
+            "label": "Rookie",
+            "short_label": "ROOK",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TECH",
+            "label": "Tech / Technical",
+            "short_label": "TECH",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRIP",
+            "label": "Triple Double",
+            "short_label": "TRIP",
+            "note": "game-state dependent · live"
+          }
+        ],
+        "likely_trap": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-AIRB",
+            "label": "Airball / Airballs / Airballed",
+            "short_label": "AIRB",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+            "label": "Retire / Retired / Retirement",
+            "short_label": "RETI",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+            "label": "Trade / Trades / Traded",
+            "short_label": "TRAD",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-AIRB",
+          "label": "Airball / Airballs / Airballed",
+          "short_label": "AIRB",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-ALLE",
+          "label": "Alley-oop",
+          "short_label": "ALLE",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-ANKL",
+          "label": "Ankle",
+          "short_label": "ANKL",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-BUZZ",
+          "label": "Buzzer",
+          "short_label": "BUZZ",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-CROW",
+          "label": "Crowd / Crowded",
+          "short_label": "CROW",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast filler"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-DRAF",
+          "label": "Draft / Drafted",
+          "short_label": "DRAF",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-ELBO",
+          "label": "Elbow",
+          "short_label": "ELBO",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-INJU",
+          "label": "Injury / Injured",
+          "short_label": "INJU",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-INJU",
+            "label": "INJU",
+            "display_label": "Injury / Injured",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-JORD",
+          "label": "Jordan",
+          "short_label": "JORD",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-MORT",
+          "label": "Mortgage Matchup",
+          "short_label": "MORT",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MORT",
+            "label": "MORT",
+            "display_label": "Mortgage Matchup",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-MVP",
+          "label": "MVP",
+          "short_label": "MVP",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-OVER",
+          "label": "Overtime",
+          "short_label": "OVER",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-PLAY",
+          "label": "Playoff",
+          "short_label": "PLAY",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+          "label": "Retire / Retired / Retirement",
+          "short_label": "RETI",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-ROOK",
+          "label": "Rookie",
+          "short_label": "ROOK",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-TECH",
+          "label": "Tech / Technical",
+          "short_label": "TECH",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+          "label": "Trade / Trades / Traded",
+          "short_label": "TRAD",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRIP",
+          "label": "Triple Double",
+          "short_label": "TRIP",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRIP",
+            "label": "TRIP",
+            "display_label": "Triple Double",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise.",
+        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+      ],
+      "likely_hooks": [
+        "replay sequence",
+        "close game script",
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline",
+        "fresh headline pressure",
+        "prematch storyline today"
+      ],
+      "context_notes": [
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: Will Hardy Rips Utah Jazz for Pathetic Effort vs. Phoenix Suns - Sports Illustrated",
+        "Свежий headline: Utah Jazz vs Phoenix Suns odds, starters, injury reports, predictions - The J-Notes"
+      ],
+      "opening_plan": [
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
+      ],
+      "post_opening_plan": [
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
+      ],
+      "qa_transition_plan": [
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MORT",
+            "label": "MORT",
+            "display_label": "Mortgage Matchup",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TECH",
+            "label": "TECH",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-INJU",
+            "label": "INJU",
+            "display_label": "Injury / Injured",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRIP",
+            "label": "TRIP",
+            "display_label": "Triple Double",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-CROW",
+            "label": "CROW",
+            "display_label": "Crowd / Crowded",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast filler"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-JORD",
+            "label": "JORD",
+            "display_label": "Jordan",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MVP",
+            "label": "MVP",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-MORT",
+            "label": "MORT",
+            "display_label": "Mortgage Matchup",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-PLAY",
+            "label": "PLAY",
+            "display_label": "Playoff",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-ROOK",
+            "label": "ROOK",
+            "display_label": "Rookie",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-RETI",
+            "label": "RETI",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR28UTAPHX-TRAD",
+            "label": "TRAD",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
+      ],
+      "live_trading_summary": [
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
+      ],
+      "risk_summary": [
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
+      ],
+      "manual_trader_prompts": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
+        "Если basket перегружен narrative tags, same-game history по shouty storylines полезнее общей сезонной частоты."
+      ],
+      "consensus_misread": [
+        "В sports mentions crowd часто недооценивает, насколько сильно same announcer меняет hit rate при другом game script.",
+        "Narrative-tag cluster может быть переполнен headline associations: MVP/Jordan/Playoff/Draft не равны live path сами по себе.",
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "the-announcers-utah-vs-phoenix-professional-basketball-game-originally-scheduled-for-march-28-2026-a"
     },
     {
       "group_key": "KXNCAABMENTION-26MAR24WICHTLSA",
