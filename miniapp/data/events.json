@@ -14539,9 +14539,9 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: N.Y. Attorney General Letitia James Indicted After Trump’s Pressure Campaign - The New York Times",
         "Свежий headline: Trump 'garbage' rhetoric about Somalis draws cheers from administration, silence from Republicans and alarm from critics - Reuters",
-        "Свежий headline: Trump Calls Affordability a ‘Con Job’ as His Edge on the Economy Slips - The New York Times",
-        "Свежий headline: Trump Calls Somalis ‘Garbage’ He Doesn’t Want in the Country - The New York Times"
+        "Свежий headline: Trump Calls Affordability a ‘Con Job’ as His Edge on the Economy Slips - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
