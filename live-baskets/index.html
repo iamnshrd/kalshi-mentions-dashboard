@@ -162,6 +162,7 @@ const state = {
   basketMembers: {},
   refreshTimer: null,
   showComponents: true,
+  liveSnapshots: {},
 };
 
 function esc(s) { return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
@@ -210,6 +211,31 @@ function computeSeriesMetrics(points) {
     delta5m: prev5 ? (last.y - prev5.y) : NaN,
     vol5m,
   };
+}
+
+function extractMarketSnapshotPrice(meta) {
+  const candidates = [
+    meta.last_price_dollars,
+    meta.yes_price_dollars,
+    meta.last_price,
+    meta.yes_price,
+    meta.yes_bid_dollars,
+    meta.yes_ask_dollars,
+  ];
+  for (const value of candidates) {
+    const num = parseFloat(value);
+    if (Number.isFinite(num)) return num * 100;
+  }
+  return NaN;
+}
+
+function extractMarketSnapshotVolume(meta) {
+  const candidates = [meta.volume_fp, meta.volume, meta.open_interest_fp];
+  for (const value of candidates) {
+    const num = parseFloat(value);
+    if (Number.isFinite(num)) return num;
+  }
+  return NaN;
 }
 function saveAssignments() {
   const key = basketStorageKey();
@@ -473,27 +499,55 @@ async function loadEvent(url) {
     state.eventMeta = payload.event || null;
     state.markets = payload.markets || [];
     const marketMap = new Map(state.markets.map(m => [m.ticker, m]));
-    state.series = (payload.candlesticks || []).map(entry => {
-      const meta = marketMap.get(entry.market_ticker) || {};
-      const name = meta.yes_sub_title || meta.subtitle || meta.title || entry.market_ticker;
-      const points = (entry.candlesticks || []).map(c => ({
+    const nowIso = new Date().toISOString();
+    const candleMap = new Map((payload.candlesticks || []).map(entry => [entry.market_ticker, entry]));
+
+    state.series = state.markets.map((meta) => {
+      const entry = candleMap.get(meta.ticker) || { candlesticks: [], market_ticker: meta.ticker };
+      const name = meta.yes_sub_title || meta.subtitle || meta.title || meta.ticker;
+      let points = (entry.candlesticks || []).map(c => ({
         x: new Date((c.end_period_ts || 0) * 1000).toISOString(),
         y: (() => {
           const price = c.price?.close_dollars ?? c.price?.mean_dollars ?? c.price?.previous_dollars ?? null;
           return price == null ? NaN : parseFloat(price) * 100;
         })(),
         volume: c.volume_fp != null ? parseFloat(c.volume_fp) : NaN,
-      }));
+      })).filter(p => Number.isFinite(p.y));
+
+      const snapshotPrice = extractMarketSnapshotPrice(meta);
+      const snapshotVolume = extractMarketSnapshotVolume(meta);
+      const previousSnapshots = state.liveSnapshots[name] || [];
+
+      if (!points.length && Number.isFinite(snapshotPrice)) {
+        const appended = [...previousSnapshots, { x: nowIso, y: snapshotPrice, volume: snapshotVolume }];
+        const deduped = [];
+        const seen = new Set();
+        for (const p of appended) {
+          const key = `${p.x}|${p.y}|${p.volume}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          deduped.push(p);
+        }
+        points = deduped.slice(-240);
+      } else if (Number.isFinite(snapshotPrice)) {
+        const latestTs = points.at(-1)?.x;
+        if (!latestTs || latestTs !== nowIso) {
+          points = [...points, { x: nowIso, y: snapshotPrice, volume: snapshotVolume }].slice(-240);
+        }
+      }
+
+      state.liveSnapshots[name] = points.slice(-240);
       const pointMap = new Map(points.map(p => [p.x, p]));
-      return { name, ticker: entry.market_ticker, points, pointMap, metrics: computeSeriesMetrics(points) };
-    }).filter(s => s.points.some(p => Number.isFinite(p.y)));
+      return { name, ticker: meta.ticker, points, pointMap, metrics: computeSeriesMetrics(points) };
+    }).filter(s => s.points.some(p => Number.isFinite(p.y)) || Number.isFinite(extractMarketSnapshotPrice(marketMap.get(s.ticker) || {})));
 
     if (!loadAssignments()) buildDefaultBaskets();
     normalizeAssignments();
     rerender();
     document.getElementById('lastRefresh').innerHTML = `<strong>${esc(fmtTs(new Date().toISOString()))}</strong>`;
     const human = state.eventMeta?.event?.title || state.eventMeta?.title || payload.event_ticker;
-    setStatus(`Loaded ${human} (${state.series.length} strikes, interval=${payload.period_interval || 1}m).`, 'muted');
+    const mode = (payload.candlesticks || []).some(x => (x.candlesticks || []).length) ? 'candles' : 'live snapshots';
+    setStatus(`Loaded ${human} (${state.series.length} strikes, interval=${payload.period_interval || 1}m, mode=${mode}).`, 'muted');
     const qp = new URLSearchParams(location.search);
     qp.set('market_url', url);
     history.replaceState({}, '', `${location.pathname}?${qp.toString()}`);
