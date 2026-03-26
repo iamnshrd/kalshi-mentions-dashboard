@@ -45871,8 +45871,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN",
-        "Свежий headline: ESPN Reveals 2025-26 College Football Commentator Roster; Top Teams Return for Another Season - ESPN Press Room",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
+        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room",
+        "Свежий headline: 2026 March Madness TV schedule, announcers: Where to watch NCAA Tournament, tip times for Sweet 16 games - CBS Sports"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -63816,12 +63816,12 @@
       "slug": "the-announcers-miami-vs-cleveland-professional-basketball-game"
     },
     {
-      "group_key": "KXNCAABMENTION-26MAR28MSUCONN",
-      "event_title": "the announcers — Michigan St. vs UConn College Basketball Game",
-      "event_ticker": "KXNCAABMENTION-26MAR28MSUCONN",
+      "group_key": "KXNCAABMENTION-26MAR27MSUCONN",
+      "event_title": "the announcers — Michigan St. vs UConn College Basketball Game originally scheduled for March 27, 2026 at 9pm",
+      "event_ticker": "KXNCAABMENTION-26MAR27MSUCONN",
       "series_ticker": "",
-      "status": "active",
-      "open_time": "2026-03-23T04:10:00Z",
+      "status": "inactive",
+      "open_time": "2026-03-26T19:10:00Z",
       "close_time": "2026-04-11T01:45:00Z",
       "market_count": 16,
       "dominant_group": "sports_announcer_mentions",
@@ -63860,41 +63860,1039 @@
         "contextual": [],
         "game_state_sensitive": [
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLE",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLE",
             "label": "Alley-oop",
             "short_label": "ALLE",
             "note": "game-state dependent · live"
           },
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ANKL",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ANKL",
             "label": "Ankle",
             "short_label": "ANKL",
             "note": "game-state dependent · live"
           },
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-BUZZ",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-BUZZ",
             "label": "Buzzer",
             "short_label": "BUZZ",
             "note": "game-state dependent · live"
           },
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DOUB",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DOUB",
             "label": "Double Double",
             "short_label": "DOUB",
             "note": "game-state dependent · live"
           },
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DRAF",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DRAF",
             "label": "Draft / Drafted",
             "short_label": "DRAF",
             "note": "game-state dependent · live"
           },
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ELBO",
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ELBO",
             "label": "Elbow",
             "short_label": "ELBO",
             "note": "game-state dependent · live"
           },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NIL",
+            "label": "NIL",
+            "short_label": "NIL",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-OVER",
+            "label": "Overtime",
+            "short_label": "OVER",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECO",
+            "label": "Record",
+            "short_label": "RECO",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-SCHE",
+            "label": "Schedule",
+            "short_label": "SCHE",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-WALK",
+            "label": "Walk On",
+            "short_label": "WALK",
+            "note": "game-state dependent · live"
+          }
+        ],
+        "likely_trap": [
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-AIRB",
+            "label": "Airball / Airballed",
+            "short_label": "AIRB",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLA",
+            "label": "All American / All America",
+            "short_label": "ALLA",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NQE",
+            "label": "Event does not qualify",
+            "short_label": "NQE",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECR",
+            "label": "Recruit / Recruited / Recruitment",
+            "short_label": "RECR",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-TRAN",
+            "label": "Transfer / Transferred",
+            "short_label": "TRAN",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
+      },
+      "strike_analyses": [
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-AIRB",
+          "label": "Airball / Airballed",
+          "short_label": "AIRB",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLA",
+          "label": "All American / All America",
+          "short_label": "ALLA",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLA",
+            "label": "ALLA",
+            "display_label": "All American / All America",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLE",
+          "label": "Alley-oop",
+          "short_label": "ALLE",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ANKL",
+          "label": "Ankle",
+          "short_label": "ANKL",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-BUZZ",
+          "label": "Buzzer",
+          "short_label": "BUZZ",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DOUB",
+          "label": "Double Double",
+          "short_label": "DOUB",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DOUB",
+            "label": "DOUB",
+            "display_label": "Double Double",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DRAF",
+          "label": "Draft / Drafted",
+          "short_label": "DRAF",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ELBO",
+          "label": "Elbow",
+          "short_label": "ELBO",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NIL",
+          "label": "NIL",
+          "short_label": "NIL",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NIL",
+            "label": "NIL",
+            "display_label": "NIL",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NQE",
+          "label": "Event does not qualify",
+          "short_label": "NQE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "pass"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-OVER",
+          "label": "Overtime",
+          "short_label": "OVER",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECO",
+          "label": "Record",
+          "short_label": "RECO",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECO",
+            "label": "RECO",
+            "display_label": "Record",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECR",
+          "label": "Recruit / Recruited / Recruitment",
+          "short_label": "RECR",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECR",
+            "label": "RECR",
+            "display_label": "Recruit / Recruited / Recruitment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-SCHE",
+          "label": "Schedule",
+          "short_label": "SCHE",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-SCHE",
+            "label": "SCHE",
+            "display_label": "Schedule",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-TRAN",
+          "label": "Transfer / Transferred",
+          "short_label": "TRAN",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-TRAN",
+            "label": "TRAN",
+            "display_label": "Transfer / Transferred",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNCAABMENTION-26MAR27MSUCONN-WALK",
+          "label": "Walk On",
+          "short_label": "WALK",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-WALK",
+            "label": "WALK",
+            "display_label": "Walk On",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        }
+      ],
+      "context_checks": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Проверь prematch storylines именно сегодняшней игры: injury report, seeding/playoff angle, revenge spot, broadcast narrative.",
+        "Оцени, какие paths сегодня реально live: whistle/review, contact/injury, pace/shot-profile, crowd/arena noise."
+      ],
+      "likely_hooks": [
+        "replay sequence",
+        "close game script",
+        "blowout yap risk",
+        "injury report",
+        "seeding narrative",
+        "broadcast storyline"
+      ],
+      "context_notes": [
+        "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
+        "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
+        "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news."
+      ],
+      "opening_plan": [
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing."
+      ],
+      "post_opening_plan": [
+        "После ключевых игровых моментов repricing должен идти по clusters: replay, penalty, measurement, blowout yapping.",
+        "Если game script ломает prematch assumption, пересобирай view быстро и без якорения."
+      ],
+      "qa_transition_plan": [
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame."
+      ],
+      "strike_priority": {
+        "top_watchlist": [
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLA",
+            "label": "ALLA",
+            "display_label": "All American / All America",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DOUB",
+            "label": "DOUB",
+            "display_label": "Double Double",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NIL",
+            "label": "NIL",
+            "display_label": "NIL",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECO",
+            "label": "RECO",
+            "display_label": "Record",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECR",
+            "label": "RECR",
+            "display_label": "Recruit / Recruited / Recruitment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          }
+        ],
+        "full_ranking": [
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-AIRB",
+            "label": "AIRB",
+            "display_label": "Airball / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLE",
+            "label": "ALLE",
+            "display_label": "Alley-oop",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ANKL",
+            "label": "ANKL",
+            "display_label": "Ankle",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-BUZZ",
+            "label": "BUZZ",
+            "display_label": "Buzzer",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ELBO",
+            "label": "ELBO",
+            "display_label": "Elbow",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DRAF",
+            "label": "DRAF",
+            "display_label": "Draft / Drafted",
+            "score": 1,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-ALLA",
+            "label": "ALLA",
+            "display_label": "All American / All America",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-DOUB",
+            "label": "DOUB",
+            "display_label": "Double Double",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NIL",
+            "label": "NIL",
+            "display_label": "NIL",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECO",
+            "label": "RECO",
+            "display_label": "Record",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-RECR",
+            "label": "RECR",
+            "display_label": "Recruit / Recruited / Recruitment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-SCHE",
+            "label": "SCHE",
+            "display_label": "Schedule",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-TRAN",
+            "label": "TRAN",
+            "display_label": "Transfer / Transferred",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-WALK",
+            "label": "WALK",
+            "display_label": "Walk On",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR27MSUCONN-NQE",
+            "label": "NQE",
+            "display_label": "Event does not qualify",
+            "score": -3,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-gray"
+          }
+        ]
+      },
+      "pre_event_summary": [
+        "Проверь announcer history, sport/network quirks и game-type baseline.",
+        "Раздели strikes на structural, replay-driven, game-state-driven и incidental chaos strikes."
+      ],
+      "live_trading_summary": [
+        "Перепрайсь по game state: blowout повышает incidental yap risk, close game повышает structural relevance.",
+        "Replay/penalty/measurement sequences важнее общей частоты по сезону."
+      ],
+      "risk_summary": [
+        "Сильная зависимость от game script.",
+        "Broadcast/network quirks могут смещать fair value сильнее, чем кажется."
+      ],
+      "manual_trader_prompts": [
+        "Проверь sport, matchup, announcer crew и network/broadcast quirks.",
+        "Смотри, есть ли pregame narrative, rivalry angle, injury storyline или weather/game-script factors.",
+        "Заранее раздели strikes на baseline-driven и game-state-driven.",
+        "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
+        "Следи за announcer flow, network style и early narrative framing.",
+        "Q&A transition not applicable in classic sports broadcast; вместо этого думай segment transitions: live play, replay, break, postgame.",
+        "Проверь, не переоценивает ли рынок headline topic вместо exact token или event phase.",
+        "Отдели baseline basket words от odd tails и rules-sensitive страйков перед тем как size up."
+      ],
+      "relevant_history_notes": [
+        "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки."
+      ],
+      "consensus_misread": [
+        "В sports mentions crowd часто недооценивает, насколько сильно same announcer меняет hit rate при другом game script.",
+        "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
+      ],
+      "semantic_families": [],
+      "attention_allocation": {
+        "prep_allocation": "light prep",
+        "live_allocation": "full live monitor",
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+      },
+      "transcript_matches": [],
+      "slug": "the-announcers-michigan-st-vs-uconn-college-basketball-game-originally-scheduled-for-march-27-2026-a"
+    },
+    {
+      "group_key": "KXNCAABMENTION-26MAR28MSUCONN",
+      "event_title": "the announcers — Michigan St. vs UConn College Basketball Game",
+      "event_ticker": "KXNCAABMENTION-26MAR28MSUCONN",
+      "series_ticker": "",
+      "status": "active",
+      "open_time": "2026-03-23T04:10:00Z",
+      "close_time": "2026-04-11T01:45:00Z",
+      "market_count": 8,
+      "dominant_group": "sports_announcer_mentions",
+      "dominant_subtype": "nba_announcer_market",
+      "dominant_rules_risk": "medium",
+      "speaker": "announcers",
+      "format_confidence": 0.93,
+      "prep_focus": "Собери priors по комментаторам, сети и game state ещё до открытия рынка.",
+      "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
+      "priority": "high",
+      "strike_codes": [
+        "NIL",
+        "Event does not qualify",
+        "Overtime",
+        "Record",
+        "Recruit / Recruited / Recruitment",
+        "Schedule",
+        "Transfer / Transferred",
+        "Walk On"
+      ],
+      "strike_buckets": {
+        "count": 8,
+        "context_sensitive_hint": 8
+      },
+      "strike_intel": {
+        "structural": [],
+        "qa_sensitive": [],
+        "contextual": [],
+        "game_state_sensitive": [
           {
             "market_id": "KXNCAABMENTION-26MAR28MSUCONN-NIL",
             "label": "NIL",
@@ -63928,18 +64926,6 @@
         ],
         "likely_trap": [
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-AIRB",
-            "label": "Airball / Airballed",
-            "short_label": "AIRB",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLA",
-            "label": "All American / All America",
-            "short_label": "ALLA",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
             "market_id": "KXNCAABMENTION-26MAR28MSUCONN-NQE",
             "label": "Event does not qualify",
             "short_label": "NQE",
@@ -63960,206 +64946,6 @@
         ]
       },
       "strike_analyses": [
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-AIRB",
-          "label": "Airball / Airballed",
-          "short_label": "AIRB",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-AIRB",
-            "label": "AIRB",
-            "display_label": "Airball / Airballed",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLA",
-          "label": "All American / All America",
-          "short_label": "ALLA",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLA",
-            "label": "ALLA",
-            "display_label": "All American / All America",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLE",
-          "label": "Alley-oop",
-          "short_label": "ALLE",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLE",
-            "label": "ALLE",
-            "display_label": "Alley-oop",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ANKL",
-          "label": "Ankle",
-          "short_label": "ANKL",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ANKL",
-            "label": "ANKL",
-            "display_label": "Ankle",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-BUZZ",
-          "label": "Buzzer",
-          "short_label": "BUZZ",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-BUZZ",
-            "label": "BUZZ",
-            "display_label": "Buzzer",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DOUB",
-          "label": "Double Double",
-          "short_label": "DOUB",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DOUB",
-            "label": "DOUB",
-            "display_label": "Double Double",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DRAF",
-          "label": "Draft / Drafted",
-          "short_label": "DRAF",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ELBO",
-          "label": "Elbow",
-          "short_label": "ELBO",
-          "note": "game-state dependent · live",
-          "bucket": "game_state_sensitive",
-          "rank": {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ELBO",
-            "label": "ELBO",
-            "display_label": "Elbow",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          "phase_fit": "game-state-sensitive",
-          "attention_allocation": "phase watch"
-        },
         {
           "market_id": "KXNCAABMENTION-26MAR28MSUCONN-NIL",
           "label": "NIL",
@@ -64220,14 +65006,15 @@
             "market_id": "KXNCAABMENTION-26MAR28MSUCONN-OVER",
             "label": "OVER",
             "display_label": "Overtime",
-            "score": 2,
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "game-state",
             "yes_reference_price": null,
             "price_bucket": "unknown",
             "reasons": [
-              "play-sequence dependent"
+              "play-sequence dependent",
+              "scarce live path"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -64401,119 +65188,20 @@
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-AIRB",
-            "label": "AIRB",
-            "display_label": "Airball / Airballed",
-            "score": 2,
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-OVER",
+            "label": "OVER",
+            "display_label": "Overtime",
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "game-state",
             "yes_reference_price": null,
             "price_bucket": "unknown",
             "reasons": [
-              "play-sequence dependent"
+              "play-sequence dependent",
+              "scarce live path"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLE",
-            "label": "ALLE",
-            "display_label": "Alley-oop",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ANKL",
-            "label": "ANKL",
-            "display_label": "Ankle",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-BUZZ",
-            "label": "BUZZ",
-            "display_label": "Buzzer",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ELBO",
-            "label": "ELBO",
-            "display_label": "Elbow",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          }
-        ],
-        "cheap_watchlist": [],
-        "likely_overreactions": [],
-        "low_priority_strikes": [
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLA",
-            "label": "ALLA",
-            "display_label": "All American / All America",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DOUB",
-            "label": "DOUB",
-            "display_label": "Double Double",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
             "type_class": "type-green"
           },
           {
@@ -64563,151 +65251,124 @@
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-SCHE",
+            "label": "SCHE",
+            "display_label": "Schedule",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          }
+        ],
+        "cheap_watchlist": [],
+        "likely_overreactions": [],
+        "low_priority_strikes": [
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-NIL",
+            "label": "NIL",
+            "display_label": "NIL",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-RECO",
+            "label": "RECO",
+            "display_label": "Record",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-RECR",
+            "label": "RECR",
+            "display_label": "Recruit / Recruited / Recruitment",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-SCHE",
+            "label": "SCHE",
+            "display_label": "Schedule",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-TRAN",
+            "label": "TRAN",
+            "display_label": "Transfer / Transferred",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "пока не приоритет",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "broadcast sensitive"
+            ],
+            "status_class": "status-gray",
+            "type_class": "type-green"
           }
         ],
         "full_ranking": [
           {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-AIRB",
-            "label": "AIRB",
-            "display_label": "Airball / Airballed",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLE",
-            "label": "ALLE",
-            "display_label": "Alley-oop",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ANKL",
-            "label": "ANKL",
-            "display_label": "Ankle",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-BUZZ",
-            "label": "BUZZ",
-            "display_label": "Buzzer",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "play-sequence dependent"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ELBO",
-            "label": "ELBO",
-            "display_label": "Elbow",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
             "market_id": "KXNCAABMENTION-26MAR28MSUCONN-OVER",
             "label": "OVER",
             "display_label": "Overtime",
-            "score": 2,
+            "score": 3,
             "priority_band": "держать в поле зрения",
             "edge_tag": "погранично",
             "strike_type": "game-state",
             "yes_reference_price": null,
             "price_bucket": "unknown",
             "reasons": [
-              "play-sequence dependent"
+              "play-sequence dependent",
+              "scarce live path"
             ],
             "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DRAF",
-            "label": "DRAF",
-            "display_label": "Draft / Drafted",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "narrative tag"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-ALLA",
-            "label": "ALLA",
-            "display_label": "All American / All America",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNCAABMENTION-26MAR28MSUCONN-DOUB",
-            "label": "DOUB",
-            "display_label": "Double Double",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "пока не приоритет",
-            "strike_type": "broadcast-flow",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "broadcast sensitive"
-            ],
-            "status_class": "status-gray",
             "type_class": "type-green"
           },
           {
@@ -64848,17 +65509,19 @@
       ],
       "relevant_history_notes": [
         "Не используй all-games sample подряд: полезнее same-broadcast, same-announcer crew и похожий game script.",
-        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки."
+        "Prime-time и high-narrative games могут резко отличаться от обычной регулярки.",
+        "Когда live-structural cluster узкий, полезнее смотреть похожие игры с тем же announcer crew, а не broad sample."
       ],
       "consensus_misread": [
         "В sports mentions crowd часто недооценивает, насколько сильно same announcer меняет hit rate при другом game script.",
+        "Если в basket мало реально live-structural words, эти немногие paths могут быть важнее, чем общий шум narrative cluster.",
         "Рынок может переоценивать общий historical hit rate без поправки на конкретный broadcast flow и game state."
       ],
       "semantic_families": [],
       "attention_allocation": {
         "prep_allocation": "light prep",
         "live_allocation": "full live monitor",
-        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве. Страйков много: важно быстро отсеять clutter и не пытаться мониторить всё одинаково."
+        "summary": "До события достаточно быстро собрать priors, основная работа будет в лайве."
       },
       "transcript_matches": [],
       "slug": "the-announcers-michigan-st-vs-uconn-college-basketball-game"
