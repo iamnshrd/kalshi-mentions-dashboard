@@ -16204,22 +16204,18 @@
         "Отдельно смотри violence / immigration / Israel / economy hooks в локальной повестке.",
         "Проверь, кто ещё участвует в событии и есть ли риск перехода в Q&A / press scrum.",
         "Сначала проверь, какой narrative cluster уже живёт в новостях вокруг этого спикера именно сегодня.",
-        "Отдели headline frame события от того, что реально естественно для scripted opening.",
-        "Проверь свежие headlines по событию/спикеру: рынок может уже торговать вчерашний narrative."
+        "Отдели headline frame события от того, что реально естественно для scripted opening."
       ],
       "likely_hooks": [
         "local incident",
         "policy headline",
         "question-driven narrative shift",
         "opening frame",
-        "headline-topic pressure",
-        "fresh headline pressure"
+        "headline-topic pressure"
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
-        "Свежий headline: Exclusive: Trump poised to attend Saudi-backed conference in Miami in February, sources say - Reuters",
-        "Свежий headline: Trump Tells Americans What Putin Wants Them to Hear - Bloomberg.com"
+        "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance."
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
