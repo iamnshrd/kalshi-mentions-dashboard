@@ -14539,9 +14539,9 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
+        "Свежий headline: TV Ratings Declined for Trump’s State of the Union Speech (Published 2020) - The New York Times",
         "Свежий headline: Trump Calls Somalis ‘Garbage’ He Doesn’t Want in the Country - The New York Times",
-        "Свежий headline: Trump Calls Somalis ‘Garbage’ in Anti-Immigrant Tirade - The New York Times",
-        "Свежий headline: Trump urges Iran to make a deal or US will 'keep blowing them away' - Reuters"
+        "Свежий headline: Trump Calls Somalis ‘Garbage’ in Anti-Immigrant Tirade - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
