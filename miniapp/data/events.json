@@ -37391,6 +37391,7 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: Boston Celtics injury report: Payton Pritchard remains on the list vs. Detroit - Sports Illustrated",
         "Свежий headline: Quin Snyder Previews Tomorrow's Matchup With The Pistons + Talks About Detroit's Growth This Season - Sports Illustrated"
       ],
       "opening_plan": [
@@ -69201,8 +69202,8 @@
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
         "Свежий headline: Divided Fed lowers rates, signals pause and one cut next year as growth rebounds - Reuters",
-        "Свежий headline: Fed Cuts Rates Again, Is Divided Over Future Moves - The New York Times",
-        "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times"
+        "Свежий headline: Fed Cuts Rates as Officials Worry About Labor Market - The New York Times",
+        "Свежий headline: Fed Cuts Rates for First Time This Year - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
