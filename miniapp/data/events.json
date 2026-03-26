@@ -47022,6 +47022,7 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: Boston Celtics injury report: Payton Pritchard remains on the list vs. Detroit - Sports Illustrated",
         "Свежий headline: Quin Snyder Previews Tomorrow's Matchup With The Pistons + Talks About Detroit's Growth This Season - Sports Illustrated"
       ],
       "opening_plan": [
@@ -61418,9 +61419,9 @@
       "event_ticker": "KXNBAMENTION-26MAR27MIACLE",
       "series_ticker": "",
       "status": "active",
-      "open_time": "2026-03-25T19:11:00Z",
+      "open_time": "2026-03-26T17:00:00Z",
       "close_time": "2026-04-10T23:30:00Z",
-      "market_count": 12,
+      "market_count": 18,
       "dominant_group": "sports_announcer_mentions",
       "dominant_subtype": "nba_announcer_market",
       "dominant_rules_risk": "medium",
@@ -61430,6 +61431,7 @@
       "live_focus": "Следи за тем, как игра и эфирный flow меняют релевантность страйков.",
       "priority": "high",
       "strike_codes": [
+        "Airball / Airballs / Airballed",
         "Alley-oop",
         "Ankle",
         "Buzzer",
@@ -61438,14 +61440,19 @@
         "Elbow",
         "Injury / Injured",
         "Jordan",
+        "MVP",
+        "Overtime",
         "Playoff",
+        "Retire / Retired / Retirement",
         "Rocket",
         "Rookie",
+        "Tech / Technical",
+        "Trade / Trades / Traded",
         "Triple Double"
       ],
       "strike_buckets": {
-        "count": 12,
-        "context_sensitive_hint": 12
+        "count": 18,
+        "context_sensitive_hint": 18
       },
       "strike_intel": {
         "structural": [],
@@ -61501,6 +61508,18 @@
             "note": "game-state dependent · live"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-MV",
+            "label": "MVP",
+            "short_label": "MV",
+            "note": "game-state dependent · live"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-OVERT",
+            "label": "Overtime",
+            "short_label": "OVERT",
+            "note": "game-state dependent · live"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-PLAY",
             "label": "Playoff",
             "short_label": "PLAY",
@@ -61519,15 +61538,65 @@
             "note": "game-state dependent · live"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TECHN",
+            "label": "Tech / Technical",
+            "short_label": "TECHN",
+            "note": "game-state dependent · live"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-TRIP",
             "label": "Triple Double",
             "short_label": "TRIP",
             "note": "game-state dependent · live"
           }
         ],
-        "likely_trap": []
+        "likely_trap": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-AIRBA",
+            "label": "Airball / Airballs / Airballed",
+            "short_label": "AIRBA",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+            "label": "Retire / Retired / Retirement",
+            "short_label": "RETIR",
+            "note": "special-rule / exact-token risk · rules"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+            "label": "Trade / Trades / Traded",
+            "short_label": "TRADE",
+            "note": "special-rule / exact-token risk · rules"
+          }
+        ]
       },
       "strike_analyses": [
+        {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-AIRBA",
+          "label": "Airball / Airballs / Airballed",
+          "short_label": "AIRBA",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-AIRBA",
+            "label": "AIRBA",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
         {
           "market_id": "KXNBAMENTION-26MAR27MIACLE-ALLE",
           "label": "Alley-oop",
@@ -61731,6 +61800,57 @@
           "attention_allocation": "phase watch"
         },
         {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-MV",
+          "label": "MVP",
+          "short_label": "MV",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-MV",
+            "label": "MV",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-OVERT",
+          "label": "Overtime",
+          "short_label": "OVERT",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-OVERT",
+            "label": "OVERT",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "phase watch"
+        },
+        {
           "market_id": "KXNBAMENTION-26MAR27MIACLE-PLAY",
           "label": "Playoff",
           "short_label": "PLAY",
@@ -61755,6 +61875,32 @@
           },
           "phase_fit": "game-state-sensitive",
           "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+          "label": "Retire / Retired / Retirement",
+          "short_label": "RETIR",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+            "label": "RETIR",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR27MIACLE-ROCK",
@@ -61806,6 +61952,57 @@
           },
           "phase_fit": "game-state-sensitive",
           "attention_allocation": "phase watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-TECHN",
+          "label": "Tech / Technical",
+          "short_label": "TECHN",
+          "note": "game-state dependent · live",
+          "bucket": "game_state_sensitive",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TECHN",
+            "label": "TECHN",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          "phase_fit": "game-state-sensitive",
+          "attention_allocation": "secondary watch"
+        },
+        {
+          "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+          "label": "Trade / Trades / Traded",
+          "short_label": "TRADE",
+          "note": "special-rule / exact-token risk · rules",
+          "bucket": "likely_trap",
+          "rank": {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+            "label": "TRADE",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          "phase_fit": "mixed",
+          "attention_allocation": "manual only"
         },
         {
           "market_id": "KXNBAMENTION-26MAR27MIACLE-TRIP",
@@ -61867,6 +62064,38 @@
       "strike_priority": {
         "top_watchlist": [
           {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TECHN",
+            "label": "TECHN",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-AIRBA",
+            "label": "AIRBA",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-ALLE",
             "label": "ALLE",
             "display_label": "Alley-oop",
@@ -61913,42 +62142,45 @@
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR27MIACLE-ELBO",
-            "label": "ELBO",
-            "display_label": "Elbow",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
-          },
-          {
-            "market_id": "KXNBAMENTION-26MAR27MIACLE-INJU",
-            "label": "INJU",
-            "display_label": "Injury / Injured",
-            "score": 2,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "game-state",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "contact/injury path"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-green"
           }
         ],
         "cheap_watchlist": [],
-        "likely_overreactions": [],
+        "likely_overreactions": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+            "label": "RETIR",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+            "label": "TRADE",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          }
+        ],
         "low_priority_strikes": [
           {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-ROCK",
@@ -61965,9 +62197,75 @@
             ],
             "status_class": "status-gray",
             "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+            "label": "RETIR",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+            "label": "TRADE",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
           }
         ],
         "full_ranking": [
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TECHN",
+            "label": "TECHN",
+            "display_label": "Tech / Technical",
+            "score": 3,
+            "priority_band": "проверить после",
+            "edge_tag": "рабочая идея",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "review/whistle trigger"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-AIRBA",
+            "label": "AIRBA",
+            "display_label": "Airball / Airballs / Airballed",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
           {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-ALLE",
             "label": "ALLE",
@@ -62044,6 +62342,22 @@
             "price_bucket": "unknown",
             "reasons": [
               "contact/injury path"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-OVERT",
+            "label": "OVERT",
+            "display_label": "Overtime",
+            "score": 2,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "game-state",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "play-sequence dependent"
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
@@ -62115,6 +62429,23 @@
             "type_class": "type-green"
           },
           {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-MV",
+            "label": "MV",
+            "display_label": "MVP",
+            "score": 0,
+            "priority_band": "держать в поле зрения",
+            "edge_tag": "погранично",
+            "strike_type": "broadcast-flow",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "narrative tag",
+              "crowded narrative cluster"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-green"
+          },
+          {
             "market_id": "KXNBAMENTION-26MAR27MIACLE-PLAY",
             "label": "PLAY",
             "display_label": "Playoff",
@@ -62163,6 +62494,40 @@
             ],
             "status_class": "status-yellow",
             "type_class": "type-green"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-RETIR",
+            "label": "RETIR",
+            "display_label": "Retire / Retired / Retirement",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
+          },
+          {
+            "market_id": "KXNBAMENTION-26MAR27MIACLE-TRADE",
+            "label": "TRADE",
+            "display_label": "Trade / Trades / Traded",
+            "score": -4,
+            "priority_band": "можно отложить",
+            "edge_tag": "рынок может переоценивать",
+            "strike_type": "odd tail",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "weird tail",
+              "weak tail cluster"
+            ],
+            "status_class": "status-red",
+            "type_class": "type-gray"
           }
         ]
       },
