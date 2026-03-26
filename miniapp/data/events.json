@@ -15964,8 +15964,8 @@
         "Для political mentions current events часто важнее последних transcript counts.",
         "Geo cluster имеет смысл только если у события есть свежий forced news hook; без него это чаще paper relevance.",
         "Свежий headline: A Fox News Host Attacks Trump, and Some Viewers Bristle (Published 2017) - The New York Times",
-        "Свежий headline: Chris Wallace Leaves Fox News as Right-Wing Hosts Hold Sway (Published 2021) - The New York Times",
-        "Свежий headline: In economic speeches, Trump claims inflation victory nearly 20 times even as prices bite - Reuters"
+        "Свежий headline: In economic speeches, Trump claims inflation victory nearly 20 times even as prices bite - Reuters",
+        "Свежий headline: Kimberly Guilfoyle, Co-Host of ‘The Five,’ Is Leaving Fox News (Published 2018) - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -19063,9 +19063,8 @@
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Свежий headline: Courts Must ‘Check the Excesses’ of Congress and the President, Roberts Says - The New York Times",
-        "Свежий headline: In their own words: Trump officials shrugging off Signal leak once decried Clinton’s server - AP News",
-        "Свежий headline: July Fourth for presidents has been a day for golf, fishing, speeches and one perilous stomachache - AP News"
+        "Свежий headline: Trump downplays national security team texting military operation plan on Signal as a minor 'glitch' - AP News",
+        "Свежий headline: Trump’s no good, bad options for ending Iran war - Reuters"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
@@ -79644,7 +79643,7 @@
       "event_title": "Todd Blanche — CPAC: Fireside Chat — Deputy Attorney General Todd Blanche",
       "event_ticker": "KXPOLITICSMENTION-26MAR26",
       "series_ticker": "",
-      "status": "determined",
+      "status": "finalized",
       "open_time": "2026-03-26T01:00:00Z",
       "close_time": "2026-03-26T17:22:24Z",
       "market_count": 10,
