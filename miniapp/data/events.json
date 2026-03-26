@@ -53752,8 +53752,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room",
-        "Свежий headline: Jay Bilas picks every single game in the 2025 men's NCAA basketball tournament - ESPN"
+        "Свежий headline: ESPN Announces Commentator Pairings for Exclusive Coverage of NCAA March Madness Women’s Basketball - ESPN Press Room",
+        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -78692,9 +78692,9 @@
       ],
       "context_notes": [
         "Для political mentions current events часто важнее последних transcript counts.",
-        "Свежий headline: For Republicans, Trump’s Hands-Off Approach to Health Care Is a Problem - The New York Times",
         "Свежий headline: President Defends Economic Policies as He Insists Affordability Is ‘Fake’ Word - The New York Times",
-        "Свежий headline: Surrounded by billionaires in Davos, Trump plans to lay out how he'll make housing more affordable - AP News"
+        "Свежий headline: Surrounded by billionaires in Davos, Trump plans to lay out how he'll make housing more affordable - AP News",
+        "Свежий headline: Trump Addresses Economy in Campaign-Style Rally in Pennsylvania - The New York Times"
       ],
       "opening_plan": [
         "Определи dominant topic cluster в первые минуты, а не следи за одним isolated strike.",
