@@ -63,7 +63,8 @@
 import React, {useEffect, useMemo, useState} from 'https://esm.sh/react@18.3.1';
 import {createRoot} from 'https://esm.sh/react-dom@18.3.1/client';
 import htm from 'https://esm.sh/htm@3.1.1';
-import ReactSortable from 'https://esm.sh/react-sortablejs@6.1.4';
+import * as SortableModule from 'https://esm.sh/react-sortablejs@6.1.4?dev';
+const ReactSortable = SortableModule.ReactSortable || SortableModule.default?.ReactSortable || SortableModule.default;
 const html = htm.bind(React.createElement);
 const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
 const DEFAULT_BASKETS = [
