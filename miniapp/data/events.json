@@ -52704,8 +52704,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: ESPN Announces Schedule and Commentators for TBT 2020 - ESPN Press Room",
-        "Свежий headline: ESPN Reveals 2025-26 College Football Commentator Roster; Top Teams Return for Another Season - ESPN Press Room",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
+        "Свежий headline: ESPN College Hoops Analysts Fran Fraschilla, Dan Dakich and Seth Greenberg Return for The Basketball Tournament 2019 - ESPN Press Room",
+        "Свежий headline: ESPN Reveals 2025-26 College Football Commentator Roster; Top Teams Return for Another Season - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -59861,7 +59861,7 @@
       "event_title": "the announcers — Nevada vs Auburn College Basketball Game",
       "event_ticker": "KXNCAABMENTION-26MAR24NEVAUB",
       "series_ticker": "",
-      "status": "active",
+      "status": "inactive",
       "open_time": "2026-03-24T16:11:00Z",
       "close_time": "2026-04-09T01:00:00Z",
       "market_count": 16,
