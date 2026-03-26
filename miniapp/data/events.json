@@ -46819,9 +46819,9 @@
         "В sports mentions game script и broadcast flow часто важнее общей сезонной частоты.",
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
+        "Свежий headline: Atlanta Hawks vs. Detroit Pistons 3/25/26 - Stream the Game Live - Watch ESPN - ESPN",
         "Свежий headline: ESPN Announces Schedule and Commentators for TBT 2020 - ESPN Press Room",
-        "Свежий headline: ESPN College Hoops Analysts Fran Fraschilla, Dan Dakich and Seth Greenberg Return for The Basketball Tournament 2019 - ESPN Press Room",
-        "Свежий headline: ESPN Reveals 2025-26 College Football Commentator Roster; Top Teams Return for Another Season - ESPN Press Room"
+        "Свежий headline: ESPN College Hoops Analysts Fran Fraschilla, Dan Dakich and Seth Greenberg Return for The Basketball Tournament 2019 - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -47868,8 +47868,8 @@
         "Live repricing после ключевых игровых моментов обычно важнее prematch static view.",
         "Для announcer markets “current context” = matchup script + crew tendencies + broadcast setting, а не general sports news.",
         "Свежий headline: Dick Vitale's complete 2025 men's NCAA tournament bracket - ESPN",
-        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room",
-        "Свежий headline: Jay Bilas picks every single game in the 2025 men's NCAA basketball tournament - ESPN"
+        "Свежий headline: ESPN Announces Commentator Pairings for Exclusive Coverage of NCAA March Madness Women’s Basketball - ESPN Press Room",
+        "Свежий headline: ESPN Tips Off 2025-26 College Basketball Season with Industry-Leading Commentator Roster; Top Announce Teams Return for Another Season - ESPN Press Room"
       ],
       "opening_plan": [
         "Не фиксируйся на prematch baseline: live game state быстро меняет relevance strikes.",
@@ -70208,14 +70208,14 @@
       "slug": "will-powell-say-ai-artificial-intelligence-at-his-apr-2026-press-conference"
     },
     {
-      "group_key": "KXSECPRESSMENTION-26MAR31",
+      "group_key": "KXSECPRESSMENTION-26APR15",
       "event_title": "Will the White House Press Secretary say Affordable / Affordability at her next press briefing?",
-      "event_ticker": "KXSECPRESSMENTION-26MAR31",
+      "event_ticker": "KXSECPRESSMENTION-26APR15",
       "series_ticker": "",
-      "status": "finalized",
-      "open_time": "2026-03-11T00:00:00Z",
-      "close_time": "2026-03-25T18:50:15Z",
-      "market_count": 34,
+      "status": "initialized",
+      "open_time": "2026-03-26T01:00:00Z",
+      "close_time": "2026-04-15T14:00:00Z",
+      "market_count": 28,
       "dominant_group": "political_mentions",
       "dominant_subtype": "press_conference",
       "dominant_rules_risk": "medium",
@@ -70230,10 +70230,7 @@
         "Border",
         "China",
         "Crypto / Bitcoin",
-        "Endorse / Endorsed / Endorsement",
         "Epic Fury",
-        "Epstein",
-        "Fake News",
         "FBI",
         "Fraud",
         "Healthcare",
@@ -70243,7 +70240,6 @@
         "Illegal Alien",
         "Iran",
         "Israel",
-        "LaGuardia",
         "Negotiate / Negotiated / Negotiation",
         "Nuclear",
         "Oil",
@@ -70255,19 +70251,17 @@
         "Stupid Question",
         "Supreme Court",
         "Tariff",
-        "Transgender",
         "TSA",
-        "Ukraine",
-        "Venezuela / Venezuelan"
+        "Ukraine"
       ],
       "strike_buckets": {
-        "count": 34,
-        "context_sensitive_hint": 34
+        "count": 28,
+        "context_sensitive_hint": 28
       },
       "strike_intel": {
         "structural": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BORD",
+            "market_id": "KXSECPRESSMENTION-26APR15-BORD",
             "label": "Border",
             "short_label": "BORD",
             "note": "opening-relevant core theme · opening"
@@ -70275,25 +70269,25 @@
         ],
         "qa_sensitive": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CHIN",
+            "market_id": "KXSECPRESSMENTION-26APR15-CHIN",
             "label": "China",
             "short_label": "CHIN",
             "note": "needs Q&A / topic pivot · q&a"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-IRAN",
+            "market_id": "KXSECPRESSMENTION-26APR15-IRAN",
             "label": "Iran",
             "short_label": "IRAN",
             "note": "geo/conflict dependent · q&a"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ISRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-ISRA",
             "label": "Israel",
             "short_label": "ISRA",
             "note": "needs Q&A / topic pivot · q&a"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-UKRA",
             "label": "Ukraine",
             "short_label": "UKRA",
             "note": "needs Q&A / topic pivot · q&a"
@@ -70301,133 +70295,109 @@
         ],
         "contextual": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BIDE",
+            "market_id": "KXSECPRESSMENTION-26APR15-BIDE",
             "label": "Biden",
             "short_label": "BIDE",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CRYP",
+            "market_id": "KXSECPRESSMENTION-26APR15-CRYP",
             "label": "Crypto / Bitcoin",
             "short_label": "CRYP",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPIC",
+            "market_id": "KXSECPRESSMENTION-26APR15-EPIC",
             "label": "Epic Fury",
             "short_label": "EPIC",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPST",
-            "label": "Epstein",
-            "short_label": "EPST",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
-            "label": "Fake News",
-            "short_label": "FAKE",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
+            "market_id": "KXSECPRESSMENTION-26APR15-FBI",
             "label": "FBI",
             "short_label": "FBI",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "market_id": "KXSECPRESSMENTION-26APR15-FRAU",
             "label": "Fraud",
             "short_label": "FRAU",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HEAL",
+            "market_id": "KXSECPRESSMENTION-26APR15-HEAL",
             "label": "Healthcare",
             "short_label": "HEAL",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HORM",
+            "market_id": "KXSECPRESSMENTION-26APR15-HORM",
             "label": "Hormuz",
             "short_label": "HORM",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ICE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ICE",
             "label": "ICE / DHS",
             "short_label": "ICE",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ILLE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ILLE",
             "label": "Illegal Alien",
             "short_label": "ILLE",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
-            "label": "LaGuardia",
-            "short_label": "LAGU",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
+            "market_id": "KXSECPRESSMENTION-26APR15-NUCL",
             "label": "Nuclear",
             "short_label": "NUCL",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "market_id": "KXSECPRESSMENTION-26APR15-OIL",
             "label": "Oil",
             "short_label": "OIL",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
+            "market_id": "KXSECPRESSMENTION-26APR15-RADI",
             "label": "Radical Left",
             "short_label": "RADI",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "market_id": "KXSECPRESSMENTION-26APR15-SANC",
             "label": "Sanctuary",
             "short_label": "SANC",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STOC",
+            "market_id": "KXSECPRESSMENTION-26APR15-STOC",
             "label": "Stock Market",
             "short_label": "STOC",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STUP",
+            "market_id": "KXSECPRESSMENTION-26APR15-STUP",
             "label": "Stupid Question",
             "short_label": "STUP",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SUPR",
+            "market_id": "KXSECPRESSMENTION-26APR15-SUPR",
             "label": "Supreme Court",
             "short_label": "SUPR",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TARI",
+            "market_id": "KXSECPRESSMENTION-26APR15-TARI",
             "label": "Tariff",
             "short_label": "TARI",
             "note": "context-dependent token · pivot"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TRAN",
-            "label": "Transgender",
-            "short_label": "TRAN",
-            "note": "context-dependent token · pivot"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "market_id": "KXSECPRESSMENTION-26APR15-TSA",
             "label": "TSA",
             "short_label": "TSA",
             "note": "context-dependent token · pivot"
@@ -70436,58 +70406,46 @@
         "game_state_sensitive": [],
         "likely_trap": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
+            "market_id": "KXSECPRESSMENTION-26APR15-AFFO",
             "label": "Affordable / Affordability",
             "short_label": "AFFO",
             "note": "special-rule / exact-token risk · rules"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
-            "label": "Endorse / Endorsed / Endorsement",
-            "short_label": "ENDO",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "market_id": "KXSECPRESSMENTION-26APR15-ID",
             "label": "ID / Identification",
             "short_label": "ID",
             "note": "special-rule / exact-token risk · rules"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "market_id": "KXSECPRESSMENTION-26APR15-NEGO",
             "label": "Negotiate / Negotiated / Negotiation",
             "short_label": "NEGO",
             "note": "special-rule / exact-token risk · rules"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
+            "market_id": "KXSECPRESSMENTION-26APR15-SAVE",
             "label": "Save Act / Save America Act",
             "short_label": "SAVE",
             "note": "special-rule / exact-token risk · rules"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
+            "market_id": "KXSECPRESSMENTION-26APR15-SHUT",
             "label": "Shutdown / Shut Down",
             "short_label": "SHUT",
-            "note": "special-rule / exact-token risk · rules"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
-            "label": "Venezuela / Venezuelan",
-            "short_label": "VENE",
             "note": "special-rule / exact-token risk · rules"
           }
         ]
       },
       "strike_analyses": [
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
+          "market_id": "KXSECPRESSMENTION-26APR15-AFFO",
           "label": "Affordable / Affordability",
           "short_label": "AFFO",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
+            "market_id": "KXSECPRESSMENTION-26APR15-AFFO",
             "label": "AFFO",
             "display_label": "Affordable / Affordability",
             "score": 0,
@@ -70507,13 +70465,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-BIDE",
+          "market_id": "KXSECPRESSMENTION-26APR15-BIDE",
           "label": "Biden",
           "short_label": "BIDE",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BIDE",
+            "market_id": "KXSECPRESSMENTION-26APR15-BIDE",
             "label": "BIDE",
             "display_label": "Biden",
             "score": 1,
@@ -70532,13 +70490,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-BORD",
+          "market_id": "KXSECPRESSMENTION-26APR15-BORD",
           "label": "Border",
           "short_label": "BORD",
           "note": "opening-relevant core theme · opening",
           "bucket": "structural",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BORD",
+            "market_id": "KXSECPRESSMENTION-26APR15-BORD",
             "label": "BORD",
             "display_label": "Border",
             "score": 4,
@@ -70558,13 +70516,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-CHIN",
+          "market_id": "KXSECPRESSMENTION-26APR15-CHIN",
           "label": "China",
           "short_label": "CHIN",
           "note": "needs Q&A / topic pivot · q&a",
           "bucket": "qa_sensitive",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CHIN",
+            "market_id": "KXSECPRESSMENTION-26APR15-CHIN",
             "label": "CHIN",
             "display_label": "China",
             "score": 4,
@@ -70584,13 +70542,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-CRYP",
+          "market_id": "KXSECPRESSMENTION-26APR15-CRYP",
           "label": "Crypto / Bitcoin",
           "short_label": "CRYP",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CRYP",
+            "market_id": "KXSECPRESSMENTION-26APR15-CRYP",
             "label": "CRYP",
             "display_label": "Crypto / Bitcoin",
             "score": 1,
@@ -70609,39 +70567,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
-          "label": "Endorse / Endorsed / Endorsement",
-          "short_label": "ENDO",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
-            "label": "ENDO",
-            "display_label": "Endorse / Endorsed / Endorsement",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "pass"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-EPIC",
+          "market_id": "KXSECPRESSMENTION-26APR15-EPIC",
           "label": "Epic Fury",
           "short_label": "EPIC",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPIC",
+            "market_id": "KXSECPRESSMENTION-26APR15-EPIC",
             "label": "EPIC",
             "display_label": "Epic Fury",
             "score": 1,
@@ -70660,63 +70592,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-EPST",
-          "label": "Epstein",
-          "short_label": "EPST",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPST",
-            "label": "EPST",
-            "display_label": "Epstein",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
-          "label": "Fake News",
-          "short_label": "FAKE",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
-            "label": "FAKE",
-            "display_label": "Fake News",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
+          "market_id": "KXSECPRESSMENTION-26APR15-FBI",
           "label": "FBI",
           "short_label": "FBI",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
+            "market_id": "KXSECPRESSMENTION-26APR15-FBI",
             "label": "FBI",
             "display_label": "FBI",
             "score": 1,
@@ -70735,13 +70617,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+          "market_id": "KXSECPRESSMENTION-26APR15-FRAU",
           "label": "Fraud",
           "short_label": "FRAU",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "market_id": "KXSECPRESSMENTION-26APR15-FRAU",
             "label": "FRAU",
             "display_label": "Fraud",
             "score": 1,
@@ -70760,13 +70642,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-HEAL",
+          "market_id": "KXSECPRESSMENTION-26APR15-HEAL",
           "label": "Healthcare",
           "short_label": "HEAL",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HEAL",
+            "market_id": "KXSECPRESSMENTION-26APR15-HEAL",
             "label": "HEAL",
             "display_label": "Healthcare",
             "score": 1,
@@ -70785,13 +70667,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-HORM",
+          "market_id": "KXSECPRESSMENTION-26APR15-HORM",
           "label": "Hormuz",
           "short_label": "HORM",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HORM",
+            "market_id": "KXSECPRESSMENTION-26APR15-HORM",
             "label": "HORM",
             "display_label": "Hormuz",
             "score": 1,
@@ -70810,13 +70692,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-ICE",
+          "market_id": "KXSECPRESSMENTION-26APR15-ICE",
           "label": "ICE / DHS",
           "short_label": "ICE",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ICE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ICE",
             "label": "ICE",
             "display_label": "ICE / DHS",
             "score": 1,
@@ -70835,13 +70717,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+          "market_id": "KXSECPRESSMENTION-26APR15-ID",
           "label": "ID / Identification",
           "short_label": "ID",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "market_id": "KXSECPRESSMENTION-26APR15-ID",
             "label": "ID",
             "display_label": "ID / Identification",
             "score": 0,
@@ -70861,13 +70743,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-ILLE",
+          "market_id": "KXSECPRESSMENTION-26APR15-ILLE",
           "label": "Illegal Alien",
           "short_label": "ILLE",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ILLE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ILLE",
             "label": "ILLE",
             "display_label": "Illegal Alien",
             "score": 1,
@@ -70886,13 +70768,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-IRAN",
+          "market_id": "KXSECPRESSMENTION-26APR15-IRAN",
           "label": "Iran",
           "short_label": "IRAN",
           "note": "geo/conflict dependent · q&a",
           "bucket": "qa_sensitive",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-IRAN",
+            "market_id": "KXSECPRESSMENTION-26APR15-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
             "score": 1,
@@ -70911,13 +70793,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-ISRA",
+          "market_id": "KXSECPRESSMENTION-26APR15-ISRA",
           "label": "Israel",
           "short_label": "ISRA",
           "note": "needs Q&A / topic pivot · q&a",
           "bucket": "qa_sensitive",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ISRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-ISRA",
             "label": "ISRA",
             "display_label": "Israel",
             "score": 4,
@@ -70937,38 +70819,13 @@
           "attention_allocation": "secondary watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
-          "label": "LaGuardia",
-          "short_label": "LAGU",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
-            "label": "LAGU",
-            "display_label": "LaGuardia",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+          "market_id": "KXSECPRESSMENTION-26APR15-NEGO",
           "label": "Negotiate / Negotiated / Negotiation",
           "short_label": "NEGO",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "market_id": "KXSECPRESSMENTION-26APR15-NEGO",
             "label": "NEGO",
             "display_label": "Negotiate / Negotiated / Negotiation",
             "score": 0,
@@ -70988,13 +70845,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
+          "market_id": "KXSECPRESSMENTION-26APR15-NUCL",
           "label": "Nuclear",
           "short_label": "NUCL",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
+            "market_id": "KXSECPRESSMENTION-26APR15-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
             "score": 1,
@@ -71013,13 +70870,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+          "market_id": "KXSECPRESSMENTION-26APR15-OIL",
           "label": "Oil",
           "short_label": "OIL",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "market_id": "KXSECPRESSMENTION-26APR15-OIL",
             "label": "OIL",
             "display_label": "Oil",
             "score": 1,
@@ -71038,13 +70895,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
+          "market_id": "KXSECPRESSMENTION-26APR15-RADI",
           "label": "Radical Left",
           "short_label": "RADI",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
+            "market_id": "KXSECPRESSMENTION-26APR15-RADI",
             "label": "RADI",
             "display_label": "Radical Left",
             "score": -1,
@@ -71064,13 +70921,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+          "market_id": "KXSECPRESSMENTION-26APR15-SANC",
           "label": "Sanctuary",
           "short_label": "SANC",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "market_id": "KXSECPRESSMENTION-26APR15-SANC",
             "label": "SANC",
             "display_label": "Sanctuary",
             "score": 1,
@@ -71089,13 +70946,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
+          "market_id": "KXSECPRESSMENTION-26APR15-SAVE",
           "label": "Save Act / Save America Act",
           "short_label": "SAVE",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
+            "market_id": "KXSECPRESSMENTION-26APR15-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
             "score": 0,
@@ -71115,13 +70972,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
+          "market_id": "KXSECPRESSMENTION-26APR15-SHUT",
           "label": "Shutdown / Shut Down",
           "short_label": "SHUT",
           "note": "special-rule / exact-token risk · rules",
           "bucket": "likely_trap",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
+            "market_id": "KXSECPRESSMENTION-26APR15-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
             "score": 0,
@@ -71141,13 +70998,13 @@
           "attention_allocation": "pass"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-STOC",
+          "market_id": "KXSECPRESSMENTION-26APR15-STOC",
           "label": "Stock Market",
           "short_label": "STOC",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STOC",
+            "market_id": "KXSECPRESSMENTION-26APR15-STOC",
             "label": "STOC",
             "display_label": "Stock Market",
             "score": 1,
@@ -71166,13 +71023,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-STUP",
+          "market_id": "KXSECPRESSMENTION-26APR15-STUP",
           "label": "Stupid Question",
           "short_label": "STUP",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STUP",
+            "market_id": "KXSECPRESSMENTION-26APR15-STUP",
             "label": "STUP",
             "display_label": "Stupid Question",
             "score": 1,
@@ -71191,13 +71048,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-SUPR",
+          "market_id": "KXSECPRESSMENTION-26APR15-SUPR",
           "label": "Supreme Court",
           "short_label": "SUPR",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SUPR",
+            "market_id": "KXSECPRESSMENTION-26APR15-SUPR",
             "label": "SUPR",
             "display_label": "Supreme Court",
             "score": 1,
@@ -71216,13 +71073,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-TARI",
+          "market_id": "KXSECPRESSMENTION-26APR15-TARI",
           "label": "Tariff",
           "short_label": "TARI",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TARI",
+            "market_id": "KXSECPRESSMENTION-26APR15-TARI",
             "label": "TARI",
             "display_label": "Tariff",
             "score": 1,
@@ -71241,38 +71098,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-TRAN",
-          "label": "Transgender",
-          "short_label": "TRAN",
-          "note": "context-dependent token · pivot",
-          "bucket": "contextual",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TRAN",
-            "label": "TRAN",
-            "display_label": "Transgender",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "phase watch"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+          "market_id": "KXSECPRESSMENTION-26APR15-TSA",
           "label": "TSA",
           "short_label": "TSA",
           "note": "context-dependent token · pivot",
           "bucket": "contextual",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "market_id": "KXSECPRESSMENTION-26APR15-TSA",
             "label": "TSA",
             "display_label": "TSA",
             "score": 1,
@@ -71291,13 +71123,13 @@
           "attention_allocation": "phase watch"
         },
         {
-          "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
+          "market_id": "KXSECPRESSMENTION-26APR15-UKRA",
           "label": "Ukraine",
           "short_label": "UKRA",
           "note": "needs Q&A / topic pivot · q&a",
           "bucket": "qa_sensitive",
           "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-UKRA",
             "label": "UKRA",
             "display_label": "Ukraine",
             "score": 4,
@@ -71315,32 +71147,6 @@
           },
           "phase_fit": "mixed",
           "attention_allocation": "secondary watch"
-        },
-        {
-          "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
-          "label": "Venezuela / Venezuelan",
-          "short_label": "VENE",
-          "note": "special-rule / exact-token risk · rules",
-          "bucket": "likely_trap",
-          "rank": {
-            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
-            "label": "VENE",
-            "display_label": "Venezuela / Venezuelan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          "phase_fit": "mixed",
-          "attention_allocation": "pass"
         }
       ],
       "context_checks": [
@@ -71376,7 +71182,7 @@
       "strike_priority": {
         "top_watchlist": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BORD",
+            "market_id": "KXSECPRESSMENTION-26APR15-BORD",
             "label": "BORD",
             "display_label": "Border",
             "score": 4,
@@ -71393,7 +71199,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CHIN",
+            "market_id": "KXSECPRESSMENTION-26APR15-CHIN",
             "label": "CHIN",
             "display_label": "China",
             "score": 4,
@@ -71410,7 +71216,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ISRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-ISRA",
             "label": "ISRA",
             "display_label": "Israel",
             "score": 4,
@@ -71427,7 +71233,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-UKRA",
             "label": "UKRA",
             "display_label": "Ukraine",
             "score": 4,
@@ -71444,7 +71250,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BIDE",
+            "market_id": "KXSECPRESSMENTION-26APR15-BIDE",
             "label": "BIDE",
             "display_label": "Biden",
             "score": 1,
@@ -71464,7 +71270,7 @@
         "likely_overreactions": [],
         "low_priority_strikes": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
+            "market_id": "KXSECPRESSMENTION-26APR15-AFFO",
             "label": "AFFO",
             "display_label": "Affordable / Affordability",
             "score": 0,
@@ -71481,24 +71287,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
-            "label": "ENDO",
-            "display_label": "Endorse / Endorsed / Endorsement",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "market_id": "KXSECPRESSMENTION-26APR15-ID",
             "label": "ID",
             "display_label": "ID / Identification",
             "score": 0,
@@ -71515,7 +71304,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "market_id": "KXSECPRESSMENTION-26APR15-NEGO",
             "label": "NEGO",
             "display_label": "Negotiate / Negotiated / Negotiation",
             "score": 0,
@@ -71532,9 +71321,26 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
+            "market_id": "KXSECPRESSMENTION-26APR15-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
+            "score": 0,
+            "priority_band": "можно отложить",
+            "edge_tag": "осторожно",
+            "strike_type": "special rule",
+            "yes_reference_price": null,
+            "price_bucket": "unknown",
+            "reasons": [
+              "opening-relevant",
+              "rules / wording risk"
+            ],
+            "status_class": "status-yellow",
+            "type_class": "type-red"
+          },
+          {
+            "market_id": "KXSECPRESSMENTION-26APR15-SHUT",
+            "label": "SHUT",
+            "display_label": "Shutdown / Shut Down",
             "score": 0,
             "priority_band": "можно отложить",
             "edge_tag": "осторожно",
@@ -71551,7 +71357,7 @@
         ],
         "full_ranking": [
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BORD",
+            "market_id": "KXSECPRESSMENTION-26APR15-BORD",
             "label": "BORD",
             "display_label": "Border",
             "score": 4,
@@ -71568,7 +71374,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CHIN",
+            "market_id": "KXSECPRESSMENTION-26APR15-CHIN",
             "label": "CHIN",
             "display_label": "China",
             "score": 4,
@@ -71585,7 +71391,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ISRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-ISRA",
             "label": "ISRA",
             "display_label": "Israel",
             "score": 4,
@@ -71602,7 +71408,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-UKRA",
+            "market_id": "KXSECPRESSMENTION-26APR15-UKRA",
             "label": "UKRA",
             "display_label": "Ukraine",
             "score": 4,
@@ -71619,7 +71425,7 @@
             "type_class": "type-blue"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-BIDE",
+            "market_id": "KXSECPRESSMENTION-26APR15-BIDE",
             "label": "BIDE",
             "display_label": "Biden",
             "score": 1,
@@ -71635,7 +71441,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-CRYP",
+            "market_id": "KXSECPRESSMENTION-26APR15-CRYP",
             "label": "CRYP",
             "display_label": "Crypto / Bitcoin",
             "score": 1,
@@ -71651,7 +71457,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPIC",
+            "market_id": "KXSECPRESSMENTION-26APR15-EPIC",
             "label": "EPIC",
             "display_label": "Epic Fury",
             "score": 1,
@@ -71667,23 +71473,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-EPST",
-            "label": "EPST",
-            "display_label": "Epstein",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FBI",
+            "market_id": "KXSECPRESSMENTION-26APR15-FBI",
             "label": "FBI",
             "display_label": "FBI",
             "score": 1,
@@ -71699,23 +71489,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FAKE",
-            "label": "FAKE",
-            "display_label": "Fake News",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-FRAU",
+            "market_id": "KXSECPRESSMENTION-26APR15-FRAU",
             "label": "FRAU",
             "display_label": "Fraud",
             "score": 1,
@@ -71731,7 +71505,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HEAL",
+            "market_id": "KXSECPRESSMENTION-26APR15-HEAL",
             "label": "HEAL",
             "display_label": "Healthcare",
             "score": 1,
@@ -71747,7 +71521,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-HORM",
+            "market_id": "KXSECPRESSMENTION-26APR15-HORM",
             "label": "HORM",
             "display_label": "Hormuz",
             "score": 1,
@@ -71763,7 +71537,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ICE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ICE",
             "label": "ICE",
             "display_label": "ICE / DHS",
             "score": 1,
@@ -71779,7 +71553,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ILLE",
+            "market_id": "KXSECPRESSMENTION-26APR15-ILLE",
             "label": "ILLE",
             "display_label": "Illegal Alien",
             "score": 1,
@@ -71795,7 +71569,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-IRAN",
+            "market_id": "KXSECPRESSMENTION-26APR15-IRAN",
             "label": "IRAN",
             "display_label": "Iran",
             "score": 1,
@@ -71811,23 +71585,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-LAGU",
-            "label": "LAGU",
-            "display_label": "LaGuardia",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NUCL",
+            "market_id": "KXSECPRESSMENTION-26APR15-NUCL",
             "label": "NUCL",
             "display_label": "Nuclear",
             "score": 1,
@@ -71843,7 +71601,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-OIL",
+            "market_id": "KXSECPRESSMENTION-26APR15-OIL",
             "label": "OIL",
             "display_label": "Oil",
             "score": 1,
@@ -71859,7 +71617,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SANC",
+            "market_id": "KXSECPRESSMENTION-26APR15-SANC",
             "label": "SANC",
             "display_label": "Sanctuary",
             "score": 1,
@@ -71875,7 +71633,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STOC",
+            "market_id": "KXSECPRESSMENTION-26APR15-STOC",
             "label": "STOC",
             "display_label": "Stock Market",
             "score": 1,
@@ -71891,7 +71649,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-STUP",
+            "market_id": "KXSECPRESSMENTION-26APR15-STUP",
             "label": "STUP",
             "display_label": "Stupid Question",
             "score": 1,
@@ -71907,7 +71665,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SUPR",
+            "market_id": "KXSECPRESSMENTION-26APR15-SUPR",
             "label": "SUPR",
             "display_label": "Supreme Court",
             "score": 1,
@@ -71923,7 +71681,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TSA",
+            "market_id": "KXSECPRESSMENTION-26APR15-TSA",
             "label": "TSA",
             "display_label": "TSA",
             "score": 1,
@@ -71939,7 +71697,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TARI",
+            "market_id": "KXSECPRESSMENTION-26APR15-TARI",
             "label": "TARI",
             "display_label": "Tariff",
             "score": 1,
@@ -71955,23 +71713,7 @@
             "type_class": "type-gray"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-TRAN",
-            "label": "TRAN",
-            "display_label": "Transgender",
-            "score": 1,
-            "priority_band": "держать в поле зрения",
-            "edge_tag": "погранично",
-            "strike_type": "generic",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-gray"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-AFFO",
+            "market_id": "KXSECPRESSMENTION-26APR15-AFFO",
             "label": "AFFO",
             "display_label": "Affordable / Affordability",
             "score": 0,
@@ -71988,24 +71730,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ENDO",
-            "label": "ENDO",
-            "display_label": "Endorse / Endorsed / Endorsement",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-ID",
+            "market_id": "KXSECPRESSMENTION-26APR15-ID",
             "label": "ID",
             "display_label": "ID / Identification",
             "score": 0,
@@ -72022,7 +71747,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-NEGO",
+            "market_id": "KXSECPRESSMENTION-26APR15-NEGO",
             "label": "NEGO",
             "display_label": "Negotiate / Negotiated / Negotiation",
             "score": 0,
@@ -72039,7 +71764,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SAVE",
+            "market_id": "KXSECPRESSMENTION-26APR15-SAVE",
             "label": "SAVE",
             "display_label": "Save Act / Save America Act",
             "score": 0,
@@ -72056,7 +71781,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-SHUT",
+            "market_id": "KXSECPRESSMENTION-26APR15-SHUT",
             "label": "SHUT",
             "display_label": "Shutdown / Shut Down",
             "score": 0,
@@ -72073,24 +71798,7 @@
             "type_class": "type-red"
           },
           {
-            "market_id": "KXSECPRESSMENTION-26MAR31-VENE",
-            "label": "VENE",
-            "display_label": "Venezuela / Venezuelan",
-            "score": 0,
-            "priority_band": "можно отложить",
-            "edge_tag": "осторожно",
-            "strike_type": "special rule",
-            "yes_reference_price": null,
-            "price_bucket": "unknown",
-            "reasons": [
-              "opening-relevant",
-              "rules / wording risk"
-            ],
-            "status_class": "status-yellow",
-            "type_class": "type-red"
-          },
-          {
-            "market_id": "KXSECPRESSMENTION-26MAR31-RADI",
+            "market_id": "KXSECPRESSMENTION-26APR15-RADI",
             "label": "RADI",
             "display_label": "Radical Left",
             "score": -1,
