@@ -5,158 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kalshi Live Basket Terminal</title>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-    <style>
+  <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background:#0b1020; color:#e7ecf5; }
-    a { color:#8cc8ff; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .wrap { max-width: 1760px; margin:0 auto; padding:16px; }
+    .wrap { max-width:1760px; margin:0 auto; padding:16px; }
     .card { background:#141a2e; border:1px solid #23304f; border-radius:14px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.2); }
+    .topbar { position:sticky; top:0; z-index:30; margin-bottom:16px; }
+    .topbar-inner { display:grid; grid-template-columns:1.3fr auto auto auto auto auto 1fr; gap:8px; align-items:center; background:#0d1324ee; backdrop-filter: blur(8px); border:1px solid #23304f; border-radius:14px; padding:12px; }
+    .input,.select,button { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
+    .input,.select { width:100%; background:#0f1629; border-color:#23304f; }
+    button { cursor:pointer; }
     .muted { color:#9fb0cf; }
+    .small { font-size:13px; }
     .warn { color:#ffd86b; }
     .danger { color:#ff9b9b; }
-    .small { font-size:13px; }
-    .topbar { position:sticky; top:0; z-index:20; margin-bottom:16px; }
-    .topbar-inner { display:grid; grid-template-columns: 1.3fr auto auto auto auto auto auto 1fr; gap:8px; align-items:center; background:#0d1324ee; backdrop-filter: blur(8px); border:1px solid #23304f; border-radius:14px; padding:12px; }
-    .input, .select { width:100%; border:1px solid #23304f; background:#0f1629; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
-    button { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; padding:10px 12px; border-radius:10px; cursor:pointer; }
-    button:hover { background:#1d2d4f; }
-    .layout-top { display:grid; grid-template-columns: 300px 1fr; gap:16px; align-items:start; }
+    .layout-top { display:grid; grid-template-columns:300px 1fr; gap:16px; align-items:start; }
     .sticky-col { position:sticky; top:82px; max-height:calc(100vh - 96px); overflow:auto; }
-    .strike-list, .member-list, .basket-grid { display:grid; gap:10px; }
-    .strike-list { grid-template-columns:repeat(2, minmax(0, 1fr)); }
-    .strike-chip { padding:10px 10px; border:1px solid #23304f; border-radius:10px; background:#10182d; cursor:grab; user-select:none; min-width:0; }
+    .strike-list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+    .strike-chip { padding:10px; border:1px solid #23304f; border-radius:10px; background:#10182d; min-width:0; cursor:grab; }
     .strike-chip strong { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; }
-    .strike-chip small { color:#9fb0cf; display:block; margin-top:3px; }
-    .basket-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items:start; }
-    .basket-card { background:#10182d; border:2px solid #23304f; border-radius:18px; padding:10px; min-height:232px; display:grid; gap:8px; transition:.15s ease; }
-    .basket-card.active { border-color:#8cc8ff; box-shadow:0 0 0 1px rgba(140,200,255,.25), 0 0 16px rgba(140,200,255,.10); }
+    .board-header { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
+    .basket-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+    .basket-card { position:relative; background:#10182d; border:2px solid #23304f; border-radius:18px; padding:10px; min-height:232px; display:grid; gap:8px; transition:.12s ease; }
+    .basket-card.active { border-color:#8cc8ff; box-shadow:0 0 0 1px rgba(140,200,255,.2), 0 0 16px rgba(140,200,255,.08); }
+    .basket-card.over { border-color:#8cc8ff; box-shadow: inset 0 0 0 1px rgba(140,200,255,.45), 0 0 0 1px rgba(140,200,255,.12); }
     .basket-head { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
     .basket-title { display:flex; align-items:center; gap:8px; min-width:0; }
     .basket-dot { width:12px; height:12px; border-radius:999px; flex:0 0 auto; }
     .basket-name { font-weight:700; line-height:1.05; font-size:13px; }
-    .basket-actions { display:flex; gap:6px; flex-wrap:wrap; }
+    .basket-actions { display:flex; gap:6px; }
     .mini-btn { padding:2px 6px; font-size:11px; min-width:24px; height:24px; border-radius:8px; }
-    .signal { display:inline-block; padding:2px 6px; border-radius:999px; font-size:10px; }
-    .signal.green { background:#163929; color:#8be0af; }
-    .signal.red { background:#4a1f1f; color:#ff9b9b; }
-    .signal.neutral { background:#23304f; color:#b9c7e7; }
-    .basket-metrics { display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap:8px; }
-    .metric { background:#141d34; border:1px solid #23304f; border-radius:10px; padding:8px; min-width:0; }
-    .metric .label { color:#9fb0cf; font-size:12px; }
-    .metric .value { margin-top:3px; font-weight:700; }
-    .sparkline { height:18px; border:1px solid #23304f; border-radius:6px; background:#0c1222; }
-    .chip-row { display:flex; gap:6px; flex-wrap:wrap; }
-    .member-chip { padding:3px 5px; border-radius:999px; background:#17233f; border:1px solid #2a3d63; font-size:10px; cursor:pointer; max-width:100%; overflow:hidden; text-overflow:ellipsis; }
-    .basket-pill-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); grid-auto-rows:34px; gap:8px; min-height:168px; max-height:168px; }
+    .basket-pill-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:34px; gap:8px; min-height:168px; max-height:168px; }
     .basket-pill { display:flex; align-items:center; justify-content:space-between; gap:8px; border:1px solid #3B4D70; border-radius:999px; padding:6px 10px; background:#24324A; color:#dbe6f7; font-size:11px; font-weight:500; min-width:0; min-height:34px; transition:.12s ease; }
     .basket-pill:hover { background:#2a3954; border-color:#5f7fb5; box-shadow:0 0 0 1px rgba(95,127,181,.18), 0 0 10px rgba(95,127,181,.14); }
     .basket-pill.placeholder { background:#1a2238; border-color:#2a3656; color:#51617f; pointer-events:none; }
-    .basket-pill-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-transform:lowercase; letter-spacing:0; }
+    .basket-pill-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-transform:lowercase; }
     .basket-pill-price { flex:0 0 auto; font-variant-numeric: tabular-nums; font-size:11px; font-weight:600; color:#e7ecf5; background:#1B2438; border:1px solid #31415f; border-radius:999px; padding:2px 6px; }
     .basket-pill-dot { width:7px; height:7px; border-radius:999px; flex:0 0 auto; }
-    .member-chip:hover, .member-chip.hovered { border-color:#8cc8ff; background:#1a2b4d; }
-    .dropzone { display:none; }
-    .dropzone.empty::before { content:''; }
-    .strike-list.drop-active { outline:1px dashed #8cc8ff; outline-offset:3px; border-radius:12px; }
-    .basket-card { position:relative; }
-    .basket-card.drop-active { box-shadow: inset 0 0 0 1px rgba(140,200,255,.45), 0 0 0 1px rgba(140,200,255,.15); }
-    .inspector-grid { display:grid; gap:10px; }
-    .contrib-bar { height:8px; border-radius:999px; background:#243250; overflow:hidden; }
-    .contrib-fill { height:100%; background:#4cc9f0; }
-    .inspector-section-title { margin:2px 0 4px; font-size:12px; color:#9fb0cf; text-transform:uppercase; letter-spacing:.04em; }
-    .chart-section, .timeline-section { margin-top:16px; }
-    .chart-controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
-    .legend-chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+    .chart-section,.timeline-section { margin-top:16px; }
+    .subhead { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:10px; }
+    .chart-controls,.legend-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
     .legend-chip { padding:5px 8px; border-radius:999px; border:1px solid #2a3d63; background:#10182d; font-size:12px; cursor:pointer; }
     .legend-chip.off { opacity:.45; }
     #chart { width:100%; height:520px; min-height:520px; }
     .timeline-row { display:flex; gap:8px; overflow:auto; padding-bottom:4px; }
     .timeline-item { white-space:nowrap; padding:6px 10px; border-radius:999px; border:1px solid #23304f; background:#10182d; font-size:12px; }
-    .subhead { display:flex; justify-content:space-between; gap:10px; align-items:center; margin-bottom:10px; }
-    @media (max-width: 1450px) {
-      .layout-top { grid-template-columns: 280px 1fr; }
-      .sticky-inspector { grid-column: 1 / -1; position:static; max-height:none; }
-      .basket-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-      .topbar-inner { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    @media (max-width: 980px) {
-      .layout-top { grid-template-columns: 1fr; }
-      .sticky-col { position:static; max-height:none; }
-      .basket-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      #chart { height:420px; min-height:420px; }
-      .topbar-inner { grid-template-columns: 1fr; }
-    }
+    .drop-target-unassigned.over { outline:1px dashed #8cc8ff; outline-offset:3px; border-radius:12px; }
+    .drag-overlay { padding:10px 12px; border:1px solid #5f7fb5; border-radius:10px; background:#24324A; color:#e7ecf5; box-shadow:0 12px 28px rgba(0,0,0,.35); }
+    @media (max-width:1450px){ .topbar-inner{grid-template-columns:1fr 1fr 1fr;} .basket-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
+    @media (max-width:980px){ .layout-top{grid-template-columns:1fr;} .sticky-col{position:static;max-height:none;} .basket-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .topbar-inner{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="topbar">
-    <div class="topbar-inner">
-      <input id="marketUrlInput" class="input" placeholder="Paste Kalshi event URL...">
-      <button id="loadBtn">Load event</button>
-      <button id="refreshBtn">Refresh now</button>
-      <button id="saveTemplateBtn">Save template</button>
-      <label class="small muted" style="display:flex; align-items:center; gap:8px;"><input id="autoRefreshToggle" type="checkbox"> Auto-refresh</label>
-      <select id="refreshInterval" class="select"><option value="5">5s</option><option value="10" selected>10s</option><option value="15">15s</option><option value="30">30s</option></select>
-      <select id="modeSelect" class="select"><option value="live">Live snapshots</option></select>
-      <div id="loadStatus" class="muted small">Load a Kalshi event to begin.</div>
-    </div>
-  </div>
-
-  <div class="layout-top">
-    <div class="card sticky-col">
-      <div class="subhead"><h2 style="margin:0;">Unassigned strikes</h2></div>
-      <input id="strikeSearch" class="input" placeholder="Search strikes...">
-      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
-        <button id="addBasketBtn">Create basket</button>
-        <button id="seedBasketsBtn">Auto-seed baskets</button>
-        <button id="clearAssignmentsBtn">Clear assignments</button>
-      </div>
-      <label class="small muted" style="display:flex; align-items:center; gap:8px; margin-top:10px;"><input id="onlyMovingToggle" type="checkbox"> Only moving</label>
-      <div id="unassignedList" class="strike-list" style="margin-top:12px;"></div>
-    </div>
-
-    <div>
-      <div class="card">
-        <div class="subhead">
-          <div>
-            <h1 id="pageTitle" style="margin:0; font-size:24px;">Live Basket Terminal</h1>
-            <div class="muted small">Baskets first, chart second. Drag strikes into baskets, then inspect the selected basket below.</div>
-          </div>
-          <div class="small muted" id="eventMetaLabel">—</div>
-        </div>
-        <div id="basketGrid" class="basket-grid"></div>
-      </div>
-
-      <div class="card chart-section">
-        <div class="subhead">
-          <h2 id="chartTitle" style="margin:0;">Basket chart</h2>
-          <div class="small muted" id="coverageLabel">—</div>
-        </div>
-        <div class="chart-controls">
-          <button class="mini-btn" data-chart-mode="avg">avg</button>
-          <button class="mini-btn" data-chart-mode="members">members</button>
-          <button class="mini-btn" data-chart-mode="leader">leader only</button>
-          <select id="compareBasketSelect" class="select" style="width:auto; min-width:170px;"><option value="">compare basket</option></select>
-          <label class="small muted" style="display:flex; align-items:center; gap:8px;"><input id="normalizeToggle" type="checkbox"> normalize</label>
-          <select id="timeRangeSelect" class="select" style="width:auto;"><option value="5">last 5m</option><option value="15" selected>last 15m</option><option value="30">last 30m</option><option value="60">last 1h</option></select>
-        </div>
-        <div id="legendChips" class="legend-chips"></div>
-        <div id="chart"></div>
-      </div>
-
-      <div class="card timeline-section">
-        <div class="subhead"><h2 style="margin:0;">Timeline / tape</h2></div>
-        <div id="timelineRow" class="timeline-row"></div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<script>
+<div id="app"></div>
+<script type="module">
+import React, {useEffect, useMemo, useState} from 'https://esm.sh/react@18.3.1';
+import {createRoot} from 'https://esm.sh/react-dom@18.3.1/client';
+import htm from 'https://esm.sh/htm@3.1.1';
+import {DndContext, DragOverlay, PointerSensor, useDraggable, useDroppable, useSensor, useSensors} from 'https://esm.sh/@dnd-kit/core@6.3.1';
+const html = htm.bind(React.createElement);
 const PROXY_BASE = 'https://139.84.170.170.nip.io/kalshi-proxy';
 const DEFAULT_BASKETS = [
   { name: 'Domestic politics', color: '#4cc9f0' },
@@ -167,92 +75,124 @@ const DEFAULT_BASKETS = [
   { name: 'Tails / noise', color: '#95a4c6' },
 ];
 const BASKET_COLORS = ['#4cc9f0','#f72585','#ffd166','#72efdd','#c77dff','#90be6d','#ff8fab','#ff9f1c','#5dade2','#f28482'];
-const state = {
-  currentEventTicker: null,
-  currentUrl: null,
-  eventMeta: null,
-  markets: [],
-  series: [],
-  baskets: [],
-  basketMembers: {},
-  refreshTimer: null,
-  liveSnapshots: {},
-  selectedBasket: null,
-  chartMode: 'avg',
-  legendVisibility: {},
-  compareBasket: '',
-  timeline: [],
-  hoverStrike: null,
-  draggedStrike: null,
-};
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
-function fmtPrice(v){return Number.isFinite(v)?v.toFixed(2):'—';}
-function fmtSigned(v){return Number.isFinite(v)?`${v>0?'+':''}${v.toFixed(2)}`:'—';}
-function fmtTs(v){if(!v)return'—';const d=new Date(v);if(Number.isNaN(d.getTime()))return String(v);return d.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'})+' UTC';}
-function setStatus(text,cls='muted small'){const el=document.getElementById('loadStatus');el.textContent=text;el.className=cls;}
-function extractEventTicker(input){const m=String(input||'').trim().match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)\b/i);return m?m[1].toUpperCase():null;}
-function avg(arr){const v=arr.filter(Number.isFinite);return v.length?v.reduce((a,b)=>a+b,0)/v.length:NaN;}
-function sum(arr){const v=arr.filter(Number.isFinite);return v.length?v.reduce((a,b)=>a+b,0):NaN;}
-function basketStorageKey(){return state.currentEventTicker?`kalshi-live-baskets:${state.currentEventTicker}`:null;}
-function saveAssignments(){const k=basketStorageKey(); if(!k) return; localStorage.setItem(k, JSON.stringify({baskets:state.baskets,basketMembers:state.basketMembers,selectedBasket:state.selectedBasket}));}
-function loadAssignments(){const k=basketStorageKey(); if(!k) return false; try{const d=JSON.parse(localStorage.getItem(k)||'null'); if(!d) return false; state.baskets=d.baskets?.length?d.baskets:structuredClone(DEFAULT_BASKETS); state.basketMembers=d.basketMembers||{}; state.selectedBasket=d.selectedBasket||state.baskets[0]?.name||null; return true;}catch{return false;}}
-function buildDefaultBaskets(){state.baskets=[]; state.basketMembers={}; state.selectedBasket=null;}
-function normalizeAssignments(){const valid=new Set(state.series.map(s=>s.name)); const seen=new Set(); for(const basket of state.baskets){const next=(state.basketMembers[basket.name]||[]).filter(n=>valid.has(n)&&!seen.has(n)); next.forEach(n=>seen.add(n)); state.basketMembers[basket.name]=next;} if(state.selectedBasket && !state.baskets.some(b=>b.name===state.selectedBasket)) state.selectedBasket=null; if(!state.selectedBasket && state.baskets[0]) state.selectedBasket=state.baskets[0].name;}
-function extractMarketSnapshotPrice(meta){for(const v of [meta.last_price_dollars,meta.yes_price_dollars,meta.last_price,meta.yes_price,meta.yes_bid_dollars,meta.yes_ask_dollars]){const n=parseFloat(v); if(Number.isFinite(n)) return n*100;} return NaN;}
-function extractMarketSnapshotVolume(meta){for(const v of [meta.volume_fp,meta.volume,meta.open_interest_fp]){const n=parseFloat(v); if(Number.isFinite(n)) return n;} return NaN;}
-function computeSeriesMetrics(points){const valid=points.filter(p=>Number.isFinite(p.y)); if(!valid.length) return {last:NaN,delta1m:NaN,delta5m:NaN,vol5m:NaN}; const last=valid.at(-1); const prev1=valid.length>=2?valid.at(-2):null; const prev5=valid.length>=6?valid.at(-6):valid[0]; return {last:last.y,delta1m:prev1?(last.y-prev1.y):NaN,delta5m:prev5?(last.y-prev5.y):NaN,vol5m:sum(valid.slice(-5).map(p=>p.volume))};}
-function basketStats(name){const members=(state.basketMembers[name]||[]).map(n=>state.series.find(s=>s.name===n)).filter(Boolean); if(!members.length) return {count:0,lastAvg:NaN,delta1mAvg:NaN,delta5mAvg:NaN,vol5m:NaN,breadth:'0/0',leader:null,laggard:null}; const leader=[...members].sort((a,b)=>(b.metrics.delta1m||-999)-(a.metrics.delta1m||-999))[0]; const laggard=[...members].sort((a,b)=>(a.metrics.delta1m||999)-(b.metrics.delta1m||999))[0]; const pos=members.filter(m=>Number.isFinite(m.metrics.delta1m)&&m.metrics.delta1m>0).length; return {count:members.length,lastAvg:avg(members.map(m=>m.metrics.last)),delta1mAvg:avg(members.map(m=>m.metrics.delta1m)),delta5mAvg:avg(members.map(m=>m.metrics.delta5m)),vol5m:sum(members.map(m=>m.metrics.vol5m)),breadth:`${pos}/${members.length}`,leader:leader?.name||null,laggard:laggard?.name||null};}
-function signalClass(v){if(!Number.isFinite(v)) return 'neutral'; if(v>0.25) return 'green'; if(v<-0.25) return 'red'; return 'neutral';}
-function getUnassigned(){const assigned=new Set(Object.values(state.basketMembers).flat()); const q=(document.getElementById('strikeSearch').value||'').trim().toLowerCase(); const moving=document.getElementById('onlyMovingToggle').checked; return state.series.filter(s=>!assigned.has(s.name)).filter(s=>!q || s.name.toLowerCase().includes(q)).filter(s=>!moving || (Number.isFinite(s.metrics.delta1m)&&Math.abs(s.metrics.delta1m)>0));}
-function makeSortable(el){ if(!el) return; el.querySelectorAll('[data-chip-name],[data-strike-name]').forEach(node=>{ if(node.dataset.nativeDragReady==='1') return; node.setAttribute('draggable','true'); node.addEventListener('dragstart',e=>{ state.draggedStrike = node.dataset.chipName || node.dataset.strikeName || null; document.body.classList.add('dragging-strike'); document.querySelectorAll('[data-basket-card], #unassignedList').forEach(x=>x.classList.add('drop-active')); if(e.dataTransfer){ e.dataTransfer.effectAllowed='move'; try{ e.dataTransfer.setData('text/plain', state.draggedStrike || ''); }catch{} } }); node.addEventListener('dragend',()=>{ state.draggedStrike = null; document.body.classList.remove('dragging-strike'); document.querySelectorAll('.drop-active').forEach(x=>x.classList.remove('drop-active')); }); node.dataset.nativeDragReady='1'; }); }
-function renderUnassigned(){const root=document.getElementById('unassignedList'); const items=getUnassigned(); root.innerHTML=items.map(s=>`<div class="strike-chip" data-strike-name="${esc(s.name)}"><strong>${esc(s.name)}</strong></div>`).join('')||'<div class="muted small">No unassigned strikes.</div>'; makeSortable(root);}
-function renderBasketBoard(){const root=document.getElementById('basketGrid'); if(!state.baskets.length){root.innerHTML='<div class="card muted small">No baskets yet. Create one or auto-seed baskets.</div>'; return;} root.innerHTML=state.baskets.map((basket,idx)=>{const members=state.basketMembers[basket.name]||[]; const active=state.selectedBasket===basket.name?'active':''; const slots=[]; for(const name of members.slice(0,8)){const s=state.series.find(x=>x.name===name); slots.push(`<div class="basket-pill member-chip" data-chip-basket="${esc(basket.name)}" data-chip-name="${esc(name)}"><span class="basket-pill-dot" style="background:${basket.color}"></span><span class="basket-pill-name">${esc(name)}</span><span class="basket-pill-price">${fmtPrice(s?.metrics.last)}</span></div>`);} while(slots.length<8){slots.push('<div class="basket-pill placeholder"><span class="basket-pill-dot" style="background:#51617f"></span><span class="basket-pill-name">—</span><span class="basket-pill-price"></span></div>');} return `<div class="basket-card ${active}" data-select-basket="${esc(basket.name)}"><div class="basket-head"><div class="basket-title"><span class="basket-dot" style="background:${basket.color}"></span><div><div class="basket-name">${esc(basket.name)}</div></div></div><div class="basket-actions"><button class="mini-btn" data-rename-basket="${esc(basket.name)}">r</button><button class="mini-btn" data-delete-basket="${esc(basket.name)}">×</button></div></div><div class="basket-pill-grid" data-basket-zone="${esc(basket.name)}">${slots.join('')}</div></div>`;}).join('');  root.querySelectorAll('[data-select-basket]').forEach(el=>el.addEventListener('click',e=>{if(e.target.closest('button')||e.target.closest('.dropzone')) return; state.selectedBasket=el.dataset.selectBasket; rerender();})); root.querySelectorAll('[data-rename-basket]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation(); const next=prompt('Rename basket', btn.dataset.renameBasket); if(next) renameBasket(btn.dataset.renameBasket,next.trim());})); root.querySelectorAll('[data-delete-basket]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation(); removeBasket(btn.dataset.deleteBasket);})); root.querySelectorAll('.member-chip').forEach(chip=>{if(!chip.dataset.chipName) return; chip.addEventListener('mouseenter',()=>{state.hoverStrike=chip.dataset.chipName; highlightLegendChip(); buildChart(); chip.classList.add('hovered');}); chip.addEventListener('mouseleave',()=>{state.hoverStrike=null; highlightLegendChip(); buildChart(); chip.classList.remove('hovered');});}); root.querySelectorAll('[data-basket-card]').forEach(card=>{card.addEventListener('dragover',e=>{e.preventDefault();}); card.addEventListener('dragenter',()=>card.classList.add('drop-active')); card.addEventListener('dragleave',e=>{if(!card.contains(e.relatedTarget)) card.classList.remove('drop-active');}); card.addEventListener('drop',e=>{e.preventDefault(); card.classList.remove('drop-active'); moveStrikeToBasket(state.draggedStrike, card.dataset.basketCard);});}); const unassigned=document.getElementById('unassignedList'); if(unassigned){ unassigned.addEventListener('dragover',e=>{e.preventDefault(); unassigned.classList.add('drop-active');}); unassigned.addEventListener('dragleave',e=>{ if(!unassigned.contains(e.relatedTarget)) unassigned.classList.remove('drop-active'); }); unassigned.addEventListener('drop',e=>{e.preventDefault(); unassigned.classList.remove('drop-active'); moveStrikeToUnassigned(state.draggedStrike);}); } makeSortable(document.getElementById('unassignedList')); root.querySelectorAll('.basket-pill-grid').forEach(makeSortable);}
-function renderSparklines(){state.baskets.forEach((basket,idx)=>{const el=document.getElementById(`spark-${idx}`); if(!el) return; const members=(state.basketMembers[basket.name]||[]).map(n=>state.series.find(s=>s.name===n)).filter(Boolean); if(!members.length){el.innerHTML=''; return;} const ts=[...new Set(members.flatMap(m=>m.points.map(p=>p.x)))].sort().slice(-15); const y=ts.map(t=>avg(members.map(m=>m.pointMap.get(t)?.y))); Plotly.newPlot(el,[{x:ts,y,mode:'lines',line:{color:basket.color,width:2},hoverinfo:'skip'}],{paper_bgcolor:'#0c1222',plot_bgcolor:'#0c1222',margin:{l:6,r:6,t:6,b:6},xaxis:{visible:false},yaxis:{visible:false}}, {staticPlot:true,displayModeBar:false});});}
-function syncAssignmentsFromDom(){}
-function removeStrikeFromAllBaskets(strikeName){ for(const basketName of Object.keys(state.basketMembers)){ state.basketMembers[basketName] = (state.basketMembers[basketName] || []).filter(n => n !== strikeName); } }
-function moveStrikeToBasket(strikeName, targetBasket){ if(!strikeName || !targetBasket) return; removeStrikeFromAllBaskets(strikeName); if(!state.basketMembers[targetBasket]) state.basketMembers[targetBasket] = []; if(!state.basketMembers[targetBasket].includes(strikeName)) state.basketMembers[targetBasket].push(strikeName); normalizeAssignments(); saveAssignments(); pushTimeline(`strike moved to ${targetBasket}`); rerender(); }
-function moveStrikeToUnassigned(strikeName){ if(!strikeName) return; removeStrikeFromAllBaskets(strikeName); normalizeAssignments(); saveAssignments(); pushTimeline('strike returned to unassigned'); rerender(); }
-function renameBasket(oldName,newName){if(!newName||oldName===newName) return; if(state.baskets.some(b=>b.name===newName)) return; const b=state.baskets.find(x=>x.name===oldName); if(!b) return; b.name=newName; state.basketMembers[newName]=state.basketMembers[oldName]||[]; delete state.basketMembers[oldName]; if(state.selectedBasket===oldName) state.selectedBasket=newName; saveAssignments(); pushTimeline(`basket renamed to ${newName}`); rerender();}
-function removeBasket(name){state.baskets=state.baskets.filter(b=>b.name!==name); delete state.basketMembers[name]; if(state.selectedBasket===name) state.selectedBasket=state.baskets[0]?.name || null; normalizeAssignments(); saveAssignments(); pushTimeline(`basket deleted: ${name}`); rerender();}
-function addBasket(){let i=1,name=`New basket ${i}`; while(state.baskets.some(b=>b.name===name)){i++;name=`New basket ${i}`;} state.baskets.push({name,color:BASKET_COLORS[state.baskets.length%BASKET_COLORS.length]}); state.basketMembers[name]=[]; state.selectedBasket=name; saveAssignments(); pushTimeline(`basket created: ${name}`); rerender();}
-function classifyBasketSeed(name){const s=name.toLowerCase(); if(/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if(/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if(/(ice|dhs|border|illegal|id\b|identification|sanctuary)/.test(s)) return 'Immigration / border'; if(/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if(/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise';}
-function autoSeedBaskets(){if(!state.baskets.length){state.baskets=structuredClone(DEFAULT_BASKETS); state.basketMembers=Object.fromEntries(state.baskets.map(b=>[b.name,[]])); state.selectedBasket=state.baskets[0]?.name || null;} for(const b of state.baskets) state.basketMembers[b.name]=[]; for(const s of state.series){const target=classifyBasketSeed(s.name); if(state.basketMembers[target]) state.basketMembers[target].push(s.name);} normalizeAssignments(); saveAssignments(); pushTimeline('auto-seeded baskets'); rerender();}
-function pushTimeline(text){state.timeline.unshift({ts:new Date().toISOString(),text}); state.timeline=state.timeline.slice(0,20); renderTimeline();}
-function renderTimeline(){const root=document.getElementById('timelineRow'); root.innerHTML=state.timeline.map(item=>`<div class="timeline-item">${esc(fmtTs(item.ts))} ${esc(item.text)}</div>`).join('') || '<div class="muted small">No timeline items yet.</div>';}
-function renderInspector(){}
-function filteredPoints(points){const mins=Number(document.getElementById('timeRangeSelect').value||15); const cutoff=Date.now()-mins*60*1000; return points.filter(p=>new Date(p.x).getTime()>=cutoff);}
-function norm(values){const valid=values.filter(Number.isFinite); if(!valid.length) return values; const first=valid[0]; return values.map(v=>Number.isFinite(v)?v-first:v);}
-function renderLegendChips(){const root=document.getElementById('legendChips'); const names=getChartSeriesNames(); root.innerHTML=names.map(n=>`<span class="legend-chip ${state.legendVisibility[n]===false?'off':''}" data-legend-name="${esc(n)}">${esc(n)}</span>`).join(''); root.querySelectorAll('[data-legend-name]').forEach(chip=>chip.addEventListener('click',()=>{const n=chip.dataset.legendName; state.legendVisibility[n]=state.legendVisibility[n]===false?true:false; buildChart(); renderLegendChips();})); highlightLegendChip();}
-function highlightLegendChip(){document.querySelectorAll('[data-legend-name]').forEach(chip=>{chip.style.borderColor = chip.dataset.legendName===state.hoverStrike ? '#8cc8ff' : ''; chip.style.boxShadow = chip.dataset.legendName===state.hoverStrike ? '0 0 0 1px rgba(140,200,255,.35)' : '';});}
-function getChartSeriesNames(){const selected=state.selectedBasket; if(!selected) return []; const members=(state.basketMembers[selected]||[]); const names=[]; if(state.chartMode==='avg') names.push(`${selected} avg`); if(state.chartMode==='members') names.push(...members); if(state.chartMode==='leader'){ const leader=basketStats(selected).leader; if(leader) names.push(leader); }
- if(state.compareBasket) names.push(`${state.compareBasket} avg`); return names;}
-function buildChart(){const selected=state.selectedBasket; const root=document.getElementById('chart'); if(!selected){root.innerHTML='<div class="muted">Select a basket.</div>'; return;} const traces=[]; const normalize=document.getElementById('normalizeToggle').checked; const selectedMembers=(state.basketMembers[selected]||[]).map(n=>state.series.find(s=>s.name===n)).filter(Boolean); const addBasketAvg=(basketName,color)=>{const members=(state.basketMembers[basketName]||[]).map(n=>state.series.find(s=>s.name===n)).filter(Boolean); if(!members.length) return; const ts=[...new Set(members.flatMap(m=>filteredPoints(m.points).map(p=>p.x)))].sort(); let y=ts.map(t=>avg(members.map(m=>m.pointMap.get(t)?.y))); if(normalize) y=norm(y); const traceName=`${basketName} avg`; if(state.legendVisibility[traceName]===false) return; traces.push({x:ts,y,mode:'lines',name:traceName,line:{width:4,color},opacity:1}); };
- const basket=state.baskets.find(b=>b.name===selected); addBasketAvg(selected,basket?.color||'#4cc9f0'); if(state.chartMode==='members'){ for(const member of selectedMembers){ if(state.legendVisibility[member.name]===false) continue; let pts=filteredPoints(member.points); let y=pts.map(p=>p.y); if(normalize) y=norm(y); traces.push({x:pts.map(p=>p.x),y,mode:'lines',name:member.name,line:{width:state.hoverStrike===member.name?3:1.8,color:basket?.color||'#4cc9f0',dash:state.hoverStrike===member.name?'solid':'dot'},opacity:state.hoverStrike&&state.hoverStrike!==member.name?0.25:0.7}); }}
- if(state.chartMode==='leader'){ const leader=basketStats(selected).leader; const member=selectedMembers.find(m=>m.name===leader); if(member && state.legendVisibility[member.name]!==false){ let pts=filteredPoints(member.points); let y=pts.map(p=>p.y); if(normalize) y=norm(y); traces.push({x:pts.map(p=>p.x),y,mode:'lines',name:member.name,line:{width:3,color:basket?.color||'#4cc9f0'}}); }}
- if(state.compareBasket && state.compareBasket!==selected){ const comp=state.baskets.find(b=>b.name===state.compareBasket); addBasketAvg(state.compareBasket, comp?.color||'#ffd166'); }
- if(!traces.length){ root.innerHTML='<div class="muted">Not enough live points yet. Keep auto-refresh on.</div>'; return; }
- Plotly.newPlot(root,traces,{paper_bgcolor:'#141a2e',plot_bgcolor:'#10182d',font:{color:'#e7ecf5'},hovermode:'x unified',margin:{l:60,r:20,t:10,b:50},xaxis:{gridcolor:'#20304d',title:'Time (UTC)'},yaxis:{gridcolor:'#20304d',title:normalize?'Normalized move':'Price (cents)'},legend:{orientation:'h',y:-0.2,x:0}}, {responsive:true,displaylogo:false}); document.getElementById('chartTitle').textContent=`Basket chart: ${selected}`; const allX=traces.flatMap(t=>t.x); const sorted=[...new Set(allX)].sort(); document.getElementById('coverageLabel').textContent=`${sorted[0]||'—'} → ${sorted.at(-1)||'—'}`; renderLegendChips();}
-async function loadEvent(url){const eventTicker=extractEventTicker(url); if(!eventTicker) return setStatus('Could not parse Kalshi event ticker from URL.','warn'); state.currentEventTicker=eventTicker; state.currentUrl=url; setStatus(`Loading ${eventTicker}...`); try{const res=await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(url)}`); if(!res.ok){const text=await res.text(); throw new Error(`proxy ${res.status} ${text.slice(0,160)}`);} const payload=await res.json(); state.eventMeta=payload.event||null; state.markets=payload.markets||[]; const marketMap=new Map(state.markets.map(m=>[m.ticker,m])); const candleMap=new Map((payload.candlesticks||[]).map(entry=>[entry.market_ticker,entry])); const nowIso=new Date().toISOString(); state.series=state.markets.map(meta=>{const entry=candleMap.get(meta.ticker)||{candlesticks:[]}; const name=meta.yes_sub_title||meta.subtitle||meta.title||meta.ticker; let points=(entry.candlesticks||[]).map(c=>({x:new Date((c.end_period_ts||0)*1000).toISOString(),y:(()=>{const p=c.price?.close_dollars??c.price?.mean_dollars??c.price?.previous_dollars??null; return p==null?NaN:parseFloat(p)*100;})(),volume:c.volume_fp!=null?parseFloat(c.volume_fp):NaN})).filter(p=>Number.isFinite(p.y)); const snapshotPrice=extractMarketSnapshotPrice(meta); const snapshotVolume=extractMarketSnapshotVolume(meta); const prev=state.liveSnapshots[name]||[]; if(!points.length && Number.isFinite(snapshotPrice)) points=[...prev,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240); else if(Number.isFinite(snapshotPrice)) points=[...points,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240); state.liveSnapshots[name]=points; return {name,ticker:meta.ticker,points,pointMap:new Map(points.map(p=>[p.x,p])),metrics:computeSeriesMetrics(points)};}).filter(s=>s.points.length); if(!loadAssignments()) buildDefaultBaskets(); normalizeAssignments(); updateMeta(payload); pushTimeline(`loaded ${payload.event_ticker}`); rerender(); const human=state.eventMeta?.event?.title||state.eventMeta?.title||payload.event_ticker; const mode=(payload.candlesticks||[]).some(x=>(x.candlesticks||[]).length)?'candles':'live snapshots'; setStatus(`Loaded ${human} (${state.series.length} strikes, interval=${payload.period_interval||1}m, mode=${mode}).`); const qp=new URLSearchParams(location.search); qp.set('market_url',url); history.replaceState({},'',`${location.pathname}?${qp.toString()}`);}catch(err){setStatus(`Load error: ${err.message||err}`,'danger');}}
-function updateMeta(payload){document.getElementById('pageTitle').textContent='Live Basket Terminal'; const human=state.eventMeta?.event?.title||state.eventMeta?.title||payload.event_ticker||state.currentEventTicker; document.getElementById('eventMetaLabel').textContent=human; document.getElementById('compareBasketSelect').innerHTML='<option value="">compare basket</option>'+state.baskets.map(b=>`<option value="${esc(b.name)}" ${state.compareBasket===b.name?'selected':''}>${esc(b.name)}</option>`).join('');}
-async function refreshEvent(){if(!state.currentUrl) return; const prevAssignments=JSON.parse(JSON.stringify(state.basketMembers)); const prevBaskets=JSON.parse(JSON.stringify(state.baskets)); const prevSelected=state.selectedBasket; const prevTimeline=[...state.timeline]; await loadEvent(state.currentUrl); state.baskets=prevBaskets; state.basketMembers=prevAssignments; state.selectedBasket=prevSelected; state.timeline=prevTimeline; normalizeAssignments(); saveAssignments(); rerender(); pushTimeline('manual refresh');}
-function rerender(){renderUnassigned(); renderBasketBoard(); buildChart(); renderTimeline(); saveAssignments();}
-function updateAutoRefresh(){if(state.refreshTimer) clearInterval(state.refreshTimer); if(!document.getElementById('autoRefreshToggle').checked){state.refreshTimer=null; return;} const sec=Number(document.getElementById('refreshInterval').value||10); state.refreshTimer=setInterval(async()=>{await refreshEvent(); pushTimeline('auto-refresh snapshot');},sec*1000);}
-
-document.getElementById('loadBtn').addEventListener('click',()=>loadEvent(document.getElementById('marketUrlInput').value));
-document.getElementById('refreshBtn').addEventListener('click',refreshEvent);
-document.getElementById('saveTemplateBtn').addEventListener('click',()=>{saveAssignments(); setStatus('Template saved in browser storage.');});
-document.getElementById('autoRefreshToggle').addEventListener('change',updateAutoRefresh);
-document.getElementById('refreshInterval').addEventListener('change',updateAutoRefresh);
-document.getElementById('strikeSearch').addEventListener('input',renderUnassigned);
-document.getElementById('onlyMovingToggle').addEventListener('change',renderUnassigned);
-document.getElementById('addBasketBtn').addEventListener('click',addBasket);
-document.getElementById('seedBasketsBtn').addEventListener('click',autoSeedBaskets);
-document.getElementById('clearAssignmentsBtn').addEventListener('click',()=>{for(const b of state.baskets) state.basketMembers[b.name]=[]; pushTimeline('cleared assignments'); rerender();});
-document.querySelectorAll('[data-chart-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.chartMode=btn.dataset.chartMode; buildChart(); renderLegendChips();}));
-document.getElementById('compareBasketSelect').addEventListener('change',e=>{state.compareBasket=e.target.value; buildChart();});
-document.getElementById('normalizeToggle').addEventListener('change',buildChart);
-document.getElementById('timeRangeSelect').addEventListener('change',buildChart);
-const qp=new URLSearchParams(location.search); const initial=qp.get('market_url'); if(initial){document.getElementById('marketUrlInput').value=initial; loadEvent(initial);} else {buildDefaultBaskets(); rerender();}
+const esc = (s) => String(s ?? '');
+const fmtPrice = (v) => Number.isFinite(v) ? v.toFixed(2) : '—';
+const fmtTs = (v) => { if(!v) return '—'; const d = new Date(v); if (Number.isNaN(d.getTime())) return String(v); return d.toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'}) + ' UTC'; };
+const avg = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : NaN; };
+const sum = (arr) => { const v = arr.filter(Number.isFinite); return v.length ? v.reduce((a,b)=>a+b,0) : NaN; };
+const extractEventTicker = (input) => { const m = String(input||'').trim().match(/\b([a-z0-9]+-\d{2}[a-z]{3}\d+[a-z]?)\b/i); return m ? m[1].toUpperCase() : null; };
+const extractMarketSnapshotPrice = (meta) => { for (const v of [meta.last_price_dollars,meta.yes_price_dollars,meta.last_price,meta.yes_price,meta.yes_bid_dollars,meta.yes_ask_dollars]) { const n = parseFloat(v); if (Number.isFinite(n)) return n*100; } return NaN; };
+const extractMarketSnapshotVolume = (meta) => { for (const v of [meta.volume_fp,meta.volume,meta.open_interest_fp]) { const n = parseFloat(v); if (Number.isFinite(n)) return n; } return NaN; };
+const computeSeriesMetrics = (points) => { const valid=points.filter(p=>Number.isFinite(p.y)); if(!valid.length) return {last:NaN,delta1m:NaN,delta5m:NaN,vol5m:NaN}; const last=valid.at(-1); const prev1=valid.length>=2?valid.at(-2):null; const prev5=valid.length>=6?valid.at(-6):valid[0]; return {last:last.y,delta1m:prev1?(last.y-prev1.y):NaN,delta5m:prev5?(last.y-prev5.y):NaN,vol5m:sum(valid.slice(-5).map(p=>p.volume))}; };
+const classifyBasketSeed = (name) => { const s = name.toLowerCase(); if (/(iran|israel|nato|nuclear|hormuz|oil|gas|cyprus|turkey|cuba|athens|ottoman)/.test(s)) return 'Geopolitics'; if (/(inflation|tariff|afford|crypto|bitcoin|economy|gasoline|oil)/.test(s)) return 'Economy / inflation'; if (/(ice|dhs|border|illegal|id\b|identification|sanctuary)/.test(s)) return 'Immigration / border'; if (/(biden|democrat|shutdown|save america act|radical left)/.test(s)) return 'Domestic politics'; if (/(fake news|cheat|epic fury)/.test(s)) return 'Media / grievance'; return 'Tails / noise'; };
+function StrikeChip({name, draggableId}) {
+  const {attributes, listeners, setNodeRef, transform, isDragging} = useDraggable({id: draggableId, data:{strikeName:name}});
+  const style = transform ? {transform:`translate3d(${transform.x}px, ${transform.y}px, 0)`} : undefined;
+  return html`<div ref=${setNodeRef} style=${style} className="strike-chip" ...${attributes} ...${listeners}><strong>${name}</strong></div>`;
+}
+function BasketPill({name, price, color, draggableId}) {
+  const {attributes, listeners, setNodeRef, transform} = useDraggable({id: draggableId, data:{strikeName:name}});
+  const style = transform ? {transform:`translate3d(${transform.x}px, ${transform.y}px, 0)`} : undefined;
+  return html`<div ref=${setNodeRef} style=${style} className="basket-pill" ...${attributes} ...${listeners}><span className="basket-pill-dot" style=${{background:color}}></span><span className="basket-pill-name">${name}</span><span className="basket-pill-price">${fmtPrice(price)}</span></div>`;
+}
+function BasketCard({basket, members, selected, onSelect, onRename, onDelete, marketMap, over}) {
+  const {setNodeRef} = useDroppable({id:`basket:${basket.name}`});
+  const slots = [];
+  for (const name of members.slice(0,8)) {
+    const s = marketMap.get(name);
+    slots.push(html`<${BasketPill} key=${name} name=${name} price=${s?.metrics?.last} color=${basket.color} draggableId=${`strike:${name}`} />`);
+  }
+  while (slots.length < 8) slots.push(html`<div className="basket-pill placeholder" key=${`ph-${slots.length}`}><span className="basket-pill-dot" style=${{background:'#51617f'}}></span><span className="basket-pill-name">—</span><span className="basket-pill-price"></span></div>`);
+  return html`<div ref=${setNodeRef} className=${`basket-card ${selected?'active':''} ${over?'over':''}`} onClick=${onSelect}><div className="basket-head"><div className="basket-title"><span className="basket-dot" style=${{background:basket.color}}></span><div className="basket-name">${basket.name}</div></div><div className="basket-actions"><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); onRename();}}>r</button><button className="mini-btn" onClick=${(e)=>{e.stopPropagation(); onDelete();}}>×</button></div></div><div className="basket-pill-grid">${slots}</div></div>`;
+}
+function App() {
+  const [marketUrl, setMarketUrl] = useState('');
+  const [status, setStatus] = useState('Load a Kalshi event to begin.');
+  const [statusClass, setStatusClass] = useState('muted small');
+  const [eventMeta, setEventMeta] = useState(null);
+  const [currentEventTicker, setCurrentEventTicker] = useState(null);
+  const [markets, setMarkets] = useState([]);
+  const [series, setSeries] = useState([]);
+  const [baskets, setBaskets] = useState([]);
+  const [basketMembers, setBasketMembers] = useState({});
+  const [selectedBasket, setSelectedBasket] = useState(null);
+  const [timeline, setTimeline] = useState([]);
+  const [dragId, setDragId] = useState(null);
+  const [overId, setOverId] = useState(null);
+  const [liveSnapshots, setLiveSnapshots] = useState({});
+  const sensors = useSensors(useSensor(PointerSensor, {activationConstraint:{distance:4}}));
+  const qs = new URLSearchParams(location.search);
+  const initialMarketUrl = qs.get('market_url') || '';
+  useEffect(()=>{ if(initialMarketUrl){ setMarketUrl(initialMarketUrl); loadEvent(initialMarketUrl); } }, []);
+  const marketMap = useMemo(()=> new Map(series.map(s=>[s.name,s])), [series]);
+  const assigned = useMemo(()=> new Set(Object.values(basketMembers).flat()), [basketMembers]);
+  const unassigned = useMemo(()=> series.filter(s=>!assigned.has(s.name)), [series, assigned]);
+  const basketStats = (name) => {
+    const members=(basketMembers[name]||[]).map(n=>marketMap.get(n)).filter(Boolean);
+    if(!members.length) return {lastAvg:NaN};
+    return {lastAvg:avg(members.map(m=>m.metrics.last))};
+  };
+  function pushTimeline(text){ setTimeline(prev => [{ts:new Date().toISOString(), text}, ...prev].slice(0,20)); }
+  function buildDefaultBaskets(){ setBaskets([]); setBasketMembers({}); setSelectedBasket(null); }
+  function addBasket(){ let i=1, name=`New basket ${i}`; while(baskets.some(b=>b.name===name)){ i++; name=`New basket ${i}`; } const next=[...baskets, {name, color:BASKET_COLORS[baskets.length % BASKET_COLORS.length]}]; setBaskets(next); setBasketMembers(prev=>({...prev, [name]:[]})); setSelectedBasket(name); pushTimeline(`basket created: ${name}`); }
+  function removeBasket(name){ setBaskets(prev=>prev.filter(b=>b.name!==name)); setBasketMembers(prev=>{ const n={...prev}; delete n[name]; return n; }); setSelectedBasket(prev=>prev===name ? null : prev); pushTimeline(`basket deleted: ${name}`); }
+  function renameBasket(oldName){ const nextName = prompt('Rename basket', oldName); if(!nextName || nextName===oldName || baskets.some(b=>b.name===nextName)) return; setBaskets(prev=>prev.map(b=>b.name===oldName?({...b,name:nextName}):b)); setBasketMembers(prev=>{ const n={...prev, [nextName]: prev[oldName] || []}; delete n[oldName]; return n; }); if(selectedBasket===oldName) setSelectedBasket(nextName); pushTimeline(`basket renamed to ${nextName}`); }
+  function moveStrike(strikeName, target){
+    setBasketMembers(prev=>{
+      const next={...prev};
+      for(const key of Object.keys(next)) next[key]=(next[key]||[]).filter(x=>x!==strikeName);
+      if(target && target.startsWith('basket:')){ const basket=target.slice(7); next[basket]=[...(next[basket]||[]), strikeName]; }
+      return next;
+    });
+    pushTimeline(target==='unassigned' ? 'strike returned to unassigned' : `strike moved to ${target.slice(7)}`);
+  }
+  async function loadEvent(url){
+    const eventTicker=extractEventTicker(url); if(!eventTicker){ setStatus('Could not parse Kalshi event ticker from URL.'); setStatusClass('warn'); return; }
+    setCurrentEventTicker(eventTicker); setStatus(`Loading ${eventTicker}...`); setStatusClass('muted small');
+    try{
+      const res=await fetch(`${PROXY_BASE}/api/kalshi-event?market_url=${encodeURIComponent(url)}`);
+      if(!res.ok){ const txt=await res.text(); throw new Error(`proxy ${res.status} ${txt.slice(0,160)}`); }
+      const payload=await res.json();
+      setEventMeta(payload.event||null); setMarkets(payload.markets||[]);
+      const marketMap=new Map((payload.markets||[]).map(m=>[m.ticker,m]));
+      const candleMap=new Map((payload.candlesticks||[]).map(entry=>[entry.market_ticker,entry]));
+      const nowIso=new Date().toISOString();
+      const nextSnapshots={...liveSnapshots};
+      const nextSeries=(payload.markets||[]).map(meta=>{
+        const entry=candleMap.get(meta.ticker)||{candlesticks:[]}; const name=meta.yes_sub_title||meta.subtitle||meta.title||meta.ticker;
+        let points=(entry.candlesticks||[]).map(c=>({x:new Date((c.end_period_ts||0)*1000).toISOString(), y:(()=>{const p=c.price?.close_dollars??c.price?.mean_dollars??c.price?.previous_dollars??null; return p==null?NaN:parseFloat(p)*100;})(), volume:c.volume_fp!=null?parseFloat(c.volume_fp):NaN})).filter(p=>Number.isFinite(p.y));
+        const snapshotPrice=extractMarketSnapshotPrice(meta); const snapshotVolume=extractMarketSnapshotVolume(meta); const prev=nextSnapshots[name]||[];
+        if(!points.length && Number.isFinite(snapshotPrice)) points=[...prev,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240); else if(Number.isFinite(snapshotPrice)) points=[...points,{x:nowIso,y:snapshotPrice,volume:snapshotVolume}].slice(-240);
+        nextSnapshots[name]=points; return {name,ticker:meta.ticker,points,pointMap:new Map(points.map(p=>[p.x,p])),metrics:computeSeriesMetrics(points)};
+      }).filter(s=>s.points.length);
+      setLiveSnapshots(nextSnapshots); setSeries(nextSeries);
+      const human=payload.event?.event?.title || payload.event?.title || payload.event_ticker;
+      setStatus(`Loaded ${human} (${nextSeries.length} strikes, interval=${payload.period_interval||1}m).`); setStatusClass('muted small');
+      pushTimeline(`loaded ${payload.event_ticker}`);
+      history.replaceState({},'',`${location.pathname}?market_url=${encodeURIComponent(url)}`);
+    }catch(err){ setStatus(`Load error: ${err.message||err}`); setStatusClass('danger'); }
+  }
+  function autoSeed(){
+    const newBaskets = DEFAULT_BASKETS.map(x=>({...x}));
+    const members = Object.fromEntries(newBaskets.map(b=>[b.name,[]]));
+    for (const s of series){ const target=classifyBasketSeed(s.name); if(members[target]) members[target].push(s.name); }
+    setBaskets(newBaskets); setBasketMembers(members); setSelectedBasket(newBaskets[0]?.name||null); pushTimeline('auto-seeded baskets');
+  }
+  useEffect(()=>{
+    const selected=selectedBasket || baskets[0]?.name;
+    const basket = baskets.find(b=>b.name===selected);
+    if(!selected || !basket){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">Select a basket.</div>'; return; }
+    const members=(basketMembers[selected]||[]).map(n=>marketMap.get(n)).filter(Boolean);
+    if(!members.length){ const el=document.getElementById('chart'); if(el) el.innerHTML='<div class="muted">No strikes in basket.</div>'; return; }
+    const ts=[...new Set(members.flatMap(m=>m.points.map(p=>p.x)))].sort().slice(-60);
+    const avgY=ts.map(t=>avg(members.map(m=>m.pointMap.get(t)?.y)));
+    const traces=[{x:ts,y:avgY,mode:'lines',name:`${selected} avg`,line:{width:4,color:basket.color}}];
+    Plotly.newPlot('chart', traces, {paper_bgcolor:'#141a2e',plot_bgcolor:'#10182d',font:{color:'#e7ecf5'},hovermode:'x unified',margin:{l:60,r:20,t:10,b:50},xaxis:{gridcolor:'#20304d',title:'Time (UTC)'},yaxis:{gridcolor:'#20304d',title:'Price (cents)'},legend:{orientation:'h',y:-0.2,x:0}}, {responsive:true,displaylogo:false});
+  }, [selectedBasket, baskets, basketMembers, series]);
+  const {setNodeRef: setUnassignedRef, isOver: isOverUnassigned} = useDroppable({id:'unassigned'});
+  return html`<${DndContext} sensors=${sensors} onDragStart=${(e)=>setDragId(e.active.id)} onDragOver=${(e)=>setOverId(e.over?.id || null)} onDragEnd=${(e)=>{ const strikeName=e.active?.data?.current?.strikeName; const target=e.over?.id; setDragId(null); setOverId(null); if(strikeName && target) moveStrike(strikeName, String(target)); }} onDragCancel=${()=>{setDragId(null); setOverId(null);}}><div className="wrap"><div className="topbar"><div className="topbar-inner"><input className="input" value=${marketUrl} onInput=${e=>setMarketUrl(e.target.value)} placeholder="Paste Kalshi event URL..." /><button onClick=${()=>loadEvent(marketUrl)}>Load event</button><button onClick=${()=>loadEvent(marketUrl)}>Refresh now</button><button onClick=${()=>pushTimeline('template saved')}>Save template</button><button onClick=${addBasket}>Create basket</button><button onClick=${autoSeed}>Auto-seed baskets</button><div className=${statusClass}>${status}</div></div></div><div className="layout-top"><div className="card sticky-col"><div className="board-header"><h2 style=${{margin:0}}>Unassigned strikes</h2></div><div ref=${setUnassignedRef} className=${`strike-list drop-target-unassigned ${isOverUnassigned?'over drop-active':''}`}>${unassigned.map(s=>html`<${StrikeChip} key=${s.name} name=${s.name} draggableId=${`strike:${s.name}`} />`)}</div></div><div><div className="card"><div className="subhead"><div><h1 style=${{margin:0,fontSize:'24px'}}>Live Basket Terminal</h1><div className="muted small">Compact basket board with reliable container drag-and-drop.</div></div><div className="small muted">${eventMeta?.event?.title || eventMeta?.title || currentEventTicker || '—'}</div></div><div className="basket-grid">${baskets.length ? baskets.map(b=>html`<${BasketCard} key=${b.name} basket=${b} members=${basketMembers[b.name]||[]} selected=${selectedBasket===b.name} onSelect=${()=>setSelectedBasket(b.name)} onRename=${()=>renameBasket(b.name)} onDelete=${()=>removeBasket(b.name)} marketMap=${marketMap} over=${overId===`basket:${b.name}`} />`) : html`<div className="card muted small">No baskets yet. Create one or auto-seed baskets.</div>`}</div></div><div className="card chart-section"><div className="subhead"><h2 style=${{margin:0}}>Basket chart</h2></div><div id="chart"></div></div><div className="card timeline-section"><div className="subhead"><h2 style=${{margin:0}}>Timeline / tape</h2></div><div className="timeline-row">${timeline.map((item,idx)=>html`<div className="timeline-item" key=${idx}>${fmtTs(item.ts)} ${item.text}</div>`)}</div></div></div></div><${DragOverlay}>${dragId ? html`<div className="drag-overlay">${String(dragId).replace(/^strike:/,'')}</div>` : null}</${DragOverlay}></div></${DndContext}>`;
+}
+createRoot(document.getElementById('app')).render(html`<${App} />`);
 </script>
 </body>
 </html>
