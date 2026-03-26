@@ -50,12 +50,12 @@
     .chip-row { display:flex; gap:6px; flex-wrap:wrap; }
     .member-chip { padding:3px 5px; border-radius:999px; background:#17233f; border:1px solid #2a3d63; font-size:10px; cursor:pointer; max-width:100%; overflow:hidden; text-overflow:ellipsis; }
     .basket-pill-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px; }
-    .basket-pill { display:flex; align-items:center; justify-content:space-between; gap:8px; border:2px solid #d7deea; border-radius:999px; padding:6px 10px; background:#f6f7fb; color:#0d1220; font-size:12px; font-weight:600; min-width:0; }
+    .basket-pill { display:flex; align-items:center; justify-content:space-between; gap:8px; border:1px solid #445a86; border-radius:999px; padding:6px 10px; background:#d9e3f4; color:#13203a; font-size:12px; font-weight:600; min-width:0; }
     .basket-pill-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-transform:lowercase; }
     .basket-pill-price { flex:0 0 auto; font-variant-numeric: tabular-nums; }
     .member-chip:hover, .member-chip.hovered { border-color:#8cc8ff; background:#1a2b4d; }
-    .dropzone { min-height:26px; border:1px dashed #37507f; border-radius:10px; padding:4px; display:flex; gap:4px; flex-wrap:wrap; overflow:hidden; background:#0d1528; }
-    .dropzone.empty::before { content:'Drop here'; color:#7084ab; font-size:10px; }
+    .dropzone { display:none; }
+    .dropzone.empty::before { content:''; }
     .inspector-grid { display:grid; gap:10px; }
     .contrib-bar { height:8px; border-radius:999px; background:#243250; overflow:hidden; }
     .contrib-fill { height:100%; background:#4cc9f0; }
