@@ -56,6 +56,7 @@ async function syncClock() { const t0 = Date.now(); const res = await fetch(`${A
 async function getStreamMeta(videoId) { const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`); return res.json(); }
 async function findStreams(query) { const res = await fetch(`${API_BASE}/stream-search?q=${encodeURIComponent(query)}`); return res.json(); }
 function bestVideoId() { const ranked = streams.filter(s => Number.isFinite(s.latencyMs)).sort((a,b) => a.latencyMs - b.latencyMs); return ranked[0]?.videoId || null; }
+function updateBestCards() { const bestId = bestVideoId(); for (const s of streams) { const card = document.getElementById(`card-${s.videoId}`); const badge = document.getElementById(`badge-${s.videoId}`); if (card) card.classList.toggle('best', bestId === s.videoId); if (badge) { badge.classList.toggle('best', bestId === s.videoId); badge.textContent = bestId === s.videoId ? 'best' : 'candidate'; } } }
 function renderCards() {
   const grid = document.getElementById('grid'); const bestId = bestVideoId();
   grid.innerHTML = streams.map(s => `
@@ -65,7 +66,7 @@ function renderCards() {
           <strong>${s.source || 'YouTube'} — ${s.meta.title || s.title || s.videoId}</strong>
           <div class="small-muted">${s.url}</div>
         </div>
-        ${bestId === s.videoId ? '<span class="badge best">best</span>' : '<span class="badge">candidate</span>'}
+        <span class="badge ${bestId === s.videoId ? 'best' : ''}" id="badge-${s.videoId}">${bestId === s.videoId ? 'best' : 'candidate'}</span>
       </div>
       <div class="player-wrap"><div id="player-${s.videoId}"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer" id="fallback-${s.videoId}" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#9fb0cf;text-decoration:none;background:#0f1629 url('https://i.ytimg.com/vi/${s.videoId}/hqdefault.jpg') center/cover no-repeat;">Open stream</a></div>
       <div class="metrics">
@@ -122,7 +123,7 @@ function tick() {
     if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'press play / warming up' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
     const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000); s.latencyMs = latencyMs; changed = true; if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`; if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
   }
-  if (changed) renderCards();
+  if (changed) updateBestCards();
 }
 window.onYouTubeIframeAPIReady = async function() { await syncClock().catch(() => toast('Clock sync failed')); setInterval(() => syncClock().catch(() => {}), 30000); setInterval(tick, 1000); };
 document.getElementById('findBtn').addEventListener('click', async () => {
