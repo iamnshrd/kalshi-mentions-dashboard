@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stream Latency Monitor</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background:#0b1020; color:#e7ecf5; }
+    .wrap { max-width: 1600px; margin: 0 auto; padding: 20px; }
+    .card { background:#141a2e; border:1px solid #23304f; border-radius:14px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.2); }
+    .top { display:grid; grid-template-columns: 1fr auto auto; gap:10px; align-items:center; margin-bottom:16px; }
+    .input, .btn { border:1px solid #2f426a; background:#17233f; color:#e7ecf5; border-radius:10px; padding:10px 12px; }
+    .input { width:100%; background:#0f1629; border-color:#23304f; }
+    .btn { cursor:pointer; }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
+    .player-card { display:grid; gap:10px; }
+    .player-wrap { aspect-ratio: 16 / 9; width:100%; background:#0f1629; border:1px solid #23304f; border-radius:12px; overflow:hidden; }
+    .metrics { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:8px; }
+    .metric { background:#10182d; border:1px solid #23304f; border-radius:10px; padding:10px; }
+    .metric .label { color:#9fb0cf; font-size:12px; }
+    .metric .value { margin-top:3px; font-weight:700; }
+    .muted { color:#9fb0cf; }
+    .status { font-size: 13px; color:#9fb0cf; }
+    .toast { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index:100; background: rgba(21,30,52,.96); color:#e7ecf5; border:1px solid #31415f; border-radius:12px; padding:10px 14px; box-shadow:0 10px 24px rgba(0,0,0,.35); display:none; }
+    .toast.show { display:block; }
+    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } .top { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card top">
+    <input id="videoInput" class="input" placeholder="Paste YouTube URL and click Add stream">
+    <button id="addBtn" class="btn">Add stream</button>
+    <div id="clockStatus" class="status">Clock sync: idle</div>
+  </div>
+  <div id="grid" class="grid"></div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+const API_BASE = 'https://139.84.170.170.nip.io/stream-latency';
+const streams = [];
+const players = new Map();
+let clockOffsetMs = 0;
+
+function toast(text) {
+  const el = document.getElementById('toast');
+  el.textContent = text;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+function extractVideoId(input) {
+  const raw = String(input || '').trim();
+  const m = raw.match(/[?&]v=([A-Za-z0-9_-]{11})/) || raw.match(/youtu\.be\/([A-Za-z0-9_-]{11})/) || raw.match(/youtube\.com\/live\/([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
+async function syncClock() {
+  const t0 = Date.now();
+  const res = await fetch(`${API_BASE}/time`);
+  const data = await res.json();
+  const t1 = Date.now();
+  const rtt = t1 - t0;
+  const serverTime = data.now + rtt / 2;
+  clockOffsetMs = serverTime - t1;
+  document.getElementById('clockStatus').textContent = `Clock sync: RTT ${rtt} ms, offset ${Math.round(clockOffsetMs)} ms`;
+}
+async function getStreamMeta(videoId) {
+  const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`);
+  return res.json();
+}
+function renderCards() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = streams.map(s => `
+    <div class="card player-card" id="card-${s.videoId}">
+      <div><strong>${s.videoId}</strong></div>
+      <div class="player-wrap"><div id="player-${s.videoId}"></div></div>
+      <div class="metrics">
+        <div class="metric"><div class="label">Latency</div><div class="value" id="lat-${s.videoId}">—</div></div>
+        <div class="metric"><div class="label">Elapsed</div><div class="value" id="dur-${s.videoId}">—</div></div>
+        <div class="metric"><div class="label">Status</div><div class="value" id="st-${s.videoId}">idle</div></div>
+      </div>
+      <div class="muted">${s.url}</div>
+    </div>
+  `).join('');
+}
+function ensurePlayers() {
+  for (const s of streams) {
+    if (players.has(s.videoId)) continue;
+    const p = new YT.Player(`player-${s.videoId}`, {
+      videoId: s.videoId,
+      playerVars: { autoplay: 0, controls: 1 },
+      events: { onReady: () => {}, onStateChange: () => {} }
+    });
+    players.set(s.videoId, p);
+  }
+}
+async function addStream(url) {
+  const videoId = extractVideoId(url);
+  if (!videoId) return toast('Could not parse YouTube video ID');
+  const meta = await getStreamMeta(videoId);
+  streams.push({ url, videoId, meta });
+  renderCards();
+  ensurePlayers();
+}
+function tick() {
+  const now = Date.now() + clockOffsetMs;
+  for (const s of streams) {
+    const p = players.get(s.videoId);
+    if (!p || typeof p.getDuration !== 'function') continue;
+    let elapsedSec = 0;
+    try { elapsedSec = p.getDuration(); } catch {}
+    const durEl = document.getElementById(`dur-${s.videoId}`);
+    const latEl = document.getElementById(`lat-${s.videoId}`);
+    const stEl = document.getElementById(`st-${s.videoId}`);
+    durEl.textContent = elapsedSec ? `${elapsedSec.toFixed(1)} s` : '—';
+    if (!elapsedSec || !s.meta.actualStartTimeMs) {
+      stEl.textContent = s.meta.actualStartTimeMs ? 'waiting' : 'no start time';
+      latEl.textContent = '—';
+      continue;
+    }
+    const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000);
+    latEl.textContent = `${Math.round(latencyMs)} ms`;
+    stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
+  }
+}
+window.onYouTubeIframeAPIReady = async function() {
+  await syncClock().catch(() => toast('Clock sync failed'));
+  setInterval(() => syncClock().catch(() => {}), 30000);
+  setInterval(tick, 1000);
+};
+document.getElementById('addBtn').addEventListener('click', () => addStream(document.getElementById('videoInput').value));
+</script>
+</body>
+</html>
