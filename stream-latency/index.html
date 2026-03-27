@@ -82,11 +82,15 @@ function ensurePlayers() {
     if (players.has(s.videoId)) continue;
     const p = new YT.Player(`player-${s.videoId}`, {
       videoId: s.videoId,
-      playerVars: { autoplay: 0, controls: 1 },
+      playerVars: { autoplay: 1, mute: 1, controls: 1, playsinline: 1 },
       events: {
-        onReady: () => {
+        onReady: (event) => {
           const fb = document.getElementById(`fallback-${s.videoId}`);
           if (fb) fb.style.display = 'none';
+          try {
+            event.target.mute();
+            event.target.playVideo();
+          } catch {}
         },
         onError: () => {
           const fb = document.getElementById(`fallback-${s.videoId}`);
@@ -110,7 +114,7 @@ function tick() {
     const p = players.get(s.videoId); if (!p || typeof p.getDuration !== 'function') continue;
     let elapsedSec = 0; try { elapsedSec = p.getDuration(); } catch {}
     const latEl = document.getElementById(`lat-${s.videoId}`); const stEl = document.getElementById(`st-${s.videoId}`);
-    if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'waiting' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
+    if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'press play / warming up' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
     const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000); s.latencyMs = latencyMs; changed = true; if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`; if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
   }
   if (changed) renderCards();
