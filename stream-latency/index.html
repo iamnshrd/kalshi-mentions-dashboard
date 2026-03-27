@@ -15,8 +15,8 @@
     .input { width:100%; background:#0f1629; border-color:#23304f; }
     .btn { cursor:pointer; }
     .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; }
-    .player-card { display:grid; gap:10px; }
-    .player-card.best { border-color:#4f86d9; box-shadow:0 0 0 1px rgba(79,134,217,.18), 0 10px 24px rgba(27,53,94,.18); }
+    .stream-card { display:grid; gap:10px; }
+    .stream-card.best { border-color:#4f86d9; box-shadow:0 0 0 1px rgba(79,134,217,.18), 0 10px 24px rgba(27,53,94,.18); }
     .title-row { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
     .title-block { min-width:0; }
     .title-block strong { display:block; }
@@ -38,8 +38,8 @@
 <body>
 <div class="wrap">
   <div class="card top">
-    <input id="videoInput" class="input" placeholder="Paste YouTube URL and click Add stream">
-    <button id="addBtn" class="btn">Add stream</button>
+    <input id="queryInput" class="input" placeholder="Type an event query, e.g. Trump Agriculture Celebration">
+    <button id="findBtn" class="btn">Find streams</button>
     <div id="clockStatus" class="status">Clock sync: idle</div>
   </div>
   <div id="grid" class="grid"></div>
@@ -51,44 +51,18 @@ const API_BASE = 'https://139.84.170.170.nip.io/stream-latency';
 const streams = [];
 const players = new Map();
 let clockOffsetMs = 0;
-
-function toast(text) {
-  const el = document.getElementById('toast');
-  el.textContent = text;
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2500);
-}
-function extractVideoId(input) {
-  const raw = String(input || '').trim();
-  const m = raw.match(/[?&]v=([A-Za-z0-9_-]{11})/) || raw.match(/youtu\.be\/([A-Za-z0-9_-]{11})/) || raw.match(/youtube\.com\/live\/([A-Za-z0-9_-]{11})/);
-  return m ? m[1] : null;
-}
-async function syncClock() {
-  const t0 = Date.now();
-  const res = await fetch(`${API_BASE}/time`);
-  const data = await res.json();
-  const t1 = Date.now();
-  const rtt = t1 - t0;
-  const serverTime = data.now + rtt / 2;
-  clockOffsetMs = serverTime - t1;
-  document.getElementById('clockStatus').textContent = `Clock sync: RTT ${rtt} ms, offset ${Math.round(clockOffsetMs)} ms`;
-}
-async function getStreamMeta(videoId) {
-  const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`);
-  return res.json();
-}
-function bestVideoId() {
-  const ranked = streams.filter(s => Number.isFinite(s.latencyMs)).sort((a,b) => a.latencyMs - b.latencyMs);
-  return ranked[0]?.videoId || null;
-}
+function toast(text) { const el = document.getElementById('toast'); el.textContent = text; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2500); }
+async function syncClock() { const t0 = Date.now(); const res = await fetch(`${API_BASE}/time`); const data = await res.json(); const t1 = Date.now(); const rtt = t1 - t0; const serverTime = data.now + rtt / 2; clockOffsetMs = serverTime - t1; document.getElementById('clockStatus').textContent = `Clock sync: RTT ${rtt} ms, offset ${Math.round(clockOffsetMs)} ms`; }
+async function getStreamMeta(videoId) { const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`); return res.json(); }
+async function findStreams(query) { const res = await fetch(`${API_BASE}/stream-search?q=${encodeURIComponent(query)}`); return res.json(); }
+function bestVideoId() { const ranked = streams.filter(s => Number.isFinite(s.latencyMs)).sort((a,b) => a.latencyMs - b.latencyMs); return ranked[0]?.videoId || null; }
 function renderCards() {
-  const grid = document.getElementById('grid');
-  const bestId = bestVideoId();
+  const grid = document.getElementById('grid'); const bestId = bestVideoId();
   grid.innerHTML = streams.map(s => `
-    <div class="card player-card ${bestId === s.videoId ? 'best' : ''}" id="card-${s.videoId}">
+    <div class="card stream-card ${bestId === s.videoId ? 'best' : ''}" id="card-${s.videoId}">
       <div class="title-row">
         <div class="title-block">
-          <strong>${s.meta.title || s.videoId}</strong>
+          <strong>${s.source || 'YouTube'} — ${s.meta.title || s.title || s.videoId}</strong>
           <div class="small-muted">${s.url}</div>
         </div>
         ${bestId === s.videoId ? '<span class="badge best">best</span>' : '<span class="badge">candidate</span>'}
@@ -96,7 +70,7 @@ function renderCards() {
       <div class="player-wrap"><div id="player-${s.videoId}"></div></div>
       <div class="metrics">
         <div class="metric"><div class="label">Latency</div><div class="value" id="lat-${s.videoId}">—</div></div>
-        <div class="metric"><div class="label">Elapsed</div><div class="value" id="dur-${s.videoId}">—</div></div>
+        <div class="metric"><div class="label">Source</div><div class="value" id="src-${s.videoId}">${s.source || 'YouTube'}</div></div>
         <div class="metric"><div class="label">Status</div><div class="value" id="st-${s.videoId}">${s.meta.liveBroadcastContent || 'idle'}</div></div>
         <div class="metric"><div class="label">Start time</div><div class="value small-muted" id="start-${s.videoId}">${s.meta.actualStartTime || s.meta.scheduledStartTime || '—'}</div></div>
       </div>
@@ -104,57 +78,35 @@ function renderCards() {
   `).join('');
 }
 function ensurePlayers() {
-  for (const s of streams) {
-    if (players.has(s.videoId)) continue;
-    const p = new YT.Player(`player-${s.videoId}`, {
-      videoId: s.videoId,
-      playerVars: { autoplay: 0, controls: 1 },
-      events: { onReady: () => {}, onStateChange: () => {} }
-    });
-    players.set(s.videoId, p);
-  }
+  for (const s of streams) { if (players.has(s.videoId)) continue; const p = new YT.Player(`player-${s.videoId}`, { videoId: s.videoId, playerVars: { autoplay: 0, controls: 1 }, events: { onReady: () => {}, onStateChange: () => {} } }); players.set(s.videoId, p); }
 }
-async function addStream(url) {
-  const videoId = extractVideoId(url);
-  if (!videoId) return toast('Could not parse YouTube video ID');
-  if (streams.some(s => s.videoId === videoId)) return toast('Stream already added');
-  const meta = await getStreamMeta(videoId);
-  streams.push({ url, videoId, meta, latencyMs: null });
-  renderCards();
-  ensurePlayers();
+async function addCandidate(candidate) {
+  if (streams.some(s => s.videoId === candidate.videoId)) return;
+  const meta = await getStreamMeta(candidate.videoId);
+  streams.push({ ...candidate, meta, latencyMs: null });
+  renderCards(); ensurePlayers();
 }
 function tick() {
-  const now = Date.now() + clockOffsetMs;
-  let changed = false;
+  const now = Date.now() + clockOffsetMs; let changed = false;
   for (const s of streams) {
-    const p = players.get(s.videoId);
-    if (!p || typeof p.getDuration !== 'function') continue;
-    let elapsedSec = 0;
-    try { elapsedSec = p.getDuration(); } catch {}
-    const durEl = document.getElementById(`dur-${s.videoId}`);
-    const latEl = document.getElementById(`lat-${s.videoId}`);
-    const stEl = document.getElementById(`st-${s.videoId}`);
-    if (durEl) durEl.textContent = elapsedSec ? `${elapsedSec.toFixed(1)} s` : '—';
-    if (!elapsedSec || !s.meta.actualStartTimeMs) {
-      if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'waiting' : (s.meta.liveBroadcastContent || 'no start time');
-      if (latEl) latEl.textContent = '—';
-      s.latencyMs = null;
-      continue;
-    }
-    const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000);
-    s.latencyMs = latencyMs;
-    changed = true;
-    if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`;
-    if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
+    const p = players.get(s.videoId); if (!p || typeof p.getDuration !== 'function') continue;
+    let elapsedSec = 0; try { elapsedSec = p.getDuration(); } catch {}
+    const latEl = document.getElementById(`lat-${s.videoId}`); const stEl = document.getElementById(`st-${s.videoId}`);
+    if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'waiting' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
+    const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000); s.latencyMs = latencyMs; changed = true; if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`; if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
   }
   if (changed) renderCards();
 }
-window.onYouTubeIframeAPIReady = async function() {
-  await syncClock().catch(() => toast('Clock sync failed'));
-  setInterval(() => syncClock().catch(() => {}), 30000);
-  setInterval(tick, 1000);
-};
-document.getElementById('addBtn').addEventListener('click', () => addStream(document.getElementById('videoInput').value));
+window.onYouTubeIframeAPIReady = async function() { await syncClock().catch(() => toast('Clock sync failed')); setInterval(() => syncClock().catch(() => {}), 30000); setInterval(tick, 1000); };
+document.getElementById('findBtn').addEventListener('click', async () => {
+  const query = document.getElementById('queryInput').value.trim();
+  if (!query) return toast('Type a query first');
+  const result = await findStreams(query).catch(() => null);
+  if (!result || !result.results || !result.results.length) return toast('No streams found');
+  streams.length = 0; players.clear(); renderCards();
+  for (const candidate of result.results) await addCandidate(candidate);
+  toast(`Added ${result.results.length} stream candidates`);
+});
 </script>
 </body>
 </html>
