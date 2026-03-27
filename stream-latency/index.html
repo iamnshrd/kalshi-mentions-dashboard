@@ -48,13 +48,23 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
 const API_BASE = 'https://139.84.170.170.nip.io/stream-latency';
+const DEMO = new URLSearchParams(location.search).has('demo');
 const streams = [];
 const players = new Map();
 let clockOffsetMs = 0;
 function toast(text) { const el = document.getElementById('toast'); el.textContent = text; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2500); }
-async function syncClock() { const t0 = Date.now(); const res = await fetch(`${API_BASE}/time`); const data = await res.json(); const t1 = Date.now(); const rtt = t1 - t0; const serverTime = data.now + rtt / 2; clockOffsetMs = serverTime - t1; document.getElementById('clockStatus').textContent = `Clock sync: RTT ${rtt} ms, offset ${Math.round(clockOffsetMs)} ms`; }
-async function getStreamMeta(videoId) { const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`); return res.json(); }
-async function findStreams(query) { const res = await fetch(`${API_BASE}/stream-search?q=${encodeURIComponent(query)}`); return res.json(); }
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+async function syncClock() { if (DEMO) { clockOffsetMs = 0; document.getElementById('clockStatus').textContent = 'Clock sync: DEMO (local clock)'; return; } const t0 = Date.now(); const res = await fetch(`${API_BASE}/time`); if (!res.ok) throw new Error(`Clock sync HTTP ${res.status}`); const data = await res.json(); const t1 = Date.now(); const rtt = t1 - t0; const serverTime = data.now + rtt / 2; clockOffsetMs = serverTime - t1; document.getElementById('clockStatus').textContent = `Clock sync: RTT ${rtt} ms, offset ${Math.round(clockOffsetMs)} ms`; }
+const DEMO_STREAMS = [
+  { videoId: 'ppMdhylTqJc', url: 'https://youtube.com/watch?v=ppMdhylTqJc', source: 'YouTube' },
+  { videoId: '-Jj8ddo-lhw', url: 'https://youtube.com/watch?v=-Jj8ddo-lhw', source: 'YouTube' },
+  { videoId: '0tDPhQNKHcY', url: 'https://youtube.com/watch?v=0tDPhQNKHcY', source: 'YouTube' },
+  { videoId: 'iUlhozXy4sw', url: 'https://youtube.com/watch?v=iUlhozXy4sw', source: 'YouTube' },
+  { videoId: 'EkAadyjPKe8', url: 'https://youtube.com/watch?v=EkAadyjPKe8', source: 'YouTube' },
+  { videoId: 'Zmk7OVpkx1o', url: 'https://youtube.com/watch?v=Zmk7OVpkx1o', source: 'YouTube' },
+];
+async function getStreamMeta(videoId) { if (DEMO) { const off = (DEMO_STREAMS.find(d => d.videoId === videoId) || {})?._offset || 10000; return { title: 'Demo stream', liveBroadcastContent: 'live', actualStartTimeMs: Date.now() - off, actualStartTime: new Date(Date.now() - off).toISOString() }; } const res = await fetch(`${API_BASE}/stream-meta?videoId=${encodeURIComponent(videoId)}`); if (!res.ok) throw new Error(`stream-meta HTTP ${res.status}`); return res.json(); }
+async function findStreams(query) { if (DEMO) return { results: DEMO_STREAMS }; const res = await fetch(`${API_BASE}/stream-search?q=${encodeURIComponent(query)}`); if (!res.ok) throw new Error(`stream-search HTTP ${res.status}`); return res.json(); }
 function bestVideoId() { const ranked = streams.filter(s => Number.isFinite(s.latencyMs)).sort((a,b) => a.latencyMs - b.latencyMs); return ranked[0]?.videoId || null; }
 function updateBestCards() { const bestId = bestVideoId(); for (const s of streams) { const card = document.getElementById(`card-${s.videoId}`); const badge = document.getElementById(`badge-${s.videoId}`); if (card) card.classList.toggle('best', bestId === s.videoId); if (badge) { badge.classList.toggle('best', bestId === s.videoId); badge.textContent = bestId === s.videoId ? 'best' : 'candidate'; } } }
 function renderCards() {
@@ -63,17 +73,17 @@ function renderCards() {
     <div class="card stream-card ${bestId === s.videoId ? 'best' : ''}" id="card-${s.videoId}">
       <div class="title-row">
         <div class="title-block">
-          <strong>${s.source || 'YouTube'} — ${s.meta.title || s.title || s.videoId}</strong>
-          <div class="small-muted">${s.url}</div>
+          <strong>${esc(s.source || 'YouTube')} — ${esc(s.meta.title || s.title || s.videoId)}</strong>
+          <div class="small-muted">${esc(s.url)}</div>
         </div>
         <span class="badge ${bestId === s.videoId ? 'best' : ''}" id="badge-${s.videoId}">${bestId === s.videoId ? 'best' : 'candidate'}</span>
       </div>
       <div class="player-wrap"><div id="player-${s.videoId}"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer" id="fallback-${s.videoId}" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#9fb0cf;text-decoration:none;background:#0f1629 url('https://i.ytimg.com/vi/${s.videoId}/hqdefault.jpg') center/cover no-repeat;">Open stream</a></div>
       <div class="metrics">
         <div class="metric"><div class="label">Latency</div><div class="value" id="lat-${s.videoId}">—</div></div>
-        <div class="metric"><div class="label">Source</div><div class="value" id="src-${s.videoId}">${s.source || 'YouTube'}</div></div>
-        <div class="metric"><div class="label">Status</div><div class="value" id="st-${s.videoId}">${s.meta.liveBroadcastContent || 'idle'}</div></div>
-        <div class="metric"><div class="label">Start time</div><div class="value small-muted" id="start-${s.videoId}">${s.meta.actualStartTime || s.meta.scheduledStartTime || '—'}</div></div>
+        <div class="metric"><div class="label">Source</div><div class="value" id="src-${s.videoId}">${esc(s.source || 'YouTube')}</div></div>
+        <div class="metric"><div class="label">Status</div><div class="value" id="st-${s.videoId}">${esc(s.meta.liveBroadcastContent || 'idle')}</div></div>
+        <div class="metric"><div class="label">Start time</div><div class="value small-muted" id="start-${s.videoId}">${esc(s.meta.actualStartTime || s.meta.scheduledStartTime || '—')}</div></div>
       </div>
       <div class="small-muted" id="dbg-${s.videoId}">dbg: waiting</div>
     </div>
@@ -108,32 +118,48 @@ async function addCandidate(candidate) {
   if (streams.some(s => s.videoId === candidate.videoId)) return;
   const meta = await getStreamMeta(candidate.videoId);
   streams.push({ ...candidate, meta, latencyMs: null });
-  renderCards(); ensurePlayers();
 }
 function tick() {
   const now = Date.now() + clockOffsetMs; let changed = false;
   for (const s of streams) {
     const p = players.get(s.videoId); if (!p || typeof p.getDuration !== 'function') continue;
-    let elapsedSec = 0; let currentTime = 0; let playerState = 'unknown';
-    try { elapsedSec = p.getDuration(); } catch {}
+    let duration = 0; let currentTime = 0; let playerState = 'unknown';
+    try { duration = p.getDuration(); } catch {}
     try { currentTime = p.getCurrentTime(); } catch {}
     try { playerState = p.getPlayerState(); } catch {}
     const latEl = document.getElementById(`lat-${s.videoId}`); const stEl = document.getElementById(`st-${s.videoId}`); const dbgEl = document.getElementById(`dbg-${s.videoId}`);
-    if (dbgEl) dbgEl.textContent = `dbg: state=${playerState} duration=${Number(elapsedSec || 0).toFixed(1)} current=${Number(currentTime || 0).toFixed(1)} startMs=${s.meta.actualStartTimeMs || 'null'}`;
-    if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'press play / warming up' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
-    const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000); s.latencyMs = latencyMs; changed = true; if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`; if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
+    if (dbgEl) dbgEl.textContent = `dbg: state=${playerState} duration=${Number(duration || 0).toFixed(1)} current=${Number(currentTime || 0).toFixed(1)} startMs=${s.meta.actualStartTimeMs || 'null'}`;
+    if (DEMO) {
+      if (!s._demoBase) s._demoBase = 3000 + Math.random() * 12000;
+      const latencyMs = s._demoBase + (Math.random() - 0.5) * 400;
+      s.latencyMs = latencyMs; changed = true;
+      if (latEl) latEl.textContent = `${(latencyMs / 1000).toFixed(1)} s`;
+      if (stEl) stEl.textContent = 'live';
+      continue;
+    }
+    if (!currentTime || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'press play / warming up' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
+    const latencyMs = now - (s.meta.actualStartTimeMs + currentTime * 1000);
+    s.latencyMs = latencyMs; changed = true;
+    if (latEl) { const abs = Math.abs(latencyMs); latEl.textContent = abs >= 120000 ? `${(latencyMs / 60000).toFixed(1)} min` : abs >= 1000 ? `${(latencyMs / 1000).toFixed(1)} s` : `${Math.round(latencyMs)} ms`; }
+    if (stEl) stEl.textContent = latencyMs > -3000 ? 'live' : 'ahead?';
   }
   if (changed) updateBestCards();
 }
-window.onYouTubeIframeAPIReady = async function() { await syncClock().catch(() => toast('Clock sync failed')); setInterval(() => syncClock().catch(() => {}), 30000); setInterval(tick, 1000); };
+let _initDone = false;
+async function init() { if (_initDone) return; _initDone = true; await syncClock().catch(() => toast('Clock sync failed')); setInterval(() => syncClock().catch(() => {}), 30000); setInterval(tick, 1000); }
+window.onYouTubeIframeAPIReady = init;
+setTimeout(() => { if (!_initDone) { toast('YouTube API slow — starting without players'); init(); } }, 5000);
+function destroyPlayers() { for (const p of players.values()) { try { p.destroy(); } catch {} } players.clear(); }
 document.getElementById('findBtn').addEventListener('click', async () => {
   const query = document.getElementById('queryInput').value.trim();
   if (!query) return toast('Type a query first');
   const result = await findStreams(query).catch(() => null);
   if (!result || !result.results || !result.results.length) return toast('No streams found');
-  streams.length = 0; players.clear(); renderCards();
-  for (const candidate of result.results) await addCandidate(candidate);
-  toast(`Added ${result.results.length} stream candidates`);
+  streams.length = 0; destroyPlayers(); renderCards();
+  let added = 0;
+  for (const candidate of result.results) { try { await addCandidate(candidate); added++; } catch {} }
+  renderCards(); ensurePlayers();
+  toast(`Added ${added} of ${result.results.length} stream candidates`);
 });
 </script>
 </body>
