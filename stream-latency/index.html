@@ -74,6 +74,7 @@ function renderCards() {
         <div class="metric"><div class="label">Status</div><div class="value" id="st-${s.videoId}">${s.meta.liveBroadcastContent || 'idle'}</div></div>
         <div class="metric"><div class="label">Start time</div><div class="value small-muted" id="start-${s.videoId}">${s.meta.actualStartTime || s.meta.scheduledStartTime || '—'}</div></div>
       </div>
+      <div class="small-muted" id="dbg-${s.videoId}">dbg: waiting</div>
     </div>
   `).join('');
 }
@@ -112,8 +113,12 @@ function tick() {
   const now = Date.now() + clockOffsetMs; let changed = false;
   for (const s of streams) {
     const p = players.get(s.videoId); if (!p || typeof p.getDuration !== 'function') continue;
-    let elapsedSec = 0; try { elapsedSec = p.getDuration(); } catch {}
-    const latEl = document.getElementById(`lat-${s.videoId}`); const stEl = document.getElementById(`st-${s.videoId}`);
+    let elapsedSec = 0; let currentTime = 0; let playerState = 'unknown';
+    try { elapsedSec = p.getDuration(); } catch {}
+    try { currentTime = p.getCurrentTime(); } catch {}
+    try { playerState = p.getPlayerState(); } catch {}
+    const latEl = document.getElementById(`lat-${s.videoId}`); const stEl = document.getElementById(`st-${s.videoId}`); const dbgEl = document.getElementById(`dbg-${s.videoId}`);
+    if (dbgEl) dbgEl.textContent = `dbg: state=${playerState} duration=${Number(elapsedSec || 0).toFixed(1)} current=${Number(currentTime || 0).toFixed(1)} startMs=${s.meta.actualStartTimeMs || 'null'}`;
     if (!elapsedSec || !s.meta.actualStartTimeMs) { if (stEl) stEl.textContent = s.meta.actualStartTimeMs ? 'press play / warming up' : (s.meta.liveBroadcastContent || 'no start time'); if (latEl) latEl.textContent = '—'; s.latencyMs = null; continue; }
     const latencyMs = now - (s.meta.actualStartTimeMs + elapsedSec * 1000); s.latencyMs = latencyMs; changed = true; if (latEl) latEl.textContent = `${Math.round(latencyMs)} ms`; if (stEl) stEl.textContent = latencyMs >= 0 ? 'live' : 'ahead?';
   }
