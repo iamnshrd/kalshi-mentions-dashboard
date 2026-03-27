@@ -67,7 +67,7 @@ function renderCards() {
         </div>
         ${bestId === s.videoId ? '<span class="badge best">best</span>' : '<span class="badge">candidate</span>'}
       </div>
-      <div class="player-wrap"><div id="player-${s.videoId}"></div></div>
+      <div class="player-wrap"><div id="player-${s.videoId}"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer" id="fallback-${s.videoId}" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#9fb0cf;text-decoration:none;background:#0f1629 url('https://i.ytimg.com/vi/${s.videoId}/hqdefault.jpg') center/cover no-repeat;">Open stream</a></div>
       <div class="metrics">
         <div class="metric"><div class="label">Latency</div><div class="value" id="lat-${s.videoId}">—</div></div>
         <div class="metric"><div class="label">Source</div><div class="value" id="src-${s.videoId}">${s.source || 'YouTube'}</div></div>
@@ -78,7 +78,25 @@ function renderCards() {
   `).join('');
 }
 function ensurePlayers() {
-  for (const s of streams) { if (players.has(s.videoId)) continue; const p = new YT.Player(`player-${s.videoId}`, { videoId: s.videoId, playerVars: { autoplay: 0, controls: 1 }, events: { onReady: () => {}, onStateChange: () => {} } }); players.set(s.videoId, p); }
+  for (const s of streams) {
+    if (players.has(s.videoId)) continue;
+    const p = new YT.Player(`player-${s.videoId}`, {
+      videoId: s.videoId,
+      playerVars: { autoplay: 0, controls: 1 },
+      events: {
+        onReady: () => {
+          const fb = document.getElementById(`fallback-${s.videoId}`);
+          if (fb) fb.style.display = 'none';
+        },
+        onError: () => {
+          const fb = document.getElementById(`fallback-${s.videoId}`);
+          if (fb) fb.style.display = 'flex';
+        },
+        onStateChange: () => {},
+      }
+    });
+    players.set(s.videoId, p);
+  }
 }
 async function addCandidate(candidate) {
   if (streams.some(s => s.videoId === candidate.videoId)) return;
