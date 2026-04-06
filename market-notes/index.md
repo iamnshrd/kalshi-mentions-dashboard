@@ -10,3 +10,4 @@
 ## How to use
 - новые заметки складывать в `notes/`
 - по мере накопления добавлять сюда ссылки и короткие summary
+- [What will Trump say during his Iran press conference?](notes/2026-04-06-what-will-trump-say-during-his-iran-press-conference.md)
