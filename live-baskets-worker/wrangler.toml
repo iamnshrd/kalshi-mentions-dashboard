@@ -1,0 +1,7 @@
+name = "kalshi-mentions-api"
+main = "src/index.js"
+compatibility_date = "2026-05-31"
+account_id = "8b379ef08dfe2365e6db5a50e1541ade"
+
+[vars]
+ALLOWED_ORIGINS = "https://iamnshrd.github.io,http://localhost:4173,http://127.0.0.1:4173"
