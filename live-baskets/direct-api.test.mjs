@@ -7,14 +7,17 @@ const here = dirname(fileURLToPath(import.meta.url));
 const html = readFileSync(join(here, "index.html"), "utf8");
 const config = readFileSync(join(here, "config.js"), "utf8");
 const assetMatch = html.match(/src="\.\/assets\/([^"]+\.js)"/);
+const cssMatch = html.match(/href="\.\/assets\/([^"?]+\.css)(?:\?[^"]*)?"/);
 
 assert.ok(assetMatch, "live-baskets index.html should reference a JS asset");
+assert.ok(cssMatch, "live-baskets index.html should reference a CSS asset");
 assert.ok(
   html.includes('<script src="./config.js?v=20260531-worker"></script>'),
   "live-baskets should load config.js before the module bundle"
 );
 
 const bundle = readFileSync(join(here, "assets", assetMatch[1]), "utf8");
+const styles = readFileSync(join(here, "assets", cssMatch[1]), "utf8");
 
 assert.ok(
   bundle.includes("https://external-api.kalshi.com/trade-api/v2"),
@@ -43,4 +46,9 @@ assert.equal(
   bundle.includes("/api/kalshi-event"),
   false,
   "bundle should not depend on the old kalshi-event proxy route"
+);
+assert.ok(
+  styles.includes(".basket-pill-name{flex:1 1 auto}") &&
+    styles.includes(".basket-pill-price,.stage-toggle{display:none}"),
+  "basket strike pills should hide prices and the middle stage toggle while letting names fill the space"
 );
