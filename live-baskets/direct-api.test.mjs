@@ -12,7 +12,7 @@ const cssMatch = html.match(/href="\.\/assets\/([^"?]+\.css)(?:\?[^"]*)?"/);
 assert.ok(assetMatch, "live-baskets index.html should reference a JS asset");
 assert.ok(cssMatch, "live-baskets index.html should reference a CSS asset");
 assert.ok(
-  html.includes('<script src="./config.js?v=20260716-worker"></script>'),
+  html.includes('<script src="./config.js?v=20260716-archive-fallback"></script>'),
   "live-baskets should load config.js before the module bundle"
 );
 
