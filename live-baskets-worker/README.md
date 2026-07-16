@@ -18,12 +18,15 @@ CLOUDFLARE_ACCOUNT_ID=<account-id> npx wrangler deploy
 After deploy, set `window.LIVE_BASKETS_API_BASE` in `live-baskets/config.js` to:
 
 ```js
-window.LIVE_BASKETS_API_BASE = "https://<your-worker-host>/trade-api/v2";
+window.LIVE_BASKETS_API_BASE = "https://<your-worker-host>";
 ```
 
 ## Endpoints
 
+- `GET /events/:eventTicker?with_nested_markets=true`
+- `GET /historical/markets?event_ticker=<eventTicker>`
 - `GET /trade-api/v2/events/:eventTicker?with_nested_markets=true`
+- `GET /trade-api/v2/historical/markets?event_ticker=<eventTicker>`
 - `GET /api/kalshi-event?market_url=<kalshi event url>`
 
-The first endpoint mirrors the Kalshi event API shape. The second is kept as a legacy compatibility route.
+The event endpoints mirror the Kalshi event API shape. If live event markets are empty, the Worker falls back to Kalshi historical markets for archived events. The `/api/kalshi-event` route is kept as a legacy compatibility route.

@@ -12,7 +12,7 @@ const cssMatch = html.match(/href="\.\/assets\/([^"?]+\.css)(?:\?[^"]*)?"/);
 assert.ok(assetMatch, "live-baskets index.html should reference a JS asset");
 assert.ok(cssMatch, "live-baskets index.html should reference a CSS asset");
 assert.ok(
-  html.includes('<script src="./config.js?v=20260531-worker"></script>'),
+  html.includes('<script src="./config.js?v=20260716-worker"></script>'),
   "live-baskets should load config.js before the module bundle"
 );
 
@@ -28,6 +28,15 @@ assert.ok(
     config.includes('get("api_base")') &&
     config.includes("window.fetch"),
   "config.js should allow a deployed Worker base URL to rewrite Kalshi API requests"
+);
+assert.ok(
+  config.includes("kalshi-mentions-api.iloveyaphets.workers.dev") &&
+    !config.includes("workers.dev/trade-api/v2"),
+  "default Worker base should match the deployed root-level proxy routes"
+);
+assert.ok(
+  config.includes("/historical/markets?event_ticker="),
+  "archived events should fall back to Kalshi historical markets when live event markets are empty"
 );
 assert.ok(
   bundle.includes("with_nested_markets=true"),

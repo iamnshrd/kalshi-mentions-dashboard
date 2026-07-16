@@ -21,8 +21,12 @@ export default {
     try {
       const url = new URL(request.url);
 
-      if (url.pathname.startsWith("/trade-api/v2/events/")) {
+      if (isEventPath(url.pathname)) {
         return mirrorKalshiEvent(url, corsHeaders);
+      }
+
+      if (isHistoricalMarketsPath(url.pathname)) {
+        return mirrorKalshiHistoricalMarkets(url, corsHeaders);
       }
 
       if (url.pathname === "/api/kalshi-event") {
@@ -49,6 +53,30 @@ async function mirrorKalshiEvent(url, corsHeaders) {
   }
 
   const upstream = await fetch(upstreamUrl.toString());
+  const body = await upstream.text();
+  if (!upstream.ok) {
+    return proxyJsonText(body, upstream, corsHeaders);
+  }
+
+  const payload = JSON.parse(body);
+  const markets = getMarkets(payload);
+  if (markets.length) {
+    return json(payload, 200, corsHeaders);
+  }
+
+  const historicalMarkets = await fetchHistoricalMarkets(ticker);
+  if (!historicalMarkets.length) {
+    return json(payload, 200, corsHeaders);
+  }
+
+  return json(addMarketsToPayload(payload, historicalMarkets), 200, corsHeaders);
+}
+
+async function mirrorKalshiHistoricalMarkets(url, corsHeaders) {
+  const upstreamUrl = new URL(`${KALSHI_API_BASE}/historical/markets`);
+  upstreamUrl.search = url.search;
+
+  const upstream = await fetch(upstreamUrl.toString());
   return proxyJsonResponse(upstream, corsHeaders);
 }
 
@@ -67,11 +95,25 @@ async function legacyKalshiEvent(url, corsHeaders) {
     return json(payload, upstream.status, corsHeaders);
   }
 
-  return json(normalizeEventPayload(payload, ticker), 200, corsHeaders);
+  const normalized = normalizeEventPayload(payload, ticker);
+  if (normalized.markets.length) {
+    return json(normalized, 200, corsHeaders);
+  }
+
+  const historicalMarkets = await fetchHistoricalMarkets(ticker);
+  return json(
+    historicalMarkets.length ? addMarketsToPayload(normalized, historicalMarkets) : normalized,
+    200,
+    corsHeaders
+  );
 }
 
 async function proxyJsonResponse(upstream, corsHeaders) {
   const body = await upstream.text();
+  return proxyJsonText(body, upstream, corsHeaders);
+}
+
+function proxyJsonText(body, upstream, corsHeaders) {
   const headers = new Headers(corsHeaders);
   headers.set("content-type", upstream.headers.get("content-type") || "application/json");
   headers.set("cache-control", "no-store");
@@ -85,11 +127,7 @@ async function proxyJsonResponse(upstream, corsHeaders) {
 
 function normalizeEventPayload(payload, fallbackTicker) {
   const event = payload.event || payload;
-  const markets = Array.isArray(event.markets)
-    ? event.markets
-    : Array.isArray(payload.markets)
-      ? payload.markets
-      : [];
+  const markets = getMarkets(payload);
 
   return {
     ...payload,
@@ -97,6 +135,41 @@ function normalizeEventPayload(payload, fallbackTicker) {
     event_ticker: payload.event_ticker || event.event_ticker || fallbackTicker,
     markets,
   };
+}
+
+async function fetchHistoricalMarkets(eventTicker) {
+  const historicalUrl = new URL(`${KALSHI_API_BASE}/historical/markets`);
+  historicalUrl.searchParams.set("event_ticker", eventTicker);
+  historicalUrl.searchParams.set("limit", "1000");
+
+  const response = await fetch(historicalUrl.toString());
+  if (!response.ok) return [];
+
+  const payload = await response.json();
+  return Array.isArray(payload.markets) ? payload.markets : [];
+}
+
+function addMarketsToPayload(payload, markets) {
+  const event = { ...(payload.event || {}), markets };
+  return {
+    ...payload,
+    event,
+    markets,
+  };
+}
+
+function getMarkets(payload) {
+  if (Array.isArray(payload?.event?.markets)) return payload.event.markets;
+  if (Array.isArray(payload?.markets)) return payload.markets;
+  return [];
+}
+
+function isEventPath(pathname) {
+  return pathname.startsWith("/events/") || pathname.startsWith("/trade-api/v2/events/");
+}
+
+function isHistoricalMarketsPath(pathname) {
+  return pathname === "/historical/markets" || pathname === "/trade-api/v2/historical/markets";
 }
 
 function parseTicker(value) {
