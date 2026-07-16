@@ -55,6 +55,15 @@ async function mirrorKalshiEvent(url, corsHeaders) {
   const upstream = await fetch(upstreamUrl.toString());
   const body = await upstream.text();
   if (!upstream.ok) {
+    const historicalMarkets = await fetchHistoricalMarkets(ticker);
+    if (historicalMarkets.length) {
+      return json(
+        addMarketsToPayload({ event: { event_ticker: ticker }, event_ticker: ticker }, historicalMarkets),
+        200,
+        corsHeaders
+      );
+    }
+
     return proxyJsonText(body, upstream, corsHeaders);
   }
 

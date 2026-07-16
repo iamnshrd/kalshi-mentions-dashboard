@@ -32,12 +32,15 @@ window.LIVE_BASKETS_API_BASE =
   async function withArchivedMarketsFallback(responsePromise, originalUrl, apiBase) {
     const response = await responsePromise;
     const eventTicker = parseEventTicker(originalUrl);
-    if (!eventTicker || !response.ok) return response;
+    if (!eventTicker) return response;
 
+    let payload = { event: { event_ticker: eventTicker }, event_ticker: eventTicker, markets: [] };
     try {
-      const payload = await response.clone().json();
-      const liveMarkets = getMarkets(payload);
-      if (liveMarkets.length) return response;
+      if (response.ok) {
+        payload = await response.clone().json();
+        const liveMarkets = getMarkets(payload);
+        if (liveMarkets.length) return response;
+      }
 
       const historicalUrl = `${apiBase}/historical/markets?event_ticker=${encodeURIComponent(eventTicker)}&limit=1000`;
       const historicalResponse = await nativeFetch(historicalUrl);
@@ -52,7 +55,7 @@ window.LIVE_BASKETS_API_BASE =
       const event = { ...(payload.event || {}), markets: archivedMarkets };
       return Response.json(
         { ...payload, event, markets: archivedMarkets },
-        { status: response.status, statusText: response.statusText }
+        { status: 200 }
       );
     } catch {
       return response;

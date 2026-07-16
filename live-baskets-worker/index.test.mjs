@@ -109,6 +109,37 @@ async function testFallsBackToHistoricalMarkets() {
   );
 }
 
+async function testFallsBackToHistoricalMarketsWhenEventIsRateLimited() {
+  const calls = [];
+  globalThis.fetch = async (url) => {
+    calls.push(String(url));
+    if (String(url).includes("/historical/markets")) {
+      return Response.json({
+        markets: [{ ticker: "KXTRUMPMENTION-26MAR27-WATER", yes_sub_title: "Water" }],
+      });
+    }
+
+    return Response.json(
+      { error: { code: "too_many_requests", message: "too many requests" } },
+      { status: 429 }
+    );
+  };
+
+  const response = await worker.fetch(
+    request("/events/KXTRUMPMENTION-26MAR27?with_nested_markets=true", {
+      headers: { Origin: "https://iamnshrd.github.io" },
+    }),
+    allowedEnv
+  );
+  const payload = await readJson(response);
+
+  assert.equal(response.status, 200);
+  assert.equal(payload.event_ticker, "KXTRUMPMENTION-26MAR27");
+  assert.equal(payload.markets.length, 1);
+  assert.equal(payload.markets[0].ticker, "KXTRUMPMENTION-26MAR27-WATER");
+  assert.equal(calls.length, 2);
+}
+
 async function testMirrorsHistoricalMarketsEndpoint() {
   const calls = [];
   globalThis.fetch = async (url) => {
@@ -168,6 +199,7 @@ for (const test of [
   testMirrorsEventEndpoint,
   testMirrorsRootEventEndpoint,
   testFallsBackToHistoricalMarkets,
+  testFallsBackToHistoricalMarketsWhenEventIsRateLimited,
   testMirrorsHistoricalMarketsEndpoint,
   testLegacyEndpointNormalizesNestedMarkets,
   testRejectsMissingTicker,
